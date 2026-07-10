@@ -230,7 +230,7 @@ export default function TransferableCredits() {
                     <p className="text-[16px] text-slate-500 leading-relaxed">{step.desc}</p>
                   </div>
                   <div className={`lg:w-1/2 ${isEven ? 'lg:pl-12' : 'lg:pr-12'}`}>
-                    <img src={step.img} alt={step.alt} width="600" height="400" className="rounded-3xl w-full shadow-md" loading="lazy" />
+                    <div role="img" aria-label={step.alt} className="bg-[rgb(var(--graphite))] blueprint-grid-fine border border-[rgb(var(--ivory))/0.10] aspect-[3/2] w-full" />
                   </div>
                 </ScrollFadeIn>
               );

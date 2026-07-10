@@ -198,7 +198,7 @@ export default function Section179D() {
                   <div className="w-14 h-14 rounded-2xl bg-concord-green/10 flex items-center justify-center mb-6">{card.icon}</div>
                   <h3 className="text-lg font-extrabold mb-3 font-heading">{card.title}</h3>
                   <p className="text-sm text-slate-500 leading-relaxed flex-1">{card.desc}</p>
-                  <img src={card.img} alt={card.alt} width="400" height="250" loading="lazy" className="rounded-xl w-full h-36 object-cover mt-auto pt-4" />
+                  <div role="img" aria-label={card.alt} className="bg-[rgb(var(--graphite))] blueprint-grid-fine border border-[rgb(var(--ivory))/0.10] aspect-[3/2] w-full" />
                 </div>
               ))}
             </div>
@@ -326,7 +326,7 @@ export default function Section179D() {
               ].map((story) => (
                 <div key={story.title} className="bg-white rounded-[24px] overflow-hidden border border-black/[0.06] flex flex-col h-full hover:shadow-lg hover:-translate-y-1 transition-all duration-300 border-t-[3px] border-t-transparent hover:border-t-concord-green">
                   <div className="relative h-48 overflow-hidden">
-                    <img src={story.img} alt={story.alt} width="500" height="300" loading="lazy" className="w-full h-full object-cover" />
+                    <div role="img" aria-label={story.alt} className="bg-[rgb(var(--graphite))] blueprint-grid-fine border border-[rgb(var(--ivory))/0.10] aspect-[3/2] w-full" />
                     <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-sm rounded-lg px-3 py-1.5"><span className="text-xl font-bold text-concord-green">{story.amount}</span></div>
                   </div>
                   <div className="p-6 flex-1 flex flex-col">

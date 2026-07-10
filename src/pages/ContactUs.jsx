@@ -176,7 +176,7 @@ export default function ContactUs() {
             ].map((loc) => (
               <ScrollFadeIn key={loc.title}>
                 <div className="bg-white rounded-3xl overflow-hidden border border-black/[0.06] shadow-sm card-hover flex flex-col h-full">
-                  <img src={loc.img} alt={loc.imgAlt} width="600" height="400" loading="lazy" className="w-full h-[200px] object-cover" />
+                  <div role="img" aria-label={loc.imgAlt} className="bg-[rgb(var(--graphite))] blueprint-grid-fine border border-[rgb(var(--ivory))/0.10] aspect-[3/2] w-full" />
                   <div className="p-6 flex-1">
                     <div className="flex items-center gap-2 mb-3">
                       <h3 className="font-heading font-bold text-[18px] text-concord-dark">{loc.title}</h3>
