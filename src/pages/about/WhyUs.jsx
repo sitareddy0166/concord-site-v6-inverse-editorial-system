@@ -241,14 +241,7 @@ export default function WhyUs() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <ScrollFadeIn>
               <div className="relative rounded-3xl overflow-hidden bg-concord-mint aspect-[4/3]">
-                <img
-                  src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=800&q=80"
-                  alt="Concord engineering professionals conducting energy analysis with building schematics"
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                  width="800"
-                  height="600"
-                />
+                <div aria-hidden="true" className="w-full h-full bg-[rgb(var(--graphite))] blueprint-grid-fine" />
                 <div className="absolute inset-0 bg-gradient-to-t from-concord-dark/20 to-transparent" />
               </div>
             </ScrollFadeIn>

@@ -213,7 +213,7 @@ export default function WhitepaperThankYou() {
       <section className="bg-concord-cream py-[100px] px-6">
         <div className="max-w-5xl mx-auto rounded-3xl relative overflow-hidden">
           <ScrollFadeIn>
-            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80" alt="Modern energy-efficient commercial office building representing clean energy tax credit opportunities" className="absolute inset-0 w-full h-full object-cover" width="1200" height="600" loading="lazy" />
+            <div aria-hidden="true" className="w-full h-full bg-[rgb(var(--graphite))] blueprint-grid-fine" />
             <div className="absolute inset-0 bg-[#151C19]/90"></div>
             <div className="relative z-10 p-16 md:p-20 text-center">
               <div className="max-w-2xl mx-auto rounded-3xl p-12" style={{ background: 'rgba(255,255,255,0.1)', backdropFilter: 'blur(16px)', WebkitBackdropFilter: 'blur(16px)', border: '1px solid rgba(255,255,255,0.2)' }}>

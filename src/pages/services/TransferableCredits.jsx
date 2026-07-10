@@ -294,7 +294,7 @@ export default function TransferableCredits() {
 
           <ScrollFadeIn>
             <div className="rounded-[24px] overflow-hidden mb-8">
-              <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1200&q=80" alt="Financial analysis dashboard representing corporate tax credit purchasing and investment opportunities" className="w-full h-[280px] object-cover" loading="lazy" width="1200" height="400" />
+              <div aria-hidden="true" className="w-full h-full bg-[rgb(var(--graphite))] blueprint-grid-fine" />
             </div>
           </ScrollFadeIn>
 

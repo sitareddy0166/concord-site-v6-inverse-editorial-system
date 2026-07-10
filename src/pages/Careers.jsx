@@ -98,7 +98,7 @@ export default function Careers() {
       {/* HERO */}
       <section className="bg-concord-dark relative overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1920&q=80" alt="Diverse team of professionals collaborating around a conference table in a modern, sunlit office" width="1920" height="1080" className="w-full h-full object-cover opacity-20" />
+          <div aria-hidden="true" className="w-full h-full bg-[rgb(var(--graphite))] blueprint-grid-fine" />
           <div className="absolute inset-0 bg-gradient-to-b from-concord-dark/60 via-concord-dark/80 to-concord-dark"></div>
         </div>
         <div className="relative z-10 max-w-[1200px] mx-auto px-6 py-[40px] lg:py-[60px]">
@@ -156,7 +156,7 @@ export default function Careers() {
           <div className="flex flex-col lg:flex-row items-center gap-16">
             <ScrollFadeIn className="lg:w-1/2">
               <div className="rounded-3xl overflow-hidden shadow-lg">
-                <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=800&q=80" alt="Team members engaged in a collaborative discussion at a modern workspace with natural light" width="800" height="600" loading="lazy" className="w-full h-[400px] lg:h-[500px] object-cover" />
+                <div aria-hidden="true" className="w-full h-full bg-[rgb(var(--graphite))] blueprint-grid-fine" />
               </div>
             </ScrollFadeIn>
             <ScrollFadeIn className="lg:w-1/2">
@@ -301,7 +301,7 @@ export default function Careers() {
       {/* CTA BANNER */}
       <section className="relative py-[80px] lg:py-[100px] overflow-hidden">
         <div className="absolute inset-0">
-          <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1920&q=80" alt="Sunlight streaming through a lush green forest canopy representing sustainability and clean energy" width="1920" height="1080" loading="lazy" className="w-full h-full object-cover" />
+          <div aria-hidden="true" className="w-full h-full bg-[rgb(var(--graphite))] blueprint-grid-fine" />
           <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, rgba(61,163,93,0.85) 0%, rgba(21,28,25,0.9) 100%)' }}></div>
         </div>
         <div className="max-w-[900px] mx-auto px-6 relative z-10">
