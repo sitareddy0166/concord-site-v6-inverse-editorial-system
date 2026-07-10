@@ -32,6 +32,7 @@ import {
 import { SEOHead, SchemaScript, generateServiceSchema, generateFAQSchema, generateBreadcrumbSchema, generateHowToSchema, generateWebPageSchema, generateSpeakableSchema } from '@/utils/seo';
 import { ScrollFadeIn } from '@/hooks/useScrollAnimation';
 import StickyNav from '@/components/layout/StickyNav';
+import ServiceHero from '@/components/sections/ServiceHero';
 import VideoExplainer from '@/components/sections/VideoExplainer';
 
 const stickyNavItems = [
