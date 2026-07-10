@@ -310,19 +310,23 @@
   /* Sticky sub-nav (updated for dark) */
   .subnav {
     position: sticky; top: 64px; z-index: 40;
-    background: rgb(var(--ink) / 0.92);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgb(var(--ivory) / 0.08);
+    background: rgb(var(--ink));
+    border-bottom: 1px solid rgb(var(--ivory) / 0.10);
   }
-  .subnav a {
+  .subnav a, .subnav .subnav-link {
     font-family: 'JetBrains Mono', monospace;
     font-size: 11px; text-transform: uppercase; letter-spacing: .12em;
     color: rgb(var(--ivory) / 0.55);
     padding: 14px 0;
     white-space: nowrap;
-    transition: color .2s;
+    border-bottom: 2px solid transparent;
+    transition: color .2s, border-color .2s;
   }
   .subnav a:hover { color: rgb(var(--ivory)); }
+  .subnav .subnav-link.is-active {
+    color: rgb(var(--concord-glow));
+    border-bottom-color: rgb(var(--concord));
+  }
 }
 
 @layer utilities {
