@@ -119,21 +119,8 @@ export default function Section179D() {
         ]}
       />
 
-      {/* Discovery scheduler */}
-      <section className="surface-ivory band-sm" aria-label="Schedule a discovery call">
-        <div className="arch grid lg:grid-cols-12 gap-10 items-start">
-          <div className="lg:col-span-5">
-            <p className="tech-label" style={{ color: 'rgb(var(--concord))' }}>Discovery · 30 min</p>
-            <h2 className="h-lead mt-4" style={{ color: 'rgb(var(--ink))' }}>Meet with a 179D practitioner.</h2>
-            <p className="mt-4 text-[15px] text-[rgb(var(--ink))/0.7] max-w-md">
-              Bring your building type, square footage, and construction dates. We will walk you through eligibility, timelines, and next steps.
-            </p>
-          </div>
-          <div className="lg:col-span-7">
-            <BookingCard />
-          </div>
-        </div>
-      </section>
+
+
 
       <StickyNav items={stickyNavItems} />
 
