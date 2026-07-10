@@ -78,7 +78,7 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 h-[64px] z-[1000] bg-[rgb(var(--ink))/0.92] backdrop-blur-md border-b border-[rgb(var(--ivory))/0.08]">
+      <header className={`fixed top-0 left-0 right-0 h-[64px] z-[1000] transition-colors duration-200 border-b ${scrolled || mobileOpen || openMenu ? 'bg-[rgb(var(--ink))] border-[rgb(var(--ivory))/0.14]' : 'bg-[rgb(var(--ink))/0.55] backdrop-blur-md border-transparent'}`}>
         <nav aria-label="Primary" className="arch h-full flex items-center justify-between gap-6">
           <Link to="/" aria-label="Concord Energy Strategies home" className="flex items-center gap-3 shrink-0">
             <img src="/assets/concord-logo.svg" alt="" aria-hidden="true" width="120" height="28" className="h-6 w-auto invert brightness-0 opacity-90" />
