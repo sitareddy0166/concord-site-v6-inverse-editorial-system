@@ -338,7 +338,11 @@
   }
   /* Legacy concord-* mappings for old pages during transition */
   .bg-concord-cream { background-color: rgb(var(--paper)); color: rgb(var(--ink)); }
-  .bg-concord-mint  { background-color: rgb(var(--paper)); }
+  .bg-concord-cream :is(h1,h2,h3,h4,h5,h6) { color: rgb(var(--ink)); }
+  .bg-concord-mint  { background-color: rgb(var(--paper)); color: rgb(var(--ink)); }
+  .bg-concord-mint :is(h1,h2,h3,h4,h5,h6)  { color: rgb(var(--ink)); }
+  .bg-white         { color: rgb(var(--ink)); }
+  .bg-white :is(h1,h2,h3,h4,h5,h6) { color: rgb(var(--ink)); }
   .bg-concord-dark  { background-color: rgb(var(--ink)); color: rgb(var(--ivory)); }
   .text-concord-dark { color: rgb(var(--ink)); }
   .text-concord-green { color: rgb(var(--concord)); }
