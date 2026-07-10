@@ -477,12 +477,7 @@ export default function DirectPay() {
       {/* CTA Banner - Glassmorphism */}
       <section className="relative py-[80px] lg:py-[100px] overflow-hidden">
         <div className="absolute inset-0">
-          <img
-            src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1600&q=80"
-            alt="Large-scale solar farm representing clean energy Direct Pay opportunities"
-            loading="lazy"
-            className="w-full h-full object-cover"
-          />
+          <div role="img" aria-label="Large-scale solar farm representing clean energy Direct Pay opportunities" className="w-full h-full object-cover bg-[rgb(var(--graphite))] blueprint-grid-fine border border-[rgb(var(--ivory))/0.10]" />
           <div className="absolute inset-0 bg-[#151C19]/85"></div>
         </div>
         <div className="relative z-10 max-w-4xl mx-auto px-6">

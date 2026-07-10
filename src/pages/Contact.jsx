@@ -239,7 +239,7 @@ export default function Contact() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
             {[
               {
-                img: 'https://images.unsplash.com/photo-1501466044931-62695aada8e9?auto=format&fit=crop&w=600&q=80',
+                img: null,
                 imgAlt: 'Washington DC skyline with the Capitol building and National Mall at dusk',
                 title: 'Washington, DC Metro Area',
                 isHQ: true,
@@ -248,14 +248,14 @@ export default function Contact() {
                 hasEmail: true,
               },
               {
-                img: 'https://images.unsplash.com/photo-1486325212027-8081e485255e?auto=format&fit=crop&w=600&q=80',
+                img: null,
                 imgAlt: 'Aerial city skyline at night representing nationwide service coverage',
                 title: 'Nationwide Coverage',
                 icon: MapPin,
                 detail: 'Serving clients across all 50 states with virtual consultations and on-site support',
               },
               {
-                img: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=600&q=80',
+                img: null,
                 imgAlt: 'Business professionals in virtual consultation meeting',
                 title: 'Virtual Consultations',
                 icon: VideoCamera,

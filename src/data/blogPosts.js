@@ -367,7 +367,7 @@ const blogPosts = [
     category: 'Deadlines',
     serviceType: 'R&D',
     tags: ['OBBBA', 'Deadlines', 'R&D', '179D'],
-    image: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=800&q=80',
+    image: null,
     link: '/obbba-deadline',
   },
   {
