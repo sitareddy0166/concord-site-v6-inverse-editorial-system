@@ -18,6 +18,7 @@ import { ScrollFadeIn } from '@/hooks/useScrollAnimation';
 import StickyNav from '@/components/layout/StickyNav';
 import ServiceHero from '@/components/sections/ServiceHero';
 import VideoExplainer from '@/components/sections/VideoExplainer';
+import ServicePageShell from '@/components/service/ServicePageShell';
 
 const stickyNavItems = [
   { label: 'What Is PWA?', href: '#what-is-pwa' },
@@ -107,7 +108,7 @@ export default function PWA() {
   const [activeTab, setActiveTab] = useState('179d');
 
   return (
-    <>
+    <ServicePageShell>
       <SEOHead
         title="PWA Compliance | Concord Energy Strategies"
         description="Prevailing Wage and Apprenticeship compliance for clean energy projects. Unlock the 5x IRA bonus multiplier with Concord and our 100% audit success rate."
