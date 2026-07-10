@@ -1,0 +1,352 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Shadcn CSS Variables */
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+    --radius: 0.5rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply font-sans text-slate-600 bg-white;
+    font-family: 'Inter', sans-serif;
+    font-size: 17px;
+    line-height: 1.7;
+  }
+
+  p { line-height: 1.7; }
+  small, .text-caption, footer { font-size: 13px; }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading text-concord-dark;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+
+  ::selection {
+    background-color: #3390ff;
+    color: #ffffff;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-concord-green;
+  }
+
+  [id] {
+    scroll-margin-top: 140px;
+  }
+}
+
+@layer components {
+  /* Layout */
+  .container-wide {
+    @apply max-w-[1200px] mx-auto px-4 lg:px-8;
+  }
+
+  .container-narrow {
+    @apply max-w-3xl mx-auto px-4 lg:px-8;
+  }
+
+  /* Buttons */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-8 py-3.5 text-[15px] font-bold text-white bg-concord-dark rounded-full
+           hover:bg-concord-greenHover hover:text-white hover:-translate-y-0.5 hover:shadow-lg
+           active:translate-y-0 active:shadow-none
+           transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-concord-green focus:ring-offset-2;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-8 py-3.5 text-[15px] font-bold text-concord-dark bg-white border-2 border-concord-dark rounded-full
+           hover:bg-concord-greenHover hover:text-white hover:border-concord-greenHover hover:-translate-y-0.5
+           active:translate-y-0
+           transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-concord-green focus:ring-offset-2;
+  }
+
+  .btn-outline-white {
+    @apply inline-flex items-center justify-center gap-2 px-8 py-3.5 text-[15px] font-bold text-white border-2 border-white/80 rounded-full
+           hover:bg-concord-greenHover hover:text-white hover:border-concord-greenHover hover:-translate-y-0.5
+           active:translate-y-0
+           transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-concord-dark;
+  }
+
+  .btn-sm {
+    @apply !text-sm !px-6 !py-2.5;
+  }
+
+  .btn-lg {
+    @apply !text-base !px-10 !py-4;
+  }
+
+  /* Section Spacing */
+  .section-padding {
+    @apply py-8 md:py-12;
+  }
+
+  .section-padding-compact {
+    @apply py-6 md:py-8;
+  }
+
+  .section-padding-emphasis {
+    @apply py-12 md:py-16;
+  }
+
+  /* Typography */
+  .heading-1 {
+    @apply text-3xl md:text-5xl font-black tracking-tight leading-[1.15] text-balance;
+  }
+
+  .heading-2 {
+    @apply text-2xl md:text-4xl font-semibold tracking-tight leading-tight;
+  }
+
+  .heading-3 {
+    @apply text-xl md:text-2xl font-bold leading-snug;
+  }
+
+  .heading-4 {
+    @apply text-base font-semibold text-concord-dark;
+  }
+
+  .text-body {
+    @apply text-base md:text-lg text-slate-600 leading-relaxed;
+  }
+
+  .text-body-sm {
+    @apply text-sm text-slate-600 leading-relaxed;
+  }
+
+  .section-eyebrow {
+    @apply text-xs font-bold text-concord-green uppercase tracking-[0.15em];
+  }
+
+  .hero-headline {
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  }
+
+  /* Cards */
+  .card {
+    @apply bg-white rounded-xl
+           shadow-[0_2px_12px_rgba(0,0,0,0.06)] border border-gray-200/40
+           hover:shadow-[0_8px_30px_rgba(0,0,0,0.12)] hover:-translate-y-0.5
+           transition-all duration-300;
+  }
+
+  .card-static {
+    @apply bg-white rounded-xl
+           shadow-[0_2px_12px_rgba(0,0,0,0.06)] border border-gray-200/40;
+  }
+
+  .card-hover {
+    transition: all 0.3s;
+    border-top: 3px solid transparent;
+  }
+
+  .card-hover:hover {
+    transform: translateY(-4px);
+    border-top-color: #3da35d;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 12px 32px rgba(0,0,0,0.1);
+  }
+
+  /* Service card green top border */
+  .service-card {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .service-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: #3da35d;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+
+  .service-card:hover::before {
+    transform: scaleX(1);
+  }
+
+  /* Badges */
+  .badge {
+    @apply inline-flex items-center px-3 py-1 text-xs font-semibold rounded-full;
+  }
+
+  .badge-green {
+    @apply badge bg-concord-mint text-concord-green;
+  }
+
+  .badge-navy {
+    @apply badge bg-concord-dark/10 text-concord-dark;
+  }
+
+  /* Glass card */
+  .glass-card {
+    @apply bg-white/[0.08] backdrop-blur-sm rounded-xl border border-white/10;
+  }
+
+  /* Nav dropdown */
+  .nav-dropdown {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(8px);
+    transition: all 0.2s ease;
+    pointer-events: none;
+    z-index: 1001;
+  }
+
+  .nav-item:hover .nav-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  /* FAQ Accordion */
+  .faq-item summary {
+    @apply cursor-pointer list-none;
+  }
+
+  .faq-item summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .faq-item[open] .faq-icon {
+    transform: rotate(45deg);
+  }
+
+  /* Tab */
+  .tab-panel {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .tab-panel.active {
+    display: block;
+    opacity: 1;
+  }
+
+  /* Mobile menu */
+  .mobile-menu {
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  .mobile-menu.open {
+    transform: translateX(0);
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  /* Prose (blog content) */
+  .prose h2 {
+    @apply text-xl md:text-2xl font-extrabold text-concord-dark mt-10 mb-4 tracking-tight;
+  }
+
+  .prose h3 {
+    @apply text-lg md:text-xl font-bold text-concord-dark mt-8 mb-3;
+  }
+
+  .prose p {
+    @apply text-slate-600 text-[15px] leading-[1.75] mb-5;
+  }
+
+  .prose ul {
+    @apply list-disc pl-6 mb-5 space-y-2 text-slate-600 text-[15px];
+  }
+
+  .prose ol {
+    @apply list-decimal pl-6 mb-5 space-y-2 text-slate-600 text-[15px];
+  }
+
+  .prose a {
+    @apply text-concord-green font-medium hover:text-concord-greenHover underline underline-offset-2 decoration-concord-green/30 hover:decoration-concord-green;
+  }
+
+  .prose blockquote {
+    @apply border-l-4 border-concord-green/40 pl-5 italic text-slate-500 my-8 text-[15px];
+  }
+
+  .prose img {
+    @apply rounded-xl my-8;
+  }
+
+  .prose strong {
+    @apply text-concord-dark font-semibold;
+  }
+
+  .prose li {
+    @apply leading-[1.75];
+  }
+
+  /* Scroll Animations */
+  .scroll-fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+  }
+
+  .scroll-fade-in.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .scroll-fade-in {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+  }
+
+  /* Dark section grain texture */
+  .bg-grain::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: 0.03;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 1;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

@@ -1,0 +1,4 @@
+.aidesigner/*
+!.aidesigner/.gitkeep
+node_modules/
+dist/
