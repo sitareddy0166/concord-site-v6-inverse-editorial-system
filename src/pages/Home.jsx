@@ -219,8 +219,8 @@ export default function Home() {
         <div className="arch">
           <div id="services-atlas" className="grid lg:grid-cols-12 gap-10 items-end mb-14">
             <div className="lg:col-span-7">
-              <p className="tech-label mb-6">The Practice · A/01</p>
-              <h2 className="h-display text-balance">Five instruments of the clean energy tax code.</h2>
+              <p className="tech-label mb-6">Our Services</p>
+              <h2 className="h-display text-balance">Tax Incentives, Simplified</h2>
             </div>
             <div className="lg:col-span-5">
               <p className="text-[16px] text-[rgb(var(--ivory))/0.7] leading-relaxed">
