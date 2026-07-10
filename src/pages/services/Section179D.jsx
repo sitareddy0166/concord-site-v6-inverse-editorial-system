@@ -28,7 +28,7 @@ import StickyNav from '@/components/layout/StickyNav';
 import VideoExplainer from '@/components/sections/VideoExplainer';
 import CTABanner from '@/components/sections/CTABanner';
 import FaqAccordion from '@/components/sections/FaqAccordion';
-import BookingCard from '@/components/ui/BookingCard';
+
 import ServiceHero from '@/components/sections/ServiceHero';
 import ServicePageShell from '@/components/service/ServicePageShell';
 
