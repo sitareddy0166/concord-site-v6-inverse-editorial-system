@@ -13,7 +13,7 @@ const cols = [
     ],
   },
   {
-    label: 'Firm',
+    label: 'About Us',
     items: [
       { label: 'Why Us', href: '/why-us' },
       { label: 'Who We Are', href: '/who-we-are' },

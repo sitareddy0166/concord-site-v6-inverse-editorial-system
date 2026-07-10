@@ -310,19 +310,23 @@
   /* Sticky sub-nav (updated for dark) */
   .subnav {
     position: sticky; top: 64px; z-index: 40;
-    background: rgb(var(--ink) / 0.92);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgb(var(--ivory) / 0.08);
+    background: rgb(var(--ink));
+    border-bottom: 1px solid rgb(var(--ivory) / 0.10);
   }
-  .subnav a {
+  .subnav a, .subnav .subnav-link {
     font-family: 'JetBrains Mono', monospace;
     font-size: 11px; text-transform: uppercase; letter-spacing: .12em;
     color: rgb(var(--ivory) / 0.55);
     padding: 14px 0;
     white-space: nowrap;
-    transition: color .2s;
+    border-bottom: 2px solid transparent;
+    transition: color .2s, border-color .2s;
   }
   .subnav a:hover { color: rgb(var(--ivory)); }
+  .subnav .subnav-link.is-active {
+    color: rgb(var(--concord-glow));
+    border-bottom-color: rgb(var(--concord));
+  }
 }
 
 @layer utilities {
@@ -398,4 +402,41 @@
   /* Buttons inside shell adopt square editorial treatment */
   .service-shell a[class*="rounded-full"],
   .service-shell button[class*="rounded-full"] { border-radius: 2px !important; }
+}
+
+/* ============================================================
+   ABOUT PAGE SHELL — alias of service-shell for about routes
+   ============================================================ */
+@layer utilities {
+  .about-shell { background: rgb(var(--ink)); color: rgb(var(--ivory)); }
+  .about-shell [class*="rounded-full"],
+  .about-shell [class*="rounded-3xl"],
+  .about-shell [class*="rounded-2xl"],
+  .about-shell [class*="rounded-xl"],
+  .about-shell [class*="rounded-\[24px\]"],
+  .about-shell [class*="rounded-\[20px\]"],
+  .about-shell [class*="rounded-\[16px\]"] { border-radius: 2px !important; }
+  .about-shell [class*="rounded-lg"],
+  .about-shell [class*="rounded-md"] { border-radius: 4px !important; }
+  .about-shell [class*="shadow-"],
+  .about-shell .shadow { box-shadow: none !important; }
+  .about-shell h1, .about-shell h2, .about-shell h3, .about-shell h4 {
+    font-family: 'Fraunces', serif; font-weight: 400; letter-spacing: -0.02em;
+  }
+  .about-shell .font-heading, .about-shell .font-extrabold, .about-shell .font-bold { font-weight: 500 !important; }
+  .about-shell img[src*="images.unsplash.com"] {
+    filter: grayscale(0.55) contrast(0.92) brightness(0.78);
+    border: 1px solid rgb(var(--ivory) / 0.10);
+    border-radius: 2px !important;
+  }
+  .about-shell section.bg-white { background: rgb(var(--paper)); color: rgb(var(--ink)); }
+  .about-shell section.bg-concord-cream { background: rgb(var(--ivory)); color: rgb(var(--ink)); }
+  .about-shell section.bg-concord-dark,
+  .about-shell section[class*="bg-[#151C19]"] { background: rgb(var(--graphite)); color: rgb(var(--ivory)); }
+  .about-shell section.bg-concord-mint { background: rgb(var(--paper)); color: rgb(var(--ink)); }
+  .about-shell a[class*="rounded-full"],
+  .about-shell button[class*="rounded-full"] { border-radius: 2px !important; }
+
+  /* Em-dash guard: strip stray characters that break editorial voice
+     (only decorative; content copy avoids em dashes at source) */
 }

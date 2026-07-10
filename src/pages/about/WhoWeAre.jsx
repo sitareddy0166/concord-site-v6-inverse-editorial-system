@@ -51,6 +51,7 @@ export default function WhoWeAre() {
   ]);
 
   return (
+    <div className="about-shell v6">
     <>
       <SEOHead
         title="Who We Are | Concord Energy Strategies"
@@ -296,5 +297,6 @@ export default function WhoWeAre() {
         </div>
       </section>
     </>
+    </div>
   );
 }

@@ -153,6 +153,7 @@ export default function TheConcordStandard() {
   const faqSchema = generateFAQSchema(faqs);
 
   return (
+    <div className="about-shell v6">
     <>
       <SEOHead
         title="The Concord Standard | Concord Energy Strategies"
@@ -471,5 +472,6 @@ export default function TheConcordStandard() {
         </div>
       </section>
     </>
+    </div>
   );
 }

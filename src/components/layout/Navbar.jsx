@@ -15,14 +15,14 @@ const dropdowns = [
     ],
   },
   {
-    label: 'Firm',
+    label: 'About Us',
     href: '/why-us',
     items: [
-      { code: 'F/01', label: 'Why Us',              href: '/why-us',                hint: 'Standards and results' },
-      { code: 'F/02', label: 'Who We Are',          href: '/who-we-are',            hint: 'People and history' },
-      { code: 'F/03', label: 'The Concord Standard', href: '/the-concord-standard', hint: 'Six-stage process' },
-      { code: 'F/04', label: 'Client Charter',       href: '/client-charter',        hint: 'Engagement principles' },
-      { code: 'F/05', label: 'Careers',             href: '/careers',               hint: 'Open positions' },
+      { code: 'A/01', label: 'Why Us',              href: '/why-us',                hint: 'Standards and results' },
+      { code: 'A/02', label: 'Who We Are',          href: '/who-we-are',            hint: 'People and history' },
+      { code: 'A/03', label: 'The Concord Standard', href: '/the-concord-standard', hint: 'Six-stage process' },
+      { code: 'A/04', label: 'Client Charter',       href: '/client-charter',        hint: 'Engagement principles' },
+      { code: 'A/05', label: 'Careers',             href: '/careers',               hint: 'Open positions' },
     ],
   },
   {
@@ -40,8 +40,16 @@ const dropdowns = [
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openMenu, setOpenMenu] = useState(null);
+  const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
   const menuRefs = useRef({});
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 8);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
   useEffect(() => {
     setMobileOpen(false);
@@ -70,7 +78,7 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 h-[64px] z-[1000] bg-[rgb(var(--ink))/0.92] backdrop-blur-md border-b border-[rgb(var(--ivory))/0.08]">
+      <header className={`fixed top-0 left-0 right-0 h-[64px] z-[1000] transition-colors duration-200 border-b ${scrolled || mobileOpen || openMenu ? 'bg-[rgb(var(--ink))] border-[rgb(var(--ivory))/0.14]' : 'bg-[rgb(var(--ink))/0.55] backdrop-blur-md border-transparent'}`}>
         <nav aria-label="Primary" className="arch h-full flex items-center justify-between gap-6">
           <Link to="/" aria-label="Concord Energy Strategies home" className="flex items-center gap-3 shrink-0">
             <img src="/assets/concord-logo.svg" alt="" aria-hidden="true" width="120" height="28" className="h-6 w-auto invert brightness-0 opacity-90" />
