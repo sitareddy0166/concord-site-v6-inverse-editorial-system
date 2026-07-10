@@ -1,111 +1,125 @@
-import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { LinkedinLogo, InstagramLogo, YoutubeLogo } from '@phosphor-icons/react';
+import { LinkedinLogo, InstagramLogo, YoutubeLogo, ArrowUpRight } from '@phosphor-icons/react';
+
+const cols = [
+  {
+    label: 'Services',
+    items: [
+      { label: '179D Tax Deduction', href: '/179d-tax-deduction' },
+      { label: 'PWA Compliance', href: '/prevailing-wage-apprenticeship' },
+      { label: 'Direct Pay (6417)', href: '/direct-pay' },
+      { label: 'Transferable Credits (6418)', href: '/transferable-tax-credits' },
+      { label: 'R&D Tax Credits', href: '/rd-tax-credits' },
+    ],
+  },
+  {
+    label: 'Firm',
+    items: [
+      { label: 'Why Us', href: '/why-us' },
+      { label: 'Who We Are', href: '/who-we-are' },
+      { label: 'The Concord Standard', href: '/the-concord-standard' },
+      { label: 'Client Charter', href: '/client-charter' },
+      { label: 'Careers', href: '/careers' },
+    ],
+  },
+  {
+    label: 'Insights',
+    items: [
+      { label: 'News & Articles', href: '/resources?content=News' },
+      { label: 'Case Studies', href: '/resources?content=Case+Studies' },
+      { label: 'Whitepapers', href: '/whitepaper' },
+      { label: 'Deadlines', href: '/resources?content=Deadlines' },
+      { label: 'OBBBA', href: '/obbba-deadline' },
+    ],
+  },
+];
 
 export default function Footer() {
-  const [email, setEmail] = useState('');
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setEmail('');
-  };
-
   return (
-    <footer className="bg-concord-dark relative">
-      {/* Main Footer */}
-      <div className="max-w-[1200px] mx-auto px-6 py-[80px] relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-          {/* Brand */}
-          <div>
-            <Link to="/" className="flex items-center mb-5">
-              <img src="/assets/concord-logo.svg" alt="Concord Energy Strategies" width="120" height="32" className="h-8 w-auto brightness-0 invert" />
-            </Link>
-            <p className="text-[14px] text-white/50 leading-relaxed mb-6">Compliance-driven tax incentive experts helping organizations maximize clean energy savings.</p>
-            <div className="flex items-center gap-4">
-              <a href="https://www.linkedin.com/company/283486" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white/60 hover:bg-concord-green hover:text-white transition-colors" aria-label="LinkedIn">
-                <LinkedinLogo size={18} weight="bold" />
-              </a>
-              <a href="https://www.instagram.com/concordenergystrategies/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white/60 hover:bg-concord-green hover:text-white transition-colors" aria-label="Instagram">
-                <InstagramLogo size={18} weight="bold" />
-              </a>
-              <a href="https://www.youtube.com/@Concordenergystrategies" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white/60 hover:bg-concord-green hover:text-white transition-colors" aria-label="YouTube">
-                <YoutubeLogo size={18} weight="bold" />
-              </a>
+    <footer className="surface-ink border-t border-[rgb(var(--ivory))/0.08]">
+      {/* Coordinate marks band */}
+      <div className="arch pt-16 pb-10 relative">
+        <span className="coord absolute top-4 left-6 text-[rgb(var(--ivory))/0.4]" aria-hidden="true" />
+        <span className="coord absolute top-4 right-6 text-[rgb(var(--ivory))/0.4]" aria-hidden="true" />
+
+        {/* Manifesto row */}
+        <div className="grid lg:grid-cols-12 gap-10 lg:gap-16">
+          <div className="lg:col-span-5">
+            <div className="flex items-center gap-3 mb-6">
+              <img src="/assets/concord-logo.svg" alt="Concord Energy Strategies" width="132" height="30" className="h-7 w-auto invert brightness-0 opacity-90" />
+            </div>
+            <p className="h-chapter text-balance mb-6 max-w-md">
+              Compliance-driven advisory for the clean energy tax code.
+            </p>
+            <p className="text-[14px] text-[rgb(var(--ivory))/0.6] leading-relaxed max-w-md">
+              Concord Energy Strategies partners with commercial building owners, ESCOs, designers, and tax-exempt entities to identify, substantiate, and monetize federal clean energy incentives.
+            </p>
+
+            <div className="mt-8">
+              <p className="tech-label mb-3">Correspond</p>
+              <ul className="text-[14px] text-[rgb(var(--ivory))/0.75] space-y-1.5">
+                <li>
+                  <a href="mailto:info@concordenergy.com" className="ed-link">info@concordenergy.com</a>
+                </li>
+                <li>
+                  <a href="tel:+15023849078" className="ed-link">(502) 384-9078</a>
+                </li>
+                <li className="text-[rgb(var(--ivory))/0.55] pt-1">
+                  6000 Brownsboro Park Blvd, Suite H<br />Louisville, KY 40207
+                </li>
+              </ul>
             </div>
           </div>
 
-          {/* Incentives */}
-          <div>
-            <p className="font-heading font-bold text-[14px] uppercase tracking-[0.1em] text-white/40 mb-5">Incentives</p>
-            <ul className="flex flex-col gap-3">
-              <li><Link to="/179d-tax-deduction" className="text-[14px] text-white/60 hover:text-white transition-colors">179D Tax Deduction</Link></li>
-              <li><Link to="/prevailing-wage-apprenticeship" className="text-[14px] text-white/60 hover:text-white transition-colors">PWA Compliance</Link></li>
-              <li><Link to="/direct-pay" className="text-[14px] text-white/60 hover:text-white transition-colors">Direct Pay (6417)</Link></li>
-              <li><Link to="/transferable-tax-credits" className="text-[14px] text-white/60 hover:text-white transition-colors">Transferable Credits (6418)</Link></li>
-              <li><Link to="/rd-tax-credits" className="text-[14px] text-white/60 hover:text-white transition-colors">R&D Tax Credits</Link></li>
-            </ul>
-          </div>
-
-          {/* About */}
-          <div>
-            <p className="font-heading font-bold text-[14px] uppercase tracking-[0.1em] text-white/40 mb-5">About</p>
-            <ul className="flex flex-col gap-3">
-              <li><Link to="/why-us" className="text-[14px] text-white/60 hover:text-white transition-colors">Why Us</Link></li>
-              <li><Link to="/who-we-are" className="text-[14px] text-white/60 hover:text-white transition-colors">Who We Are</Link></li>
-              <li><Link to="/the-concord-standard" className="text-[14px] text-white/60 hover:text-white transition-colors">The Concord Standard</Link></li>
-              <li><Link to="/client-charter" className="text-[14px] text-white/60 hover:text-white transition-colors">Client Charter</Link></li>
-              <li><Link to="/careers" className="text-[14px] text-white/60 hover:text-white transition-colors">Careers</Link></li>
-            </ul>
-          </div>
-
-          {/* Insights */}
-          <div>
-            <p className="font-heading font-bold text-[14px] uppercase tracking-[0.1em] text-white/40 mb-5">Insights</p>
-            <ul className="flex flex-col gap-3">
-              <li><Link to="/resources?content=News" className="text-[14px] text-white/60 hover:text-white transition-colors">News & Articles</Link></li>
-              <li><Link to="/resources?content=Case+Studies" className="text-[14px] text-white/60 hover:text-white transition-colors">Case Studies</Link></li>
-              <li><Link to="/whitepaper" className="text-[14px] text-white/60 hover:text-white transition-colors">Whitepapers</Link></li>
-              <li><Link to="/resources?content=Deadlines" className="text-[14px] text-white/60 hover:text-white transition-colors">Deadlines</Link></li>
-              <li><Link to="/contact" className="text-[14px] text-white/60 hover:text-white transition-colors">Contact Us</Link></li>
-            </ul>
-          </div>
+          <nav aria-label="Footer" className="lg:col-span-7 grid grid-cols-2 md:grid-cols-3 gap-8">
+            {cols.map((col) => (
+              <div key={col.label}>
+                <p className="tech-label mb-4">{col.label}</p>
+                <ul className="space-y-2.5">
+                  {col.items.map((it) => (
+                    <li key={it.href}>
+                      <Link to={it.href} className="text-[14px] text-[rgb(var(--ivory))/0.75] hover:text-[rgb(var(--concord-glow))] transition-colors">
+                        {it.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </nav>
         </div>
       </div>
 
-      {/* Newsletter Bar */}
-      <div className="border-t border-white/10 relative z-10">
-        <div className="max-w-[1200px] mx-auto px-6 py-8">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            <div>
-              <p className="font-heading font-bold text-[16px] text-white mb-1">Stay informed on incentive updates</p>
-              <p className="text-[14px] text-white/50">Get the latest clean energy tax news delivered to your inbox.</p>
-            </div>
-            <form onSubmit={handleSubmit} className="flex w-full md:w-auto gap-3">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className="bg-concord-mint text-concord-dark placeholder:text-slate-400 rounded-full px-6 py-3 text-[14px] w-full md:w-[280px] outline-none focus:ring-2 focus:ring-concord-green"
-                aria-label="Email address for newsletter"
-              />
-              <button type="submit" className="rounded-full bg-white text-[#151C19] px-6 py-3 font-bold text-[14px] hover:-translate-y-[2px] hover:shadow-lg transition-all duration-300 shrink-0">
-                Subscribe
-              </button>
-            </form>
+      {/* Newsletter (honest state — no fake success) */}
+      <div className="border-t border-[rgb(var(--ivory))/0.08]">
+        <div className="arch py-8 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+          <div className="max-w-md">
+            <p className="tech-label mb-2">Field Notes</p>
+            <p className="text-[15px] text-[rgb(var(--ivory))/0.85]">
+              Deadlines, regulatory updates, and practitioner memos from the Concord team.
+            </p>
           </div>
+          <a
+            href="mailto:info@concordenergy.com?subject=Subscribe%20to%20Field%20Notes"
+            className="btn btn-outline"
+          >
+            Request Updates <ArrowUpRight size={14} weight="bold" />
+          </a>
         </div>
       </div>
 
-      {/* Copyright */}
-      <div className="border-t border-white/10 relative z-10">
-        <div className="max-w-[1200px] mx-auto px-6 py-[40px]">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-[13px] text-white/40">&copy; 2026 Concord Energy Strategies. All rights reserved.</p>
-            <div className="flex items-center gap-6">
-              <Link to="/privacy-policy" className="text-[13px] text-white/40 hover:text-white/60 transition-colors">Privacy Policy</Link>
-              <Link to="/terms-conditions" className="text-[13px] text-white/40 hover:text-white/60 transition-colors">Terms of Service</Link>
-            </div>
+      {/* Bottom */}
+      <div className="border-t border-[rgb(var(--ivory))/0.08]">
+        <div className="arch py-7 flex flex-col md:flex-row items-center justify-between gap-4">
+          <div className="flex items-center gap-4">
+            <a href="https://www.linkedin.com/company/283486" target="_blank" rel="noopener noreferrer" aria-label="Concord on LinkedIn" className="text-[rgb(var(--ivory))/0.55] hover:text-[rgb(var(--ivory))]"><LinkedinLogo size={18} weight="bold" /></a>
+            <a href="https://www.instagram.com/concordenergystrategies/" target="_blank" rel="noopener noreferrer" aria-label="Concord on Instagram" className="text-[rgb(var(--ivory))/0.55] hover:text-[rgb(var(--ivory))]"><InstagramLogo size={18} weight="bold" /></a>
+            <a href="https://www.youtube.com/@Concordenergystrategies" target="_blank" rel="noopener noreferrer" aria-label="Concord on YouTube" className="text-[rgb(var(--ivory))/0.55] hover:text-[rgb(var(--ivory))]"><YoutubeLogo size={18} weight="bold" /></a>
+          </div>
+          <p className="text-[12px] text-[rgb(var(--ivory))/0.45] tracking-wide">© 2026 Concord Energy Strategies. All rights reserved.</p>
+          <div className="flex items-center gap-6">
+            <Link to="/privacy-policy" className="text-[12px] text-[rgb(var(--ivory))/0.55] hover:text-[rgb(var(--ivory))]">Privacy</Link>
+            <Link to="/terms-conditions" className="text-[12px] text-[rgb(var(--ivory))/0.55] hover:text-[rgb(var(--ivory))]">Terms</Link>
           </div>
         </div>
       </div>

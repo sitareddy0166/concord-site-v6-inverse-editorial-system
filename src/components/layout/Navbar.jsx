@@ -1,153 +1,183 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Buildings, HardHat, HandCoins, ArrowsLeftRight, Flask, Star, UsersThree, SealCheck, Handshake, Briefcase, Newspaper, FolderOpen, FileText, Calendar, CaretDown, List, X } from '@phosphor-icons/react';
-
-const iconMap = {
-  Buildings, HardHat, HandCoins, ArrowsLeftRight, Flask,
-  Star, UsersThree, SealCheck, Handshake, Briefcase,
-  Newspaper, FolderOpen, FileText, Calendar,
-};
+import { CaretDown, List, X } from '@phosphor-icons/react';
 
 const dropdowns = [
   {
     label: 'Services',
     href: '/#services',
     items: [
-      { label: '179D Tax Deduction', href: '/179d-tax-deduction', icon: 'Buildings' },
-      { label: 'PWA Compliance', href: '/prevailing-wage-apprenticeship', icon: 'HardHat' },
-      { label: 'Direct Pay (6417)', href: '/direct-pay', icon: 'HandCoins' },
-      { label: 'Transferable Credits (6418)', href: '/transferable-tax-credits', icon: 'ArrowsLeftRight' },
-      { label: 'R&D Tax Credits', href: '/rd-tax-credits', icon: 'Flask' },
+      { code: 'S/01', label: '179D Tax Deduction',            href: '/179d-tax-deduction',            hint: 'Energy-efficient commercial buildings' },
+      { code: 'S/02', label: 'PWA Compliance',                href: '/prevailing-wage-apprenticeship', hint: 'Prevailing wage and apprenticeship' },
+      { code: 'S/03', label: 'Direct Pay (6417)',             href: '/direct-pay',                    hint: 'Tax-exempt entity cash payments' },
+      { code: 'S/04', label: 'Transferable Credits (6418)',   href: '/transferable-tax-credits',       hint: 'Credit sale and purchase' },
+      { code: 'S/05', label: 'R&D Tax Credits',               href: '/rd-tax-credits',                hint: 'Innovation cost recovery' },
     ],
   },
   {
-    label: 'About Us',
+    label: 'Firm',
     href: '/why-us',
     items: [
-      { label: 'Why Us', href: '/why-us', icon: 'Star' },
-      { label: 'Who We Are', href: '/who-we-are', icon: 'UsersThree' },
-      { label: 'The Concord Standard', href: '/the-concord-standard', icon: 'SealCheck' },
-      { label: 'Client Charter', href: '/client-charter', icon: 'Handshake' },
-      { label: 'Careers', href: '/careers', icon: 'Briefcase' },
+      { code: 'F/01', label: 'Why Us',              href: '/why-us',                hint: 'Standards and results' },
+      { code: 'F/02', label: 'Who We Are',          href: '/who-we-are',            hint: 'People and history' },
+      { code: 'F/03', label: 'The Concord Standard', href: '/the-concord-standard', hint: 'Six-stage process' },
+      { code: 'F/04', label: 'Client Charter',       href: '/client-charter',        hint: 'Engagement principles' },
+      { code: 'F/05', label: 'Careers',             href: '/careers',               hint: 'Open positions' },
     ],
   },
   {
     label: 'Insights',
     href: '/resources',
     items: [
-      { label: 'News & Articles', href: '/resources?content=News', icon: 'Newspaper' },
-      { label: 'Case Studies', href: '/resources?content=Case+Studies', icon: 'FolderOpen' },
-      { label: 'Whitepapers', href: '/whitepaper', icon: 'FileText' },
-      { label: 'Deadlines', href: '/resources?content=Deadlines', icon: 'Calendar' },
+      { code: 'I/01', label: 'News & Articles', href: '/resources?content=News',          hint: 'Field notes and updates' },
+      { code: 'I/02', label: 'Case Studies',    href: '/resources?content=Case+Studies',  hint: 'Client engagements' },
+      { code: 'I/03', label: 'Whitepapers',     href: '/whitepaper',                       hint: 'Long-form guides' },
+      { code: 'I/04', label: 'Deadlines',       href: '/resources?content=Deadlines',      hint: 'Filing windows' },
     ],
   },
 ];
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [openMenu, setOpenMenu] = useState(null);
   const location = useLocation();
+  const menuRefs = useRef({});
 
   useEffect(() => {
     setMobileOpen(false);
+    setOpenMenu(null);
     document.body.style.overflow = '';
   }, [location.pathname]);
 
-  const toggleMobile = () => {
-    setMobileOpen(!mobileOpen);
-    document.body.style.overflow = !mobileOpen ? 'hidden' : '';
-  };
+  useEffect(() => {
+    const onKey = (e) => { if (e.key === 'Escape') setOpenMenu(null); };
+    const onClick = (e) => {
+      if (openMenu && menuRefs.current[openMenu] && !menuRefs.current[openMenu].contains(e.target)) {
+        setOpenMenu(null);
+      }
+    };
+    document.addEventListener('keydown', onKey);
+    document.addEventListener('mousedown', onClick);
+    return () => { document.removeEventListener('keydown', onKey); document.removeEventListener('mousedown', onClick); };
+  }, [openMenu]);
+
+  const toggleMobile = useCallback(() => {
+    setMobileOpen((v) => {
+      document.body.style.overflow = !v ? 'hidden' : '';
+      return !v;
+    });
+  }, []);
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 h-[72px] bg-white/85 backdrop-blur-[20px] border-b border-black/[0.06] z-[1000] flex items-center">
-        <nav aria-label="Main navigation" className="max-w-[1200px] mx-auto px-6 w-full flex items-center justify-between">
-          <Link to="/" className="flex items-center shrink-0 focus:outline-none focus-visible:ring-2 focus-visible:ring-concord-green rounded">
-            <img src="/assets/concord-logo.svg" alt="Concord Energy Strategies" width="120" height="32" className="h-8 w-auto" />
+      <header className="fixed top-0 left-0 right-0 h-[64px] z-[1000] bg-[rgb(var(--ink))/0.92] backdrop-blur-md border-b border-[rgb(var(--ivory))/0.08]">
+        <nav aria-label="Primary" className="arch h-full flex items-center justify-between gap-6">
+          <Link to="/" aria-label="Concord Energy Strategies home" className="flex items-center gap-3 shrink-0">
+            <img src="/assets/concord-logo.svg" alt="" aria-hidden="true" width="120" height="28" className="h-6 w-auto invert brightness-0 opacity-90" />
+            <span className="sr-only">Concord Energy Strategies</span>
+            <span aria-hidden="true" className="hidden sm:inline text-[10px] tracking-[0.24em] uppercase text-[rgb(var(--ivory))/0.5] font-mono border-l border-[rgb(var(--ivory))/0.15] pl-3 ml-1" style={{ fontFamily: 'JetBrains Mono, monospace' }}>
+              Est. 2009 &middot; Louisville KY
+            </span>
           </Link>
 
-          {/* Desktop Nav */}
-          <div className="hidden lg:flex items-center gap-8">
-            <Link to="/the-concord-standard" className="text-[15px] font-medium text-slate-600 hover:text-concord-green focus:outline-none focus-visible:text-concord-green focus-visible:underline underline-offset-4 transition-colors">
-              The Concord Standard
-            </Link>
-
-            {dropdowns.map((dropdown) => (
-              <div key={dropdown.label} className="nav-item relative group">
-                <Link
-                  to={dropdown.href}
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                  className="text-[15px] font-medium text-slate-600 hover:text-concord-green focus:outline-none focus-visible:text-concord-green focus-visible:underline underline-offset-4 transition-colors flex items-center gap-1"
-                >
-                  {dropdown.label} <CaretDown size={12} aria-hidden="true" />
-                </Link>
-                <div className="nav-dropdown absolute top-full left-1/2 -translate-x-1/2 pt-3 z-[1001]" role="menu">
-                  <div className="w-[280px] bg-white rounded-3xl shadow-xl border border-black/[0.06] p-4">
-                    {dropdown.items.map((item) => {
-                      const Icon = iconMap[item.icon];
-                      return (
-                        <Link
-                          key={item.href}
-                          to={item.href}
-                          role="menuitem"
-                          className="flex items-center gap-3 px-4 py-3 rounded-2xl hover:bg-concord-mint focus:outline-none focus-visible:bg-concord-mint transition-colors"
-                        >
-                          {Icon && <Icon size={18} className="text-concord-green" aria-hidden="true" />}
-                          <span className="text-[14px] font-medium text-concord-dark">{item.label}</span>
-                        </Link>
-                      );
-                    })}
-                  </div>
+          <div className="hidden lg:flex items-center gap-1">
+            {dropdowns.map((d) => {
+              const isOpen = openMenu === d.label;
+              return (
+                <div key={d.label} className="relative" ref={(el) => (menuRefs.current[d.label] = el)}>
+                  <button
+                    type="button"
+                    aria-haspopup="menu"
+                    aria-expanded={isOpen}
+                    onClick={() => setOpenMenu(isOpen ? null : d.label)}
+                    className="nav-link inline-flex items-center gap-1 px-3 py-2"
+                  >
+                    {d.label}
+                    <CaretDown size={10} weight="bold" aria-hidden="true" className={`transition-transform ${isOpen ? 'rotate-180' : ''}`} />
+                  </button>
+                  {isOpen && (
+                    <div role="menu" className="absolute top-full left-0 mt-1 w-[340px] bg-[rgb(var(--graphite))] border border-[rgb(var(--ivory))/0.10] shadow-2xl">
+                      <div className="px-4 py-2 border-b border-[rgb(var(--ivory))/0.08] flex items-center justify-between">
+                        <span className="tech-label">Index &nbsp;/&nbsp; {d.label}</span>
+                        <span className="tech-label tech-label--dim">0{d.items.length}</span>
+                      </div>
+                      <ul className="py-1">
+                        {d.items.map((it) => (
+                          <li key={it.href}>
+                            <Link
+                              to={it.href}
+                              role="menuitem"
+                              className="flex items-baseline gap-3 px-4 py-3 group hover:bg-[rgb(var(--ivory))/0.04]"
+                              onClick={() => setOpenMenu(null)}
+                            >
+                              <span className="index-num shrink-0 w-10">{it.code}</span>
+                              <span className="flex-1">
+                                <span className="block text-[14px] font-medium text-[rgb(var(--ivory))] group-hover:text-[rgb(var(--concord-glow))]">
+                                  {it.label}
+                                </span>
+                                <span className="block text-[12px] text-[rgb(var(--ivory))/0.5] mt-0.5">{it.hint}</span>
+                              </span>
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
                 </div>
-              </div>
-            ))}
+              );
+            })}
+            <Link to="/the-concord-standard" className="nav-link px-3 py-2">The Concord Standard</Link>
+            <Link to="/obbba-deadline" className="nav-link px-3 py-2 text-[rgb(var(--brass))] hover:text-[rgb(var(--brass))]">OBBBA</Link>
           </div>
 
-          {/* Desktop CTA */}
           <div className="hidden lg:flex items-center gap-3 shrink-0">
-            <Link to="/contact" className="text-[14px] font-bold text-concord-dark border border-concord-dark/20 rounded-full px-6 py-2.5 hover:-translate-y-[2px] hover:shadow-lg transition-all duration-300">
-              Contact
-            </Link>
-            <Link to="/start-the-conversation" className="text-[14px] font-bold text-white bg-[#151C19] rounded-full px-6 py-2.5 hover:-translate-y-[2px] hover:shadow-lg transition-all duration-300">
-              Start the Conversation
+            <Link to="/contact" className="nav-link px-2">Contact</Link>
+            <Link
+              to="/start-the-conversation"
+              className="btn btn-primary"
+            >
+              Start<span aria-hidden="true"> →</span>
             </Link>
           </div>
 
-          {/* Mobile Hamburger */}
-          <button onClick={toggleMobile} className="lg:hidden p-2" aria-label="Toggle navigation menu">
-            {mobileOpen ? <X size={24} className="text-concord-dark" /> : <List size={24} className="text-concord-dark" />}
+          <button
+            onClick={toggleMobile}
+            className="lg:hidden p-2 -mr-2 text-[rgb(var(--ivory))]"
+            aria-label={mobileOpen ? 'Close navigation menu' : 'Open navigation menu'}
+            aria-expanded={mobileOpen}
+          >
+            {mobileOpen ? <X size={22} weight="bold" /> : <List size={22} weight="bold" />}
           </button>
         </nav>
       </header>
 
-      {/* Mobile Menu */}
-      <div className={`mobile-menu fixed inset-0 z-[999] bg-white pt-[72px] overflow-y-auto lg:hidden ${mobileOpen ? 'open' : ''}`}>
-        <div className="px-6 py-8 flex flex-col gap-6">
-          <Link to="/the-concord-standard" className="text-lg font-heading font-bold text-concord-dark">The Concord Standard</Link>
-
-          {dropdowns.map((dropdown) => (
-            <div key={dropdown.label}>
-              <p className="text-[13px] uppercase tracking-[0.1em] font-bold text-concord-green mb-3">{dropdown.label}</p>
-              <div className="flex flex-col gap-2 pl-4">
-                {dropdown.items.map((item) => (
-                  <Link key={item.href} to={item.href} className="text-[15px] text-slate-600 hover:text-concord-green">
-                    {item.label}
-                  </Link>
-                ))}
+      {mobileOpen && (
+        <div className="fixed inset-0 z-[999] pt-[64px] bg-[rgb(var(--ink))] lg:hidden overflow-y-auto">
+          <div className="arch py-10 flex flex-col gap-8">
+            {dropdowns.map((d) => (
+              <div key={d.label}>
+                <p className="tech-label mb-3">{d.label}</p>
+                <ul className="flex flex-col divide-y divide-[rgb(var(--ivory))/0.08] border-y border-[rgb(var(--ivory))/0.08]">
+                  {d.items.map((it) => (
+                    <li key={it.href}>
+                      <Link to={it.href} className="flex items-baseline gap-3 py-3">
+                        <span className="index-num w-10">{it.code}</span>
+                        <span className="text-[15px] text-[rgb(var(--ivory))]">{it.label}</span>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
               </div>
+            ))}
+            <div className="flex flex-col gap-3 pt-4">
+              <Link to="/the-concord-standard" className="nav-link py-2">The Concord Standard</Link>
+              <Link to="/obbba-deadline" className="nav-link py-2 text-[rgb(var(--brass))]">OBBBA Deadlines</Link>
+              <Link to="/contact" className="btn btn-outline mt-3 justify-center">Contact</Link>
+              <Link to="/start-the-conversation" className="btn btn-primary justify-center">Start the Conversation</Link>
             </div>
-          ))}
-
-          <div className="flex flex-col gap-3 pt-4 border-t border-black/[0.06]">
-            <Link to="/contact" className="text-center text-[14px] font-bold text-concord-dark border border-concord-dark/20 rounded-full px-6 py-3">
-              Contact
-            </Link>
-            <Link to="/start-the-conversation" className="text-center text-[14px] font-bold text-white bg-[#151C19] rounded-full px-6 py-3">
-              Start the Conversation
-            </Link>
           </div>
         </div>
-      </div>
+      )}
     </>
   );
 }

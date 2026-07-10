@@ -10,10 +10,7 @@ export default function Layout() {
     if (hash) {
       const id = hash.replace('#', '');
       setTimeout(() => {
-        const el = document.getElementById(id);
-        if (el) {
-          el.scrollIntoView({ behavior: 'smooth' });
-        }
+        document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
       }, 100);
     } else {
       window.scrollTo(0, 0);
@@ -21,9 +18,15 @@ export default function Layout() {
   }, [pathname, hash]);
 
   return (
-    <div style={{ overflowX: 'clip' }}>
+    <div className="min-h-dvh bg-[rgb(var(--ink))] text-[rgb(var(--ivory))]">
+      <a
+        href="#main"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[1200] focus:bg-[rgb(var(--concord))] focus:text-[rgb(var(--ink))] focus:px-4 focus:py-2 focus:font-semibold"
+      >
+        Skip to content
+      </a>
       <Navbar />
-      <main className="pt-[72px]">
+      <main id="main" className="pt-[64px]">
         <Outlet />
       </main>
       <Footer />
