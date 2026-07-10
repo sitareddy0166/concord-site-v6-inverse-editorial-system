@@ -78,6 +78,7 @@ export default function Careers() {
   ]);
 
   return (
+    <div className="about-shell v6">
     <>
       <SEOHead
         title="Careers"
@@ -322,5 +323,6 @@ export default function Careers() {
         </div>
       </section>
     </>
+    </div>
   );
 }

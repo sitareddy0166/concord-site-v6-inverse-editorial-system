@@ -71,6 +71,7 @@ export default function WhyUs() {
   const faqSchema = generateFAQSchema(faqs);
 
   return (
+    <div className="about-shell v6">
     <>
       <SEOHead
         title="Why Choose Concord | Concord Energy Strategies"
@@ -410,6 +411,7 @@ export default function WhyUs() {
         </div>
       </section>
     </>
+    </div>
   );
 }
 

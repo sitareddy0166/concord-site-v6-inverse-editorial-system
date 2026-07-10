@@ -75,6 +75,7 @@ export default function ClientCharter() {
   const faqSchema = generateFAQSchema(faqs);
 
   return (
+    <div className="about-shell v6">
     <>
       <SEOHead
         title="Client Charter | Concord Energy Strategies"
@@ -320,5 +321,6 @@ export default function ClientCharter() {
         </div>
       </section>
     </>
+    </div>
   );
 }
