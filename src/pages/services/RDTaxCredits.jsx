@@ -242,7 +242,7 @@ export default function RDTaxCredits() {
                     <p className="text-slate-500 text-base leading-relaxed">{step.desc}</p>
                   </div>
                   <div className={`lg:w-1/2 ${isEven ? 'lg:pl-16' : 'lg:pr-16'}`}>
-                    <img src={step.img} alt={step.alt} loading="lazy" width="600" height="400" className="rounded-3xl shadow-md w-full object-cover aspect-[3/2]" />
+                    {step.img ? (<img src={step.img} alt={step.alt} loading="lazy" width="600" height="400" className="rounded-3xl shadow-md w-full object-cover aspect-[3/2]" />) : (<div role="img" aria-label={step.alt} className="bg-[rgb(var(--graphite))] blueprint-grid-fine border border-[rgb(var(--ivory))/0.10] aspect-[3/2] w-full" />)}
                   </div>
                 </ScrollFadeIn>
               );
