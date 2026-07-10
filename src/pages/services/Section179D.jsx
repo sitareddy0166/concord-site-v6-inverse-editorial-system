@@ -29,6 +29,7 @@ import VideoExplainer from '@/components/sections/VideoExplainer';
 import CTABanner from '@/components/sections/CTABanner';
 import FaqAccordion from '@/components/sections/FaqAccordion';
 import BookingCard from '@/components/ui/BookingCard';
+import ServiceHero from '@/components/sections/ServiceHero';
 
 const stickyNavItems = [
   { label: 'What Is 179D?', href: '#what-is-179d' },
@@ -103,46 +104,33 @@ export default function Section179D() {
         ],
       })} />
 
-      {/* Breadcrumbs */}
-      <div className="pt-[20px] bg-concord-cream">
-        <div className="max-w-[1200px] mx-auto px-6">
-          <nav aria-label="Breadcrumb" className="text-sm text-concord-dark/50 font-medium flex items-center gap-2">
-            <Link to="/" className="hover:text-concord-green transition-colors">Home</Link>
-            <CaretRight size={12} />
-            <Link to="/#services" className="hover:text-concord-green transition-colors">Services</Link>
-            <CaretRight size={12} />
-            <span className="text-concord-dark">179D Tax Deduction</span>
-          </nav>
-        </div>
-      </div>
+      <ServiceHero
+        code="S/01"
+        eyebrow="Section 179D"
+        title="179D Tax Deduction"
+        lastUpdated="July 2026"
+        primaryCta={{ label: 'Start Your 179D Claim', href: '/contact' }}
+        lede={<>The Section 179D tax deduction rewards building owners, architects, engineers, contractors, and developers who invest in energy-efficient properties. Concord helps you claim up to <strong className="text-[rgb(var(--ivory))]">$5.94 per square foot</strong> in federal tax savings with an industry-leading audit track record, backed by <Link to="/the-concord-standard" className="ed-link">The Concord Standard</Link>.</>}
+        stats={[
+          { value: '$5.94/sf', label: 'Maximum deduction', note: 'With PWA compliance' },
+          { value: '25%+',     label: 'Minimum energy savings', note: 'To qualify' },
+          { value: '3 yrs',    label: 'Retroactive claim window' },
+        ]}
+      />
 
-      <p className="text-xs text-slate-400 mt-1 max-w-[1200px] mx-auto px-6 pb-2 bg-concord-cream">Last Updated: July 2026</p>
-
-      {/* Hero */}
-      <section className="pt-4 pb-[40px] lg:pb-[48px] bg-concord-cream relative overflow-hidden">
-        <div className="max-w-[1200px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
-          <ScrollFadeIn>
-            <p className="text-[13px] uppercase tracking-[0.1em] font-bold text-concord-green mb-4">179D Tax Deduction</p>
-            <h1 className="font-heading font-extrabold text-[36px] lg:text-[52px] tracking-[-0.03em] leading-[1.1] text-balance mb-6">
-              Maximize Energy-Efficient Building Tax Savings.
-            </h1>
-            <p className="hero-description text-base md:text-lg text-slate-500 font-body max-w-xl mb-10 leading-relaxed">
-              The Section 179D tax deduction rewards building owners, architects, engineers, contractors, and developers who invest in energy-efficient properties. Concord helps you claim up to <strong className="text-concord-dark">$5.94 per square foot</strong> in federal tax savings with an industry-leading audit track record, backed by <Link to="/the-concord-standard" className="text-concord-green font-semibold hover:underline">The Concord Standard</Link>.
+      {/* Discovery scheduler */}
+      <section className="surface-ivory band-sm" aria-label="Schedule a discovery call">
+        <div className="arch grid lg:grid-cols-12 gap-10 items-start">
+          <div className="lg:col-span-5">
+            <p className="tech-label" style={{ color: 'rgb(var(--concord))' }}>Discovery · 30 min</p>
+            <h2 className="h-lead mt-4" style={{ color: 'rgb(var(--ink))' }}>Meet with a 179D practitioner.</h2>
+            <p className="mt-4 text-[15px] text-[rgb(var(--ink))/0.7] max-w-md">
+              Bring your building type, square footage, and construction dates. We will walk you through eligibility, timelines, and next steps.
             </p>
-            <div className="flex flex-wrap items-center gap-4">
-              <Link to="/contact" className="bg-[#151C19] text-white px-8 py-3.5 rounded-full text-sm font-bold tracking-wide inline-flex items-center gap-2 hover:-translate-y-[2px] hover:shadow-lg transition-all duration-300">
-                Start Your 179D Claim <ArrowRight size={16} />
-              </Link>
-              <a href="https://www.concordlp.com/meetings/jonathan-darnell" className="px-8 py-3.5 rounded-full text-sm font-bold tracking-wide border border-[#151C19]/20 text-[#151C19] hover:-translate-y-[2px] hover:shadow-lg transition-all duration-300">
-                Book a Discovery Call
-              </a>
-            </div>
-          </ScrollFadeIn>
-
-          {/* Right: Booking Calendar */}
-          <ScrollFadeIn className="w-full">
+          </div>
+          <div className="lg:col-span-7">
             <BookingCard />
-          </ScrollFadeIn>
+          </div>
         </div>
       </section>
 

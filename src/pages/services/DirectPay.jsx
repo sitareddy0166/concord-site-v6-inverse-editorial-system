@@ -156,67 +156,20 @@ export default function DirectPay() {
         ],
       })} />
 
-      {/* Breadcrumbs */}
-      <div className="pt-[20px] bg-concord-cream">
-        <div className="max-w-[1200px] mx-auto px-6">
-          <nav aria-label="Breadcrumb" className="text-sm text-concord-dark/50 font-medium flex items-center gap-2">
-            <Link to="/" className="hover:text-concord-green transition-colors">Home</Link>
-            <CaretRight size={12} />
-            <Link to="/#services" className="hover:text-concord-green transition-colors">Services</Link>
-            <CaretRight size={12} />
-            <span className="text-concord-dark">Direct Pay</span>
-          </nav>
-        </div>
-      </div>
-
-      <p className="text-xs text-slate-400 mt-1 max-w-[1200px] mx-auto px-6 pb-2 bg-concord-cream">Last reviewed: April 2026</p>
-
-      {/* Hero */}
-      <section className="pt-4 pb-[40px] lg:pb-[48px] bg-concord-cream relative overflow-hidden">
-        <div className="max-w-[1200px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
-          <ScrollFadeIn>
-            <p className="text-[13px] uppercase tracking-[0.1em] font-bold text-concord-green mb-4">Section 6417 Direct Pay</p>
-            <h1 className="font-heading font-extrabold text-[36px] lg:text-[52px] tracking-[-0.03em] leading-[1.1] text-balance mb-6">
-              Turn Tax Credits Into Direct Cash Payments.
-            </h1>
-            <p className="hero-description text-base md:text-lg text-slate-500 font-body max-w-xl mb-10 leading-relaxed">
-              For the first time, tax-exempt entities can receive clean energy tax credits as direct cash payments from the U.S. Treasury. Concord helps municipalities, nonprofits, and tribal governments navigate Section 6417 to unlock millions in new funding. Eligible entities can combine Direct Pay with the <Link to="/179d-tax-deduction" className="text-concord-green font-semibold hover:underline">179D deduction</Link> and <Link to="/transferable-tax-credits" className="text-concord-green font-semibold hover:underline">transferable credits</Link> for maximum benefit.
-            </p>
-            <div className="flex flex-wrap items-center gap-4">
-              <Link to="/contact" className="bg-[#151C19] text-white px-8 py-3.5 rounded-full text-sm font-bold tracking-wide inline-flex items-center gap-2 hover:-translate-y-[2px] hover:shadow-lg transition-all duration-300">
-                Check Your Eligibility <ArrowRight size={16} />
-              </Link>
-              <a href="https://www.concordlp.com/meetings/jonathan-darnell" className="px-8 py-3.5 rounded-full text-sm font-bold tracking-wide border border-[#151C19]/20 text-[#151C19] hover:-translate-y-[2px] hover:shadow-lg transition-all duration-300">
-                Book a Discovery Call
-              </a>
-            </div>
-          </ScrollFadeIn>
-
-          {/* Right: Stat Cards */}
-          <ScrollFadeIn className="hidden lg:flex flex-col gap-4">
-            <div className="rounded-2xl px-6 py-5 bg-gradient-to-br from-concord-green to-emerald-600 text-white shadow-lg">
-              <p className="text-2xl font-heading font-extrabold leading-none mb-1">Refundable</p>
-              <p className="text-sm font-semibold text-white/90">Cash from Treasury</p>
-              <p className="text-xs text-white/60">Direct Payment</p>
-            </div>
-            <div className="rounded-2xl px-6 py-5 bg-[#151C19] text-white shadow-lg">
-              <p className="text-3xl font-heading font-extrabold leading-none mb-1">11</p>
-              <p className="text-sm font-semibold text-white/90">Eligible Credits</p>
-              <p className="text-xs text-white/60">Under Section 6417</p>
-            </div>
-            <div className="rounded-2xl px-6 py-5 bg-concord-cream border border-black/[0.06] shadow-lg">
-              <p className="text-3xl font-heading font-extrabold text-concord-dark leading-none mb-1">$3.2M</p>
-              <p className="text-sm font-semibold text-concord-dark/80">Average Claim</p>
-              <p className="text-xs text-slate-500">Tax-Exempt Entities</p>
-            </div>
-            <div className="rounded-2xl px-6 py-5 bg-white border border-black/[0.06] shadow-lg">
-              <p className="text-3xl font-heading font-extrabold text-concord-green leading-none mb-1">5 Yrs</p>
-              <p className="text-sm font-semibold text-concord-dark/80">Election Window</p>
-              <p className="text-xs text-slate-500">Tax Years 2023 to 2027</p>
-            </div>
-          </ScrollFadeIn>
-        </div>
-      </section>
+      <ServiceHero
+        code="S/03"
+        eyebrow="Section 6417 Direct Pay"
+        title="Turn Tax Credits Into Direct Cash Payments"
+        lastUpdated="April 2026"
+        primaryCta={{ label: 'Check Your Eligibility', href: '/contact' }}
+        lede={<>For the first time, tax-exempt entities can receive clean energy tax credits as direct cash payments from the U.S. Treasury. Concord helps municipalities, nonprofits, and tribal governments navigate Section 6417 to unlock millions in new funding. Eligible entities can combine Direct Pay with the <Link to="/179d-tax-deduction" className="ed-link">179D deduction</Link> and <Link to="/transferable-tax-credits" className="ed-link">transferable credits</Link> for maximum benefit.</>}
+        stats={[
+          { value: 'Refundable', label: 'Cash from Treasury', note: 'Direct Payment' },
+          { value: '11',          label: 'Eligible credits',    note: 'Under Section 6417' },
+          { value: '$3.2M',       label: 'Average claim',       note: 'Tax-exempt entities' },
+          { value: '5 yrs',       label: 'Election window',     note: 'Tax years 2023 to 2027' },
+        ]}
+      />
 
       <StickyNav items={stickyNavItems} />
 

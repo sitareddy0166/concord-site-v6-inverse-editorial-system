@@ -145,67 +145,20 @@ export default function TransferableCredits() {
         ],
       })} />
 
-      {/* Breadcrumbs */}
-      <div className="pt-[20px] bg-concord-cream">
-        <div className="max-w-[1200px] mx-auto px-6">
-          <nav aria-label="Breadcrumb" className="text-sm text-concord-dark/50 font-medium flex items-center gap-2">
-            <Link to="/" className="hover:text-concord-green transition-colors">Home</Link>
-            <CaretRight size={12} />
-            <Link to="/#services" className="hover:text-concord-green transition-colors">Services</Link>
-            <CaretRight size={12} />
-            <span className="text-concord-dark">Transferable Credits</span>
-          </nav>
-        </div>
-      </div>
-
-      <p className="text-xs text-slate-400 mt-1 max-w-[1200px] mx-auto px-6 pb-2 bg-concord-cream">Last reviewed: April 2026</p>
-
-      {/* Hero */}
-      <section className="pt-4 pb-[40px] lg:pb-[48px] bg-concord-cream relative overflow-hidden">
-        <div className="max-w-[1200px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
-          <ScrollFadeIn>
-            <p className="text-[13px] uppercase tracking-[0.1em] font-bold text-concord-green mb-4">Section 6418</p>
-            <h1 className="font-heading font-extrabold text-[36px] lg:text-[52px] tracking-[-0.03em] leading-[1.1] text-balance mb-6">
-              Monetize Your Clean Energy Tax Credits.
-            </h1>
-            <p className="hero-description text-base md:text-lg text-slate-500 font-body max-w-xl mb-10 leading-relaxed">
-              Section 6418 created a new marketplace for <Link to="/transferable-tax-credits" className="text-concord-green font-semibold hover:underline">transferable tax credits</Link>. Whether you generate credits and need liquidity or have tax liability and want savings, Concord connects both sides with confidence.
-            </p>
-            <div className="flex flex-wrap items-center gap-4">
-              <a href="#who-can-sell" className="bg-[#151C19] text-white px-8 py-3.5 rounded-full text-sm font-bold tracking-wide inline-flex items-center gap-2 hover:-translate-y-[2px] hover:shadow-lg transition-all duration-300">
-                Sell Credits <ArrowRight size={16} />
-              </a>
-              <a href="https://www.concordlp.com/meetings/jonathan-darnell" className="px-8 py-3.5 rounded-full text-sm font-bold tracking-wide border border-[#151C19]/20 text-[#151C19] hover:-translate-y-[2px] hover:shadow-lg transition-all duration-300">
-                Book a Discovery Call
-              </a>
-            </div>
-          </ScrollFadeIn>
-
-          {/* Right: Stat Cards */}
-          <ScrollFadeIn className="hidden lg:flex flex-col gap-4">
-            <div className="rounded-2xl px-6 py-5 bg-gradient-to-br from-concord-green to-emerald-600 text-white shadow-lg">
-              <p className="text-3xl font-heading font-extrabold leading-none mb-1">$10B+</p>
-              <p className="text-sm font-semibold text-white/90">Market Size</p>
-              <p className="text-xs text-white/60">Growing Rapidly</p>
-            </div>
-            <div className="rounded-2xl px-6 py-5 bg-[#151C19] text-white shadow-lg">
-              <p className="text-3xl font-heading font-extrabold leading-none mb-1">12</p>
-              <p className="text-sm font-semibold text-white/90">Eligible Credit Types</p>
-              <p className="text-xs text-white/60">Section 6418</p>
-            </div>
-            <div className="rounded-2xl px-6 py-5 bg-concord-cream border border-black/[0.06] shadow-lg">
-              <p className="text-3xl font-heading font-extrabold text-concord-dark leading-none mb-1">91-94&cent;</p>
-              <p className="text-sm font-semibold text-concord-dark/80">Average Price</p>
-              <p className="text-xs text-slate-500">Per Dollar of Credit</p>
-            </div>
-            <div className="rounded-2xl px-6 py-5 bg-white border border-black/[0.06] shadow-lg">
-              <p className="text-3xl font-heading font-extrabold text-concord-green leading-none mb-1">6 to 8%</p>
-              <p className="text-sm font-semibold text-concord-dark/80">Buyer Savings</p>
-              <p className="text-xs text-slate-500">vs. Full Tax Liability</p>
-            </div>
-          </ScrollFadeIn>
-        </div>
-      </section>
+      <ServiceHero
+        code="S/04"
+        eyebrow="Section 6418"
+        title="Monetize your clean energy tax credits"
+        lastUpdated="April 2026"
+        primaryCta={{ label: 'Sell Credits', href: '#who-can-sell' }}
+        lede={<>Section 6418 created a new marketplace for <Link to="/transferable-tax-credits" className="ed-link">transferable tax credits</Link>. Whether you generate credits and need liquidity or have tax liability and want savings, Concord connects both sides with confidence.</>}
+        stats={[
+          { value: '$10B+',  label: 'Market size',         note: 'Growing rapidly' },
+          { value: '12',      label: 'Eligible credit types', note: 'Section 6418' },
+          { value: '91–94¢',  label: 'Average price',        note: 'Per dollar of credit' },
+          { value: '6–8%',    label: 'Buyer savings',         note: 'vs. full tax liability' },
+        ]}
+      />
 
       <StickyNav items={stickyNavItems} />
 
