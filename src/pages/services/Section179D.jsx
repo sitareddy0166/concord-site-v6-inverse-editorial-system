@@ -455,7 +455,7 @@ export default function Section179D() {
           </ScrollFadeIn>
         </div>
       </section>
-    </>
+    </ServicePageShell>
   );
 }
 

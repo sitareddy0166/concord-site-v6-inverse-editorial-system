@@ -360,7 +360,7 @@ export default function RDTaxCredits() {
           </ScrollFadeIn>
         </div>
       </section>
-    </>
+    </ServicePageShell>
   );
 }
 

@@ -507,7 +507,7 @@ export default function DirectPay() {
           </ScrollFadeIn>
         </div>
       </section>
-    </>
+    </ServicePageShell>
   );
 }
 

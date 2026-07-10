@@ -410,7 +410,7 @@ export default function PWA() {
           </ScrollFadeIn>
         </div>
       </section>
-    </>
+    </ServicePageShell>
   );
 }
 

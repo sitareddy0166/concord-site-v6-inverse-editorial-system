@@ -498,7 +498,7 @@ export default function TransferableCredits() {
           </ScrollFadeIn>
         </div>
       </section>
-    </>
+    </ServicePageShell>
   );
 }
 
