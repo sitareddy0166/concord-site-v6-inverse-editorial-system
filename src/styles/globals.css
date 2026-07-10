@@ -348,4 +348,54 @@
   .text-concord-green { color: rgb(var(--concord)); }
   .text-concord-greenHover { color: rgb(var(--concord-glow)); }
   .border-concord-green { border-color: rgb(var(--concord)); }
+
+  /* ============================================================
+     SERVICE PAGE SHELL — scoped normalization applied to all five
+     service routes via <ServicePageShell>. Flattens V1 chrome
+     (rounded pills, drop shadows, saturated stock photos) so the
+     substantive content beneath conforms to the dark editorial
+     grammar without rewriting copy.
+     ============================================================ */
+  .service-shell { background: rgb(var(--ink)); color: rgb(var(--ivory)); }
+
+  /* Flatten corners to the 0-8px range */
+  .service-shell [class*="rounded-full"],
+  .service-shell [class*="rounded-3xl"],
+  .service-shell [class*="rounded-2xl"],
+  .service-shell [class*="rounded-xl"],
+  .service-shell [class*="rounded-\[24px\]"],
+  .service-shell [class*="rounded-\[20px\]"],
+  .service-shell [class*="rounded-\[16px\]"] { border-radius: 2px !important; }
+  .service-shell [class*="rounded-lg"],
+  .service-shell [class*="rounded-md"],
+  .service-shell [class*="rounded"] { border-radius: 4px; }
+
+  /* Reset floating shadows */
+  .service-shell [class*="shadow-"],
+  .service-shell .shadow { box-shadow: none !important; }
+
+  /* Editorial type inside shell */
+  .service-shell h1, .service-shell h2, .service-shell h3, .service-shell h4 {
+    font-family: 'Fraunces', serif; font-weight: 400; letter-spacing: -0.02em;
+  }
+  .service-shell .font-heading, .service-shell .font-extrabold, .service-shell .font-bold { font-weight: 500 !important; }
+
+  /* Downgrade any residual stock photography inside service bodies */
+  .service-shell img[src*="images.unsplash.com"] {
+    filter: grayscale(0.55) contrast(0.92) brightness(0.78);
+    border: 1px solid rgb(var(--ivory) / 0.10);
+    border-radius: 2px !important;
+  }
+
+  /* Section alternation: paper reading surface stays paper, but
+     graphite bands replace the harsh pure white/dark alternation */
+  .service-shell section.bg-white { background: rgb(var(--paper)); color: rgb(var(--ink)); }
+  .service-shell section.bg-concord-cream { background: rgb(var(--ivory)); color: rgb(var(--ink)); }
+  .service-shell section.bg-concord-dark,
+  .service-shell section[class*="bg-[#151C19]"] { background: rgb(var(--graphite)); color: rgb(var(--ivory)); }
+  .service-shell section.bg-concord-mint { background: rgb(var(--paper)); color: rgb(var(--ink)); }
+
+  /* Buttons inside shell adopt square editorial treatment */
+  .service-shell a[class*="rounded-full"],
+  .service-shell button[class*="rounded-full"] { border-radius: 2px !important; }
 }
