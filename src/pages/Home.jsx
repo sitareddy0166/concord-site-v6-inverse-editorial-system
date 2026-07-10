@@ -125,7 +125,7 @@ export default function Home() {
         <div aria-hidden="true" className="absolute inset-0 blueprint-grid opacity-70" />
 
         <div className="arch relative">
-          <div className="grid lg:grid-cols-12 gap-6 lg:gap-10 pt-14 lg:pt-24 pb-16 lg:pb-24 items-stretch">
+          <div className="grid lg:grid-cols-12 gap-6 lg:gap-10 pt-10 pb-20 lg:pt-16 lg:pb-28 items-stretch">
             {/* Copy panel — solid ivory reading surface */}
             <div className="lg:col-span-6 xl:col-span-5 surface-ivory p-8 lg:p-12 relative">
               <span aria-hidden="true" className="coord absolute top-3 left-3 text-[rgb(var(--ink))/0.5]" />

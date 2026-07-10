@@ -26,8 +26,8 @@ export function AboutHero({ code, eyebrow, title, lede, meta, primaryCta, second
   return (
     <section className="surface-ink relative overflow-hidden">
       <div aria-hidden="true" className="absolute inset-0 blueprint-grid opacity-60" />
-      <div className="arch relative py-14 lg:py-20">
-        <div className="grid lg:grid-cols-12 gap-10 items-end">
+      <div className="arch relative pt-10 pb-20 lg:pt-16 lg:pb-28">
+        <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-start">
           <div className="lg:col-span-8">
             <div className="flex items-center gap-3 mb-6">
               <span className="index-num">{code}</span>
@@ -58,16 +58,16 @@ export function AboutHero({ code, eyebrow, title, lede, meta, primaryCta, second
             )}
           </div>
           {meta && (
-            <aside className="lg:col-span-4 border-t lg:border-t-0 lg:border-l border-[rgb(var(--ivory))/0.12] pt-8 lg:pt-0 lg:pl-10">
-              <p className="tech-label tech-label--brass mb-4">Document · Meta</p>
-              <dl className="space-y-3">
+            <aside className="lg:col-span-4 border-t lg:border-t-0 lg:border-l border-[rgb(var(--ivory))/0.12] pt-8 lg:pt-0 lg:pl-8" aria-label="Key facts">
+              <p className="tech-label mb-5">Key Facts</p>
+              <ul className="divide-y divide-[rgb(var(--ivory))/0.10] key-facts">
                 {meta.map((m) => (
-                  <div key={m.label} className="flex items-baseline justify-between gap-3">
-                    <dt className="tech-label tech-label--dim">{m.label}</dt>
-                    <dd className="text-[14px] text-[rgb(var(--ivory))]">{m.value}</dd>
-                  </div>
+                  <li key={m.label} className="py-4">
+                    <p className="font-[Fraunces] text-[36px] leading-none text-[rgb(var(--ivory))]">{m.value}</p>
+                    <p className="text-[13px] text-[rgb(var(--ivory))/0.75] mt-1">{m.label}</p>
+                  </li>
                 ))}
-              </dl>
+              </ul>
             </aside>
           )}
         </div>
