@@ -239,7 +239,7 @@ export default function Contact() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
             {[
               {
-                img: 'https://images.unsplash.com/photo-1501466044931-62695aada8e9?auto=format&fit=crop&w=600&q=80',
+                img: null,
                 imgAlt: 'Washington DC skyline with the Capitol building and National Mall at dusk',
                 title: 'Washington, DC Metro Area',
                 isHQ: true,
@@ -248,14 +248,14 @@ export default function Contact() {
                 hasEmail: true,
               },
               {
-                img: 'https://images.unsplash.com/photo-1486325212027-8081e485255e?auto=format&fit=crop&w=600&q=80',
+                img: null,
                 imgAlt: 'Aerial city skyline at night representing nationwide service coverage',
                 title: 'Nationwide Coverage',
                 icon: MapPin,
                 detail: 'Serving clients across all 50 states with virtual consultations and on-site support',
               },
               {
-                img: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=600&q=80',
+                img: null,
                 imgAlt: 'Business professionals in virtual consultation meeting',
                 title: 'Virtual Consultations',
                 icon: VideoCamera,
@@ -264,7 +264,7 @@ export default function Contact() {
             ].map((loc) => (
               <ScrollFadeIn key={loc.title}>
                 <div className="bg-white rounded-3xl overflow-hidden border border-black/[0.06] shadow-sm card-hover flex flex-col h-full">
-                  <img src={loc.img} alt={loc.imgAlt} width="600" height="400" loading="lazy" className="w-full h-[200px] object-cover" />
+                  <div role="img" aria-label={loc.imgAlt} className="bg-[rgb(var(--graphite))] blueprint-grid-fine border border-[rgb(var(--ivory))/0.10] aspect-[3/2] w-full" />
                   <div className="p-6 flex-1">
                     <div className="flex items-center gap-2 mb-3">
                       <h3 className="font-heading font-bold text-[18px] text-concord-dark">{loc.title}</h3>

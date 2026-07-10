@@ -92,10 +92,10 @@ const qualifyingActivities = [
 const processSteps = [
   { step: '01', title: 'Activity Identification', desc: 'We conduct technical interviews with your engineering and project teams to identify all qualifying R&D activities under the IRS four-part test.', img: manufacturingRdImg, alt: 'Manufacturing floor where R&D activities and innovation take place' },
   { step: '02', title: 'Expense Analysis', desc: 'We analyze qualified research expenses including wages, supplies, and contract research to determine the full scope of your eligible credit.', img: financialAnalysisImg, alt: 'Financial analyst reviewing R&D expense spreadsheets and qualified research costs' },
-  { step: '03', title: 'Technical Documentation', desc: 'We produce comprehensive study reports with detailed narratives linking each qualified activity to the four-part test, gathering contemporaneous records and project documentation.', img: 'https://images.unsplash.com/photo-1434626881859-194d67b2b86f?auto=format&fit=crop&w=600&q=80', alt: 'Technical documentation and engineering records supporting R&D and data management' },
-  { step: '04', title: 'Credit Calculation', desc: 'We compute your benefit using both the regular and alternative simplified credit methods, selecting the approach that maximizes your return.', img: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80', alt: 'Data visualization dashboard showing R&D credit calculation results' },
-  { step: '05', title: 'Filing Support', desc: 'We prepare all necessary tax forms and supporting schedules, coordinating with your CPA or tax team to ensure seamless filing and maximum credit capture.', img: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=600&q=80', alt: 'Tax professional preparing IRS Form 6765 for R&D credit filing' },
-  { step: '06', title: 'Audit Defense', desc: 'If the IRS examines your credit claim, our team provides full audit defense with organized, defensible documentation and direct support throughout the process.', img: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=600&q=80', alt: 'Concord advisors presenting audit defense strategy in a professional meeting' },
+  { step: '03', title: 'Technical Documentation', desc: 'We produce comprehensive study reports with detailed narratives linking each qualified activity to the four-part test, gathering contemporaneous records and project documentation.', img: null, alt: 'Technical documentation and engineering records supporting R&D and data management' },
+  { step: '04', title: 'Credit Calculation', desc: 'We compute your benefit using both the regular and alternative simplified credit methods, selecting the approach that maximizes your return.', img: null, alt: 'Data visualization dashboard showing R&D credit calculation results' },
+  { step: '05', title: 'Filing Support', desc: 'We prepare all necessary tax forms and supporting schedules, coordinating with your CPA or tax team to ensure seamless filing and maximum credit capture.', img: null, alt: 'Tax professional preparing IRS Form 6765 for R&D credit filing' },
+  { step: '06', title: 'Audit Defense', desc: 'If the IRS examines your credit claim, our team provides full audit defense with organized, defensible documentation and direct support throughout the process.', img: null, alt: 'Concord advisors presenting audit defense strategy in a professional meeting' },
 ];
 
 export default function RDTaxCredits() {
@@ -242,7 +242,7 @@ export default function RDTaxCredits() {
                     <p className="text-slate-500 text-base leading-relaxed">{step.desc}</p>
                   </div>
                   <div className={`lg:w-1/2 ${isEven ? 'lg:pl-16' : 'lg:pr-16'}`}>
-                    <img src={step.img} alt={step.alt} loading="lazy" width="600" height="400" className="rounded-3xl shadow-md w-full object-cover aspect-[3/2]" />
+                    {step.img ? (<img src={step.img} alt={step.alt} loading="lazy" width="600" height="400" className="rounded-3xl shadow-md w-full object-cover aspect-[3/2]" />) : (<div role="img" aria-label={step.alt} className="bg-[rgb(var(--graphite))] blueprint-grid-fine border border-[rgb(var(--ivory))/0.10] aspect-[3/2] w-full" />)}
                   </div>
                 </ScrollFadeIn>
               );

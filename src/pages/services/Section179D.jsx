@@ -129,7 +129,7 @@ export default function Section179D() {
         <div className="max-w-[1200px] mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <ScrollFadeIn>
-              <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" alt="Modern commercial building with energy-efficient glass facade" width="800" height="500" loading="lazy" className="rounded-[24px] w-full h-auto object-cover shadow-lg" />
+              <div role="img" aria-label="Modern commercial building with energy-efficient glass facade" className="rounded-[24px] w-full h-auto object-cover shadow-lg bg-[rgb(var(--graphite))] blueprint-grid-fine border border-[rgb(var(--ivory))/0.10]" />
             </ScrollFadeIn>
             <ScrollFadeIn delay={100}>
               <span className="text-[13px] uppercase tracking-widest font-bold text-concord-green mb-4 block font-heading">Understanding 179D</span>
@@ -189,16 +189,16 @@ export default function Section179D() {
           <ScrollFadeIn>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
               {[
-                { icon: <Bank size={24} className="text-concord-green" />, title: 'Government Buildings', desc: 'Schools, courthouses, libraries, military facilities, municipal offices, and other publicly owned properties.', img: 'https://images.unsplash.com/photo-1501466044931-62695aada8e9?auto=format&fit=crop&w=800&q=80', alt: 'Government building' },
-                { icon: <GraduationCap size={24} className="text-concord-green" />, title: 'Tax-Exempt Properties', desc: <>Nonprofit hospitals, universities, tribal facilities, religious institutions, and charitable organizations. These entities may also benefit from <Link to="/direct-pay" className="text-concord-green font-semibold hover:underline">Direct Pay</Link>.</>, img: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80', alt: 'Hospital building representing tax-exempt properties' },
-                { icon: <Buildings size={24} className="text-concord-green" />, title: 'Commercial Buildings', desc: 'Office buildings, warehouses, retail centers, industrial facilities, and mixed-use properties.', img: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80', alt: 'Modern glass office building representing commercial properties' },
-                { icon: <HouseLine size={24} className="text-concord-green" />, title: 'Multifamily Residential', desc: 'Residential buildings with four or more stories, including new construction and renovation projects.', img: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80', alt: 'Modern multifamily residential apartment building' },
+                { icon: <Bank size={24} className="text-concord-green" />, title: 'Government Buildings', desc: 'Schools, courthouses, libraries, military facilities, municipal offices, and other publicly owned properties.', img: null, alt: 'Government building' },
+                { icon: <GraduationCap size={24} className="text-concord-green" />, title: 'Tax-Exempt Properties', desc: <>Nonprofit hospitals, universities, tribal facilities, religious institutions, and charitable organizations. These entities may also benefit from <Link to="/direct-pay" className="text-concord-green font-semibold hover:underline">Direct Pay</Link>.</>, img: null, alt: 'Hospital building representing tax-exempt properties' },
+                { icon: <Buildings size={24} className="text-concord-green" />, title: 'Commercial Buildings', desc: 'Office buildings, warehouses, retail centers, industrial facilities, and mixed-use properties.', img: null, alt: 'Modern glass office building representing commercial properties' },
+                { icon: <HouseLine size={24} className="text-concord-green" />, title: 'Multifamily Residential', desc: 'Residential buildings with four or more stories, including new construction and renovation projects.', img: null, alt: 'Modern multifamily residential apartment building' },
               ].map((card) => (
                 <div key={card.title} className="bg-white rounded-[24px] border border-black/[0.06] p-8 flex flex-col h-full hover:shadow-lg hover:-translate-y-1 hover:border-t-concord-green transition-all duration-300 border-t-[3px] border-t-transparent">
                   <div className="w-14 h-14 rounded-2xl bg-concord-green/10 flex items-center justify-center mb-6">{card.icon}</div>
                   <h3 className="text-lg font-extrabold mb-3 font-heading">{card.title}</h3>
                   <p className="text-sm text-slate-500 leading-relaxed flex-1">{card.desc}</p>
-                  <img src={card.img} alt={card.alt} width="400" height="250" loading="lazy" className="rounded-xl w-full h-36 object-cover mt-auto pt-4" />
+                  <div role="img" aria-label={card.alt} className="bg-[rgb(var(--graphite))] blueprint-grid-fine border border-[rgb(var(--ivory))/0.10] aspect-[3/2] w-full" />
                 </div>
               ))}
             </div>
@@ -229,7 +229,7 @@ export default function Section179D() {
               </div>
             </ScrollFadeIn>
             <ScrollFadeIn delay={100} className="flex flex-col gap-6">
-              <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80" alt="Engineers reviewing energy modeling blueprints for building improvements" width="600" height="400" loading="lazy" className="rounded-[24px] shadow-md w-full h-64 object-cover" />
+              <div role="img" aria-label="Engineers reviewing energy modeling blueprints for building improvements" className="rounded-[24px] shadow-md w-full h-64 object-cover bg-[rgb(var(--graphite))] blueprint-grid-fine border border-[rgb(var(--ivory))/0.10]" />
               <div className="bg-white rounded-[24px] p-6 border border-black/[0.06] flex-1 flex flex-col justify-center">
                 <h3 className="font-bold text-lg mb-3 text-concord-dark font-heading">Energy Savings Requirements</h3>
                 <ul className="space-y-3 text-sm text-slate-500">
@@ -320,13 +320,13 @@ export default function Section179D() {
           <ScrollFadeIn>
             <div className="grid sm:grid-cols-3 gap-8 items-stretch">
               {[
-                { img: 'https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=800&q=80', alt: 'Public school campus with energy-efficient upgrades', amount: '$1.2M', title: 'Public School District', desc: 'Deductions realized through HVAC and lighting upgrades across multiple campuses.' },
+                { img: null, alt: 'Public school campus with energy-efficient upgrades', amount: '$1.2M', title: 'Public School District', desc: 'Deductions realized through HVAC and lighting upgrades across multiple campuses.' },
                 { img: financialAnalysisImg, alt: 'Financial documents for tax deduction', amount: '$750K', title: 'Military Facility', desc: 'Retroactive savings secured through amended filings and comprehensive documentation.' },
-                { img: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80', alt: 'Architectural plans for multifamily residential building envelope upgrades', amount: '$2.5M', title: 'Multifamily Developer', desc: 'Tax benefits captured from building envelope and lighting system upgrades.' },
+                { img: null, alt: 'Architectural plans for multifamily residential building envelope upgrades', amount: '$2.5M', title: 'Multifamily Developer', desc: 'Tax benefits captured from building envelope and lighting system upgrades.' },
               ].map((story) => (
                 <div key={story.title} className="bg-white rounded-[24px] overflow-hidden border border-black/[0.06] flex flex-col h-full hover:shadow-lg hover:-translate-y-1 transition-all duration-300 border-t-[3px] border-t-transparent hover:border-t-concord-green">
                   <div className="relative h-48 overflow-hidden">
-                    <img src={story.img} alt={story.alt} width="500" height="300" loading="lazy" className="w-full h-full object-cover" />
+                    <div role="img" aria-label={story.alt} className="bg-[rgb(var(--graphite))] blueprint-grid-fine border border-[rgb(var(--ivory))/0.10] aspect-[3/2] w-full" />
                     <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-sm rounded-lg px-3 py-1.5"><span className="text-xl font-bold text-concord-green">{story.amount}</span></div>
                   </div>
                   <div className="p-6 flex-1 flex flex-col">

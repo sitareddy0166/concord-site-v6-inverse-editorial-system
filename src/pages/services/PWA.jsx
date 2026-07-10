@@ -87,12 +87,12 @@ const breadcrumbSchema = generateBreadcrumbSchema([
 ]);
 
 const processSteps = [
-  { step: '01', title: 'Initial Assessment', desc: 'We evaluate your project scope, timeline, and workforce structure to determine PWA requirements and create a tailored compliance roadmap.', img: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=600&q=80', alt: 'Construction site assessment with compliance data analysis' },
+  { step: '01', title: 'Initial Assessment', desc: 'We evaluate your project scope, timeline, and workforce structure to determine PWA requirements and create a tailored compliance roadmap.', img: null, alt: 'Construction site assessment with compliance data analysis' },
   { step: '02', title: 'Wage Rate Determination', desc: 'We analyze Department of Labor wage determinations for your specific project location and trade classifications, verifying prevailing wage rates and fringe benefits.', img: financialAnalysisImg, alt: 'Financial spreadsheets showing prevailing wage rate analysis' },
-  { step: '03', title: 'Apprenticeship Setup', desc: 'We coordinate with registered apprenticeship programs, manage labor hour ratios, and ensure your project meets or exceeds the required apprenticeship thresholds.', img: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80', alt: 'Team collaborating on apprenticeship program setup and training coordination' },
-  { step: '04', title: 'Monitoring & Reporting', desc: 'Our real-time monitoring platform provides continuous visibility into compliance status. Automated alerts flag potential deviations before they become problems.', img: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80', alt: 'Compliance monitoring dashboard showing real-time wage tracking metrics' },
-  { step: '05', title: 'Documentation & Filing', desc: 'We build comprehensive, IRS-ready documentation packages with certified payroll records, apprenticeship logs, and wage determination analyses assembled throughout construction.', img: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=600&q=80', alt: 'Professional reviewing certified payroll compliance documents' },
-  { step: '06', title: 'Audit Support', desc: 'If the IRS examines your credit claim, our team steps in with organized, defensible documentation and direct support throughout the audit process to protect your full credit amount.', img: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=600&q=80', alt: 'Tax professionals reviewing audit documentation and compliance records' },
+  { step: '03', title: 'Apprenticeship Setup', desc: 'We coordinate with registered apprenticeship programs, manage labor hour ratios, and ensure your project meets or exceeds the required apprenticeship thresholds.', img: null, alt: 'Team collaborating on apprenticeship program setup and training coordination' },
+  { step: '04', title: 'Monitoring & Reporting', desc: 'Our real-time monitoring platform provides continuous visibility into compliance status. Automated alerts flag potential deviations before they become problems.', img: null, alt: 'Compliance monitoring dashboard showing real-time wage tracking metrics' },
+  { step: '05', title: 'Documentation & Filing', desc: 'We build comprehensive, IRS-ready documentation packages with certified payroll records, apprenticeship logs, and wage determination analyses assembled throughout construction.', img: null, alt: 'Professional reviewing certified payroll compliance documents' },
+  { step: '06', title: 'Audit Support', desc: 'If the IRS examines your credit claim, our team steps in with organized, defensible documentation and direct support throughout the audit process to protect your full credit amount.', img: null, alt: 'Tax professionals reviewing audit documentation and compliance records' },
 ];
 
 const guaranteeItems = [
@@ -151,7 +151,7 @@ export default function PWA() {
       <section id="what-is-pwa" className="py-[80px] lg:py-[100px] bg-white">
         <div className="max-w-[1200px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
           <ScrollFadeIn className="relative">
-            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80" alt="Construction workers installing solar panels on a prevailing wage project site" loading="lazy" width="600" height="400" className="rounded-3xl w-full object-cover aspect-[4/3]" />
+            <div role="img" aria-label="Construction workers installing solar panels on a prevailing wage project site" className="rounded-3xl w-full object-cover aspect-[4/3] bg-[rgb(var(--graphite))] blueprint-grid-fine border border-[rgb(var(--ivory))/0.10]" />
             <div className="absolute bottom-6 left-6 bg-white/95 backdrop-blur rounded-3xl shadow-lg px-6 py-4">
               <p className="text-2xl font-heading font-extrabold text-concord-green">1,200+</p>
               <p className="text-xs text-concord-dark/60 font-medium">Projects Managed</p>
@@ -304,7 +304,7 @@ export default function PWA() {
                     <p className="text-slate-500 text-base leading-relaxed">{step.desc}</p>
                   </div>
                   <div className={`lg:w-1/2 ${isEven ? 'lg:pl-16' : 'lg:pr-16'}`}>
-                    <img src={step.img} alt={step.alt} loading="lazy" width="600" height="400" className="rounded-3xl shadow-md w-full object-cover aspect-[3/2]" />
+                    {step.img ? (<img src={step.img} alt={step.alt} loading="lazy" width="600" height="400" className="rounded-3xl shadow-md w-full object-cover aspect-[3/2]" />) : (<div role="img" aria-label={step.alt} className="bg-[rgb(var(--graphite))] blueprint-grid-fine border border-[rgb(var(--ivory))/0.10] aspect-[3/2] w-full" />)}
                   </div>
                 </ScrollFadeIn>
               );
@@ -385,7 +385,7 @@ export default function PWA() {
       {/* CTA Banner - Glassmorphism */}
       <section className="relative py-[80px] lg:py-[100px] overflow-hidden">
         <div className="absolute inset-0">
-          <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1600&q=80" alt="Large-scale solar farm representing clean energy projects requiring PWA compliance" loading="lazy" className="w-full h-full object-cover" />
+          <div role="img" aria-label="Large-scale solar farm representing clean energy projects requiring PWA compliance" className="w-full h-full object-cover bg-[rgb(var(--graphite))] blueprint-grid-fine border border-[rgb(var(--ivory))/0.10]" />
           <div className="absolute inset-0 bg-[#151C19]/85"></div>
         </div>
         <div className="relative z-10 max-w-4xl mx-auto px-6">

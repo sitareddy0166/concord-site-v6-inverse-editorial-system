@@ -96,12 +96,12 @@ const breadcrumbSchema = generateBreadcrumbSchema([
 ]);
 
 const processSteps = [
-  { step: '01', title: 'Credit Identification', desc: 'We analyze your clean energy portfolio to identify all eligible IRA tax credits, quantify their value, and determine optimal transfer timing. This step mirrors the assessment phase of The Concord Standard.', img: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80', alt: 'Energy consultant analyzing tax credit portfolio at desk' },
+  { step: '01', title: 'Credit Identification', desc: 'We analyze your clean energy portfolio to identify all eligible IRA tax credits, quantify their value, and determine optimal transfer timing. This step mirrors the assessment phase of The Concord Standard.', img: null, alt: 'Energy consultant analyzing tax credit portfolio at desk' },
   { step: '02', title: 'Due Diligence', desc: 'Comprehensive project verification, credit substantiation, financial review, and risk assessment to ensure every credit is defensible and market-ready.', img: financialAnalysisImg, alt: 'Due diligence team reviewing compliance documents and financial statements at a conference table' },
-  { step: '03', title: 'Buyer Matching', desc: 'Credits are matched to pre-vetted corporate buyers in our network based on credit type, size, timing preferences, and competitive market pricing.', img: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=600&q=80', alt: 'Business professionals in a meeting negotiating tax credit transfer terms' },
-  { step: '04', title: 'Transfer Execution', desc: 'Transfer agreements drafted with full tax indemnification, representations, warranties, and IRS compliance provisions. Cash delivered at closing.', img: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=600&q=80', alt: 'Legal professional reviewing and signing a Section 6418 credit transfer agreement' },
-  { step: '05', title: 'Compliance Filing', desc: 'IRS pre-filing registration, transfer election support, Form 3800 guidance, and complete documentation packages for both parties.', img: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=600&q=80', alt: 'Professional preparing IRS compliance filings and transfer election and Form 3800 tracking' },
-  { step: '06', title: 'Post-Transfer Support', desc: 'Ongoing compliance monitoring, audit defense assistance, and advisory support for future credit transfers and portfolio optimization.', img: 'https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=600&q=80', alt: 'Aerial view of a large-scale solar farm representing completed clean energy project' },
+  { step: '03', title: 'Buyer Matching', desc: 'Credits are matched to pre-vetted corporate buyers in our network based on credit type, size, timing preferences, and competitive market pricing.', img: null, alt: 'Business professionals in a meeting negotiating tax credit transfer terms' },
+  { step: '04', title: 'Transfer Execution', desc: 'Transfer agreements drafted with full tax indemnification, representations, warranties, and IRS compliance provisions. Cash delivered at closing.', img: null, alt: 'Legal professional reviewing and signing a Section 6418 credit transfer agreement' },
+  { step: '05', title: 'Compliance Filing', desc: 'IRS pre-filing registration, transfer election support, Form 3800 guidance, and complete documentation packages for both parties.', img: null, alt: 'Professional preparing IRS compliance filings and transfer election and Form 3800 tracking' },
+  { step: '06', title: 'Post-Transfer Support', desc: 'Ongoing compliance monitoring, audit defense assistance, and advisory support for future credit transfers and portfolio optimization.', img: null, alt: 'Aerial view of a large-scale solar farm representing completed clean energy project' },
 ];
 
 const sellerCards = [
@@ -169,7 +169,7 @@ export default function TransferableCredits() {
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
             <ScrollFadeIn>
-              <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="Financial data visualization representing the transferable tax credit marketplace" width="800" height="500" loading="lazy" className="rounded-3xl w-full aspect-[4/3] object-cover shadow-md" />
+              <div role="img" aria-label="Financial data visualization representing the transferable tax credit marketplace" className="rounded-3xl w-full aspect-[4/3] object-cover shadow-md bg-[rgb(var(--graphite))] blueprint-grid-fine border border-[rgb(var(--ivory))/0.10]" />
             </ScrollFadeIn>
 
             <ScrollFadeIn>
@@ -230,7 +230,7 @@ export default function TransferableCredits() {
                     <p className="text-[16px] text-slate-500 leading-relaxed">{step.desc}</p>
                   </div>
                   <div className={`lg:w-1/2 ${isEven ? 'lg:pl-12' : 'lg:pr-12'}`}>
-                    <img src={step.img} alt={step.alt} width="600" height="400" className="rounded-3xl w-full shadow-md" loading="lazy" />
+                    <div role="img" aria-label={step.alt} className="bg-[rgb(var(--graphite))] blueprint-grid-fine border border-[rgb(var(--ivory))/0.10] aspect-[3/2] w-full" />
                   </div>
                 </ScrollFadeIn>
               );
@@ -259,7 +259,7 @@ export default function TransferableCredits() {
 
           <ScrollFadeIn>
             <div className="rounded-[24px] overflow-hidden mb-8">
-              <img src="https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?auto=format&fit=crop&w=1200&q=80" alt="Aerial view of a large-scale solar farm generating clean energy tax credits eligible for transfer under Section 6418" className="w-full h-[280px] object-cover" loading="lazy" width="1200" height="400" />
+              <div role="img" aria-label="Aerial view of a large-scale solar farm generating clean energy tax credits eligible for transfer under Section 6418" className="w-full h-[280px] object-cover bg-[rgb(var(--graphite))] blueprint-grid-fine border border-[rgb(var(--ivory))/0.10]" />
             </div>
           </ScrollFadeIn>
 
@@ -474,7 +474,7 @@ export default function TransferableCredits() {
       {/* CTA Banner - Glassmorphism */}
       <section className="relative py-[80px] lg:py-[100px] overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1600&q=80" alt="Clean energy solar farm at sunset representing sustainable investment" loading="lazy" className="w-full h-full object-cover" />
+          <div role="img" aria-label="Clean energy solar farm at sunset representing sustainable investment" className="w-full h-full object-cover bg-[rgb(var(--graphite))] blueprint-grid-fine border border-[rgb(var(--ivory))/0.10]" />
           <div className="absolute inset-0 bg-[#151C19]/85"></div>
         </div>
         <div className="relative z-10 max-w-4xl mx-auto px-6">
