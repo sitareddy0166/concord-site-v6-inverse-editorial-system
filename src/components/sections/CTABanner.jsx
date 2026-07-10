@@ -9,24 +9,19 @@ export default function CTABanner({
   variant = "dark",
 }) {
   const isDark = variant === 'dark';
-
   return (
-    <section className={`py-[80px] lg:py-[100px] relative ${isDark ? 'bg-concord-dark bg-grain' : 'bg-white'}`}>
-      <div className="max-w-[1200px] mx-auto px-6 text-center relative z-10">
-        <h2 className={`font-heading font-extrabold text-[36px] lg:text-[52px] tracking-[-0.03em] leading-[1.1] mb-6 ${isDark ? 'text-white' : 'text-concord-dark'}`}>
-          {headline}
-        </h2>
-        <p className={`text-[18px] leading-relaxed max-w-[600px] mx-auto mb-10 ${isDark ? 'text-white/60' : 'text-slate-500'}`}>
+    <section className={`${isDark ? 'surface-ink' : 'surface-ivory'} band relative overflow-hidden grain`}>
+      {isDark && <div aria-hidden="true" className="absolute inset-0 blueprint-grid opacity-40" />}
+      <div className="arch relative text-center">
+        <h2 className={`h-display text-balance max-w-3xl mx-auto ${isDark ? '' : 'text-[rgb(var(--ink))]'}`}>{headline}</h2>
+        <p className={`mt-6 text-[17px] leading-relaxed max-w-2xl mx-auto ${isDark ? 'text-[rgb(var(--ivory))/0.7]' : 'text-[rgb(var(--ink))/0.7]'}`}>
           {description}
         </p>
-        <Link
-          to={buttonHref}
-          className={`inline-flex items-center gap-2 rounded-full px-10 py-4 font-bold text-[15px] hover:-translate-y-[2px] hover:shadow-lg transition-all duration-300 ${
-            isDark ? 'bg-white text-concord-dark' : 'bg-[#151C19] text-white'
-          }`}
-        >
-          {buttonText} <ArrowRight size={16} />
-        </Link>
+        <div className="mt-10">
+          <Link to={buttonHref} className={`btn ${isDark ? 'btn-primary' : 'btn-dark'}`}>
+            {buttonText} <ArrowRight size={14} weight="bold" />
+          </Link>
+        </div>
       </div>
     </section>
   );
