@@ -336,7 +336,7 @@ export default function RDTaxCredits() {
       {/* CTA Banner - Glassmorphism */}
       <section className="relative py-[80px] lg:py-[100px] overflow-hidden bg-[#151C19]">
         <div className="absolute inset-0 opacity-15">
-          <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1600&q=80" alt="" aria-hidden="true" loading="lazy" className="w-full h-full object-cover" />
+          <div aria-hidden="true" className="w-full h-full bg-[rgb(var(--graphite))] blueprint-grid-fine" />
           <div className="absolute inset-0 bg-[#151C19]/70"></div>
         </div>
         <div className="max-w-4xl mx-auto px-6 relative z-10">

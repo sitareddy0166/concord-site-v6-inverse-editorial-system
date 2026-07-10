@@ -234,14 +234,7 @@ export default function TheConcordStandard() {
               </div>
             </div>
             <div className="space-y-4">
-              <img
-                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80"
-                alt="Compliance management team collaborating around a table reviewing project documentation"
-                className="rounded-[24px] shadow-lg w-full h-72 object-cover"
-                loading="lazy"
-                width="600"
-                height="400"
-              />
+              <div aria-hidden="true" className="w-full h-full bg-[rgb(var(--graphite))] blueprint-grid-fine" />
               <div className="grid grid-cols-3 gap-4">
                 {[
                   { value: '15+', label: 'Years of Practice' },

@@ -315,7 +315,7 @@ export default function Section179D() {
                 <p className="text-slate-500 text-sm">A third-party certification from a licensed professional is also required. Projects must begin construction before <Link to="/obbba-deadline" className="text-concord-green font-semibold hover:underline">critical deadlines</Link> to lock in enhanced rates.</p>
               </div>
               <div>
-                <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80" alt="Modern energy-efficient commercial building interior showcasing sustainable design" width="600" height="500" loading="lazy" className="rounded-[24px] shadow-lg w-full h-[420px] object-cover" />
+                <div aria-hidden="true" className="w-full h-full bg-[rgb(var(--graphite))] blueprint-grid-fine" />
               </div>
             </div>
           </ScrollFadeIn>
@@ -438,7 +438,7 @@ export default function Section179D() {
 
       {/* CTA Banner */}
       <section className="relative py-[80px] lg:py-[100px] overflow-hidden bg-[#151C19]">
-        <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1600&q=80" alt="" aria-hidden="true" width="1600" height="600" loading="lazy" className="absolute inset-0 w-full h-full object-cover opacity-15" />
+        <div aria-hidden="true" className="w-full h-full bg-[rgb(var(--graphite))] blueprint-grid-fine" />
         <div className="absolute inset-0 bg-[#151C19]/70"></div>
         <div className="relative z-10 max-w-[800px] mx-auto px-6">
           <ScrollFadeIn>

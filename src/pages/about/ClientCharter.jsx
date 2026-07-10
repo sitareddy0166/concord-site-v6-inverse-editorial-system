@@ -291,14 +291,7 @@ export default function ClientCharter() {
       {/* CTA Banner */}
       <section className="relative py-[100px] overflow-hidden">
         <div className="absolute inset-0">
-          <img
-            src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1400&q=80"
-            alt="Modern glass office building exterior representing professional consulting environment"
-            className="w-full h-full object-cover"
-            loading="lazy"
-            width="1400"
-            height="800"
-          />
+          <div aria-hidden="true" className="w-full h-full bg-[rgb(var(--graphite))] blueprint-grid-fine" />
           <div className="absolute inset-0 bg-gradient-to-br from-concord-dark/90 to-concord-dark/70" />
         </div>
         <div className="relative z-10 max-w-[800px] mx-auto px-6">

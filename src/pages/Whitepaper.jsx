@@ -155,7 +155,7 @@ export default function Whitepaper() {
               <div className="relative mb-10">
                 <div className="absolute inset-0 bg-concord-dark/5 rounded-3xl transform rotate-6 scale-95 translate-y-4"></div>
                 <div className="relative bg-white rounded-3xl shadow-2xl transform rotate-3 overflow-hidden w-72 md:w-80">
-                  <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=400&q=80" alt="Professional reviewing R&D tax credit documentation and financial analysis spreadsheets for clean energy companies" className="w-full h-28 object-cover" width="400" height="120" loading="lazy" />
+                  <div aria-hidden="true" className="w-full h-full bg-[rgb(var(--graphite))] blueprint-grid-fine" />
                   <div className="p-8 md:p-10">
                     <span className="text-concord-green text-xs font-bold uppercase tracking-widest">Concord Energy Strategies</span>
                     <h2 className="text-lg md:text-xl font-heading font-extrabold tracking-tight mt-4 mb-6 leading-snug">
@@ -335,7 +335,7 @@ export default function Whitepaper() {
       {/* 7. CTA BANNER */}
       <section className="relative py-[80px] lg:py-[100px] overflow-hidden">
         <div className="absolute inset-0">
-          <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1600&q=80" alt="Sustainable green forest canopy representing clean energy and environmental commitment" className="w-full h-full object-cover" width="1600" height="800" loading="lazy" aria-hidden="true" />
+          <div aria-hidden="true" className="w-full h-full bg-[rgb(var(--graphite))] blueprint-grid-fine" />
           <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, rgba(61,163,93,0.93), rgba(21,28,25,0.92))' }}></div>
         </div>
         <div className="relative z-10 max-w-[800px] mx-auto px-6">

@@ -231,7 +231,7 @@ export default function ContactUs() {
       {/* CTA BANNER */}
       <section className="relative py-[50px] lg:py-[100px] overflow-hidden">
         <div className="absolute inset-0">
-          <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1920&q=80" alt="Sunlight streaming through a lush green forest canopy representing sustainability and clean energy" width="1920" height="1080" loading="lazy" className="w-full h-full object-cover" />
+          <div aria-hidden="true" className="w-full h-full bg-[rgb(var(--graphite))] blueprint-grid-fine" />
           <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, rgba(61,163,93,0.85) 0%, rgba(21,28,25,0.9) 100%)' }}></div>
         </div>
         <div className="max-w-[800px] mx-auto px-6 text-center relative z-10">
