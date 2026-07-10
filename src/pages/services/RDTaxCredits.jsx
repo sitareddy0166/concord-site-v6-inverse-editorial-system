@@ -19,6 +19,7 @@ import {
 import { SEOHead, SchemaScript, generateServiceSchema, generateFAQSchema, generateBreadcrumbSchema, generateHowToSchema, generateWebPageSchema, generateSpeakableSchema } from '@/utils/seo';
 import { ScrollFadeIn } from '@/hooks/useScrollAnimation';
 import StickyNav from '@/components/layout/StickyNav';
+import ServiceHero from '@/components/sections/ServiceHero';
 import VideoExplainer from '@/components/sections/VideoExplainer';
 
 const stickyNavItems = [
@@ -121,67 +122,19 @@ export default function RDTaxCredits() {
         ],
       })} />
 
-      {/* Breadcrumbs */}
-      <div className="pt-[20px] bg-concord-cream">
-        <div className="max-w-[1200px] mx-auto px-6">
-          <nav aria-label="Breadcrumb" className="text-sm text-concord-dark/50 font-medium flex items-center gap-2">
-            <Link to="/" className="hover:text-concord-green transition-colors">Home</Link>
-            <CaretRight size={12} />
-            <Link to="/#services" className="hover:text-concord-green transition-colors">Services</Link>
-            <CaretRight size={12} />
-            <span className="text-concord-dark">R&amp;D Tax Credits</span>
-          </nav>
-        </div>
-      </div>
-
-      <p className="text-xs text-slate-400 mt-1 max-w-[1200px] mx-auto px-6 pb-2 bg-concord-cream">Last reviewed: April 2026</p>
-
-      {/* Hero */}
-      <section className="pt-4 pb-[40px] lg:pb-[48px] bg-concord-cream relative overflow-hidden">
-        <div className="max-w-[1200px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
-          <ScrollFadeIn>
-            <p className="text-[13px] uppercase tracking-[0.1em] font-bold text-concord-green mb-4">R&amp;D Tax Credits</p>
-            <h1 className="font-heading font-extrabold text-[36px] lg:text-[52px] tracking-[-0.03em] leading-[1.1] text-balance mb-6">
-              Recover Your Innovation Costs. Fuel Future Growth.
-            </h1>
-            <p className="hero-description text-base md:text-lg text-slate-500 font-body max-w-xl mb-10 leading-relaxed">
-              Clean energy companies invest heavily in research and development, but most leave significant tax credits unclaimed. Concord helps you identify, document, and capture every R&amp;D dollar you&apos;re owed.
-            </p>
-            <div className="flex flex-wrap items-center gap-4">
-              <Link to="/contact" className="bg-[#151C19] text-white px-8 py-3.5 rounded-full text-sm font-bold tracking-wide inline-flex items-center gap-2 hover:-translate-y-[2px] hover:shadow-lg transition-all duration-300">
-                Start the Conversation <ArrowRight size={16} />
-              </Link>
-              <a href="https://www.concordlp.com/meetings/jonathan-darnell" className="px-8 py-3.5 rounded-full text-sm font-bold tracking-wide border border-[#151C19]/20 text-[#151C19] hover:-translate-y-[2px] hover:shadow-lg transition-all duration-300">
-                Book a Discovery Call
-              </a>
-            </div>
-          </ScrollFadeIn>
-
-          {/* Right: Stat Cards */}
-          <ScrollFadeIn className="hidden lg:flex flex-col gap-4">
-            <div className="rounded-2xl px-6 py-5 bg-gradient-to-br from-concord-green to-emerald-600 text-white shadow-lg">
-              <p className="text-2xl font-heading font-extrabold leading-none mb-1">Dollar-for-Dollar</p>
-              <p className="text-sm font-semibold text-white/90">Tax Liability Reduction</p>
-              <p className="text-xs text-white/60">R&amp;D Credits</p>
-            </div>
-            <div className="rounded-2xl px-6 py-5 bg-[#151C19] text-white shadow-lg">
-              <p className="text-3xl font-heading font-extrabold leading-none mb-1">2,493</p>
-              <p className="text-sm font-semibold text-white/90">Companies Served</p>
-              <p className="text-xs text-white/60">And Counting</p>
-            </div>
-            <div className="rounded-2xl px-6 py-5 bg-concord-cream border border-black/[0.06] shadow-lg">
-              <p className="text-2xl font-heading font-extrabold text-concord-dark leading-none mb-1">Every Industry</p>
-              <p className="text-sm font-semibold text-concord-dark/80">Qualifies</p>
-              <p className="text-xs text-slate-500">Not Just Tech</p>
-            </div>
-            <div className="rounded-2xl px-6 py-5 bg-white border border-black/[0.06] shadow-lg">
-              <p className="text-3xl font-heading font-extrabold text-concord-green leading-none mb-1">20 Yrs</p>
-              <p className="text-sm font-semibold text-concord-dark/80">Carryforward Period</p>
-              <p className="text-xs text-slate-500">Unused Credits</p>
-            </div>
-          </ScrollFadeIn>
-        </div>
-      </section>
+      <ServiceHero
+        code="S/05"
+        eyebrow="R&D Tax Credits"
+        title="Recover innovation costs. Fuel future growth."
+        lastUpdated="April 2026"
+        lede={<>Clean energy companies invest heavily in research and development, but most leave significant tax credits unclaimed. Concord helps you identify, document, and capture every R&amp;D dollar you're owed.</>}
+        stats={[
+          { value: 'Dollar-for-Dollar', label: 'Tax liability reduction', note: 'R&D credits' },
+          { value: '2,493',              label: 'Companies served',        note: 'And counting' },
+          { value: 'Every industry',     label: 'Qualifies',                note: 'Not just tech' },
+          { value: '20 yrs',             label: 'Carryforward period',      note: 'Unused credits' },
+        ]}
+      />
 
       <StickyNav items={stickyNavItems} />
 

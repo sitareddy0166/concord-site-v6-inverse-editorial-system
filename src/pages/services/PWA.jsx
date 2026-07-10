@@ -16,6 +16,7 @@ import {
 import { SEOHead, SchemaScript, generateServiceSchema, generateFAQSchema, generateBreadcrumbSchema, generateHowToSchema, generateWebPageSchema, generateSpeakableSchema } from '@/utils/seo';
 import { ScrollFadeIn } from '@/hooks/useScrollAnimation';
 import StickyNav from '@/components/layout/StickyNav';
+import ServiceHero from '@/components/sections/ServiceHero';
 import VideoExplainer from '@/components/sections/VideoExplainer';
 
 const stickyNavItems = [
@@ -129,67 +130,19 @@ export default function PWA() {
         ],
       })} />
 
-      {/* Breadcrumbs */}
-      <div className="pt-[20px] bg-concord-cream">
-        <div className="max-w-[1200px] mx-auto px-6">
-          <nav aria-label="Breadcrumb" className="text-sm text-concord-dark/50 font-medium flex items-center gap-2">
-            <Link to="/" className="hover:text-concord-green transition-colors">Home</Link>
-            <CaretRight size={12} />
-            <Link to="/#services" className="hover:text-concord-green transition-colors">Services</Link>
-            <CaretRight size={12} />
-            <span className="text-concord-dark">PWA Compliance</span>
-          </nav>
-        </div>
-      </div>
-
-      <p className="text-xs text-slate-400 mt-1 max-w-[1200px] mx-auto px-6 pb-2 bg-concord-cream">Last reviewed: April 2026</p>
-
-      {/* Hero */}
-      <section className="pt-4 pb-[40px] lg:pb-[48px] bg-concord-cream relative overflow-hidden">
-        <div className="max-w-[1200px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
-          <ScrollFadeIn>
-            <p className="text-[13px] uppercase tracking-[0.1em] font-bold text-concord-green mb-4">PWA Compliance</p>
-            <h1 className="font-heading font-extrabold text-[36px] lg:text-[52px] tracking-[-0.03em] leading-[1.1] text-balance mb-6">
-              Unlock the 5x Bonus Multiplier.
-            </h1>
-            <p className="hero-description text-base md:text-lg text-slate-500 font-body max-w-lg mb-10 leading-relaxed">
-              The Inflation Reduction Act offers massive clean energy tax credits, but only if you meet Prevailing Wage and Apprenticeship requirements. Concord ensures every dollar is captured.
-            </p>
-            <div className="flex flex-wrap items-center gap-4">
-              <Link to="/contact" className="bg-[#151C19] text-white px-8 py-3.5 rounded-full text-base font-bold tracking-wide inline-flex items-center gap-2 hover:-translate-y-[2px] hover:shadow-lg transition-all duration-300">
-                Get a Compliance Assessment <ArrowRight size={16} />
-              </Link>
-              <a href="https://www.concordlp.com/meetings/jonathan-darnell" className="px-8 py-3.5 rounded-full text-base font-bold tracking-wide border border-[#151C19]/20 text-[#151C19] hover:-translate-y-[2px] hover:shadow-lg transition-all duration-300">
-                Book a Discovery Call
-              </a>
-            </div>
-          </ScrollFadeIn>
-
-          {/* Right: Stat Cards */}
-          <ScrollFadeIn className="hidden lg:flex flex-col gap-4">
-            <div className="rounded-2xl px-6 py-5 bg-gradient-to-br from-concord-green to-emerald-600 text-white shadow-lg">
-              <p className="text-3xl font-heading font-extrabold leading-none mb-1">5x</p>
-              <p className="text-sm font-semibold text-white/90">Enhanced Rate Multiplier</p>
-              <p className="text-xs text-white/60">With PWA Compliance</p>
-            </div>
-            <div className="rounded-2xl px-6 py-5 bg-[#151C19] text-white shadow-lg">
-              <p className="text-3xl font-heading font-extrabold leading-none mb-1">$5.94<span className="text-lg">/sqft</span></p>
-              <p className="text-sm font-semibold text-white/90">Maximum 179D Rate</p>
-              <p className="text-xs text-white/60">PWA Required</p>
-            </div>
-            <div className="rounded-2xl px-6 py-5 bg-concord-cream border border-black/[0.06] shadow-lg">
-              <p className="text-3xl font-heading font-extrabold text-concord-dark leading-none mb-1">100%</p>
-              <p className="text-sm font-semibold text-concord-dark/80">Compliance Rate</p>
-              <p className="text-xs text-slate-500">All Engagements</p>
-            </div>
-            <div className="rounded-2xl px-6 py-5 bg-white border border-black/[0.06] shadow-lg">
-              <p className="text-3xl font-heading font-extrabold text-concord-green leading-none mb-1">5x</p>
-              <p className="text-sm font-semibold text-concord-dark/80">Bonus Multiplier</p>
-              <p className="text-xs text-slate-500">With PWA Compliance</p>
-            </div>
-          </ScrollFadeIn>
-        </div>
-      </section>
+      <ServiceHero
+        code="S/02"
+        eyebrow="PWA Compliance"
+        title="Unlock the 5× bonus multiplier"
+        lastUpdated="April 2026"
+        primaryCta={{ label: 'Get a Compliance Assessment', href: '/contact' }}
+        lede="The Inflation Reduction Act offers massive clean energy tax credits, but only if you meet Prevailing Wage and Apprenticeship requirements. Concord ensures every dollar is captured."
+        stats={[
+          { value: '5×',      label: 'Enhanced rate multiplier', note: 'With PWA compliance' },
+          { value: '$5.94/sf', label: 'Maximum 179D rate',       note: 'PWA required' },
+          { value: '100%',    label: 'Compliance rate',          note: 'All engagements' },
+        ]}
+      />
 
       <StickyNav items={stickyNavItems} />
 
