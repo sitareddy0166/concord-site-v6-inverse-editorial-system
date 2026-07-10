@@ -134,14 +134,18 @@ export default function Home() {
               <div className="flex items-center gap-3 mb-8">
                 <span className="index-num" style={{ color: 'rgba(8,12,10,0.55)' }}>FIG. 00 / OVERVIEW</span>
                 <span className="h-px w-10 bg-[rgb(var(--ink))/0.3]" />
-                <span className="tech-label" style={{ color: 'rgb(var(--concord))' }}>Established 2009</span>
+                <span className="tech-label" style={{ color: 'rgb(var(--concord))' }}>Compliance-Driven Tax Incentive Experts</span>
               </div>
 
               <h1 className="h-display text-balance" style={{ color: 'rgb(var(--ink))' }}>
-                Clean energy <em className="italic font-light">tax code</em>, drawn to scale.
+                Maximize Your<br /><em className="italic font-light">Tax Incentives.</em>
               </h1>
 
-              <p className="hero-description mt-8 text-[17px] leading-relaxed text-[rgb(var(--ink))/0.75] max-w-lg">
+              <p className="mt-6 font-[Fraunces] text-[24px] lg:text-[30px] leading-tight tracking-tight text-[rgb(var(--ink))/0.75]">
+                Concord Makes It Simple.
+              </p>
+
+              <p className="hero-description mt-6 text-[17px] leading-relaxed text-[rgb(var(--ink))/0.75] max-w-lg">
                 With over $1 billion in tax savings identified and an industry-leading audit success track record, Concord Energy Strategies helps building owners, designers, and tax-exempt organizations capture every clean energy incentive they deserve.
               </p>
 
