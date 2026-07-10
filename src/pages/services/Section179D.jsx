@@ -30,6 +30,7 @@ import CTABanner from '@/components/sections/CTABanner';
 import FaqAccordion from '@/components/sections/FaqAccordion';
 import BookingCard from '@/components/ui/BookingCard';
 import ServiceHero from '@/components/sections/ServiceHero';
+import ServicePageShell from '@/components/service/ServicePageShell';
 
 const stickyNavItems = [
   { label: 'What Is 179D?', href: '#what-is-179d' },
@@ -80,7 +81,7 @@ const faqs = [
 
 export default function Section179D() {
   return (
-    <>
+    <ServicePageShell>
       <SEOHead
         title="179D Tax Deduction | Concord Energy Strategies"
         description="Claim up to $5.94/sq ft with the 179D energy-efficient commercial building deduction. Concord handles modeling, certification and audit defense."
@@ -454,7 +455,7 @@ export default function Section179D() {
           </ScrollFadeIn>
         </div>
       </section>
-    </>
+    </ServicePageShell>
   );
 }
 

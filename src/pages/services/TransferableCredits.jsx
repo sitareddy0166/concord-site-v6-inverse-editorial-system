@@ -35,6 +35,7 @@ import { ScrollFadeIn } from '@/hooks/useScrollAnimation';
 import StickyNav from '@/components/layout/StickyNav';
 import ServiceHero from '@/components/sections/ServiceHero';
 import VideoExplainer from '@/components/sections/VideoExplainer';
+import ServicePageShell from '@/components/service/ServicePageShell';
 
 const stickyNavItems = [
   { label: 'What Are Transferable Credits?', href: '#what-are-tc' },
@@ -123,7 +124,7 @@ const buyerCards = [
 
 export default function TransferableCredits() {
   return (
-    <>
+    <ServicePageShell>
       <SEOHead
         title="Transferable Tax Credits | Concord Energy Strategies"
         description="Monetize your clean energy tax credits through Section 6418 transfers. Concord connects sellers with pre-vetted corporate buyers at competitive market rates."
@@ -497,7 +498,7 @@ export default function TransferableCredits() {
           </ScrollFadeIn>
         </div>
       </section>
-    </>
+    </ServicePageShell>
   );
 }
 

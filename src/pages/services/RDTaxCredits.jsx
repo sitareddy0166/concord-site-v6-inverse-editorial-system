@@ -21,6 +21,7 @@ import { ScrollFadeIn } from '@/hooks/useScrollAnimation';
 import StickyNav from '@/components/layout/StickyNav';
 import ServiceHero from '@/components/sections/ServiceHero';
 import VideoExplainer from '@/components/sections/VideoExplainer';
+import ServicePageShell from '@/components/service/ServicePageShell';
 
 const stickyNavItems = [
   { label: 'What Are R&D Credits?', href: '#overview' },
@@ -99,7 +100,7 @@ const processSteps = [
 
 export default function RDTaxCredits() {
   return (
-    <>
+    <ServicePageShell>
       <SEOHead
         title="R&D Tax Credits | Concord Energy Strategies"
         description="Recover your innovation costs with R&D tax credits for clean energy companies. Download the free 2026 R&D Tax Credit Guide from Concord Energy Strategies."
@@ -359,7 +360,7 @@ export default function RDTaxCredits() {
           </ScrollFadeIn>
         </div>
       </section>
-    </>
+    </ServicePageShell>
   );
 }
 

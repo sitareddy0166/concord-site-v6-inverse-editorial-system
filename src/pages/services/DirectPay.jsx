@@ -34,6 +34,7 @@ import { ScrollFadeIn } from '@/hooks/useScrollAnimation';
 import StickyNav from '@/components/layout/StickyNav';
 import ServiceHero from '@/components/sections/ServiceHero';
 import VideoExplainer from '@/components/sections/VideoExplainer';
+import ServicePageShell from '@/components/service/ServicePageShell';
 
 const stickyNavItems = [
   { label: 'What Is Direct Pay?', href: '#what-is-6417' },
@@ -134,7 +135,7 @@ export default function DirectPay() {
   const [activeTab, setActiveTab] = useState('itc');
 
   return (
-    <>
+    <ServicePageShell>
       <SEOHead
         title="Section 6417 Direct Pay | Concord Energy Strategies"
         description="Section 6417 Direct Pay enables tax-exempt entities to receive clean energy tax credits as direct cash payments from the IRS. Concord manages the full process."
@@ -506,7 +507,7 @@ export default function DirectPay() {
           </ScrollFadeIn>
         </div>
       </section>
-    </>
+    </ServicePageShell>
   );
 }
 
