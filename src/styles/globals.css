@@ -250,14 +250,50 @@
     from { transform: translateX(0); }
     to   { transform: translateX(-50%); }
   }
+  .marquee-viewport {
+    position: relative;
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(to right, transparent 0, #000 40px, #000 calc(100% - 40px), transparent 100%);
+            mask-image: linear-gradient(to right, transparent 0, #000 40px, #000 calc(100% - 40px), transparent 100%);
+  }
   .marquee-track {
     display: flex;
-    animation: marquee 40s linear infinite;
+    align-items: center;
+    gap: 64px;
+    animation: marquee 45s linear infinite;
     width: max-content;
+    will-change: transform;
   }
+  @media (max-width: 768px) {
+    .marquee-track { animation-duration: 60s; gap: 40px; }
+  }
+  .marquee-viewport:hover .marquee-track,
+  .marquee-viewport:focus-within .marquee-track { animation-play-state: paused; }
   @media (prefers-reduced-motion: reduce) {
     .marquee-track { animation: none; }
   }
+
+  /* Individually-tuned affiliation logos: dim, desaturated, hover-restored */
+  .affiliation-logo {
+    width: auto;
+    object-fit: contain;
+    filter: grayscale(1) brightness(1.85) contrast(0.9);
+    opacity: 0.72;
+    transition: opacity .2s ease, filter .2s ease;
+  }
+  .affiliation-logo:hover,
+  .marquee-viewport:focus-within .affiliation-logo,
+  .marquee-viewport:hover .affiliation-logo {
+    opacity: 0.95;
+  }
+
+  /* Persona tab panel fade — respects reduced motion */
+  .persona-fade { animation: personaFade .28s ease-out; }
+  @keyframes personaFade { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+  @media (prefers-reduced-motion: reduce) {
+    .persona-fade { animation: none; }
+  }
+
 
   /* Line-draw reveal for diagrams */
   @keyframes drawLine {
@@ -508,3 +544,11 @@ html, body { overflow-x: hidden; }
 /* Anchor scroll offset (fixed 64px header + 48px sticky subnav) */
 :target { scroll-margin-top: 128px; }
 [id] { scroll-margin-top: 128px; }
+
+/* ============================================================
+   Hero blueprint: hide micro annotations at narrow widths
+   where the 9px SVG labels become sub-5px on-screen.
+   ============================================================ */
+@media (max-width: 640px) {
+  .bp-svg text { display: none; }
+}

@@ -9,8 +9,10 @@ import {
   generateOrganizationSchema, generateFAQSchema, generateServiceSchema,
   generateWebSiteSchema, generateWebPageSchema, generateSpeakableSchema,
 } from '@/utils/seo';
-import { ScrollFadeIn } from '@/hooks/useScrollAnimation';
 import BuildingBlueprint from '@/components/sections/BuildingBlueprint';
+import PersonaTabs from '@/components/sections/PersonaTabs';
+import HomeFaq from '@/components/sections/HomeFaq';
+
 
 /* ------------------------------------------------------------------ */
 /* Content preserved from V1 verbatim (no invented facts).            */
@@ -33,11 +35,12 @@ const services = [
 ];
 
 const tabs = [
-  { id: 'designers',   label: 'Project Designers',       title: 'Project Designers',       description: 'Architects and engineers who design energy-efficient buildings can claim the 179D deduction through allocation letters from building owners. Concord manages the entire process, from energy modeling to certification.', imageAlt: 'Architect reviewing energy-efficient building blueprints for 179D tax deduction eligibility' },
-  { id: 'for-profit',  label: 'For-Profit Owners',       title: 'For-Profit Owners',       description: 'Commercial building owners can directly claim 179D deductions and leverage transferable credits under Section 6418 to monetize their clean energy investments in new ways.', imageAlt: 'Modern commercial office building exterior with energy-efficient systems eligible for 179D tax deduction' },
-  { id: 'tax-exempt',  label: 'Tax-Exempt Owners',       title: 'Tax-Exempt Owners',       description: 'Government agencies, tribal nations, and nonprofits can now receive direct cash payments for clean energy tax credits through Section 6417. We handle pre-filing registration and IRS compliance.', imageAlt: 'University campus buildings representing tax-exempt entities eligible for Section 6417 Direct Pay' },
-  { id: 'marketplace', label: 'Tax Credit Marketplace',  title: 'Tax Credit Marketplace',  description: 'Section 6418 created a new marketplace for buying and selling clean energy credits. Concord connects buyers and sellers, manages due diligence, and ensures compliant transfer mechanics.', imageAlt: 'Financial dashboard showing tax credit transfer analytics for Section 6418 marketplace' },
+  { id: 'designers',   label: 'Project Designers',       title: 'Project Designers',       description: 'Architects and engineers who design energy-efficient buildings can claim the 179D deduction through allocation letters from building owners. Concord manages the entire process, from energy modeling to certification.', media: 'engineering',   imageAlt: 'Architect reviewing energy-efficient building blueprints for 179D tax deduction eligibility' },
+  { id: 'for-profit',  label: 'For-Profit Owners',       title: 'For-Profit Owners',       description: 'Commercial building owners can directly claim 179D deductions and leverage transferable credits under Section 6418 to monetize their clean energy investments in new ways.', media: 'building-179d', imageAlt: 'Modern commercial office building exterior with energy-efficient systems eligible for 179D tax deduction' },
+  { id: 'tax-exempt',  label: 'Tax-Exempt Owners',       title: 'Tax-Exempt Owners',       description: 'Government agencies, tribal nations, and nonprofits can now receive direct cash payments for clean energy tax credits through Section 6417. We handle pre-filing registration and IRS compliance.', media: 'public-infra',  imageAlt: 'University campus buildings representing tax-exempt entities eligible for Section 6417 Direct Pay' },
+  { id: 'marketplace', label: 'Tax Credit Marketplace',  title: 'Tax Credit Marketplace',  description: 'Section 6418 created a new marketplace for buying and selling clean energy credits. Concord connects buyers and sellers, manages due diligence, and ensures compliant transfer mechanics.', media: 'transaction',   imageAlt: 'Financial dashboard showing tax credit transfer analytics for Section 6418 marketplace' },
 ];
+
 
 const standardStages = [
   { num: '01', title: 'Assessment',            text: 'We evaluate your portfolio to identify every eligible incentive. Our team reviews building systems, project timelines, and ownership structures to uncover hidden value.' },
@@ -68,12 +71,13 @@ const caseStudies = [
 ];
 
 const affiliationLogos = [
-  { src: '/assets/affiliations/acec-logo.png',    alt: 'American Council of Engineering Companies logo' },
-  { src: '/assets/affiliations/acp-logo.png',     alt: 'American Clean Power association logo' },
-  { src: '/assets/affiliations/cebn-logo.png',    alt: 'Clean Energy Business Network logo' },
-  { src: '/assets/affiliations/seia-logo.png',    alt: 'Solar Energy Industries Association logo' },
-  { src: '/assets/affiliations/naesco-logo.png',  alt: 'National Association of Energy Service Companies logo' },
+  { src: '/assets/affiliations/acec-logo.png',   alt: 'American Council of Engineering Companies logo',   height: 44 },
+  { src: '/assets/affiliations/acp-logo.png',    alt: 'American Clean Power association logo',            height: 40 },
+  { src: '/assets/affiliations/cebn-logo.png',   alt: 'Clean Energy Business Network logo',               height: 44 },
+  { src: '/assets/affiliations/seia-logo.png',   alt: 'Solar Energy Industries Association logo',         height: 40 },
+  { src: '/assets/affiliations/naesco-logo.png', alt: 'National Association of Energy Service Companies logo', height: 44 },
 ];
+
 
 const latestResources = [
   { category: 'News',       date: 'Mar 15, 2026', title: 'IRS Updates 179D Guidance for 2026 Tax Year' },
@@ -84,8 +88,8 @@ const latestResources = [
 /* ------------------------------------------------------------------ */
 
 export default function Home() {
-  const [activeTab, setActiveTab] = useState('designers');
   const [activeStage, setActiveStage] = useState(0);
+
 
   const organizationSchema = generateOrganizationSchema();
   const websiteSchema = generateWebSiteSchema();
@@ -209,17 +213,26 @@ export default function Home() {
             <p className="tech-label">Industry Affiliations</p>
             <p className="tech-label tech-label--dim">Verified members · 05</p>
           </div>
-          <div className="overflow-hidden relative">
-            <div className="marquee-track items-center gap-16">
+          <div className="marquee-viewport">
+            <div className="marquee-track items-center">
               {[...affiliationLogos, ...affiliationLogos].map((logo, i) => (
-                <img key={i} src={logo.src} alt={logo.alt}
-                     width="180" height="60" loading="lazy"
-                     className="h-14 w-auto object-contain grayscale opacity-80 hover:opacity-100 transition-opacity brightness-200 contrast-50 mr-16" />
+                <img
+                  key={i}
+                  src={logo.src}
+                  alt={i < affiliationLogos.length ? logo.alt : ''}
+                  aria-hidden={i >= affiliationLogos.length || undefined}
+                  width="200"
+                  height="72"
+                  loading="lazy"
+                  className="affiliation-logo"
+                  style={{ height: `${logo.height || 44}px` }}
+                />
               ))}
             </div>
           </div>
         </div>
       </section>
+
 
       {/* ============================================================
           SERVICES ATLAS — vertical editorial index, no card grid
@@ -312,53 +325,10 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="grid lg:grid-cols-12 gap-10">
-            <div role="tablist" aria-label="Who we serve" className="lg:col-span-4 border-y border-[rgb(var(--ivory))/0.12]">
-              {tabs.map((t, i) => (
-                <button
-                  key={t.id}
-                  role="tab"
-                  id={`persona-tab-${t.id}`}
-                  aria-selected={activeTab === t.id}
-                  aria-controls={`persona-panel-${t.id}`}
-                  onClick={() => setActiveTab(t.id)}
-                  className={`w-full flex items-baseline gap-4 text-left py-5 border-b border-[rgb(var(--ivory))/0.12] transition-colors last:border-b-0
-                    ${activeTab === t.id ? 'text-[rgb(var(--ivory))]' : 'text-[rgb(var(--ivory))/0.55] hover:text-[rgb(var(--ivory))]'}`}
-                >
-                  <span className={`index-num shrink-0 w-12 ${activeTab === t.id ? 'text-[rgb(var(--concord-glow))]' : ''}`}>B/0{i + 1}</span>
-                  <span className="font-[Fraunces] text-[24px] leading-tight tracking-tight flex-1">{t.label}</span>
-                  <span aria-hidden="true" className={`transition-transform ${activeTab === t.id ? 'text-[rgb(var(--concord-glow))]' : ''}`}>
-                    <ArrowRight size={18} weight="bold" />
-                  </span>
-                </button>
-              ))}
-            </div>
-
-            <div className="lg:col-span-8">
-              {tabs.map((t) => (
-                <div
-                  key={t.id}
-                  role="tabpanel"
-                  id={`persona-panel-${t.id}`}
-                  aria-labelledby={`persona-tab-${t.id}`}
-                  hidden={activeTab !== t.id}
-                  className="surface-ivory p-8 lg:p-12 relative"
-                >
-                  <span aria-hidden="true" className="coord absolute top-3 right-3 text-[rgb(var(--ink))/0.5]" />
-                  <p className="tech-label mb-6" style={{ color: 'rgb(var(--concord))' }}>Persona</p>
-                  <h3 className="h-lead" style={{ color: 'rgb(var(--ink))' }}>{t.title}</h3>
-                  <p className="mt-6 text-[17px] leading-relaxed text-[rgb(var(--ink))/0.75] max-w-2xl">
-                    {t.description}
-                  </p>
-                  <div className="mt-8">
-                    <Link to="/contact" className="btn btn-dark">Learn More <ArrowRight size={14} weight="bold" /></Link>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
+          <PersonaTabs items={tabs} />
         </div>
       </section>
+
 
       {/* ============================================================
           THE CONCORD STANDARD — six-stage sticky progression
@@ -620,22 +590,10 @@ export default function Home() {
               <p className="tech-label mb-6">Frequently Asked · J/01</p>
               <h2 className="h-lead">Everything you need to know about clean energy tax incentives and how Concord can help your organization.</h2>
             </div>
-            <div className="lg:col-span-8 border-t border-[rgb(var(--ivory))/0.12]">
-              {homeFaqs.map((faq, i) => (
-                <details key={i} className="border-b border-[rgb(var(--ivory))/0.12] group py-2">
-                  <summary className="list-none py-5 cursor-pointer flex items-start justify-between gap-6">
-                    <span className="flex items-baseline gap-4">
-                      <span className="index-num shrink-0">Q/0{i + 1}</span>
-                      <span className="font-[Fraunces] text-[20px] lg:text-[22px] tracking-tight text-[rgb(var(--ivory))]">{faq.question}</span>
-                    </span>
-                    <span aria-hidden="true" className="tech-label text-[rgb(var(--concord-glow))] shrink-0 transition-transform group-open:rotate-45">+</span>
-                  </summary>
-                  <div className="pb-6 pl-14 pr-4">
-                    <p className="text-[15px] text-[rgb(var(--ivory))/0.72] leading-relaxed max-w-2xl">{faq.answer}</p>
-                  </div>
-                </details>
-              ))}
+            <div className="lg:col-span-8">
+              <HomeFaq faqs={homeFaqs} />
             </div>
+
           </div>
         </div>
       </section>

@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useId, useRef, useState } from 'react';
 
 /**
  * Architectural cutaway of a mid-rise commercial building
@@ -23,6 +23,12 @@ export default function BuildingBlueprint() {
   const [active, setActive] = useState('hvac');
   const wrapRef = useRef(null);
   const svgRef = useRef(null);
+  const uid = useId().replace(/[^a-zA-Z0-9_-]/g, '');
+  const idGlass = `bp-glass-${uid}`;
+  const idBrass = `bp-brass-${uid}`;
+  const idHatch = `bp-hatch-${uid}`;
+  const idSoft  = `bp-soft-${uid}`;
+
 
   useEffect(() => {
     const el = wrapRef.current;
@@ -121,21 +127,22 @@ export default function BuildingBlueprint() {
         role="img"
         aria-label="Architectural cutaway of a mid-rise commercial building showing envelope, HVAC, lighting, clean energy, documentation, and incentive capture systems"
         preserveAspectRatio="xMidYMid meet"
-        className="w-full h-full block"
+        className="bp-svg w-full h-full block"
       >
+
         <defs>
-          <linearGradient id="glass" x1="0" x2="1" y1="0" y2="1">
+          <linearGradient id={idGlass} x1="0" x2="1" y1="0" y2="1">
             <stop offset="0" stopColor="#3da35d" stopOpacity="0.25" />
             <stop offset="1" stopColor="#0f2418" stopOpacity="0.0" />
           </linearGradient>
-          <linearGradient id="brass" x1="0" x2="0" y1="0" y2="1">
+          <linearGradient id={idBrass} x1="0" x2="0" y1="0" y2="1">
             <stop offset="0" stopColor="#d1a670" />
             <stop offset="1" stopColor="#8a6a3f" />
           </linearGradient>
-          <pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+          <pattern id={idHatch} width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
             <line x1="0" y1="0" x2="0" y2="6" stroke="rgba(239,236,229,0.15)" strokeWidth="1" />
           </pattern>
-          <filter id="soft">
+          <filter id={idSoft}>
             <feGaussianBlur stdDeviation="0.5" />
           </filter>
         </defs>
@@ -179,7 +186,7 @@ export default function BuildingBlueprint() {
           <rect x="180" y="150" width="380" height="360" fill="#0e1412" stroke={on('envelope') ? '#40b868' : 'rgba(239,236,229,0.55)'} strokeWidth={on('envelope') ? 1.6 : 1} />
 
           {/* Glass curtain on right half */}
-          <rect x="380" y="150" width="180" height="360" fill="url(#glass)" opacity={on('envelope') || on('hvac') ? 0.8 : 0.5} />
+          <rect x="380" y="150" width="180" height="360" fill={`url(#${idGlass})`} opacity={on('envelope') || on('hvac') ? 0.8 : 0.5} />
 
           {/* Floors */}
           {Array.from({ length: 7 }).map((_, i) => {
@@ -198,7 +205,7 @@ export default function BuildingBlueprint() {
                 </g>
                 {/* HVAC ducts per floor (right side) */}
                 <g opacity={on('hvac') ? 1 : 0.25}>
-                  <rect x="400" y={y - 12} width="150" height="6" fill="url(#hatch)" stroke={on('hvac') ? '#40b868' : 'rgba(239,236,229,0.3)'} strokeWidth="0.75" />
+                  <rect x="400" y={y - 12} width="150" height="6" fill={`url(#${idHatch})`} stroke={on('hvac') ? '#40b868' : 'rgba(239,236,229,0.3)'} strokeWidth="0.75" />
                 </g>
               </g>
             );
