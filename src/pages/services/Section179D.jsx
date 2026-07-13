@@ -122,7 +122,11 @@ export default function Section179D() {
             eyebrow="Understanding 179D"
             title="What Is the 179D Tax Deduction?"
             mediaVariant="engineering"
-            mediaImage="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80"
+            mediaImages={[
+              'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80',
+              'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80',
+              'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80',
+            ]}
             mediaAlt="Modern commercial building with energy-efficient glass facade"
             lede={
               <>
