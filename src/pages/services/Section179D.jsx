@@ -122,6 +122,7 @@ export default function Section179D() {
             eyebrow="Understanding 179D"
             title="What Is the 179D Tax Deduction?"
             mediaVariant="engineering"
+            mediaImage="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80"
             mediaAlt="Modern commercial building with energy-efficient glass facade"
             lede={
               <>
@@ -187,6 +188,7 @@ export default function Section179D() {
             eyebrow="Qualifying Improvements"
             title="What Improvements Qualify for 179D?"
             mediaVariant="engineering"
+            mediaImage="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=80"
             mediaAlt="Engineers reviewing energy modeling blueprints for building improvements"
             lede={<>To qualify, projects must demonstrate a reduction in total annual energy and power costs compared to the ASHRAE 90.1 reference standard. Meeting <Link to="/prevailing-wage-apprenticeship" className="ed-link">prevailing wage and apprenticeship</Link> requirements unlocks enhanced rates.</>}
           >
@@ -246,6 +248,7 @@ export default function Section179D() {
             eyebrow="For Design Professionals"
             title="How Do Designers Qualify? What Is an Allocation Letter?"
             mediaVariant="building-179d"
+            mediaImage="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1200&q=80"
             mediaAlt="Architectural drawings showing 179D allocation letter documentation for a public sector building"
             lede={<>Design professionals working on tax-exempt or government-owned buildings can qualify by receiving an allocation letter from the property owner. Federal law allows the economic benefit to be transferred to the designers who made the energy-saving improvements possible. Visit our <Link to="/resources" className="ed-link">resources</Link> library for detailed allocation letter guides.</>}
           >

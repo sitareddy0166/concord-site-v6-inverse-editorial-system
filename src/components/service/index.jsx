@@ -71,7 +71,7 @@ export function ServiceFactsRail({ facts = [] }) {
 /* ---------- 3. Media split ---------- */
 export function ServiceMediaSplit({
   eyebrow, code, title, lede, bullets, mediaVariant = 'engineering', mediaAlt = '',
-  reverse = false, children,
+  mediaImage, reverse = false, children,
 }) {
   return (
     <div className={`grid lg:grid-cols-12 gap-10 lg:gap-14 items-center ${reverse ? 'lg:[&>*:first-child]:order-2' : ''}`}>
@@ -90,7 +90,19 @@ export function ServiceMediaSplit({
         {children}
       </div>
       <div className="lg:col-span-6">
-        <EditorialMedia variant={mediaVariant} alt={mediaAlt} aspect="4/3" className="w-full" />
+        {mediaImage ? (
+          <div className="relative overflow-hidden border border-[rgb(var(--ivory))/0.12] bg-[rgb(var(--ink))]" style={{ aspectRatio: '4/3' }}>
+            <img
+              src={mediaImage}
+              alt={mediaAlt}
+              loading="lazy"
+              className="w-full h-full object-cover object-center"
+            />
+            <div aria-hidden="true" className="absolute inset-0 pointer-events-none" style={{ background: 'linear-gradient(180deg, rgba(11,15,13,0.10) 0%, rgba(11,15,13,0.45) 100%)' }} />
+          </div>
+        ) : (
+          <EditorialMedia variant={mediaVariant} alt={mediaAlt} aspect="4/3" className="w-full" />
+        )}
       </div>
     </div>
   );
