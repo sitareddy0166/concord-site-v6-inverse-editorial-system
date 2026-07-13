@@ -332,13 +332,26 @@
 @layer utilities {
   .text-balance { text-wrap: balance; }
   .text-pretty  { text-wrap: pretty; }
-  .grain {
-    position: relative;
+
+  /* Cross-browser scrollbar hide */
+  .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+  .scrollbar-hide::-webkit-scrollbar { display: none; }
+
+  /* Fade masks on horizontally scrolling nav rows */
+  .subnav-fade {
+    -webkit-mask-image: linear-gradient(to right, transparent 0, #000 24px, #000 calc(100% - 24px), transparent 100%);
+            mask-image: linear-gradient(to right, transparent 0, #000 24px, #000 calc(100% - 24px), transparent 100%);
   }
+
+  /* Grain overlay (disabled on small viewports for perf) */
+  .grain { position: relative; }
   .grain::after {
     content: ''; position: absolute; inset: 0; pointer-events: none;
     opacity: 0.04; mix-blend-mode: overlay;
     background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  }
+  @media (max-width: 640px) {
+    .grain::after { display: none; }
   }
   /* Legacy concord-* mappings for old pages during transition */
   .bg-concord-cream { background-color: rgb(var(--paper)); color: rgb(var(--ink)); }
@@ -440,3 +453,87 @@
   /* Em-dash guard: strip stray characters that break editorial voice
      (only decorative; content copy avoids em dashes at source) */
 }
+
+/* ============================================================
+   MEDIA FALLBACK — decorative schematic art for otherwise-empty
+   image containers. Any element that has `.blueprint-grid-fine`
+   and is used as a media slot (has role=img OR aria-hidden and
+   sits in an aspect-ratio container) gets a subtle architectural
+   line-art overlay so it never renders as a blank dark box.
+   ============================================================ */
+.blueprint-grid-fine {
+  position: relative;
+  isolation: isolate;
+}
+.blueprint-grid-fine::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: min(72%, 320px) auto;
+  opacity: 0.55;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 200' fill='none' stroke='%2340b868' stroke-width='0.9' stroke-linecap='square'><rect x='40' y='40' width='240' height='130' opacity='0.7'/><line x1='40' y1='70' x2='280' y2='70' opacity='0.4'/><line x1='40' y1='100' x2='280' y2='100' opacity='0.4'/><line x1='40' y1='130' x2='280' y2='130' opacity='0.4'/><line x1='120' y1='40' x2='120' y2='170' opacity='0.25' stroke-dasharray='2 4'/><line x1='200' y1='40' x2='200' y2='170' opacity='0.25' stroke-dasharray='2 4'/><rect x='90' y='16' width='50' height='24' opacity='0.6'/><circle cx='260' cy='30' r='8' opacity='0.6'/><line x1='16' y1='180' x2='304' y2='180' stroke='%23efece5' opacity='0.25'/><text x='40' y='192' font-family='JetBrains Mono, monospace' font-size='7' fill='%23efece5' opacity='0.5'>FIG · SCHEMATIC</text></svg>");
+}
+.blueprint-grid-fine::after {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  pointer-events: none;
+  border: 1px solid rgb(var(--ivory) / 0.06);
+}
+/* If the container has real children (an <img>, an SVG, etc), suppress overlay */
+.blueprint-grid-fine:has(> :not(style):not(script)):not([role="img"]):not([aria-hidden="true"])::before,
+.blueprint-grid-fine:has(> :not(style):not(script)):not([role="img"]):not([aria-hidden="true"])::after {
+  content: none;
+}
+
+/* ============================================================
+   MOBILE TYPOGRAPHY GUARDS
+   ============================================================ */
+@media (max-width: 640px) {
+  .h-display { font-size: clamp(2.25rem, 10vw, 2.75rem); letter-spacing: -0.03em; }
+  .h-lead    { font-size: clamp(1.85rem, 8vw, 2.25rem); }
+  .h-chapter { font-size: clamp(1.35rem, 6vw, 1.6rem); }
+  input, textarea, select { font-size: 16px !important; }
+}
+
+/* ============================================================
+   SUBNAV MOBILE: hide "On This Page" label below 480px,
+   compact padding, respect edge fades
+   ============================================================ */
+@media (max-width: 480px) {
+  .subnav [data-subnav-label] { display: none; }
+  .subnav a, .subnav .subnav-link { padding: 12px 0; }
+}
+
+/* Ensure horizontally scrolling nav rows use momentum on iOS */
+.subnav [data-subnav-scroll] { -webkit-overflow-scrolling: touch; }
+
+/* ============================================================
+   NAVBAR: active-route highlight, larger touch targets on mobile
+   ============================================================ */
+.nav-link[data-active="true"] { color: rgb(var(--concord-glow)); }
+.nav-link[data-active="true"]::after {
+  content: ""; display: block; height: 1px; margin-top: 4px;
+  background: rgb(var(--concord-glow) / 0.6);
+}
+@media (max-width: 1024px) {
+  .nav-link { min-height: 44px; display: inline-flex; align-items: center; }
+}
+
+/* ============================================================
+   Content-block CTA responsiveness
+   ============================================================ */
+@media (max-width: 480px) {
+  .btn { width: 100%; justify-content: center; min-height: 48px; }
+  .btn + .btn { margin-top: 12px; }
+}
+
+/* Prevent horizontal overflow globally */
+html, body { overflow-x: hidden; }
+
+/* Anchor scroll offset (fixed 64px header + 48px sticky subnav) */
+:target { scroll-margin-top: 128px; }
+[id] { scroll-margin-top: 128px; }
