@@ -184,8 +184,8 @@ export default function Contact() {
                     {errors.message && <p className="text-[#e85d75] text-[13px] mt-1">{errors.message}</p>}
                   </div>
 
-                  <button type="submit" disabled={isSubmitting} className="rounded-full bg-[#151C19] text-white px-8 py-4 font-bold text-[15px] hover:-translate-y-[2px] hover:shadow-lg transition-all duration-300 inline-flex items-center gap-2 w-full sm:w-auto justify-center disabled:opacity-60">
-                    {isSubmitting ? 'Sending...' : <>Send Message <PaperPlaneTilt /></>}
+                  <button type="submit" disabled={isSubmitting} className="rounded-full bg-[#151C19] text-white px-8 py-4 min-h-[52px] font-bold text-[15px] hover:-translate-y-[2px] hover:shadow-lg transition-all duration-300 inline-flex items-center gap-2 w-full sm:w-auto justify-center disabled:opacity-60">
+                    {isSubmitting ? 'Sending...' : <>Send Message (Preview) <PaperPlaneTilt /></>}
                   </button>
 
                   {showSuccess && (
