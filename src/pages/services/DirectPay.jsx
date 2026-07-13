@@ -103,7 +103,11 @@ export default function DirectPay() {
             eyebrow="Understanding Section 6417"
             title="What Is Direct Pay?"
             mediaVariant="public-infra"
-            mediaImage="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1200&q=80"
+            mediaImages={[
+              'https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1200&q=80',
+              'https://images.unsplash.com/photo-1497440001374-f26997328c1b?auto=format&fit=crop&w=800&q=80',
+              'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=800&q=80',
+            ]}
             mediaAlt="Municipal facility with rooftop solar array representing a Section 6417 Direct Pay project"
             lede={<>Section 6417 of the Internal Revenue Code, introduced by the Inflation Reduction Act, fundamentally changed how tax-exempt entities interact with clean energy incentives. For the first time, organizations that do not owe federal income tax can receive the full value of certain clean energy tax credits as direct cash payments from the U.S. Treasury.</>}
           >

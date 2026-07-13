@@ -152,7 +152,11 @@ export default function PWA() {
             eyebrow="Understanding PWA"
             title="What is Prevailing Wage & Apprenticeship Compliance?"
             mediaVariant="solar-array"
-            mediaImage="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80"
+            mediaImages={[
+              'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80',
+              'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=800&q=80',
+              'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80',
+            ]}
             mediaAlt="Construction workers installing solar panels on a prevailing wage project site"
             lede={<>The Inflation Reduction Act of 2022 introduced Prevailing Wage and Apprenticeship (PWA) requirements as the gateway to enhanced clean energy tax incentives. Projects that meet these labor standards qualify for the full bonus credit rate, which is <strong className="text-[rgb(var(--ivory))]">five times</strong> the base rate. This is particularly critical for organizations pursuing the <Link to="/179d-tax-deduction" className="ed-link">179D tax deduction</Link>, where compliance determines whether you receive $1.19/sqft or the full $5.94/sqft.</>}
           >
