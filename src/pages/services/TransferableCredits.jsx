@@ -231,7 +231,7 @@ export default function TransferableCredits() {
                     <p className="text-[16px] text-slate-500 leading-relaxed">{step.desc}</p>
                   </div>
                   <div className={`lg:w-1/2 ${isEven ? 'lg:pl-12' : 'lg:pr-12'}`}>
-                    <EditorialMedia variant="transaction" alt={step.alt} aspect="3/2" className="w-full" />
+                    <EditorialMedia variant="auto" alt={step.alt} aspect="3/2" className="w-full" />
                   </div>
                 </ScrollFadeIn>
               );

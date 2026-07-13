@@ -265,7 +265,7 @@ export default function Contact() {
             ].map((loc) => (
               <ScrollFadeIn key={loc.title}>
                 <div className="bg-white rounded-3xl overflow-hidden border border-black/[0.06] shadow-sm card-hover flex flex-col h-full">
-                  <EditorialMedia variant="office-map" alt={loc.imgAlt} aspect="3/2" className="w-full" />
+                  <EditorialMedia variant="auto" alt={loc.imgAlt} aspect="3/2" className="w-full" />
                   <div className="p-6 flex-1">
                     <div className="flex items-center gap-2 mb-3">
                       <h3 className="font-heading font-bold text-[18px] text-concord-dark">{loc.title}</h3>
