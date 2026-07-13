@@ -188,6 +188,7 @@ export default function Section179D() {
             eyebrow="Qualifying Improvements"
             title="What Improvements Qualify for 179D?"
             mediaVariant="engineering"
+            mediaImage="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=80"
             mediaAlt="Engineers reviewing energy modeling blueprints for building improvements"
             lede={<>To qualify, projects must demonstrate a reduction in total annual energy and power costs compared to the ASHRAE 90.1 reference standard. Meeting <Link to="/prevailing-wage-apprenticeship" className="ed-link">prevailing wage and apprenticeship</Link> requirements unlocks enhanced rates.</>}
           >
