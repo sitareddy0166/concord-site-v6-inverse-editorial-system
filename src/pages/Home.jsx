@@ -35,10 +35,10 @@ const services = [
 ];
 
 const tabs = [
-  { id: 'designers',   label: 'Project Designers',       title: 'Project Designers',       description: 'Architects and engineers who design energy-efficient buildings can claim the 179D deduction through allocation letters from building owners. Concord manages the entire process, from energy modeling to certification.', media: 'engineering',   imageAlt: 'Architect reviewing energy-efficient building blueprints for 179D tax deduction eligibility' },
-  { id: 'for-profit',  label: 'For-Profit Owners',       title: 'For-Profit Owners',       description: 'Commercial building owners can directly claim 179D deductions and leverage transferable credits under Section 6418 to monetize their clean energy investments in new ways.', media: 'building-179d', imageAlt: 'Modern commercial office building exterior with energy-efficient systems eligible for 179D tax deduction' },
-  { id: 'tax-exempt',  label: 'Tax-Exempt Owners',       title: 'Tax-Exempt Owners',       description: 'Government agencies, tribal nations, and nonprofits can now receive direct cash payments for clean energy tax credits through Section 6417. We handle pre-filing registration and IRS compliance.', media: 'public-infra',  imageAlt: 'University campus buildings representing tax-exempt entities eligible for Section 6417 Direct Pay' },
-  { id: 'marketplace', label: 'Tax Credit Marketplace',  title: 'Tax Credit Marketplace',  description: 'Section 6418 created a new marketplace for buying and selling clean energy credits. Concord connects buyers and sellers, manages due diligence, and ensures compliant transfer mechanics.', media: 'transaction',   imageAlt: 'Financial dashboard showing tax credit transfer analytics for Section 6418 marketplace' },
+  { id: 'designers',   label: 'Project Designers',       title: 'Project Designers',       description: 'Architects and engineers who design energy-efficient buildings can claim the 179D deduction through allocation letters from building owners. Concord manages the entire process, from energy modeling to certification.', media: 'engineering',   image: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=80', imageAlt: 'Architect reviewing energy-efficient building blueprints for 179D tax deduction eligibility' },
+  { id: 'for-profit',  label: 'For-Profit Owners',       title: 'For-Profit Owners',       description: 'Commercial building owners can directly claim 179D deductions and leverage transferable credits under Section 6418 to monetize their clean energy investments in new ways.', media: 'building-179d', image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80', imageAlt: 'Modern commercial office building exterior with energy-efficient systems eligible for 179D tax deduction' },
+  { id: 'tax-exempt',  label: 'Tax-Exempt Owners',       title: 'Tax-Exempt Owners',       description: 'Government agencies, tribal nations, and nonprofits can now receive direct cash payments for clean energy tax credits through Section 6417. We handle pre-filing registration and IRS compliance.', media: 'public-infra',  image: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1200&q=80', imageAlt: 'Civic government building representing tax-exempt entities eligible for Section 6417 Direct Pay' },
+  { id: 'marketplace', label: 'Tax Credit Marketplace',  title: 'Tax Credit Marketplace',  description: 'Section 6418 created a new marketplace for buying and selling clean energy credits. Concord connects buyers and sellers, manages due diligence, and ensures compliant transfer mechanics.', media: 'transaction',   image: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1200&q=80', imageAlt: 'Business professionals shaking hands representing tax credit marketplace transactions' },
 ];
 
 
@@ -321,7 +321,7 @@ export default function Home() {
           <div className="grid lg:grid-cols-12 gap-10 items-end mb-14">
             <div className="lg:col-span-8">
               <p className="tech-label mb-6">Chapters · B/01–04</p>
-              <h2 className="h-display text-balance">Built for your position in the incentive stack.</h2>
+              <h2 className="h-display text-balance">Who Qualifies</h2>
             </div>
           </div>
 
