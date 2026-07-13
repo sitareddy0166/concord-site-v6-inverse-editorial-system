@@ -122,6 +122,7 @@ export default function Section179D() {
             eyebrow="Understanding 179D"
             title="What Is the 179D Tax Deduction?"
             mediaVariant="engineering"
+            mediaImage="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=formatmediaVariant="engineering"fit=cropmediaVariant="engineering"w=1200mediaVariant="engineering"q=80"
             mediaAlt="Modern commercial building with energy-efficient glass facade"
             lede={
               <>
@@ -187,6 +188,7 @@ export default function Section179D() {
             eyebrow="Qualifying Improvements"
             title="What Improvements Qualify for 179D?"
             mediaVariant="engineering"
+            mediaImage="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=formatmediaVariant="engineering"fit=cropmediaVariant="engineering"w=1200mediaVariant="engineering"q=80"
             mediaAlt="Engineers reviewing energy modeling blueprints for building improvements"
             lede={<>To qualify, projects must demonstrate a reduction in total annual energy and power costs compared to the ASHRAE 90.1 reference standard. Meeting <Link to="/prevailing-wage-apprenticeship" className="ed-link">prevailing wage and apprenticeship</Link> requirements unlocks enhanced rates.</>}
           >
