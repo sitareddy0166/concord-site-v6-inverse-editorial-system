@@ -32,6 +32,7 @@ import FaqAccordion from '@/components/sections/FaqAccordion';
 
 import ServiceHero from '@/components/sections/ServiceHero';
 import ServicePageShell from '@/components/service/ServicePageShell';
+import { SharedServiceFAQ, ServiceFinalCTA, RelatedServices } from '@/components/service';
 
 const stickyNavItems = [
   { label: 'What Is 179D?', href: '#what-is-179d' },
