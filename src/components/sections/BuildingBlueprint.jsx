@@ -23,6 +23,12 @@ export default function BuildingBlueprint() {
   const [active, setActive] = useState('hvac');
   const wrapRef = useRef(null);
   const svgRef = useRef(null);
+  const uid = useId().replace(/[^a-zA-Z0-9_-]/g, '');
+  const idGlass = `bp-glass-${uid}`;
+  const idBrass = `bp-brass-${uid}`;
+  const idHatch = `bp-hatch-${uid}`;
+  const idSoft  = `bp-soft-${uid}`;
+
 
   useEffect(() => {
     const el = wrapRef.current;
