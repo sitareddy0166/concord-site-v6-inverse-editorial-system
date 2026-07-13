@@ -1,3 +1,4 @@
+import EditorialMedia from '@/components/media/EditorialMedia';
 import { useState } from 'react';
 import financialAnalysisImg from '@/assets/financial-analysis.jpg';
 import manufacturingRdImg from '@/assets/manufacturing-rd.jpg';
@@ -242,7 +243,7 @@ export default function RDTaxCredits() {
                     <p className="text-slate-500 text-base leading-relaxed">{step.desc}</p>
                   </div>
                   <div className={`lg:w-1/2 ${isEven ? 'lg:pl-16' : 'lg:pr-16'}`}>
-                    {step.img ? (<img src={step.img} alt={step.alt} loading="lazy" width="600" height="400" className="rounded-3xl shadow-md w-full object-cover aspect-[3/2]" />) : (<div role="img" aria-label={step.alt} className="bg-[rgb(var(--graphite))] blueprint-grid-fine border border-[rgb(var(--ivory))/0.10] aspect-[3/2] w-full" />)}
+                    {step.img ? (<img src={step.img} alt={step.alt} loading="lazy" width="600" height="400" className="rounded-3xl shadow-md w-full object-cover aspect-[3/2]" />) : (<EditorialMedia variant="auto" alt={step.alt} aspect="3/2" className="w-full" />)}
                   </div>
                 </ScrollFadeIn>
               );
@@ -337,7 +338,7 @@ export default function RDTaxCredits() {
       {/* CTA Banner - Glassmorphism */}
       <section className="relative py-[80px] lg:py-[100px] overflow-hidden bg-[#151C19]">
         <div className="absolute inset-0 opacity-15">
-          <div aria-hidden="true" className="w-full h-full bg-[rgb(var(--graphite))] blueprint-grid-fine" />
+          <EditorialMedia variant="tech-docs" decorative className="h-full w-full" />
           <div className="absolute inset-0 bg-[#151C19]/70"></div>
         </div>
         <div className="max-w-4xl mx-auto px-6 relative z-10">

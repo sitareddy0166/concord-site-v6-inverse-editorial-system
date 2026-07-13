@@ -1,3 +1,4 @@
+import EditorialMedia from '@/components/media/EditorialMedia';
 import { useState } from 'react';
 import financialAnalysisImg from '@/assets/financial-analysis.jpg';
 import { Link } from 'react-router-dom';
@@ -169,7 +170,7 @@ export default function TransferableCredits() {
         <div className="max-w-[1200px] mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
             <ScrollFadeIn>
-              <div role="img" aria-label="Financial data visualization representing the transferable tax credit marketplace" className="rounded-3xl w-full aspect-[4/3] object-cover shadow-md bg-[rgb(var(--graphite))] blueprint-grid-fine border border-[rgb(var(--ivory))/0.10]" />
+              <EditorialMedia variant="transaction" alt="Financial data visualization representing the transferable tax credit marketplace" aspect="4/3" rounded className="w-full" />
             </ScrollFadeIn>
 
             <ScrollFadeIn>
@@ -230,7 +231,7 @@ export default function TransferableCredits() {
                     <p className="text-[16px] text-slate-500 leading-relaxed">{step.desc}</p>
                   </div>
                   <div className={`lg:w-1/2 ${isEven ? 'lg:pl-12' : 'lg:pr-12'}`}>
-                    <div role="img" aria-label={step.alt} className="bg-[rgb(var(--graphite))] blueprint-grid-fine border border-[rgb(var(--ivory))/0.10] aspect-[3/2] w-full" />
+                    <EditorialMedia variant="auto" alt={step.alt} aspect="3/2" className="w-full" />
                   </div>
                 </ScrollFadeIn>
               );
@@ -259,7 +260,7 @@ export default function TransferableCredits() {
 
           <ScrollFadeIn>
             <div className="rounded-[24px] overflow-hidden mb-8">
-              <div role="img" aria-label="Aerial view of a large-scale solar farm generating clean energy tax credits eligible for transfer under Section 6418" className="w-full h-[280px] object-cover bg-[rgb(var(--graphite))] blueprint-grid-fine border border-[rgb(var(--ivory))/0.10]" />
+              <EditorialMedia variant="solar-array" alt="Aerial view of a large-scale solar farm generating clean energy tax credits eligible for transfer under Section 6418" className="h-[280px] w-full" />
             </div>
           </ScrollFadeIn>
 
@@ -295,7 +296,7 @@ export default function TransferableCredits() {
 
           <ScrollFadeIn>
             <div className="rounded-[24px] overflow-hidden mb-8">
-              <div aria-hidden="true" className="w-full h-full bg-[rgb(var(--graphite))] blueprint-grid-fine" />
+              <EditorialMedia variant="solar-array" decorative className="h-full w-full" />
             </div>
           </ScrollFadeIn>
 
@@ -474,7 +475,7 @@ export default function TransferableCredits() {
       {/* CTA Banner - Glassmorphism */}
       <section className="relative py-[80px] lg:py-[100px] overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <div role="img" aria-label="Clean energy solar farm at sunset representing sustainable investment" className="w-full h-full object-cover bg-[rgb(var(--graphite))] blueprint-grid-fine border border-[rgb(var(--ivory))/0.10]" />
+          <EditorialMedia variant="solar-array" alt="Clean energy solar farm at sunset representing sustainable investment" className="h-full w-full" />
           <div className="absolute inset-0 bg-[#151C19]/85"></div>
         </div>
         <div className="relative z-10 max-w-4xl mx-auto px-6">
