@@ -104,8 +104,6 @@ const guaranteeItems = [
 ];
 
 export default function PWA() {
-  const [activeTab, setActiveTab] = useState('179d');
-
   return (
     <ServicePageShell>
       <SEOHead
