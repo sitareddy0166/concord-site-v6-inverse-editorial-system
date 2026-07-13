@@ -20,6 +20,7 @@ import StickyNav from '@/components/layout/StickyNav';
 import ServiceHero from '@/components/sections/ServiceHero';
 import VideoExplainer from '@/components/sections/VideoExplainer';
 import ServicePageShell from '@/components/service/ServicePageShell';
+import { SharedServiceFAQ, ServiceFinalCTA, RelatedServices } from '@/components/service';
 
 const stickyNavItems = [
   { label: 'What Is PWA?', href: '#what-is-pwa' },
@@ -363,73 +364,19 @@ export default function PWA() {
         </div>
       </section>
 
-      {/* FAQ */}
-      <section id="faq" className="py-[80px] lg:py-[100px] bg-concord-cream">
-        <div className="max-w-[1200px] mx-auto px-6">
-          <div className="grid lg:grid-cols-5 gap-16">
-            <ScrollFadeIn className="lg:col-span-2">
-              <p className="text-[13px] uppercase tracking-[0.1em] font-bold text-concord-green mb-4">FAQ</p>
-              <h2 className="font-heading font-extrabold text-[36px] lg:text-[52px] tracking-[-0.03em] leading-[1.1] mb-6">Frequently Asked Questions</h2>
-              <p className="text-base text-slate-500 leading-relaxed mb-8">Everything you need to know about prevailing wage and apprenticeship compliance for IRA tax credits.</p>
-              <Link to="/contact" className="bg-[#151C19] text-white px-8 py-4 rounded-full text-sm font-semibold tracking-wide inline-flex items-center gap-2">
-                Still have questions? <ArrowRight size={16} />
-              </Link>
-            </ScrollFadeIn>
+      <SharedServiceFAQ
+        faqs={faqs}
+        intro="Everything you need to know about prevailing wage and apprenticeship compliance for IRA tax credits."
+      />
 
-            <ScrollFadeIn className="lg:col-span-3">
-              <FaqInline faqs={faqs} />
-            </ScrollFadeIn>
-          </div>
-        </div>
-      </section>
+      <RelatedServices currentHref="/prevailing-wage-apprenticeship" />
 
-      {/* CTA Banner - Glassmorphism */}
-      <section className="relative py-[80px] lg:py-[100px] overflow-hidden">
-        <div className="absolute inset-0">
-          <EditorialMedia variant="solar-array" alt="Large-scale solar farm representing clean energy projects requiring PWA compliance" className="h-full w-full" />
-          <div className="absolute inset-0 bg-[#151C19]/85"></div>
-        </div>
-        <div className="relative z-10 max-w-4xl mx-auto px-6">
-          <ScrollFadeIn>
-            <div className="backdrop-blur-xl rounded-3xl p-10 md:p-14 text-center" style={{ background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.15)' }}>
-              <p className="text-[13px] uppercase tracking-[0.1em] font-bold text-concord-green mb-4">Start Today</p>
-              <h2 className="font-heading font-extrabold text-[36px] lg:text-[52px] tracking-[-0.03em] leading-[1.1] text-white mb-6 text-balance">
-                Don&apos;t Leave 80% of Your Credits on the Table
-              </h2>
-              <p className="text-white/60 text-base md:text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
-                Every day without PWA compliance is money left behind. Let Concord&apos;s experts ensure you capture the full 5x bonus multiplier on your clean energy tax credits.
-              </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <Link to="/contact" className="bg-white text-[#151C19] px-8 py-3.5 rounded-full text-base font-bold tracking-wide inline-flex items-center gap-2 hover:-translate-y-[2px] hover:shadow-lg transition-all duration-300">
-                  Start the Conversation <ArrowRight size={16} />
-                </Link>
-                <a href="https://www.concordlp.com/meetings/jonathan-darnell" className="px-8 py-3.5 rounded-full text-base font-bold tracking-wide border border-white/30 text-white hover:-translate-y-[2px] hover:shadow-lg transition-all duration-300 inline-flex items-center gap-2">
-                  Book a Discovery Call
-                </a>
-              </div>
-            </div>
-          </ScrollFadeIn>
-        </div>
-      </section>
+      <ServiceFinalCTA
+        eyebrow="Start Today"
+        headline="Don't Leave 80% of Your Credits on the Table"
+        description="Every day without PWA compliance is money left behind. Let Concord's experts ensure you capture the full 5x bonus multiplier on your clean energy tax credits."
+      />
     </ServicePageShell>
   );
 }
 
-function FaqInline({ faqs }) {
-  const [openIndex, setOpenIndex] = useState(null);
-  return (
-    <div className="space-y-4">
-      {faqs.map((faq, i) => (
-        <div key={i} className="bg-white rounded-2xl border border-black/[0.06] shadow-sm">
-          <button onClick={() => setOpenIndex(openIndex === i ? null : i)} className="flex items-center justify-between p-6 font-heading font-bold text-base cursor-pointer w-full text-left">
-            {faq.question}
-            <CaretRight size={18} className={`text-concord-green shrink-0 ml-4 transition-transform duration-300 ${openIndex === i ? 'rotate-90' : ''}`} />
-          </button>
-          <div className={`overflow-hidden transition-all duration-300 ${openIndex === i ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'}`}>
-            <p className="px-6 pb-6 text-slate-500 text-base leading-relaxed">{faq.answer}</p>
-          </div>
-        </div>
-      ))}
-    </div>
-  );
-}

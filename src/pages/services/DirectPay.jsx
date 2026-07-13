@@ -36,6 +36,7 @@ import StickyNav from '@/components/layout/StickyNav';
 import ServiceHero from '@/components/sections/ServiceHero';
 import VideoExplainer from '@/components/sections/VideoExplainer';
 import ServicePageShell from '@/components/service/ServicePageShell';
+import { SharedServiceFAQ, ServiceFinalCTA, RelatedServices } from '@/components/service';
 
 const stickyNavItems = [
   { label: 'What Is Direct Pay?', href: '#what-is-6417' },
@@ -455,73 +456,19 @@ export default function DirectPay() {
         </div>
       </section>
 
-      {/* FAQ */}
-      <section id="faq" className="py-[80px] lg:py-[100px] bg-concord-mint">
-        <div className="max-w-[1200px] mx-auto px-6">
-          <div className="grid lg:grid-cols-5 gap-16">
-            <ScrollFadeIn className="lg:col-span-2">
-              <span className="text-[13px] uppercase tracking-[0.1em] font-bold text-concord-green mb-4 block font-heading">FAQ</span>
-              <h2 className="font-heading font-extrabold text-[36px] lg:text-[52px] tracking-[-0.03em] leading-[1.1] mb-6">Frequently Asked Questions</h2>
-              <p className="text-base text-slate-500 leading-relaxed mb-8">Everything you need to know about Section 6417 Direct Pay for tax-exempt entities.</p>
-              <Link to="/contact" className="bg-[#151C19] text-white px-8 py-4 rounded-full text-sm font-semibold tracking-wide inline-flex items-center gap-2">
-                Still have questions? <ArrowRight size={16} />
-              </Link>
-            </ScrollFadeIn>
+      <SharedServiceFAQ
+        faqs={faqs}
+        intro="Everything you need to know about Section 6417 Direct Pay for tax-exempt entities."
+      />
 
-            <ScrollFadeIn className="lg:col-span-3">
-              <FaqInline faqs={faqs} />
-            </ScrollFadeIn>
-          </div>
-        </div>
-      </section>
+      <RelatedServices currentHref="/direct-pay" />
 
-      {/* CTA Banner - Glassmorphism */}
-      <section className="relative py-[80px] lg:py-[100px] overflow-hidden">
-        <div className="absolute inset-0">
-          <EditorialMedia variant="solar-array" alt="Large-scale solar farm representing clean energy Direct Pay opportunities" className="h-full w-full" />
-          <div className="absolute inset-0 bg-[#151C19]/85"></div>
-        </div>
-        <div className="relative z-10 max-w-4xl mx-auto px-6">
-          <ScrollFadeIn>
-            <div className="backdrop-blur-xl rounded-3xl p-10 md:p-14 text-center" style={{ background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.15)' }}>
-              <span className="text-[13px] uppercase tracking-[0.1em] font-bold text-concord-green mb-4 block">Start Today</span>
-              <h2 className="font-heading font-extrabold text-[36px] lg:text-[52px] tracking-[-0.03em] leading-[1.1] text-white mb-6 text-balance">
-                Your Clean Energy Credits Are Waiting
-              </h2>
-              <p className="text-white/60 text-base md:text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
-                Tax-exempt entities are leaving millions on the table. Let Concord help you claim the direct cash payments you're entitled to under Section 6417.
-              </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <Link to="/contact" className="bg-white text-[#151C19] px-8 py-3.5 rounded-full text-base font-bold tracking-wide inline-flex items-center gap-2 hover:-translate-y-[2px] hover:shadow-lg transition-all duration-300">
-                  Start the Conversation <ArrowRight size={16} />
-                </Link>
-                <a href="https://www.concordlp.com/meetings/jonathan-darnell" className="px-8 py-3.5 rounded-full text-base font-bold tracking-wide border border-white/30 text-white hover:-translate-y-[2px] hover:shadow-lg transition-all duration-300 inline-flex items-center gap-2">
-                  Book a Discovery Call
-                </a>
-              </div>
-            </div>
-          </ScrollFadeIn>
-        </div>
-      </section>
+      <ServiceFinalCTA
+        eyebrow="Start Today"
+        headline="Your Clean Energy Credits Are Waiting"
+        description="Tax-exempt entities are leaving millions on the table. Let Concord help you claim the direct cash payments you're entitled to under Section 6417."
+      />
     </ServicePageShell>
   );
 }
 
-function FaqInline({ faqs }) {
-  const [openIndex, setOpenIndex] = useState(null);
-  return (
-    <div className="space-y-0">
-      {faqs.map((faq, i) => (
-        <div key={i} className="border-b border-black/[0.06]">
-          <button onClick={() => setOpenIndex(openIndex === i ? null : i)} className="flex items-center justify-between py-6 text-base font-semibold text-concord-dark w-full text-left">
-            {faq.question}
-            <span className={`text-xl text-concord-green ml-4 flex-shrink-0 transition-transform duration-300 ${openIndex === i ? 'rotate-45' : ''}`}>+</span>
-          </button>
-          <div className={`overflow-hidden transition-all duration-300 ${openIndex === i ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'}`}>
-            <p className="pb-6 text-sm text-slate-500 leading-relaxed">{faq.answer}</p>
-          </div>
-        </div>
-      ))}
-    </div>
-  );
-}

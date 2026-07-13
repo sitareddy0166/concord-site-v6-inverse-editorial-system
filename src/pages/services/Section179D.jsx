@@ -32,6 +32,7 @@ import FaqAccordion from '@/components/sections/FaqAccordion';
 
 import ServiceHero from '@/components/sections/ServiceHero';
 import ServicePageShell from '@/components/service/ServicePageShell';
+import { SharedServiceFAQ, ServiceFinalCTA, RelatedServices } from '@/components/service';
 
 const stickyNavItems = [
   { label: 'What Is 179D?', href: '#what-is-179d' },
@@ -409,60 +410,19 @@ export default function Section179D() {
         </div>
       </section>
 
-      {/* FAQ */}
-      <section id="faq" className="bg-concord-cream py-[80px] lg:py-[100px] px-6">
-        <div className="max-w-[1200px] mx-auto">
-          <div className="grid lg:grid-cols-[40%_60%] gap-16">
-            <ScrollFadeIn>
-              <span className="text-[13px] uppercase tracking-widest font-bold text-concord-green mb-4 block font-heading">FAQ</span>
-              <h2 className="font-heading font-extrabold text-[36px] lg:text-[48px] tracking-tight leading-[1.1] text-concord-dark mb-4">Frequently Asked Questions</h2>
-              <p className="text-[16px] lg:text-[18px] text-slate-500 leading-relaxed max-w-[640px]">Get answers to the most common questions about the 179D tax deduction. Visit our <Link to="/resources" className="text-concord-green font-semibold hover:underline">resources library</Link> for more in-depth guides.</p>
-            </ScrollFadeIn>
-            <ScrollFadeIn delay={100}>
-              <FaqInline faqs={faqs} />
-            </ScrollFadeIn>
-          </div>
-        </div>
-      </section>
+      <SharedServiceFAQ
+        faqs={faqs}
+        intro={<>Get answers to the most common questions about the 179D tax deduction. Visit our <Link to="/resources" className="ed-link">resources library</Link> for more in-depth guides.</>}
+      />
 
-      {/* CTA Banner */}
-      <section className="relative py-[80px] lg:py-[100px] overflow-hidden bg-[#151C19]">
-        <EditorialMedia variant="building-179d" decorative className="h-full w-full" />
-        <div className="absolute inset-0 bg-[#151C19]/70"></div>
-        <div className="relative z-10 max-w-[800px] mx-auto px-6">
-          <ScrollFadeIn>
-            <div className="rounded-[24px] p-10 lg:p-14 text-center border border-white/20 backdrop-blur-xl" style={{ background: 'rgba(255,255,255,0.1)' }}>
-              <span className="text-[13px] uppercase tracking-widest font-bold text-concord-greenHover mb-4 block font-heading">Get Started Today</span>
-              <h2 className="font-heading font-extrabold text-[36px] lg:text-[48px] tracking-tight leading-[1.1] text-white mb-6 text-balance">Ready to Claim Your 179D Deduction?</h2>
-              <p className="text-[16px] lg:text-[18px] text-white/70 max-w-lg mx-auto leading-relaxed mb-10">Our team will assess your building portfolio, estimate your potential savings, and guide you through every step of the process.</p>
-              <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
-                <Link to="/contact" className="w-full sm:w-auto bg-white text-concord-dark px-8 py-4 rounded-full text-base font-bold tracking-wide inline-flex items-center justify-center gap-2 font-heading hover:-translate-y-[2px] hover:shadow-lg transition-all">Start the Conversation <ArrowRight size={16} /></Link>
-                <a href="https://www.concordlp.com/meetings/jonathan-darnell" className="w-full sm:w-auto px-8 py-4 rounded-full text-base font-bold tracking-wide border-2 border-white/30 text-white hover:bg-white/10 transition-all hover:-translate-y-[2px] hover:shadow-lg inline-flex items-center justify-center gap-2 font-heading">Book a Discovery Call</a>
-              </div>
-            </div>
-          </ScrollFadeIn>
-        </div>
-      </section>
+      <RelatedServices currentHref="/179d-tax-deduction" />
+
+      <ServiceFinalCTA
+        eyebrow="Get Started Today"
+        headline="Ready to Claim Your 179D Deduction?"
+        description="Our team will assess your building portfolio, estimate your potential savings, and guide you through every step of the process."
+      />
     </ServicePageShell>
   );
 }
 
-/* Inline FAQ component for the split layout used in this page */
-function FaqInline({ faqs }) {
-  const [openIndex, setOpenIndex] = useState(null);
-  return (
-    <div className="space-y-0">
-      {faqs.map((faq, i) => (
-        <div key={i} className="border-b border-black/[0.06]">
-          <button onClick={() => setOpenIndex(openIndex === i ? null : i)} className="flex items-center justify-between py-6 text-base font-semibold text-concord-dark w-full text-left">
-            {faq.question}
-            <span className={`text-xl text-concord-green ml-4 flex-shrink-0 transition-transform duration-300 ${openIndex === i ? 'rotate-45' : ''}`}>+</span>
-          </button>
-          <div className={`overflow-hidden transition-all duration-300 ${openIndex === i ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'}`}>
-            <p className="pb-6 text-sm text-slate-500 leading-relaxed">{faq.answer}</p>
-          </div>
-        </div>
-      ))}
-    </div>
-  );
-}
