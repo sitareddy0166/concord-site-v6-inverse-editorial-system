@@ -114,26 +114,25 @@ export function ServiceMediaSplit({
 
 function MediaCollage({ images, alt }) {
   const n = images.length;
-  // Grid templates for 1, 2, 3 images filling full height with matching width
   const layout =
     n === 1
       ? 'grid-cols-1 grid-rows-1'
       : n === 2
-      ? 'grid-cols-1 grid-rows-2'
-      : 'grid-cols-3 grid-rows-2';
+      ? 'grid-cols-2 grid-rows-1'
+      : 'grid-cols-3 grid-rows-6';
 
   return (
     <div
-      className={`grid gap-2 w-full min-h-[420px] lg:min-h-[520px] ${layout}`}
+      className={`grid gap-2 w-full h-full self-stretch min-h-[420px] lg:min-h-[560px] ${layout}`}
       role="group"
       aria-label={alt}
     >
       {images.map((src, i) => {
-        // For n=3: first image spans full left column (2 rows, 2 cols wide look) — use 2/3 width, 2 rows
         let cls = 'relative overflow-hidden border border-[rgb(var(--ivory))/0.12] bg-[rgb(var(--ink))]';
         if (n === 3) {
-          if (i === 0) cls += ' col-span-2 row-span-2';
-          else cls += ' col-span-1 row-span-1';
+          if (i === 0) cls += ' col-span-2 row-span-6';
+          else if (i === 1) cls += ' col-span-1 row-span-3';
+          else cls += ' col-span-1 row-span-3';
         }
         return (
           <div key={i} className={cls}>
@@ -141,7 +140,8 @@ function MediaCollage({ images, alt }) {
               src={src}
               alt={i === 0 ? alt : ''}
               loading="lazy"
-              className="absolute inset-0 w-full h-full object-cover object-center"
+              onError={(e) => { e.currentTarget.style.opacity = '0'; }}
+              className="absolute inset-0 w-full h-full object-cover object-center transition-opacity"
             />
             <div aria-hidden="true" className="absolute inset-0 pointer-events-none" style={{ background: 'linear-gradient(180deg, rgba(11,15,13,0.10) 0%, rgba(11,15,13,0.45) 100%)' }} />
           </div>
