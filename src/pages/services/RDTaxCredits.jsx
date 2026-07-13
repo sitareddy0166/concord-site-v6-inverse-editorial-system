@@ -114,7 +114,11 @@ export default function RDTaxCredits() {
             eyebrow="Understanding R&D Credits"
             title="What Are R&D Tax Credits?"
             mediaVariant="laboratory"
-            mediaImage="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80"
+            mediaImages={[
+              'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80',
+              'https://images.unsplash.com/photo-1567427017947-545c5f8d16ad?auto=format&fit=crop&w=800&q=80',
+              'https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=800&q=80',
+            ]}
             mediaAlt="Clean energy laboratory researcher working on qualifying R&D activity"
             lede={<>The Research and Development Tax Credit (IRC Section 41) is a dollar-for-dollar federal tax incentive designed to reward companies that invest in innovation within the United States. Originally enacted in 1981, the credit has been expanded and made permanent to encourage technological advancement across all industries.</>}
           >
