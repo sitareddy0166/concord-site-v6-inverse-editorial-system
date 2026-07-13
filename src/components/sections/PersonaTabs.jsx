@@ -102,13 +102,13 @@ export default function PersonaTabs({ items }) {
       <div className="lg:col-span-8">
         {items.map((t) => {
           const on = active === t.id;
+          if (!on) return null;
           return (
             <div
               key={t.id}
               role="tabpanel"
               id={`persona-panel-${t.id}`}
               aria-labelledby={`persona-tab-${t.id}`}
-              hidden={!on}
               className="grid md:grid-cols-2 gap-0 border border-[rgb(var(--ivory))/0.12] persona-fade min-h-[420px] lg:min-h-[460px]"
             >
               <div className="surface-ivory p-6 sm:p-8 lg:p-10 relative flex flex-col">
@@ -124,8 +124,17 @@ export default function PersonaTabs({ items }) {
                   <Link to="/contact" className="btn btn-dark min-h-[44px]">Learn More <ArrowRight size={14} weight="bold" /></Link>
                 </div>
               </div>
-              <div className="relative bg-[rgb(var(--ink))] min-h-[240px] md:min-h-full">
-                <EditorialMedia variant={t.media} alt={t.imageAlt} className="w-full h-full" aspect="4/3" />
+              <div className="relative bg-[rgb(var(--ink))] min-h-[240px] md:min-h-full overflow-hidden">
+                {t.image ? (
+                  <img
+                    src={t.image}
+                    alt={t.imageAlt || ''}
+                    loading="lazy"
+                    className="absolute inset-0 w-full h-full object-cover object-center"
+                  />
+                ) : (
+                  <EditorialMedia variant={t.media} alt={t.imageAlt} className="w-full h-full" aspect="4/3" />
+                )}
               </div>
             </div>
           );
