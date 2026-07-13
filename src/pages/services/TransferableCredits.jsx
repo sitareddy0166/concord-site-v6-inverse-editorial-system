@@ -130,9 +130,9 @@ export default function TransferableCredits() {
             title="What Are Transferable Tax Credits?"
             mediaVariant="transaction"
             mediaImages={[
-              'https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&w=1200&q=80',
-              'https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=800&q=80',
-              'https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&q=80',
+              'https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&w=1600&q=85',
+              'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1000&q=85',
+              'https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1000&q=85',
             ]}
             mediaAlt="Business professionals shaking hands representing a transferable tax credit transaction"
             lede={<>The Inflation Reduction Act created Section 6418, allowing entities that generate clean energy tax credits to sell them to unrelated third-party buyers for cash. This unlocks liquidity for project developers and delivers tax savings to corporate buyers, without complex tax equity partnerships. Organizations pursuing <Link to="/179d-tax-deduction" className="ed-link">179D deductions</Link> or <Link to="/direct-pay" className="ed-link">Direct Pay elections</Link> can also benefit from understanding the transfer marketplace.</>}
