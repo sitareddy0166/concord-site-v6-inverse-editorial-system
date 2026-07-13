@@ -256,7 +256,11 @@ export default function Section179D() {
             eyebrow="For Design Professionals"
             title="How Do Designers Qualify? What Is an Allocation Letter?"
             mediaVariant="building-179d"
-            mediaImage="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1200&q=80"
+            mediaImages={[
+              'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1200&q=80',
+              'https://images.unsplash.com/photo-1497440001374-f26997328c1b?auto=format&fit=crop&w=800&q=80',
+              'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80',
+            ]}
             mediaAlt="Architectural drawings showing 179D allocation letter documentation for a public sector building"
             lede={<>Design professionals working on tax-exempt or government-owned buildings can qualify by receiving an allocation letter from the property owner. Federal law allows the economic benefit to be transferred to the designers who made the energy-saving improvements possible. Visit our <Link to="/resources" className="ed-link">resources</Link> library for detailed allocation letter guides.</>}
           >
