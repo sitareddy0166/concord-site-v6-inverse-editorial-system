@@ -139,7 +139,7 @@ export default function BuildingBlueprint() {
         </g>
 
         {/* Solar array on ground / adjacent */}
-        <g opacity={on('solar') ? 1 : 0.4} style={{ transform: `translate3d(${tilt.x * 0.6}px, 0, 0)`, transformOrigin: 'center' }}>
+        <g opacity={on('solar') ? 1 : 0.4}>
           {[0,1,2].map((i) => (
             <g key={i} transform={`translate(${600 + i * 44}, 470) rotate(-14)`}>
               <rect x="0" y="0" width="42" height="30" fill="#0f2418" stroke={on('solar') ? '#40b868' : 'rgba(239,236,229,0.35)'} strokeWidth="1" />
@@ -189,7 +189,7 @@ export default function BuildingBlueprint() {
         </g>
 
         {/* Roof plant / HVAC unit */}
-        <g style={{ transform: `translate3d(${tilt.x * 0.9}px, ${tilt.y * 0.5}px, 0)`, transformOrigin: 'center' }} opacity={on('hvac') ? 1 : 0.6}>
+        <g opacity={on('hvac') ? 1 : 0.6}>
           <rect x="240" y="118" width="80" height="32" fill="#12161a" stroke={on('hvac') ? '#40b868' : 'rgba(239,236,229,0.55)'} strokeWidth="1" />
           <line x1="252" y1="118" x2="252" y2="150" stroke="rgba(239,236,229,0.35)" />
           <line x1="266" y1="118" x2="266" y2="150" stroke="rgba(239,236,229,0.35)" />
