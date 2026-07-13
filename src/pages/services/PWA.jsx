@@ -1,26 +1,23 @@
-import EditorialMedia from '@/components/media/EditorialMedia';
-import { useState } from 'react';
-import financialAnalysisImg from '@/assets/financial-analysis.jpg';
 import { Link } from 'react-router-dom';
 import {
-  ArrowRight,
-  CaretRight,
-  CheckCircle,
-  Certificate,
-  ChartLineUp,
-  ShieldCheck,
-  Trophy,
-  Warning,
-  Quotes,
-  Check,
+  Certificate, ChartLineUp, ShieldCheck, Trophy, Warning,
 } from '@phosphor-icons/react';
-import { SEOHead, SchemaScript, generateServiceSchema, generateFAQSchema, generateBreadcrumbSchema, generateHowToSchema, generateWebPageSchema, generateSpeakableSchema } from '@/utils/seo';
-import { ScrollFadeIn } from '@/hooks/useScrollAnimation';
+import {
+  SEOHead, SchemaScript,
+  generateServiceSchema, generateFAQSchema, generateBreadcrumbSchema,
+  generateHowToSchema, generateWebPageSchema, generateSpeakableSchema,
+} from '@/utils/seo';
 import StickyNav from '@/components/layout/StickyNav';
 import ServiceHero from '@/components/sections/ServiceHero';
 import VideoExplainer from '@/components/sections/VideoExplainer';
 import ServicePageShell from '@/components/service/ServicePageShell';
-import { SharedServiceFAQ, ServiceFinalCTA, RelatedServices } from '@/components/service';
+import {
+  SharedServiceFAQ, ServiceFinalCTA, RelatedServices,
+  ServiceSectionHeader, ServiceFactsRail, ServiceMediaSplit,
+  ServiceAudienceGrid, ServiceEligibilityIndex, ServiceProcess,
+  ServiceDocumentIndex, ServiceComparison, ServiceEvidence,
+} from '@/components/service';
+
 
 const stickyNavItems = [
   { label: 'What Is PWA?', href: '#what-is-pwa' },
