@@ -22,33 +22,52 @@ const SYSTEMS = [
 export default function BuildingBlueprint() {
   const [active, setActive] = useState('hvac');
   const wrapRef = useRef(null);
-  const [tilt, setTilt] = useState({ x: 0, y: 0 });
+  const svgRef = useRef(null);
 
   useEffect(() => {
     const el = wrapRef.current;
-    if (!el) return;
+    const svg = svgRef.current;
+    if (!el || !svg) return;
     const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (reduce) return;
+    const coarse = window.matchMedia('(pointer: coarse), (hover: none)').matches;
+    if (reduce || coarse) return;
     let raf = 0;
+    let nx = 0, ny = 0;
+    let visible = true;
     const onMove = (e) => {
       const r = el.getBoundingClientRect();
-      const nx = (e.clientX - r.left) / r.width - 0.5;
-      const ny = (e.clientY - r.top) / r.height - 0.5;
-      cancelAnimationFrame(raf);
-      raf = requestAnimationFrame(() => setTilt({ x: nx * 6, y: ny * 4 }));
+      nx = (e.clientX - r.left) / r.width - 0.5;
+      ny = (e.clientY - r.top) / r.height - 0.5;
+      if (!raf) raf = requestAnimationFrame(apply);
     };
-    const onLeave = () => setTilt({ x: 0, y: 0 });
+    const apply = () => {
+      raf = 0;
+      if (!visible) return;
+      svg.style.transform = `translate3d(${nx * 2.4}px, ${ny * 1.6}px, 0)`;
+    };
+    const onLeave = () => { nx = 0; ny = 0; if (!raf) raf = requestAnimationFrame(apply); };
     el.addEventListener('pointermove', onMove);
     el.addEventListener('pointerleave', onLeave);
-    return () => { el.removeEventListener('pointermove', onMove); el.removeEventListener('pointerleave', onLeave); cancelAnimationFrame(raf); };
+    // pause when offscreen or tab hidden
+    const io = new IntersectionObserver(([e]) => { visible = e.isIntersecting; }, { threshold: 0.05 });
+    io.observe(el);
+    const onVis = () => { visible = !document.hidden; };
+    document.addEventListener('visibilitychange', onVis);
+    return () => {
+      el.removeEventListener('pointermove', onMove);
+      el.removeEventListener('pointerleave', onLeave);
+      document.removeEventListener('visibilitychange', onVis);
+      io.disconnect();
+      if (raf) cancelAnimationFrame(raf);
+    };
   }, []);
 
   const on = (id) => active === id;
 
   return (
     <div ref={wrapRef} className="relative w-full h-full">
-      {/* Legend / system selector (HTML, outside the canvas) */}
-      <div className="absolute top-4 left-4 z-10 flex flex-col gap-1 max-w-[220px]">
+      {/* Desktop legend / system selector — absolute overlay */}
+      <div className="hidden lg:flex absolute top-4 left-4 z-10 flex-col gap-1 max-w-[220px]">
         <p className="tech-label mb-1">Systems / F-01</p>
         <div role="tablist" aria-label="Building systems" className="flex flex-col">
           {SYSTEMS.map((s, i) => (
@@ -75,11 +94,12 @@ export default function BuildingBlueprint() {
       <span className="coord absolute bottom-2 right-2 text-[rgb(var(--ivory))/0.4]" aria-hidden="true" />
 
       <svg
+        ref={svgRef}
         viewBox="0 0 800 600"
         role="img"
         aria-label="Architectural cutaway of a mid-rise commercial building showing envelope, HVAC, lighting, clean energy, documentation, and incentive capture systems"
-        className="w-full h-full"
-        style={{ transform: `translate3d(${tilt.x * 0.4}px, ${tilt.y * 0.3}px, 0)` }}
+        preserveAspectRatio="xMidYMid meet"
+        className="w-full h-full block"
       >
         <defs>
           <linearGradient id="glass" x1="0" x2="1" y1="0" y2="1">
