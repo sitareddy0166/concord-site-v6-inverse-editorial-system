@@ -321,7 +321,7 @@ export default function Home() {
           <div className="grid lg:grid-cols-12 gap-10 items-end mb-14">
             <div className="lg:col-span-8">
               <p className="tech-label mb-6">Chapters · B/01–04</p>
-              <h2 className="h-display text-balance">Built for your position in the incentive stack.</h2>
+              <h2 className="h-display text-balance">Who Qualifies</h2>
             </div>
           </div>
 
