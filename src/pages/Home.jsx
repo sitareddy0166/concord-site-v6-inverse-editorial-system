@@ -125,13 +125,13 @@ export default function Home() {
         <div aria-hidden="true" className="absolute inset-0 blueprint-grid opacity-70" />
 
         <div className="arch relative">
-          <div className="grid lg:grid-cols-12 gap-6 lg:gap-10 pt-10 pb-20 lg:pt-16 lg:pb-28 items-stretch">
+          <div className="grid lg:grid-cols-12 gap-6 lg:gap-10 pt-8 pb-16 lg:pt-16 lg:pb-24 items-stretch">
             {/* Copy panel — solid ivory reading surface */}
-            <div className="lg:col-span-6 xl:col-span-5 surface-ivory p-8 lg:p-12 relative">
+            <div className="order-1 lg:order-1 lg:col-span-6 xl:col-span-5 surface-ivory p-6 sm:p-8 lg:p-12 relative">
               <span aria-hidden="true" className="coord absolute top-3 left-3 text-[rgb(var(--ink))/0.5]" />
               <span aria-hidden="true" className="coord absolute top-3 right-3 text-[rgb(var(--ink))/0.5]" />
 
-              <div className="flex items-center gap-3 mb-8">
+              <div className="flex flex-wrap items-center gap-3 mb-6">
                 <span className="index-num" style={{ color: 'rgba(8,12,10,0.55)' }}>FIG. 00 / OVERVIEW</span>
                 <span className="h-px w-10 bg-[rgb(var(--ink))/0.3]" />
                 <span className="tech-label" style={{ color: 'rgb(var(--concord))' }}>Compliance-Driven Tax Incentive Experts</span>
@@ -141,15 +141,15 @@ export default function Home() {
                 Maximize Your<br /><em className="italic font-light">Tax Incentives.</em>
               </h1>
 
-              <p className="mt-6 font-[Fraunces] text-[24px] lg:text-[30px] leading-tight tracking-tight text-[rgb(var(--ink))/0.75]">
+              <p className="mt-6 font-[Fraunces] text-[22px] sm:text-[24px] lg:text-[30px] leading-tight tracking-tight text-[rgb(var(--ink))/0.75]">
                 Concord Makes It Simple.
               </p>
 
-              <p className="hero-description mt-6 text-[17px] leading-relaxed text-[rgb(var(--ink))/0.75] max-w-lg">
+              <p className="hero-description mt-6 text-[16px] lg:text-[17px] leading-relaxed text-[rgb(var(--ink))/0.75] max-w-lg">
                 With over $1 billion in tax savings identified and an industry-leading audit success track record, Concord Energy Strategies helps building owners, designers, and tax-exempt organizations capture every clean energy incentive they deserve.
               </p>
 
-              <div className="mt-10 flex flex-wrap gap-3">
+              <div className="mt-8 flex flex-wrap gap-3">
                 <Link to="/start-the-conversation" className="btn btn-dark">
                   Start the Conversation <ArrowRight size={14} weight="bold" />
                 </Link>
@@ -158,38 +158,41 @@ export default function Home() {
                 </a>
               </div>
 
-              <div className="hrule-ink mt-12 mb-6" />
-              <dl className="grid grid-cols-3 gap-6">
+              <div className="hrule-ink mt-10 mb-6" />
+              <dl className="grid grid-cols-3 gap-4 sm:gap-6">
                 <div>
                   <dt className="tech-label" style={{ color: 'rgba(8,12,10,0.55)' }}>Savings</dt>
-                  <dd className="font-[Fraunces] text-[28px] leading-none mt-1 text-[rgb(var(--ink))]">$1B+</dd>
+                  <dd className="font-[Fraunces] text-[24px] sm:text-[28px] leading-none mt-1 text-[rgb(var(--ink))]">$1B+</dd>
                 </div>
                 <div>
                   <dt className="tech-label" style={{ color: 'rgba(8,12,10,0.55)' }}>Audit Success</dt>
-                  <dd className="font-[Fraunces] text-[28px] leading-none mt-1 text-[rgb(var(--ink))]">100%</dd>
+                  <dd className="font-[Fraunces] text-[24px] sm:text-[28px] leading-none mt-1 text-[rgb(var(--ink))]">100%</dd>
                 </div>
                 <div>
                   <dt className="tech-label" style={{ color: 'rgba(8,12,10,0.55)' }}>Focus</dt>
-                  <dd className="font-[Fraunces] text-[28px] leading-none mt-1 text-[rgb(var(--ink))]">15+ yrs</dd>
+                  <dd className="font-[Fraunces] text-[24px] sm:text-[28px] leading-none mt-1 text-[rgb(var(--ink))]">15+ yrs</dd>
                 </div>
               </dl>
             </div>
 
-            {/* Blueprint panel */}
-            <div className="lg:col-span-6 xl:col-span-7 relative min-h-[420px] lg:min-h-[560px] border border-[rgb(var(--ivory))/0.10]">
+            {/* Blueprint panel — 4:3 on mobile, full height on desktop */}
+            <div className="order-2 lg:order-2 lg:col-span-6 xl:col-span-7 relative border border-[rgb(var(--ivory))/0.10] aspect-[4/3] lg:aspect-auto lg:min-h-[560px]">
               <BuildingBlueprint />
             </div>
           </div>
 
-          {/* Meta strip */}
-          <div className="hrule mb-0" />
-          <div className="flex flex-wrap items-center justify-between gap-4 py-4 text-[rgb(var(--ivory))/0.6]">
-            <span className="tech-label tech-label--dim">Doc/CES-V6 · Revision 06.07.2026</span>
-            <span className="tech-label tech-label--dim">Fig. 01 · Mid-rise Commercial Cutaway</span>
-            <span className="tech-label tech-label--dim">Louisville KY · Practicing in 50 states</span>
+          {/* Meta strip — hidden below 640px to reduce clutter */}
+          <div className="hidden sm:block">
+            <div className="hrule mb-0" />
+            <div className="flex flex-wrap items-center justify-between gap-4 py-4 text-[rgb(var(--ivory))/0.6]">
+              <span className="tech-label tech-label--dim">Doc/CES-V6 · Revision 06.07.2026</span>
+              <span className="tech-label tech-label--dim">Fig. 01 · Mid-rise Commercial Cutaway</span>
+              <span className="tech-label tech-label--dim">Louisville KY · Practicing in 50 states</span>
+            </div>
           </div>
         </div>
       </section>
+
 
       {/* ============================================================
           AFFILIATIONS BAND — institutional monochrome marquee
