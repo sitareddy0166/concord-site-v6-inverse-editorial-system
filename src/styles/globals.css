@@ -552,3 +552,22 @@ html, body { overflow-x: hidden; }
 @media (max-width: 640px) {
   .bp-svg text { display: none; }
 }
+
+/* ============================================================
+   Phase C2 — Mobile form control minimums
+   Prevent iOS auto-zoom (needs >=16px font-size on the control)
+   and enforce 44px minimum touch target for form inputs.
+   ============================================================ */
+@media (max-width: 640px) {
+  input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="color"]),
+  select,
+  textarea {
+    font-size: 16px !important;
+  }
+  input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="color"]):not([type="hidden"]),
+  select {
+    min-height: 48px;
+  }
+  textarea { min-height: 96px; }
+  button:not([aria-hidden="true"]) { min-height: 44px; }
+}

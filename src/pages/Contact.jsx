@@ -90,7 +90,7 @@ export default function Contact() {
   const faqSchema = generateFAQSchema(faqItems.map((f) => ({ question: f.question, answer: f.answer })));
 
   const inputClasses = (field) =>
-    `w-full rounded-2xl border ${errors[field] ? 'border-[#e85d75] ring-2 ring-[#e85d75]/10' : 'border-black/[0.06]'} px-5 py-4 text-[15px] text-concord-dark placeholder:text-slate-400 bg-white focus:ring-2 focus:ring-concord-green focus:border-concord-green outline-none transition-all`;
+    `w-full rounded-2xl border ${errors[field] ? 'border-[#e85d75] ring-2 ring-[#e85d75]/10' : 'border-black/[0.06]'} px-5 py-4 min-h-[48px] text-[16px] text-concord-dark placeholder:text-slate-400 bg-white focus:ring-2 focus:ring-concord-green focus:border-concord-green outline-none transition-all`;
 
   return (
     <>
@@ -184,17 +184,17 @@ export default function Contact() {
                     {errors.message && <p className="text-[#e85d75] text-[13px] mt-1">{errors.message}</p>}
                   </div>
 
-                  <button type="submit" disabled={isSubmitting} className="rounded-full bg-[#151C19] text-white px-8 py-4 font-bold text-[15px] hover:-translate-y-[2px] hover:shadow-lg transition-all duration-300 inline-flex items-center gap-2 w-full sm:w-auto justify-center disabled:opacity-60">
-                    {isSubmitting ? 'Sending...' : <>Send Message <PaperPlaneTilt /></>}
+                  <button type="submit" disabled={isSubmitting} className="rounded-full bg-[#151C19] text-white px-8 py-4 min-h-[52px] font-bold text-[15px] hover:-translate-y-[2px] hover:shadow-lg transition-all duration-300 inline-flex items-center gap-2 w-full sm:w-auto justify-center disabled:opacity-60">
+                    {isSubmitting ? 'Sending...' : <>Send Message (Preview) <PaperPlaneTilt /></>}
                   </button>
 
                   {showSuccess && (
-                    <div className="mt-6 p-5 rounded-3xl bg-concord-mint border border-concord-green/20">
+                    <div className="mt-6 p-5 rounded-2xl bg-concord-mint border border-concord-green/20" role="status" aria-live="polite">
                       <div className="flex items-center gap-3">
                         <CheckCircle weight="fill" size={24} className="text-concord-green" />
                         <div>
-                          <p className="font-heading font-bold text-concord-dark">Message sent successfully!</p>
-                          <p className="text-[14px] text-slate-500">We'll get back to you within 24 hours.</p>
+                          <p className="font-heading font-bold text-concord-dark">Preview submission received.</p>
+                          <p className="text-[14px] text-slate-600">This is a design mock — no message was actually delivered. In production, a Concord team member responds within 24 hours.</p>
                         </div>
                       </div>
                     </div>
