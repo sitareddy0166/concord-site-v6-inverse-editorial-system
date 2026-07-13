@@ -1,38 +1,26 @@
-import EditorialMedia from '@/components/media/EditorialMedia';
-import { useState } from 'react';
-import financialAnalysisImg from '@/assets/financial-analysis.jpg';
 import { Link } from 'react-router-dom';
 import {
-  ArrowRight,
-  Buildings,
-  Bank,
-  GraduationCap,
-  HouseLine,
-  ThermometerSimple,
-  Lightbulb,
-  House,
-  Sun,
-  Lightning,
-  Hammer,
-  ChartBar,
-  MagnifyingGlass,
-  FileText,
-  ClipboardText,
-  ClockCounterClockwise,
-  ShieldCheck,
-  CheckCircle,
-  CaretRight,
+  Buildings, Bank, GraduationCap, HouseLine,
+  ThermometerSimple, Lightbulb, House, Sun,
+  Lightning, Hammer, ChartBar,
+  MagnifyingGlass, FileText, ClipboardText, ClockCounterClockwise, ShieldCheck,
 } from '@phosphor-icons/react';
-import { SEOHead, SchemaScript, generateServiceSchema, generateFAQSchema, generateBreadcrumbSchema, generateHowToSchema, generateWebPageSchema, generateSpeakableSchema } from '@/utils/seo';
-import { ScrollFadeIn } from '@/hooks/useScrollAnimation';
+import {
+  SEOHead, SchemaScript,
+  generateServiceSchema, generateFAQSchema, generateBreadcrumbSchema,
+  generateHowToSchema, generateWebPageSchema, generateSpeakableSchema,
+} from '@/utils/seo';
 import StickyNav from '@/components/layout/StickyNav';
 import VideoExplainer from '@/components/sections/VideoExplainer';
-import CTABanner from '@/components/sections/CTABanner';
-import FaqAccordion from '@/components/sections/FaqAccordion';
-
 import ServiceHero from '@/components/sections/ServiceHero';
 import ServicePageShell from '@/components/service/ServicePageShell';
-import { SharedServiceFAQ, ServiceFinalCTA, RelatedServices } from '@/components/service';
+import {
+  SharedServiceFAQ, ServiceFinalCTA, RelatedServices,
+  ServiceSectionHeader, ServiceFactsRail, ServiceMediaSplit,
+  ServiceAudienceGrid, ServiceEligibilityIndex, ServiceProcess,
+  ServiceDocumentIndex, ServiceComparison, ServiceEvidence,
+} from '@/components/service';
+
 
 const stickyNavItems = [
   { label: 'What Is 179D?', href: '#what-is-179d' },
@@ -127,252 +115,197 @@ export default function Section179D() {
       <StickyNav items={stickyNavItems} />
 
       {/* What Is 179D */}
-      <section id="what-is-179d" className="bg-concord-cream py-[80px] lg:py-[100px] px-6">
-        <div className="max-w-[1200px] mx-auto">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <ScrollFadeIn>
-              <EditorialMedia variant="engineering" alt="Modern commercial building with energy-efficient glass facade" rounded className="h-auto w-full" />
-            </ScrollFadeIn>
-            <ScrollFadeIn delay={100}>
-              <span className="text-[13px] uppercase tracking-widest font-bold text-concord-green mb-4 block font-heading">Understanding 179D</span>
-              <h2 className="font-heading font-extrabold text-[36px] lg:text-[48px] tracking-tight leading-[1.1] text-concord-dark mb-4">What Is the 179D Tax Deduction?</h2>
-              <p className="service-definition text-[16px] lg:text-[18px] text-slate-500 leading-relaxed max-w-[640px] mb-4">
-                The 179D tax deduction is a federal incentive that allows building owners and designers to reduce their tax liability by up to $5.94 per square foot when they implement energy-efficient improvements in commercial, government, or multifamily buildings. Established under the Energy Policy Act of 2005 and expanded by the Inflation Reduction Act of 2022, it covers new construction and retrofits. Learn more about how <Link to="/prevailing-wage-apprenticeship" className="text-concord-green font-semibold hover:underline">PWA compliance</Link> unlocks the maximum rates.
-              </p>
-              <p className="text-[16px] lg:text-[18px] text-slate-500 leading-relaxed max-w-[640px] mb-6">
-                Eligible projects include improvements to HVAC systems, lighting, or building envelope design. For government-owned or tax-exempt buildings, designers who create energy-efficient specifications can receive allocation letters that transfer the deduction directly to them. Projects must meet <Link to="/obbba-deadline" className="text-concord-green font-semibold hover:underline">key deadlines</Link> to lock in enhanced rates. Credits may also be combined with <Link to="/transferable-tax-credits" className="text-concord-green font-semibold hover:underline">transferable credits</Link> for additional value.
-              </p>
+      <section id="what-is-179d" className="surface-ink band">
+        <div className="arch">
+          <ServiceMediaSplit
+            code="F/01"
+            eyebrow="Understanding 179D"
+            title="What Is the 179D Tax Deduction?"
+            mediaVariant="engineering"
+            mediaAlt="Modern commercial building with energy-efficient glass facade"
+            lede={
+              <>
+                The 179D tax deduction is a federal incentive that allows building owners and designers to reduce their tax liability by up to $5.94 per square foot when they implement energy-efficient improvements in commercial, government, or multifamily buildings. Established under the Energy Policy Act of 2005 and expanded by the Inflation Reduction Act of 2022, it covers new construction and retrofits. Learn more about how <Link to="/prevailing-wage-apprenticeship" className="ed-link">PWA compliance</Link> unlocks the maximum rates.
+              </>
+            }
+          >
+            <p className="service-definition mt-5 text-[16px] lg:text-[17px] leading-relaxed text-[rgb(var(--ivory))/0.72] max-w-2xl">
+              Eligible projects include improvements to HVAC systems, lighting, or building envelope design. For government-owned or tax-exempt buildings, designers who create energy-efficient specifications can receive allocation letters that transfer the deduction directly to them. Projects must meet <Link to="/obbba-deadline" className="ed-link">key deadlines</Link> to lock in enhanced rates. Credits may also be combined with <Link to="/transferable-tax-credits" className="ed-link">transferable credits</Link> for additional value.
+            </p>
 
-              <div className="key-facts bg-[#151C19] text-white rounded-2xl p-6 mb-6">
-                <h3 className="font-heading font-bold text-[18px] text-white mb-4">Key 179D Facts</h3>
-                <ul className="space-y-2.5">
-                  {[
-                    'Up to $5.94 per square foot with PWA compliance',
-                    'Minimum 25% energy savings required to qualify',
-                    'Commercial, government, and 4+ story multifamily buildings eligible',
-                    'Designers of tax-exempt projects can receive the deduction via allocation letters',
-                    'Retroactive claims available for up to three prior tax years',
-                  ].map((f) => (
-                    <li key={f} className="flex items-start gap-2 text-slate-200 text-[14px] leading-relaxed">
-                      <CheckCircle size={16} weight="fill" className="text-concord-green shrink-0 mt-0.5" />
-                      <span>{f}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+            <div className="key-facts mt-8">
+              <p className="tech-label mb-4"><span className="index-num mr-2 text-[rgb(var(--concord-glow))]">K/01</span>Key 179D Facts</p>
+              <ServiceEligibilityIndex
+                rows={[
+                  { title: 'Maximum Deduction', desc: 'Up to $5.94 per square foot with PWA compliance.' },
+                  { title: 'Energy Savings',    desc: 'Minimum 25% energy savings required to qualify.' },
+                  { title: 'Eligible Buildings', desc: 'Commercial, government, and 4+ story multifamily buildings eligible.' },
+                  { title: 'Designer Route',    desc: 'Designers of tax-exempt projects can receive the deduction via allocation letters.' },
+                  { title: 'Retroactive Claims', desc: 'Retroactive claims available for up to three prior tax years.' },
+                ]}
+              />
+            </div>
 
-              <div className="grid grid-cols-2 gap-6">
-                <div className="bg-white rounded-[24px] p-5 border border-black/[0.06]">
-                  <p className="text-3xl font-extrabold text-concord-green font-heading">$5.94</p>
-                  <p className="text-sm text-slate-500 mt-1">Max per sq ft with PWA</p>
-                </div>
-                <div className="bg-white rounded-[24px] p-5 border border-black/[0.06]">
-                  <p className="text-3xl font-extrabold text-concord-green font-heading">$1B+</p>
-                  <p className="text-sm text-slate-500 mt-1">Client savings realized</p>
-                </div>
-              </div>
-            </ScrollFadeIn>
-          </div>
-          <div className="mt-12 flex flex-col sm:flex-row items-center justify-between gap-4 bg-white rounded-[24px] p-6 border border-black/[0.06]">
-            <p className="text-[14px] font-semibold text-slate-600">Check your building's eligibility today</p>
-            <Link to="/contact" className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full bg-[#151C19] text-white px-6 py-3 font-bold text-[14px] hover:-translate-y-[2px] hover:shadow-lg transition-all">Check Eligibility <ArrowRight size={14} /></Link>
-          </div>
+            <div className="mt-8">
+              <ServiceFactsRail
+                facts={[
+                  { label: 'Max / sq ft', value: '$5.94', note: 'With PWA compliance' },
+                  { label: 'Client Savings', value: '$1B+', note: 'Realized to date' },
+                ]}
+              />
+            </div>
+          </ServiceMediaSplit>
         </div>
       </section>
 
       {/* Buildings That Qualify */}
-      <section id="buildings-qualify" className="bg-white py-[80px] lg:py-[100px] px-6">
-        <div className="max-w-[1200px] mx-auto">
-          <ScrollFadeIn className="text-center mb-14">
-            <span className="text-[13px] uppercase tracking-widest font-bold text-concord-green mb-4 block font-heading">Eligible Properties</span>
-            <h2 className="font-heading font-extrabold text-[36px] lg:text-[48px] tracking-tight leading-[1.1] text-concord-dark mb-4">What Buildings Qualify for the 179D Deduction?</h2>
-            <p className="text-[16px] lg:text-[18px] text-slate-500 leading-relaxed max-w-[640px] mx-auto">The 179D deduction covers a broad range of building types that implement energy-efficient improvements.</p>
-          </ScrollFadeIn>
-          <ScrollFadeIn>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
-              {[
-                { icon: <Bank size={24} className="text-concord-green" />, title: 'Government Buildings', desc: 'Schools, courthouses, libraries, military facilities, municipal offices, and other publicly owned properties.', img: null, alt: 'Government building' },
-                { icon: <GraduationCap size={24} className="text-concord-green" />, title: 'Tax-Exempt Properties', desc: <>Nonprofit hospitals, universities, tribal facilities, religious institutions, and charitable organizations. These entities may also benefit from <Link to="/direct-pay" className="text-concord-green font-semibold hover:underline">Direct Pay</Link>.</>, img: null, alt: 'Hospital building representing tax-exempt properties' },
-                { icon: <Buildings size={24} className="text-concord-green" />, title: 'Commercial Buildings', desc: 'Office buildings, warehouses, retail centers, industrial facilities, and mixed-use properties.', img: null, alt: 'Modern glass office building representing commercial properties' },
-                { icon: <HouseLine size={24} className="text-concord-green" />, title: 'Multifamily Residential', desc: 'Residential buildings with four or more stories, including new construction and renovation projects.', img: null, alt: 'Modern multifamily residential apartment building' },
-              ].map((card) => (
-                <div key={card.title} className="bg-white rounded-[24px] border border-black/[0.06] p-8 flex flex-col h-full hover:shadow-lg hover:-translate-y-1 hover:border-t-concord-green transition-all duration-300 border-t-[3px] border-t-transparent">
-                  <div className="w-14 h-14 rounded-2xl bg-concord-green/10 flex items-center justify-center mb-6">{card.icon}</div>
-                  <h3 className="text-lg font-extrabold mb-3 font-heading">{card.title}</h3>
-                  <p className="text-sm text-slate-500 leading-relaxed flex-1">{card.desc}</p>
-                  <EditorialMedia variant="auto" alt={card.alt} aspect="3/2" className="w-full" />
-                </div>
-              ))}
-            </div>
-          </ScrollFadeIn>
+      <section id="buildings-qualify" className="surface-ink band border-t border-[rgb(var(--ivory))/0.10]">
+        <div className="arch">
+          <ServiceSectionHeader
+            code="B/01"
+            eyebrow="Eligible Properties"
+            title="What Buildings Qualify for the 179D Deduction?"
+            lede="The 179D deduction covers a broad range of building types that implement energy-efficient improvements."
+          />
+          <ServiceAudienceGrid
+            items={[
+              { icon: Bank,           title: 'Government Buildings',   desc: 'Schools, courthouses, libraries, military facilities, municipal offices, and other publicly owned properties.' },
+              { icon: GraduationCap,  title: 'Tax-Exempt Properties',  desc: <>Nonprofit hospitals, universities, tribal facilities, religious institutions, and charitable organizations. These entities may also benefit from <Link to="/direct-pay" className="ed-link">Direct Pay</Link>.</> },
+              { icon: Buildings,      title: 'Commercial Buildings',   desc: 'Office buildings, warehouses, retail centers, industrial facilities, and mixed-use properties.' },
+              { icon: HouseLine,      title: 'Multifamily Residential', desc: 'Residential buildings with four or more stories, including new construction and renovation projects.' },
+            ]}
+          />
         </div>
       </section>
 
       {/* Qualifying Improvements */}
-      <section id="improvements" className="bg-concord-cream py-[80px] lg:py-[100px] px-6">
-        <div className="max-w-[1200px] mx-auto">
-          <div className="grid lg:grid-cols-2 gap-16">
-            <ScrollFadeIn>
-              <span className="text-[13px] uppercase tracking-widest font-bold text-concord-green mb-4 block font-heading">Qualifying Improvements</span>
-              <h2 className="font-heading font-extrabold text-[36px] lg:text-[48px] tracking-tight leading-[1.1] text-concord-dark mb-4">What Improvements Qualify for 179D?</h2>
-              <p className="text-[16px] lg:text-[18px] text-slate-500 leading-relaxed max-w-[640px] mb-8">To qualify, projects must demonstrate a reduction in total annual energy and power costs compared to the ASHRAE 90.1 reference standard. Meeting <Link to="/prevailing-wage-apprenticeship" className="text-concord-green font-semibold hover:underline">prevailing wage and apprenticeship</Link> requirements unlocks enhanced rates.</p>
-              <div className="space-y-4">
-                {[
-                  { icon: <ThermometerSimple size={20} className="text-concord-green" />, title: 'HVAC and Hot Water', desc: 'High-efficiency heating, ventilation, air conditioning, and plumbing systems that reduce energy consumption.' },
-                  { icon: <Lightbulb size={20} className="text-concord-green" />, title: 'Lighting', desc: 'LED fixtures, automated lighting controls, occupancy sensors, and daylighting strategies that lower electricity usage.' },
-                  { icon: <House size={20} className="text-concord-green" />, title: 'Building Envelope', desc: 'Upgraded insulation, energy-efficient roofing, high-performance windows, and improved doors that minimize thermal loss.' },
-                  { icon: <Sun size={20} className="text-concord-green" />, title: 'Renewable Integration', desc: 'Energy-saving systems combined with solar photovoltaic, geothermal, or other renewable energy technologies.' },
-                ].map((item) => (
-                  <div key={item.title} className="flex items-start gap-4 bg-white rounded-[24px] px-6 py-5 border border-black/[0.06]">
-                    <div className="w-10 h-10 bg-concord-green/10 rounded-lg flex items-center justify-center flex-shrink-0">{item.icon}</div>
-                    <div><h3 className="font-bold text-concord-dark font-heading">{item.title}</h3><p className="text-sm text-slate-500 mt-1">{item.desc}</p></div>
-                  </div>
-                ))}
-              </div>
-            </ScrollFadeIn>
-            <ScrollFadeIn delay={100} className="flex flex-col gap-6">
-              <EditorialMedia variant="engineering" alt="Engineers reviewing energy modeling blueprints for building improvements" rounded className="h-64 w-full" />
-              <div className="bg-white rounded-[24px] p-6 border border-black/[0.06] flex-1 flex flex-col justify-center">
-                <h3 className="font-bold text-lg mb-3 text-concord-dark font-heading">Energy Savings Requirements</h3>
-                <ul className="space-y-3 text-sm text-slate-500">
-                  <li className="flex items-start gap-2"><CheckCircle size={18} weight="fill" className="text-concord-green mt-0.5" /><span>At least <strong className="text-concord-dark">25% energy savings</strong> required for the base deduction</span></li>
-                  <li className="flex items-start gap-2"><CheckCircle size={18} weight="fill" className="text-concord-green mt-0.5" /><span>Up to <strong className="text-concord-dark">50%+ savings</strong> secures the maximum $5.94/sq ft</span></li>
-                  <li className="flex items-start gap-2"><CheckCircle size={18} weight="fill" className="text-concord-green mt-0.5" /><span><strong className="text-concord-dark"><Link to="/prevailing-wage-apprenticeship" className="text-concord-dark hover:text-concord-green">PWA compliance</Link></strong> required for enhanced deduction rates</span></li>
-                </ul>
-              </div>
-            </ScrollFadeIn>
-          </div>
+      <section id="improvements" className="surface-ink band border-t border-[rgb(var(--ivory))/0.10]">
+        <div className="arch">
+          <ServiceMediaSplit
+            reverse
+            code="I/01"
+            eyebrow="Qualifying Improvements"
+            title="What Improvements Qualify for 179D?"
+            mediaVariant="engineering"
+            mediaAlt="Engineers reviewing energy modeling blueprints for building improvements"
+            lede={<>To qualify, projects must demonstrate a reduction in total annual energy and power costs compared to the ASHRAE 90.1 reference standard. Meeting <Link to="/prevailing-wage-apprenticeship" className="ed-link">prevailing wage and apprenticeship</Link> requirements unlocks enhanced rates.</>}
+          >
+            <div className="mt-6">
+              <ServiceEligibilityIndex
+                rows={[
+                  { title: 'HVAC and Hot Water',   desc: 'High-efficiency heating, ventilation, air conditioning, and plumbing systems that reduce energy consumption.' },
+                  { title: 'Lighting',             desc: 'LED fixtures, automated lighting controls, occupancy sensors, and daylighting strategies that lower electricity usage.' },
+                  { title: 'Building Envelope',    desc: 'Upgraded insulation, energy-efficient roofing, high-performance windows, and improved doors that minimize thermal loss.' },
+                  { title: 'Renewable Integration', desc: 'Energy-saving systems combined with solar photovoltaic, geothermal, or other renewable energy technologies.' },
+                ]}
+              />
+            </div>
+
+            <div className="mt-8">
+              <p className="tech-label mb-4"><span className="index-num mr-2 text-[rgb(var(--concord-glow))]">R/01</span>Energy Savings Requirements</p>
+              <ServiceComparison
+                headers={['Threshold', 'Requirement']}
+                rows={[
+                  ['Base Deduction',       <>At least <strong className="text-[rgb(var(--ivory))]">25% energy savings</strong> required.</>],
+                  ['Maximum $5.94/sq ft',  <>Up to <strong className="text-[rgb(var(--ivory))]">50%+ savings</strong> secures the maximum rate.</>],
+                  ['Enhanced Rates',       <><Link to="/prevailing-wage-apprenticeship" className="ed-link">PWA compliance</Link> required for enhanced deduction rates.</>],
+                ]}
+              />
+            </div>
+          </ServiceMediaSplit>
         </div>
       </section>
 
       {/* Who Qualifies */}
-      <section id="who-qualifies" className="bg-white py-[80px] lg:py-[100px] px-6">
-        <div className="max-w-[1200px] mx-auto">
-          <ScrollFadeIn className="text-center mb-14">
-            <span className="text-[13px] uppercase tracking-widest font-bold text-concord-green mb-4 block font-heading">Eligibility</span>
-            <h2 className="font-heading font-extrabold text-[36px] lg:text-[48px] tracking-tight leading-[1.1] text-concord-dark mb-4">Who Qualifies for the 179D Deduction?</h2>
-            <p className="text-[16px] lg:text-[18px] text-slate-500 leading-relaxed max-w-[640px] mx-auto">Several groups can claim the 179D deduction depending on their role in the project. <Link to="/who-we-are" className="text-concord-green font-semibold hover:underline">Our team</Link> has deep experience guiding each group through the process.</p>
-          </ScrollFadeIn>
-          <ScrollFadeIn>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
-              {[
-                { icon: <Buildings size={24} className="text-concord-green" />, title: 'Architects', desc: 'Eligible when their designs include energy-saving features such as advanced lighting layouts, HVAC planning, or improved building envelopes.' },
-                { icon: <Lightning size={24} className="text-concord-green" />, title: 'Engineers', desc: 'Qualify when they specify efficient HVAC, plumbing, electrical, or mechanical systems that meet or exceed ASHRAE 90.1 standards.' },
-                { icon: <Hammer size={24} className="text-concord-green" />, title: 'Contractors', desc: 'May receive allocation letters if they install qualifying improvements that contribute to building-wide energy savings.' },
-                { icon: <ChartBar size={24} className="text-concord-green" />, title: 'ESCOs', desc: 'Often qualify by designing and implementing full retrofit projects with guaranteed performance outcomes.' },
-                { icon: <HouseLine size={24} className="text-concord-green" />, title: 'Multifamily Developers', desc: 'Eligible for deductions when constructing or upgrading residential buildings with four or more stories.' },
-                { icon: <Bank size={24} className="text-concord-green" />, title: 'Property Owners', desc: 'Can claim deductions when improving energy efficiency in offices, warehouses, retail spaces, or industrial facilities they own.' },
-              ].map((card) => (
-                <div key={card.title} className="bg-white rounded-[24px] border border-black/[0.06] p-8 flex flex-col h-full hover:shadow-lg hover:-translate-y-1 transition-all duration-300 border-t-[3px] border-t-transparent hover:border-t-concord-green">
-                  <div className="w-14 h-14 rounded-2xl bg-concord-green/10 flex items-center justify-center mb-6">{card.icon}</div>
-                  <h3 className="text-lg font-extrabold mb-3 font-heading">{card.title}</h3>
-                  <p className="text-sm text-slate-500 leading-relaxed mt-auto">{card.desc}</p>
-                </div>
-              ))}
-            </div>
-          </ScrollFadeIn>
-          <div className="mt-12 flex flex-col sm:flex-row items-center justify-between gap-4 bg-concord-cream rounded-[24px] p-6 border border-black/[0.06]">
-            <p className="text-[14px] font-semibold text-slate-600">Find out if you qualify for the 179D deduction</p>
-            <Link to="/contact" className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full bg-[#151C19] text-white px-6 py-3 font-bold text-[14px] hover:-translate-y-[2px] hover:shadow-lg transition-all">Talk to Our Team <ArrowRight size={14} /></Link>
-          </div>
+      <section id="who-qualifies" className="surface-ink band border-t border-[rgb(var(--ivory))/0.10]">
+        <div className="arch">
+          <ServiceSectionHeader
+            code="W/01"
+            eyebrow="Eligibility"
+            title="Who Qualifies for the 179D Deduction?"
+            lede={<>Several groups can claim the 179D deduction depending on their role in the project. <Link to="/who-we-are" className="ed-link">Our team</Link> has deep experience guiding each group through the process.</>}
+          />
+          <ServiceAudienceGrid
+            items={[
+              { icon: Buildings,  title: 'Architects',              desc: 'Eligible when their designs include energy-saving features such as advanced lighting layouts, HVAC planning, or improved building envelopes.' },
+              { icon: Lightning,  title: 'Engineers',               desc: 'Qualify when they specify efficient HVAC, plumbing, electrical, or mechanical systems that meet or exceed ASHRAE 90.1 standards.' },
+              { icon: Hammer,     title: 'Contractors',             desc: 'May receive allocation letters if they install qualifying improvements that contribute to building-wide energy savings.' },
+              { icon: ChartBar,   title: 'ESCOs',                   desc: 'Often qualify by designing and implementing full retrofit projects with guaranteed performance outcomes.' },
+              { icon: HouseLine,  title: 'Multifamily Developers',  desc: 'Eligible for deductions when constructing or upgrading residential buildings with four or more stories.' },
+              { icon: Bank,       title: 'Property Owners',         desc: 'Can claim deductions when improving energy efficiency in offices, warehouses, retail spaces, or industrial facilities they own.' },
+            ]}
+          />
         </div>
       </section>
 
       {/* Designers / Allocation Letters */}
-      <section id="designers" className="bg-concord-cream py-[80px] lg:py-[100px] px-6">
-        <div className="max-w-[1200px] mx-auto">
-          <ScrollFadeIn>
-            <div className="grid lg:grid-cols-2 gap-16 items-center">
-              <div>
-                <span className="text-[13px] uppercase tracking-widest font-bold text-concord-green mb-4 block font-heading">For Design Professionals</span>
-                <h2 className="font-heading font-extrabold text-[36px] lg:text-[48px] tracking-tight leading-[1.1] text-concord-dark mb-4">How Do Designers Qualify? What Is an Allocation Letter?</h2>
-                <p className="text-[16px] lg:text-[18px] text-slate-500 leading-relaxed max-w-[640px] mb-6">
-                  Design professionals working on tax-exempt or government-owned buildings can qualify by receiving an allocation letter from the property owner. Federal law allows the economic benefit to be transferred to the designers who made the energy-saving improvements possible. Visit our <Link to="/resources" className="text-concord-green font-semibold hover:underline">resources</Link> library for detailed allocation letter guides.
-                </p>
-                <div className="space-y-3 mb-6">
-                  {[
-                    { label: 'Architect:', desc: 'Eligible when your building designs improve energy efficiency.' },
-                    { label: 'Engineer:', desc: 'Qualify when your specifications reduce overall energy consumption.' },
-                    { label: 'Contractor:', desc: 'Can claim the deduction when you install qualifying energy-efficient systems.' },
-                    { label: 'ESCO:', desc: 'Eligible when you design and implement full retrofit projects with verified energy savings.' },
-                  ].map((item) => (
-                    <div key={item.label} className="flex items-start gap-3">
-                      <CheckCircle size={18} weight="fill" className="text-concord-green mt-0.5" />
-                      <p className="text-[15px] text-slate-500"><strong className="text-concord-dark">{item.label}</strong> {item.desc}</p>
-                    </div>
-                  ))}
-                </div>
-                <p className="text-slate-500 text-sm">A third-party certification from a licensed professional is also required. Projects must begin construction before <Link to="/obbba-deadline" className="text-concord-green font-semibold hover:underline">critical deadlines</Link> to lock in enhanced rates.</p>
-              </div>
-              <div>
-                <EditorialMedia variant="building-179d" decorative className="h-full w-full" />
-              </div>
+      <section id="designers" className="surface-ink band border-t border-[rgb(var(--ivory))/0.10]">
+        <div className="arch">
+          <ServiceMediaSplit
+            code="D/01"
+            eyebrow="For Design Professionals"
+            title="How Do Designers Qualify? What Is an Allocation Letter?"
+            mediaVariant="building-179d"
+            mediaAlt="Architectural drawings showing 179D allocation letter documentation for a public sector building"
+            lede={<>Design professionals working on tax-exempt or government-owned buildings can qualify by receiving an allocation letter from the property owner. Federal law allows the economic benefit to be transferred to the designers who made the energy-saving improvements possible. Visit our <Link to="/resources" className="ed-link">resources</Link> library for detailed allocation letter guides.</>}
+          >
+            <div className="mt-6">
+              <ServiceEligibilityIndex
+                rows={[
+                  { title: 'Architect',   desc: 'Eligible when your building designs improve energy efficiency.' },
+                  { title: 'Engineer',    desc: 'Qualify when your specifications reduce overall energy consumption.' },
+                  { title: 'Contractor',  desc: 'Can claim the deduction when you install qualifying energy-efficient systems.' },
+                  { title: 'ESCO',        desc: 'Eligible when you design and implement full retrofit projects with verified energy savings.' },
+                ]}
+              />
             </div>
-          </ScrollFadeIn>
+            <p className="mt-6 text-[14px] text-[rgb(var(--ivory))/0.7] leading-relaxed">
+              A third-party certification from a licensed professional is also required. Projects must begin construction before <Link to="/obbba-deadline" className="ed-link">critical deadlines</Link> to lock in enhanced rates.
+            </p>
+          </ServiceMediaSplit>
         </div>
       </section>
 
       {/* Success Stories */}
-      <section id="success-stories" className="bg-white py-[80px] lg:py-[100px] px-6">
-        <div className="max-w-[1200px] mx-auto">
-          <ScrollFadeIn className="text-center mb-14">
-            <span className="text-[13px] uppercase tracking-widest font-bold text-concord-green mb-4 block font-heading">Proven Results</span>
-            <h2 className="font-heading font-extrabold text-[36px] lg:text-[48px] tracking-tight leading-[1.1] text-concord-dark mb-4">179D Success Stories</h2>
-          </ScrollFadeIn>
-          <ScrollFadeIn>
-            <div className="grid sm:grid-cols-3 gap-8 items-stretch">
-              {[
-                { img: null, alt: 'Public school campus with energy-efficient upgrades', amount: '$1.2M', title: 'Public School District', desc: 'Deductions realized through HVAC and lighting upgrades across multiple campuses.' },
-                { img: financialAnalysisImg, alt: 'Financial documents for tax deduction', amount: '$750K', title: 'Military Facility', desc: 'Retroactive savings secured through amended filings and comprehensive documentation.' },
-                { img: null, alt: 'Architectural plans for multifamily residential building envelope upgrades', amount: '$2.5M', title: 'Multifamily Developer', desc: 'Tax benefits captured from building envelope and lighting system upgrades.' },
-              ].map((story) => (
-                <div key={story.title} className="bg-white rounded-[24px] overflow-hidden border border-black/[0.06] flex flex-col h-full hover:shadow-lg hover:-translate-y-1 transition-all duration-300 border-t-[3px] border-t-transparent hover:border-t-concord-green">
-                  <div className="relative h-48 overflow-hidden">
-                    <EditorialMedia variant="auto" alt={story.alt} aspect="3/2" className="w-full" />
-                    <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-sm rounded-lg px-3 py-1.5"><span className="text-xl font-bold text-concord-green">{story.amount}</span></div>
-                  </div>
-                  <div className="p-6 flex-1 flex flex-col">
-                    <h3 className="font-bold text-concord-dark text-lg font-heading">{story.title}</h3>
-                    <p className="text-sm text-slate-500 mt-2 leading-relaxed mt-auto">{story.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </ScrollFadeIn>
-          <p className="text-center mt-8"><Link to="/resources?content=Case+Studies" className="text-concord-green font-semibold hover:underline inline-flex items-center gap-1 text-sm">View all case studies <ArrowRight size={14} /></Link></p>
+      <section id="success-stories" className="surface-ink band border-t border-[rgb(var(--ivory))/0.10]">
+        <div className="arch">
+          <ServiceSectionHeader
+            code="C/01"
+            eyebrow="Proven Results"
+            title="179D Success Stories"
+          />
+          <ServiceEvidence
+            items={[
+              { amount: '$1.2M', title: 'Public School District', desc: 'Deductions realized through HVAC and lighting upgrades across multiple campuses.' },
+              { amount: '$750K', title: 'Military Facility',      desc: 'Retroactive savings secured through amended filings and comprehensive documentation.' },
+              { amount: '$2.5M', title: 'Multifamily Developer',  desc: 'Tax benefits captured from building envelope and lighting system upgrades.' },
+            ]}
+          />
+          <p className="mt-8 text-[14px]">
+            <Link to="/resources?content=Case+Studies" className="ed-link">View all case studies</Link>
+          </p>
         </div>
       </section>
 
       {/* How It Works */}
-      <section id="how-it-works" className="bg-concord-cream py-[80px] lg:py-[100px] px-6">
-        <div className="max-w-[1200px] mx-auto">
-          <ScrollFadeIn className="text-center mb-14">
-            <span className="text-[13px] uppercase tracking-widest font-bold text-concord-green mb-4 block font-heading">The Concord Process</span>
-            <h2 className="font-heading font-extrabold text-[36px] lg:text-[48px] tracking-tight leading-[1.1] text-concord-dark mb-4">How to Claim the 179D Tax Deduction</h2>
-            <p className="text-[16px] lg:text-[18px] text-slate-500 leading-relaxed max-w-[640px] mx-auto">We make it simple. Six steps from start to finish.</p>
-          </ScrollFadeIn>
-          <ScrollFadeIn>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
-              {[
-                { step: '01', title: 'Upload Your Files', desc: 'Submit building plans and project reports through our secure platform.' },
-                { step: '02', title: 'Document Processing', desc: 'Our software identifies all qualifying improvements from your specifications.' },
-                { step: '03', title: 'Energy Modeling', desc: 'Detailed models demonstrating DOE and IRS compliance.' },
-                { step: '04', title: 'Site Certification', desc: 'Licensed engineers verify installations and collect documentation.' },
-                { step: '05', title: 'Allocation Letters', desc: 'We manage the full allocation process including owner signatures.' },
-                { step: '06', title: 'Report Delivery', desc: 'IRS-compliant report ready to file, with audit defense included.' },
-              ].map((item) => (
-                <div key={item.step} className="bg-white rounded-[24px] border border-black/[0.06] p-8 flex flex-col h-full hover:shadow-lg hover:-translate-y-1 transition-all duration-300 border-t-[3px] border-t-transparent hover:border-t-concord-green">
-                  <div className="w-12 h-12 rounded-full bg-concord-green text-white font-heading font-bold flex items-center justify-center text-lg mb-4">{item.step}</div>
-                  <h3 className="text-lg font-bold mb-2 font-heading">{item.title}</h3>
-                  <p className="text-sm text-slate-500 leading-relaxed mt-auto">{item.desc}</p>
-                </div>
-              ))}
-            </div>
-          </ScrollFadeIn>
-          <div className="mt-12 flex flex-col sm:flex-row items-center justify-between gap-4 bg-white rounded-[24px] p-6 border border-black/[0.06]">
-            <p className="text-[14px] font-semibold text-slate-600">Ready to start the process?</p>
-            <Link to="/contact" className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full bg-[#151C19] text-white px-6 py-3 font-bold text-[14px] hover:-translate-y-[2px] hover:shadow-lg transition-all">Get Started <ArrowRight size={14} /></Link>
-          </div>
+      <section id="how-it-works" className="surface-ink band border-t border-[rgb(var(--ivory))/0.10]">
+        <div className="arch">
+          <ServiceSectionHeader
+            code="P/01"
+            eyebrow="The Concord Process"
+            title="How to Claim the 179D Tax Deduction"
+            lede="We make it simple. Six steps from start to finish."
+          />
+          <ServiceProcess
+            steps={[
+              { title: 'Upload Your Files',   desc: 'Submit building plans and project reports through our secure platform.' },
+              { title: 'Document Processing', desc: 'Our software identifies all qualifying improvements from your specifications.' },
+              { title: 'Energy Modeling',     desc: 'Detailed models demonstrating DOE and IRS compliance.' },
+              { title: 'Site Certification',  desc: 'Licensed engineers verify installations and collect documentation.' },
+              { title: 'Allocation Letters',  desc: 'We manage the full allocation process including owner signatures.' },
+              { title: 'Report Delivery',     desc: 'IRS-compliant report ready to file, with audit defense included.' },
+            ]}
+          />
         </div>
       </section>
 
@@ -382,33 +315,43 @@ export default function Section179D() {
       />
 
       {/* Why Concord */}
-      <section id="why-concord" className="bg-white py-[80px] lg:py-[100px] px-6">
-        <div className="max-w-[1200px] mx-auto">
-          <ScrollFadeIn className="text-center mb-14">
-            <span className="text-[13px] uppercase tracking-widest font-bold text-concord-green mb-4 block font-heading">The Concord Advantage</span>
-            <h2 className="font-heading font-extrabold text-[36px] lg:text-[48px] tracking-tight leading-[1.1] text-concord-dark mb-4">Why Choose Concord for 179D?</h2>
-            <p className="text-[16px] lg:text-[18px] text-slate-500 leading-relaxed max-w-[640px] mx-auto">Concord specializes exclusively in energy-efficiency tax incentives, with over $1 billion in realized client savings and an industry-leading audit track record. Learn more about <Link to="/the-concord-standard" className="text-concord-green font-semibold hover:underline">The Concord Standard</Link>.</p>
-          </ScrollFadeIn>
-          <ScrollFadeIn>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
-              {[
-                { icon: <MagnifyingGlass size={24} className="text-concord-green" />, title: 'Full Eligibility Assessment', desc: 'Complete assessment and energy modeling for every qualifying building in your portfolio.' },
-                { icon: <FileText size={24} className="text-concord-green" />, title: 'Certified Documentation', desc: 'IRS-compliant reports prepared by licensed professionals, ready for filing.' },
-                { icon: <ClipboardText size={24} className="text-concord-green" />, title: 'Allocation Letter Support', desc: 'Full allocation letter management for designers working on government and tax-exempt projects.' },
-                { icon: <ClockCounterClockwise size={24} className="text-concord-green" />, title: 'Retroactive Claims', desc: 'Filed for prior tax years (up to three years back, or four for allocations) to recover past savings.' },
-                { icon: <ShieldCheck size={24} className="text-concord-green" />, title: 'Audit Defense', desc: 'Compliance assurance and full audit defense included as a standard part of every engagement.' },
-                { icon: <Lightning size={24} className="text-concord-green" />, title: 'Proven Audit Track Record', desc: 'Backed by over $1 billion in realized client savings across thousands of projects.' },
-              ].map((card) => (
-                <div key={card.title} className="bg-white rounded-[24px] border border-black/[0.06] p-8 flex flex-col h-full hover:shadow-lg hover:-translate-y-1 transition-all duration-300 border-t-[3px] border-t-transparent hover:border-t-concord-green">
-                  <div className="w-14 h-14 rounded-2xl bg-concord-green/10 flex items-center justify-center mb-6">{card.icon}</div>
-                  <h3 className="text-lg font-extrabold mb-3 font-heading">{card.title}</h3>
-                  <p className="text-sm text-slate-500 leading-relaxed mt-auto">{card.desc}</p>
-                </div>
-              ))}
-            </div>
-          </ScrollFadeIn>
+      <section id="why-concord" className="surface-ink band border-t border-[rgb(var(--ivory))/0.10]">
+        <div className="arch">
+          <ServiceSectionHeader
+            code="A/01"
+            eyebrow="The Concord Advantage"
+            title="Why Choose Concord for 179D?"
+            lede={<>Concord specializes exclusively in energy-efficiency tax incentives, with over $1 billion in realized client savings and an industry-leading audit track record. Learn more about <Link to="/the-concord-standard" className="ed-link">The Concord Standard</Link>.</>}
+          />
+          <ServiceAudienceGrid
+            items={[
+              { icon: MagnifyingGlass,        title: 'Full Eligibility Assessment', desc: 'Complete assessment and energy modeling for every qualifying building in your portfolio.' },
+              { icon: FileText,               title: 'Certified Documentation',     desc: 'IRS-compliant reports prepared by licensed professionals, ready for filing.' },
+              { icon: ClipboardText,          title: 'Allocation Letter Support',   desc: 'Full allocation letter management for designers working on government and tax-exempt projects.' },
+              { icon: ClockCounterClockwise,  title: 'Retroactive Claims',          desc: 'Filed for prior tax years (up to three years back, or four for allocations) to recover past savings.' },
+              { icon: ShieldCheck,            title: 'Audit Defense',               desc: 'Compliance assurance and full audit defense included as a standard part of every engagement.' },
+              { icon: Lightning,              title: 'Proven Audit Track Record',   desc: 'Backed by over $1 billion in realized client savings across thousands of projects.' },
+            ]}
+          />
+
+          <div className="mt-14">
+            <ServiceSectionHeader
+              code="X/01"
+              eyebrow="Deliverables"
+              title="179D Documentation Package"
+            />
+            <ServiceDocumentIndex
+              documents={[
+                { title: 'Energy Model',           desc: 'IRS-approved modeling of proposed vs. ASHRAE 90.1 reference building.' },
+                { title: 'Site Certification',    desc: 'Licensed professional verification of installed measures.' },
+                { title: 'Allocation Letter',     desc: 'Owner-signed transfer of deduction to designer, when applicable.' },
+                { title: 'Certified Report',      desc: 'IRS-compliant report ready to file, with audit defense included.' },
+              ]}
+            />
+          </div>
         </div>
       </section>
+
 
       <SharedServiceFAQ
         faqs={faqs}
