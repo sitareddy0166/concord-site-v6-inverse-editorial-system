@@ -90,7 +90,7 @@ export default function Contact() {
   const faqSchema = generateFAQSchema(faqItems.map((f) => ({ question: f.question, answer: f.answer })));
 
   const inputClasses = (field) =>
-    `w-full rounded-2xl border ${errors[field] ? 'border-[#e85d75] ring-2 ring-[#e85d75]/10' : 'border-black/[0.06]'} px-5 py-4 text-[15px] text-concord-dark placeholder:text-slate-400 bg-white focus:ring-2 focus:ring-concord-green focus:border-concord-green outline-none transition-all`;
+    `w-full rounded-2xl border ${errors[field] ? 'border-[#e85d75] ring-2 ring-[#e85d75]/10' : 'border-black/[0.06]'} px-5 py-4 min-h-[48px] text-[16px] text-concord-dark placeholder:text-slate-400 bg-white focus:ring-2 focus:ring-concord-green focus:border-concord-green outline-none transition-all`;
 
   return (
     <>
