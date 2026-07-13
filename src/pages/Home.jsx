@@ -166,7 +166,7 @@ export default function Home() {
                 </div>
                 <div>
                   <dt className="tech-label" style={{ color: 'rgba(8,12,10,0.55)' }}>Audit Success</dt>
-                  <dd className="font-[Fraunces] text-[28px] leading-none mt-1 text-[rgb(var(--ink))]">98%</dd>
+                  <dd className="font-[Fraunces] text-[28px] leading-none mt-1 text-[rgb(var(--ink))]">100%</dd>
                 </div>
                 <div>
                   <dt className="tech-label" style={{ color: 'rgba(8,12,10,0.55)' }}>Focus</dt>
