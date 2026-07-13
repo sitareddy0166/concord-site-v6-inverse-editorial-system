@@ -154,7 +154,7 @@ export default function PWA() {
             mediaVariant="solar-array"
             mediaImages={[
               'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1600&q=85',
-              'https://images.unsplash.com/photo-1541976076758-347942db1970?auto=format&fit=crop&w=1000&q=85',
+              'https://images.unsplash.com/photo-1591955506264-3f5a6834570a?auto=format&fit=crop&w=1000&q=85',
               'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1000&q=85',
             ]}
             mediaAlt="Construction workers installing solar panels on a prevailing wage project site"
