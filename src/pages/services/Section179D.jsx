@@ -1,38 +1,26 @@
-import EditorialMedia from '@/components/media/EditorialMedia';
-import { useState } from 'react';
-import financialAnalysisImg from '@/assets/financial-analysis.jpg';
 import { Link } from 'react-router-dom';
 import {
-  ArrowRight,
-  Buildings,
-  Bank,
-  GraduationCap,
-  HouseLine,
-  ThermometerSimple,
-  Lightbulb,
-  House,
-  Sun,
-  Lightning,
-  Hammer,
-  ChartBar,
-  MagnifyingGlass,
-  FileText,
-  ClipboardText,
-  ClockCounterClockwise,
-  ShieldCheck,
-  CheckCircle,
-  CaretRight,
+  Buildings, Bank, GraduationCap, HouseLine,
+  ThermometerSimple, Lightbulb, House, Sun,
+  Lightning, Hammer, ChartBar,
+  MagnifyingGlass, FileText, ClipboardText, ClockCounterClockwise, ShieldCheck,
 } from '@phosphor-icons/react';
-import { SEOHead, SchemaScript, generateServiceSchema, generateFAQSchema, generateBreadcrumbSchema, generateHowToSchema, generateWebPageSchema, generateSpeakableSchema } from '@/utils/seo';
-import { ScrollFadeIn } from '@/hooks/useScrollAnimation';
+import {
+  SEOHead, SchemaScript,
+  generateServiceSchema, generateFAQSchema, generateBreadcrumbSchema,
+  generateHowToSchema, generateWebPageSchema, generateSpeakableSchema,
+} from '@/utils/seo';
 import StickyNav from '@/components/layout/StickyNav';
 import VideoExplainer from '@/components/sections/VideoExplainer';
-import CTABanner from '@/components/sections/CTABanner';
-import FaqAccordion from '@/components/sections/FaqAccordion';
-
 import ServiceHero from '@/components/sections/ServiceHero';
 import ServicePageShell from '@/components/service/ServicePageShell';
-import { SharedServiceFAQ, ServiceFinalCTA, RelatedServices } from '@/components/service';
+import {
+  SharedServiceFAQ, ServiceFinalCTA, RelatedServices,
+  ServiceSectionHeader, ServiceFactsRail, ServiceMediaSplit,
+  ServiceAudienceGrid, ServiceEligibilityIndex, ServiceProcess,
+  ServiceDocumentIndex, ServiceComparison, ServiceEvidence,
+} from '@/components/service';
+
 
 const stickyNavItems = [
   { label: 'What Is 179D?', href: '#what-is-179d' },
