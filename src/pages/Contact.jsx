@@ -189,12 +189,12 @@ export default function Contact() {
                   </button>
 
                   {showSuccess && (
-                    <div className="mt-6 p-5 rounded-3xl bg-concord-mint border border-concord-green/20">
+                    <div className="mt-6 p-5 rounded-2xl bg-concord-mint border border-concord-green/20" role="status" aria-live="polite">
                       <div className="flex items-center gap-3">
                         <CheckCircle weight="fill" size={24} className="text-concord-green" />
                         <div>
-                          <p className="font-heading font-bold text-concord-dark">Message sent successfully!</p>
-                          <p className="text-[14px] text-slate-500">We'll get back to you within 24 hours.</p>
+                          <p className="font-heading font-bold text-concord-dark">Preview submission received.</p>
+                          <p className="text-[14px] text-slate-600">This is a design mock — no message was actually delivered. In production, a Concord team member responds within 24 hours.</p>
                         </div>
                       </div>
                     </div>
