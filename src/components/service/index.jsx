@@ -71,11 +71,13 @@ export function ServiceFactsRail({ facts = [] }) {
 /* ---------- 3. Media split ---------- */
 export function ServiceMediaSplit({
   eyebrow, code, title, lede, bullets, mediaVariant = 'engineering', mediaAlt = '',
-  mediaImage, reverse = false, children,
+  mediaImage, mediaImages, reverse = false, children,
 }) {
+  const collage = Array.isArray(mediaImages) ? mediaImages.filter(Boolean).slice(0, 3) : null;
+
   return (
-    <div className={`grid lg:grid-cols-12 gap-10 lg:gap-14 items-center ${reverse ? 'lg:[&>*:first-child]:order-2' : ''}`}>
-      <div className="lg:col-span-6">
+    <div className={`grid lg:grid-cols-12 gap-10 lg:gap-14 items-stretch ${reverse ? 'lg:[&>*:first-child]:order-2' : ''}`}>
+      <div className="lg:col-span-6 flex flex-col">
         <ServiceSectionHeader eyebrow={eyebrow} code={code} title={title} lede={lede} />
         {bullets && bullets.length > 0 && (
           <ul className="space-y-3 mt-4">
@@ -89,14 +91,16 @@ export function ServiceMediaSplit({
         )}
         {children}
       </div>
-      <div className="lg:col-span-6">
-        {mediaImage ? (
-          <div className="relative overflow-hidden border border-[rgb(var(--ivory))/0.12] bg-[rgb(var(--ink))]" style={{ aspectRatio: '4/3' }}>
+      <div className="lg:col-span-6 flex">
+        {collage && collage.length > 0 ? (
+          <MediaCollage images={collage} alt={mediaAlt} />
+        ) : mediaImage ? (
+          <div className="relative overflow-hidden border border-[rgb(var(--ivory))/0.12] bg-[rgb(var(--ink))] w-full min-h-[360px] lg:min-h-0">
             <img
               src={mediaImage}
               alt={mediaAlt}
               loading="lazy"
-              className="w-full h-full object-cover object-center"
+              className="absolute inset-0 w-full h-full object-cover object-center"
             />
             <div aria-hidden="true" className="absolute inset-0 pointer-events-none" style={{ background: 'linear-gradient(180deg, rgba(11,15,13,0.10) 0%, rgba(11,15,13,0.45) 100%)' }} />
           </div>
@@ -104,6 +108,45 @@ export function ServiceMediaSplit({
           <EditorialMedia variant={mediaVariant} alt={mediaAlt} aspect="4/3" className="w-full" />
         )}
       </div>
+    </div>
+  );
+}
+
+function MediaCollage({ images, alt }) {
+  const n = images.length;
+  // Grid templates for 1, 2, 3 images filling full height with matching width
+  const layout =
+    n === 1
+      ? 'grid-cols-1 grid-rows-1'
+      : n === 2
+      ? 'grid-cols-1 grid-rows-2'
+      : 'grid-cols-3 grid-rows-2';
+
+  return (
+    <div
+      className={`grid gap-2 w-full min-h-[420px] lg:min-h-[520px] ${layout}`}
+      role="group"
+      aria-label={alt}
+    >
+      {images.map((src, i) => {
+        // For n=3: first image spans full left column (2 rows, 2 cols wide look) — use 2/3 width, 2 rows
+        let cls = 'relative overflow-hidden border border-[rgb(var(--ivory))/0.12] bg-[rgb(var(--ink))]';
+        if (n === 3) {
+          if (i === 0) cls += ' col-span-2 row-span-2';
+          else cls += ' col-span-1 row-span-1';
+        }
+        return (
+          <div key={i} className={cls}>
+            <img
+              src={src}
+              alt={i === 0 ? alt : ''}
+              loading="lazy"
+              className="absolute inset-0 w-full h-full object-cover object-center"
+            />
+            <div aria-hidden="true" className="absolute inset-0 pointer-events-none" style={{ background: 'linear-gradient(180deg, rgba(11,15,13,0.10) 0%, rgba(11,15,13,0.45) 100%)' }} />
+          </div>
+        );
+      })}
     </div>
   );
 }
