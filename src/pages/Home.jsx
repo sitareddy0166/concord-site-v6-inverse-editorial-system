@@ -141,15 +141,9 @@ export default function Home() {
                 Maximize Your<br /><em className="italic font-light">Tax Incentives.</em>
               </h1>
 
-              {/* Mobile-only inline compact graphic — appears immediately after H1 per audit */}
-              <div className="lg:hidden -mx-6 sm:-mx-8 my-6 relative border-y border-[rgb(var(--ink))/0.08] aspect-[4/3] bg-[rgb(var(--ink))]">
-                <BuildingBlueprint />
-              </div>
-
               <p className="mt-6 font-[Fraunces] text-[22px] sm:text-[24px] lg:text-[30px] leading-tight tracking-tight text-[rgb(var(--ink))/0.75]">
                 Concord Makes It Simple.
               </p>
-
 
               <p className="hero-description mt-6 text-[16px] lg:text-[17px] leading-relaxed text-[rgb(var(--ink))/0.75] max-w-lg">
                 With over $1 billion in tax savings identified and an industry-leading audit success track record, Concord Energy Strategies helps building owners, designers, and tax-exempt organizations capture every clean energy incentive they deserve.
@@ -162,6 +156,11 @@ export default function Home() {
                 <a href="#services-atlas" className="btn btn-outline" style={{ color: 'rgb(var(--ink))', boxShadow: 'inset 0 0 0 1px rgba(8,12,10,0.35)' }}>
                   Explore Services
                 </a>
+              </div>
+
+              {/* Mobile-only compact graphic — appears after CTAs per audit order */}
+              <div className="lg:hidden -mx-6 sm:-mx-8 mt-8 relative border-y border-[rgb(var(--ink))/0.08] aspect-[4/3] bg-[rgb(var(--ink))]">
+                <BuildingBlueprint />
               </div>
 
               <div className="hrule-ink mt-10 mb-6" />
