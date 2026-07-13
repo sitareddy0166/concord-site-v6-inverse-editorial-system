@@ -121,8 +121,9 @@ export default function BuildingBlueprint() {
         role="img"
         aria-label="Architectural cutaway of a mid-rise commercial building showing envelope, HVAC, lighting, clean energy, documentation, and incentive capture systems"
         preserveAspectRatio="xMidYMid meet"
-        className="w-full h-full block"
+        className="bp-svg w-full h-full block"
       >
+
         <defs>
           <linearGradient id="glass" x1="0" x2="1" y1="0" y2="1">
             <stop offset="0" stopColor="#3da35d" stopOpacity="0.25" />
