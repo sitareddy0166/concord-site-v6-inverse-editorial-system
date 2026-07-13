@@ -1,3 +1,4 @@
+import EditorialMedia from '@/components/media/EditorialMedia';
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import {
@@ -287,7 +288,7 @@ export default function Terms() {
       {/* CTA BANNER */}
       <section className="relative py-[50px] lg:py-[80px] overflow-hidden">
         <div className="absolute inset-0">
-          <div aria-hidden="true" className="w-full h-full bg-[rgb(var(--graphite))] blueprint-grid-fine" />
+          <EditorialMedia variant="document-stack" decorative className="h-full w-full" />
           <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, rgba(61,163,93,0.85) 0%, rgba(21,28,25,0.9) 100%)' }}></div>
         </div>
         <div className="max-w-[800px] mx-auto px-6 relative z-10">

@@ -1,3 +1,4 @@
+import EditorialMedia from '@/components/media/EditorialMedia';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import {
@@ -477,7 +478,7 @@ export default function DirectPay() {
       {/* CTA Banner - Glassmorphism */}
       <section className="relative py-[80px] lg:py-[100px] overflow-hidden">
         <div className="absolute inset-0">
-          <div role="img" aria-label="Large-scale solar farm representing clean energy Direct Pay opportunities" className="w-full h-full object-cover bg-[rgb(var(--graphite))] blueprint-grid-fine border border-[rgb(var(--ivory))/0.10]" />
+          <EditorialMedia variant="solar-array" alt="Large-scale solar farm representing clean energy Direct Pay opportunities" className="h-full w-full" />
           <div className="absolute inset-0 bg-[#151C19]/85"></div>
         </div>
         <div className="relative z-10 max-w-4xl mx-auto px-6">

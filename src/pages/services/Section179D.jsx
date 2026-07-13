@@ -1,3 +1,4 @@
+import EditorialMedia from '@/components/media/EditorialMedia';
 import { useState } from 'react';
 import financialAnalysisImg from '@/assets/financial-analysis.jpg';
 import { Link } from 'react-router-dom';
@@ -129,7 +130,7 @@ export default function Section179D() {
         <div className="max-w-[1200px] mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <ScrollFadeIn>
-              <div role="img" aria-label="Modern commercial building with energy-efficient glass facade" className="rounded-[24px] w-full h-auto object-cover shadow-lg bg-[rgb(var(--graphite))] blueprint-grid-fine border border-[rgb(var(--ivory))/0.10]" />
+              <EditorialMedia variant="engineering" alt="Modern commercial building with energy-efficient glass facade" rounded className="h-auto w-full" />
             </ScrollFadeIn>
             <ScrollFadeIn delay={100}>
               <span className="text-[13px] uppercase tracking-widest font-bold text-concord-green mb-4 block font-heading">Understanding 179D</span>
@@ -198,7 +199,7 @@ export default function Section179D() {
                   <div className="w-14 h-14 rounded-2xl bg-concord-green/10 flex items-center justify-center mb-6">{card.icon}</div>
                   <h3 className="text-lg font-extrabold mb-3 font-heading">{card.title}</h3>
                   <p className="text-sm text-slate-500 leading-relaxed flex-1">{card.desc}</p>
-                  <div role="img" aria-label={card.alt} className="bg-[rgb(var(--graphite))] blueprint-grid-fine border border-[rgb(var(--ivory))/0.10] aspect-[3/2] w-full" />
+                  <EditorialMedia variant="building-179d" alt={card.alt} aspect="3/2" className="w-full" />
                 </div>
               ))}
             </div>
@@ -229,7 +230,7 @@ export default function Section179D() {
               </div>
             </ScrollFadeIn>
             <ScrollFadeIn delay={100} className="flex flex-col gap-6">
-              <div role="img" aria-label="Engineers reviewing energy modeling blueprints for building improvements" className="rounded-[24px] shadow-md w-full h-64 object-cover bg-[rgb(var(--graphite))] blueprint-grid-fine border border-[rgb(var(--ivory))/0.10]" />
+              <EditorialMedia variant="engineering" alt="Engineers reviewing energy modeling blueprints for building improvements" rounded className="h-64 w-full" />
               <div className="bg-white rounded-[24px] p-6 border border-black/[0.06] flex-1 flex flex-col justify-center">
                 <h3 className="font-bold text-lg mb-3 text-concord-dark font-heading">Energy Savings Requirements</h3>
                 <ul className="space-y-3 text-sm text-slate-500">
@@ -303,7 +304,7 @@ export default function Section179D() {
                 <p className="text-slate-500 text-sm">A third-party certification from a licensed professional is also required. Projects must begin construction before <Link to="/obbba-deadline" className="text-concord-green font-semibold hover:underline">critical deadlines</Link> to lock in enhanced rates.</p>
               </div>
               <div>
-                <div aria-hidden="true" className="w-full h-full bg-[rgb(var(--graphite))] blueprint-grid-fine" />
+                <EditorialMedia variant="building-179d" decorative className="h-full w-full" />
               </div>
             </div>
           </ScrollFadeIn>
@@ -326,7 +327,7 @@ export default function Section179D() {
               ].map((story) => (
                 <div key={story.title} className="bg-white rounded-[24px] overflow-hidden border border-black/[0.06] flex flex-col h-full hover:shadow-lg hover:-translate-y-1 transition-all duration-300 border-t-[3px] border-t-transparent hover:border-t-concord-green">
                   <div className="relative h-48 overflow-hidden">
-                    <div role="img" aria-label={story.alt} className="bg-[rgb(var(--graphite))] blueprint-grid-fine border border-[rgb(var(--ivory))/0.10] aspect-[3/2] w-full" />
+                    <EditorialMedia variant="building-179d" alt={story.alt} aspect="3/2" className="w-full" />
                     <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-sm rounded-lg px-3 py-1.5"><span className="text-xl font-bold text-concord-green">{story.amount}</span></div>
                   </div>
                   <div className="p-6 flex-1 flex flex-col">
@@ -426,7 +427,7 @@ export default function Section179D() {
 
       {/* CTA Banner */}
       <section className="relative py-[80px] lg:py-[100px] overflow-hidden bg-[#151C19]">
-        <div aria-hidden="true" className="w-full h-full bg-[rgb(var(--graphite))] blueprint-grid-fine" />
+        <EditorialMedia variant="building-179d" decorative className="h-full w-full" />
         <div className="absolute inset-0 bg-[#151C19]/70"></div>
         <div className="relative z-10 max-w-[800px] mx-auto px-6">
           <ScrollFadeIn>

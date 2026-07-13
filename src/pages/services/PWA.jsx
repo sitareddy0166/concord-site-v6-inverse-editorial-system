@@ -1,3 +1,4 @@
+import EditorialMedia from '@/components/media/EditorialMedia';
 import { useState } from 'react';
 import financialAnalysisImg from '@/assets/financial-analysis.jpg';
 import { Link } from 'react-router-dom';
@@ -151,7 +152,7 @@ export default function PWA() {
       <section id="what-is-pwa" className="py-[80px] lg:py-[100px] bg-white">
         <div className="max-w-[1200px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
           <ScrollFadeIn className="relative">
-            <div role="img" aria-label="Construction workers installing solar panels on a prevailing wage project site" className="rounded-3xl w-full object-cover aspect-[4/3] bg-[rgb(var(--graphite))] blueprint-grid-fine border border-[rgb(var(--ivory))/0.10]" />
+            <EditorialMedia variant="solar-array" alt="Construction workers installing solar panels on a prevailing wage project site" aspect="4/3" rounded className="w-full" />
             <div className="absolute bottom-6 left-6 bg-white/95 backdrop-blur rounded-3xl shadow-lg px-6 py-4">
               <p className="text-2xl font-heading font-extrabold text-concord-green">1,200+</p>
               <p className="text-xs text-concord-dark/60 font-medium">Projects Managed</p>
@@ -304,7 +305,7 @@ export default function PWA() {
                     <p className="text-slate-500 text-base leading-relaxed">{step.desc}</p>
                   </div>
                   <div className={`lg:w-1/2 ${isEven ? 'lg:pl-16' : 'lg:pr-16'}`}>
-                    {step.img ? (<img src={step.img} alt={step.alt} loading="lazy" width="600" height="400" className="rounded-3xl shadow-md w-full object-cover aspect-[3/2]" />) : (<div role="img" aria-label={step.alt} className="bg-[rgb(var(--graphite))] blueprint-grid-fine border border-[rgb(var(--ivory))/0.10] aspect-[3/2] w-full" />)}
+                    {step.img ? (<img src={step.img} alt={step.alt} loading="lazy" width="600" height="400" className="rounded-3xl shadow-md w-full object-cover aspect-[3/2]" />) : (<EditorialMedia variant="workforce-pwa" alt={step.alt} aspect="3/2" className="w-full" />)}
                   </div>
                 </ScrollFadeIn>
               );
@@ -385,7 +386,7 @@ export default function PWA() {
       {/* CTA Banner - Glassmorphism */}
       <section className="relative py-[80px] lg:py-[100px] overflow-hidden">
         <div className="absolute inset-0">
-          <div role="img" aria-label="Large-scale solar farm representing clean energy projects requiring PWA compliance" className="w-full h-full object-cover bg-[rgb(var(--graphite))] blueprint-grid-fine border border-[rgb(var(--ivory))/0.10]" />
+          <EditorialMedia variant="solar-array" alt="Large-scale solar farm representing clean energy projects requiring PWA compliance" className="h-full w-full" />
           <div className="absolute inset-0 bg-[#151C19]/85"></div>
         </div>
         <div className="relative z-10 max-w-4xl mx-auto px-6">

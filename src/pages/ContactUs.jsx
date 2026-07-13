@@ -1,3 +1,4 @@
+import EditorialMedia from '@/components/media/EditorialMedia';
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import {
@@ -176,7 +177,7 @@ export default function ContactUs() {
             ].map((loc) => (
               <ScrollFadeIn key={loc.title}>
                 <div className="bg-white rounded-3xl overflow-hidden border border-black/[0.06] shadow-sm card-hover flex flex-col h-full">
-                  <div role="img" aria-label={loc.imgAlt} className="bg-[rgb(var(--graphite))] blueprint-grid-fine border border-[rgb(var(--ivory))/0.10] aspect-[3/2] w-full" />
+                  <EditorialMedia variant="office-map" alt={loc.imgAlt} aspect="3/2" className="w-full" />
                   <div className="p-6 flex-1">
                     <div className="flex items-center gap-2 mb-3">
                       <h3 className="font-heading font-bold text-[18px] text-concord-dark">{loc.title}</h3>
@@ -231,7 +232,7 @@ export default function ContactUs() {
       {/* CTA BANNER */}
       <section className="relative py-[50px] lg:py-[100px] overflow-hidden">
         <div className="absolute inset-0">
-          <div aria-hidden="true" className="w-full h-full bg-[rgb(var(--graphite))] blueprint-grid-fine" />
+          <EditorialMedia variant="office-map" decorative className="h-full w-full" />
           <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, rgba(61,163,93,0.85) 0%, rgba(21,28,25,0.9) 100%)' }}></div>
         </div>
         <div className="max-w-[800px] mx-auto px-6 text-center relative z-10">

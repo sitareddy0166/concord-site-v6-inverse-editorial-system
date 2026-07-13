@@ -1,3 +1,4 @@
+import EditorialMedia from '@/components/media/EditorialMedia';
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import {
@@ -155,7 +156,7 @@ export default function Whitepaper() {
               <div className="relative mb-10">
                 <div className="absolute inset-0 bg-concord-dark/5 rounded-3xl transform rotate-6 scale-95 translate-y-4"></div>
                 <div className="relative bg-white rounded-3xl shadow-2xl transform rotate-3 overflow-hidden w-72 md:w-80">
-                  <div aria-hidden="true" className="w-full h-full bg-[rgb(var(--graphite))] blueprint-grid-fine" />
+                  <EditorialMedia variant="whitepaper" decorative className="h-full w-full" />
                   <div className="p-8 md:p-10">
                     <span className="text-concord-green text-xs font-bold uppercase tracking-widest">Concord Energy Strategies</span>
                     <h2 className="text-lg md:text-xl font-heading font-extrabold tracking-tight mt-4 mb-6 leading-snug">
@@ -335,7 +336,7 @@ export default function Whitepaper() {
       {/* 7. CTA BANNER */}
       <section className="relative py-[80px] lg:py-[100px] overflow-hidden">
         <div className="absolute inset-0">
-          <div aria-hidden="true" className="w-full h-full bg-[rgb(var(--graphite))] blueprint-grid-fine" />
+          <EditorialMedia variant="whitepaper" decorative className="h-full w-full" />
           <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, rgba(61,163,93,0.93), rgba(21,28,25,0.92))' }}></div>
         </div>
         <div className="relative z-10 max-w-[800px] mx-auto px-6">

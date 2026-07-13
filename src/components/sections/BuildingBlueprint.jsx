@@ -88,10 +88,32 @@ export default function BuildingBlueprint() {
         </p>
       </div>
 
+      {/* Mobile inline systems selector — horizontal scroll, touch friendly */}
+      <div className="lg:hidden absolute left-0 right-0 bottom-0 z-10 bg-[rgb(var(--ink))/0.85] backdrop-blur border-t border-[rgb(var(--ivory))/0.14]">
+        <div role="tablist" aria-label="Building systems" className="flex gap-1 overflow-x-auto scrollbar-hide px-2 py-2">
+          {SYSTEMS.map((s, i) => (
+            <button
+              key={s.id}
+              role="tab"
+              aria-selected={on(s.id)}
+              onClick={() => setActive(s.id)}
+              className={`shrink-0 px-3 min-h-[40px] flex items-center gap-2 border ${on(s.id) ? 'border-[rgb(var(--concord-glow))] text-[rgb(var(--ivory))] bg-[rgb(var(--concord))/0.10]' : 'border-[rgb(var(--ivory))/0.14] text-[rgb(var(--ivory))/0.6]'}`}
+            >
+              <span className="index-num">L/{String(i + 1).padStart(2, '0')}</span>
+              <span className="text-[11px] font-medium tracking-wide uppercase">{s.label}</span>
+            </button>
+          ))}
+        </div>
+        <p className="px-3 pb-2 text-[11px] leading-snug text-[rgb(var(--ivory))/0.6]">
+          {SYSTEMS.find((s) => s.id === active)?.detail}
+        </p>
+      </div>
+
       {/* Coordinate marks */}
       <span className="coord absolute top-2 right-2 text-[rgb(var(--ivory))/0.4]" aria-hidden="true" />
-      <span className="coord absolute bottom-2 left-2 text-[rgb(var(--ivory))/0.4]" aria-hidden="true" />
-      <span className="coord absolute bottom-2 right-2 text-[rgb(var(--ivory))/0.4]" aria-hidden="true" />
+      <span className="coord absolute bottom-2 left-2 text-[rgb(var(--ivory))/0.4] hidden lg:inline-block" aria-hidden="true" />
+      <span className="coord absolute bottom-2 right-2 text-[rgb(var(--ivory))/0.4] hidden lg:inline-block" aria-hidden="true" />
+
 
       <svg
         ref={svgRef}

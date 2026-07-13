@@ -454,40 +454,11 @@
      (only decorative; content copy avoids em dashes at source) */
 }
 
-/* ============================================================
-   MEDIA FALLBACK — decorative schematic art for otherwise-empty
-   image containers. Any element that has `.blueprint-grid-fine`
-   and is used as a media slot (has role=img OR aria-hidden and
-   sits in an aspect-ratio container) gets a subtle architectural
-   line-art overlay so it never renders as a blank dark box.
-   ============================================================ */
-.blueprint-grid-fine {
-  position: relative;
-  isolation: isolate;
-}
-.blueprint-grid-fine::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: min(72%, 320px) auto;
-  opacity: 0.55;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 200' fill='none' stroke='%2340b868' stroke-width='0.9' stroke-linecap='square'><rect x='40' y='40' width='240' height='130' opacity='0.7'/><line x1='40' y1='70' x2='280' y2='70' opacity='0.4'/><line x1='40' y1='100' x2='280' y2='100' opacity='0.4'/><line x1='40' y1='130' x2='280' y2='130' opacity='0.4'/><line x1='120' y1='40' x2='120' y2='170' opacity='0.25' stroke-dasharray='2 4'/><line x1='200' y1='40' x2='200' y2='170' opacity='0.25' stroke-dasharray='2 4'/><rect x='90' y='16' width='50' height='24' opacity='0.6'/><circle cx='260' cy='30' r='8' opacity='0.6'/><line x1='16' y1='180' x2='304' y2='180' stroke='%23efece5' opacity='0.25'/><text x='40' y='192' font-family='JetBrains Mono, monospace' font-size='7' fill='%23efece5' opacity='0.5'>FIG · SCHEMATIC</text></svg>");
-}
-.blueprint-grid-fine::after {
-  content: "";
-  position: absolute;
-  inset: 8px;
-  pointer-events: none;
-  border: 1px solid rgb(var(--ivory) / 0.06);
-}
-/* If the container has real children (an <img>, an SVG, etc), suppress overlay */
-.blueprint-grid-fine:has(> :not(style):not(script)):not([role="img"]):not([aria-hidden="true"])::before,
-.blueprint-grid-fine:has(> :not(style):not(script)):not([role="img"]):not([aria-hidden="true"])::after {
-  content: none;
-}
+/* Media fallback pseudo-art removed — replaced by
+   src/components/media/EditorialMedia.jsx which renders a
+   route-specific SVG illustration for every media slot. */
+
+
 
 /* ============================================================
    MOBILE TYPOGRAPHY GUARDS

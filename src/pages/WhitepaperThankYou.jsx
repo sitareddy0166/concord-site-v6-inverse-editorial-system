@@ -1,3 +1,4 @@
+import EditorialMedia from '@/components/media/EditorialMedia';
 import { Link } from 'react-router-dom';
 import {
   CaretRight,
@@ -213,7 +214,7 @@ export default function WhitepaperThankYou() {
       <section className="bg-concord-cream py-[100px] px-6">
         <div className="max-w-5xl mx-auto rounded-3xl relative overflow-hidden">
           <ScrollFadeIn>
-            <div aria-hidden="true" className="w-full h-full bg-[rgb(var(--graphite))] blueprint-grid-fine" />
+            <EditorialMedia variant="whitepaper" decorative className="h-full w-full" />
             <div className="absolute inset-0 bg-[#151C19]/90"></div>
             <div className="relative z-10 p-16 md:p-20 text-center">
               <div className="max-w-2xl mx-auto rounded-3xl p-12" style={{ background: 'rgba(255,255,255,0.1)', backdropFilter: 'blur(16px)', WebkitBackdropFilter: 'blur(16px)', border: '1px solid rgba(255,255,255,0.2)' }}>
