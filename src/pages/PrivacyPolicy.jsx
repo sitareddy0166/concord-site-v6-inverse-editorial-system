@@ -216,7 +216,7 @@ export default function PrivacyPolicy() {
                       </div>
                     ))}
                   </div>
-                  <p className="text-[16px] text-slate-500 leading-relaxed">To exercise any of these rights, please contact us at <a href="mailto:info@concordenergy.com" className="text-concord-green hover:text-concord-greenHover underline underline-offset-2">info@concordenergy.com</a>. We will respond within 30 days.</p>
+                  <p className="text-[16px] text-slate-500 leading-relaxed">To exercise any of these rights, please contact us at <a href="mailto:info@concordlp.com" className="text-concord-green hover:text-concord-greenHover underline underline-offset-2">info@concordlp.com</a>. We will respond within 30 days.</p>
                 </ScrollFadeIn>
               </div>
 
@@ -282,14 +282,14 @@ export default function PrivacyPolicy() {
                         <EnvelopeSimple size={20} className="text-concord-green mt-0.5" />
                         <div>
                           <p className="text-sm font-semibold text-concord-dark">Email</p>
-                          <a href="mailto:info@concordenergy.com" className="text-concord-green hover:text-concord-greenHover underline underline-offset-2">info@concordenergy.com</a>
+                          <a href="mailto:info@concordlp.com" className="text-concord-green hover:text-concord-greenHover underline underline-offset-2">info@concordlp.com</a>
                         </div>
                       </div>
                       <div className="flex items-start gap-3">
                         <MapPin size={20} className="text-concord-green mt-0.5" />
                         <div>
                           <p className="text-sm font-semibold text-concord-dark">Location</p>
-                          <p className="text-slate-500 text-[15px]">Concord Energy Strategies<br />Washington, DC Metro Area</p>
+                          <p className="text-slate-500 text-[15px]">Concord Energy Strategies<br />6000 Brownsboro Park Blvd, Suite H<br />Louisville, KY 40207</p>
                         </div>
                       </div>
                     </div>

@@ -1,4 +1,6 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { BookingModal } from '@/components/ui/BookingModal';
 import { ArrowRight, CaretRight } from '@phosphor-icons/react';
 
 /**
@@ -15,9 +17,10 @@ export default function ServiceHero({
   stats = [],    // [{value, label, note?}]
   breadcrumb,    // 'Services / 179D Tax Deduction'
   primaryCta = { label: 'Start the Conversation', href: '/contact' },
-  secondaryCta = { label: 'Book a Discovery Call', href: 'https://www.concordlp.com/meetings/jonathan-darnell', external: true },
+  secondaryCta = { label: 'Book a Discovery Call' },
   lastUpdated,
 }) {
+  const [bookingOpen, setBookingOpen] = useState(false);
   return (
     <header className="surface-ink relative overflow-hidden grain">
       {/* Blueprint grid backdrop */}
@@ -55,12 +58,12 @@ export default function ServiceHero({
               <Link to={primaryCta.href} className="btn btn-primary">
                 {primaryCta.label} <ArrowRight size={14} weight="bold" />
               </Link>
-              {secondaryCta.external ? (
-                <a href={secondaryCta.href} target="_blank" rel="noopener noreferrer" className="btn btn-outline">
-                  {secondaryCta.label}
-                </a>
-              ) : (
+              {secondaryCta.href ? (
                 <Link to={secondaryCta.href} className="btn btn-outline">{secondaryCta.label}</Link>
+              ) : (
+                <button type="button" onClick={() => setBookingOpen(true)} className="btn btn-outline">
+                  {secondaryCta.label}
+                </button>
               )}
             </div>
             {lastUpdated && (
@@ -89,6 +92,7 @@ export default function ServiceHero({
         <span aria-hidden="true" className="coord absolute bottom-4 left-6 text-[rgb(var(--ivory))/0.45]" />
         <span aria-hidden="true" className="coord absolute bottom-4 right-6 text-[rgb(var(--ivory))/0.45]" />
       </div>
+      <BookingModal open={bookingOpen} onClose={() => setBookingOpen(false)} />
     </header>
   );
 }

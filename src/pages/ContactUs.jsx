@@ -30,7 +30,7 @@ const faqItems = [
   },
   {
     question: 'Do you work with clients nationwide?',
-    answer: 'Absolutely. Headquartered in the Washington, DC metro area, we serve clients across all 50 states. Our team conducts virtual consultations and can coordinate on-site visits as needed for engineering certifications and compliance documentation.',
+    answer: 'Absolutely. Headquartered in Louisville, Kentucky, we serve clients across all 50 states. Our team conducts virtual consultations and can coordinate on-site visits as needed for engineering certifications and compliance documentation.',
   },
 ];
 
@@ -105,7 +105,7 @@ export default function ContactUs() {
 
                 <div className="flex flex-col gap-4">
                   {[
-                    { icon: EnvelopeSimple, title: 'Email', content: <a href="mailto:info@concordenergy.com" className="text-[15px] text-slate-600 hover:text-concord-green transition-colors">info@concordenergy.com</a> },
+                    { icon: EnvelopeSimple, title: 'Email', content: <a href="mailto:info@concordlp.com" className="text-[15px] text-slate-600 hover:text-concord-green transition-colors">info@concordlp.com</a> },
                     { icon: Clock, title: 'Office Hours', content: <p className="text-[15px] text-slate-600">Mon&ndash;Fri 8AM&ndash;6PM EST</p> },
                     { icon: Lightning, title: 'Response Time', content: <p className="text-[15px] text-slate-600">Within 24 hours</p> },
                   ].map((card) => (
@@ -153,11 +153,11 @@ export default function ContactUs() {
             {[
               {
                 img: null,
-                imgAlt: 'Washington DC skyline with the Capitol building and National Mall at dusk',
-                title: 'Washington, DC Metro Area',
+                imgAlt: 'Louisville Kentucky skyline along the Ohio River at dusk',
+                title: 'Louisville, KY Headquarters',
                 isHQ: true,
                 icon: MapPin,
-                detail: 'Greater Washington, DC Area',
+                detail: '6000 Brownsboro Park Blvd, Suite H, Louisville, KY 40207',
                 hasEmail: true,
               },
               {
@@ -191,7 +191,7 @@ export default function ContactUs() {
                       {loc.hasEmail && (
                         <div className="flex items-center gap-3">
                           <EnvelopeSimple size={18} className="text-concord-green shrink-0" />
-                          <a href="mailto:info@concordenergy.com" className="text-[14px] text-slate-600 hover:text-concord-green transition-colors">info@concordenergy.com</a>
+                          <a href="mailto:info@concordlp.com" className="text-[14px] text-slate-600 hover:text-concord-green transition-colors">info@concordlp.com</a>
                         </div>
                       )}
                     </div>

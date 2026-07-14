@@ -128,7 +128,7 @@ export default function Whitepaper() {
                 </h1>
                 <div className="flex items-center gap-2 text-sm text-concord-dark/60 mb-8">
                   <CheckCircle weight="fill" className="text-concord-green text-lg" />
-                  <span className="font-body">2,493 companies downloaded</span>
+                  <span className="font-body">Trusted by 2,493 clean energy companies</span>
                 </div>
 
                 <form onSubmit={handleSubmit} className="space-y-4">
@@ -256,8 +256,8 @@ export default function Whitepaper() {
                   <User weight="fill" className="text-concord-green text-lg" />
                 </div>
                 <div className="text-left">
-                  <p className="font-heading font-bold text-sm">James Richardson</p>
-                  <p className="text-xs text-concord-dark/50 font-body">VP of Facilities, National Education Partners</p>
+                  <p className="font-heading font-bold text-sm">VP of Engineering, clean energy manufacturer</p>
+                  <p className="text-xs text-concord-dark/50 font-body">Illustrative client profile</p>
                 </div>
               </div>
             </div>

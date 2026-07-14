@@ -280,7 +280,7 @@ export default function BuildingBlueprint() {
         </g>
 
         <text x="60" y="588" fontFamily="JetBrains Mono, monospace" fontSize="9" fill="rgba(239,236,229,0.4)">
-          FIG. 01 — MID-RISE COMMERCIAL / SECTIONAL / SYSTEMS OVERLAY
+          FIG. 01 / MID-RISE COMMERCIAL / SECTIONAL / SYSTEMS OVERLAY
         </text>
       </svg>
     </div>

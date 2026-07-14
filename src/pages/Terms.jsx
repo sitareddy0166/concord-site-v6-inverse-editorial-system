@@ -216,7 +216,7 @@ export default function Terms() {
                 <ScrollFadeIn>
                   <h2 className="font-heading font-bold text-2xl md:text-[28px] text-concord-dark border-l-4 border-concord-green pl-6 mb-6">Dispute Resolution</h2>
                   <h3 className="font-heading font-semibold text-lg text-concord-dark mt-8 mb-3">Arbitration Clause</h3>
-                  <p className="text-[16px] text-slate-500 leading-relaxed mb-4">In the event of a dispute, both parties agree to first attempt resolution through good-faith negotiation. If the dispute cannot be resolved within thirty (30) days, either party may elect to submit the matter to binding arbitration administered by the American Arbitration Association. The arbitration shall take place in Washington, D.C.</p>
+                  <p className="text-[16px] text-slate-500 leading-relaxed mb-4">In the event of a dispute, both parties agree to first attempt resolution through good-faith negotiation. If the dispute cannot be resolved within thirty (30) days, either party may elect to submit the matter to binding arbitration administered by the American Arbitration Association. The arbitration shall take place in Louisville, Kentucky.</p>
                   <h3 className="font-heading font-semibold text-lg text-concord-dark mt-8 mb-3">Governing Law</h3>
                   <p className="text-[16px] text-slate-500 leading-relaxed">These Terms shall be governed by and construed in accordance with the laws of the District of Columbia, without regard to its conflict of law principles.</p>
                 </ScrollFadeIn>
@@ -266,14 +266,14 @@ export default function Terms() {
                         <EnvelopeSimple size={20} className="text-concord-green mt-0.5" />
                         <div>
                           <p className="text-sm font-semibold text-concord-dark">Email</p>
-                          <a href="mailto:info@concordenergy.com" className="text-concord-green hover:text-concord-greenHover underline underline-offset-2">info@concordenergy.com</a>
+                          <a href="mailto:info@concordlp.com" className="text-concord-green hover:text-concord-greenHover underline underline-offset-2">info@concordlp.com</a>
                         </div>
                       </div>
                       <div className="flex items-start gap-3">
                         <MapPin size={20} className="text-concord-green mt-0.5" />
                         <div>
                           <p className="text-sm font-semibold text-concord-dark">Location</p>
-                          <p className="text-slate-500 text-[15px]">Concord Energy Strategies<br />Washington, DC Metro Area</p>
+                          <p className="text-slate-500 text-[15px]">Concord Energy Strategies<br />6000 Brownsboro Park Blvd, Suite H<br />Louisville, KY 40207</p>
                         </div>
                       </div>
                     </div>

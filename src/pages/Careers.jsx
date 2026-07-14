@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, MapPin, MagnifyingGlass } from '@phosphor-icons/react';
-import { SEOHead, SchemaScript, generateBreadcrumbSchema, generateJobPostingSchema } from '@/utils/seo';
+import { SEOHead, SchemaScript, generateBreadcrumbSchema } from '@/utils/seo';
 import AboutPageShell, { AboutBreadcrumb, AboutHero, ChapterHeader, ChapterHeaderInk, AboutCTA } from '@/components/about/AboutPageShell';
 
 const whyItems = [
@@ -19,10 +19,10 @@ const values = [
 
 const jobs = [
   { id: 1, category: 'consulting',  catLabel: 'Consulting',  title: 'Senior Tax Incentive Consultant', location: 'Remote',           body: 'Lead complex 179D, PWA, and Direct Pay engagements for Fortune 500 clients. Develop tax incentive strategies and ensure compliance across multi-site portfolios.' },
-  { id: 2, category: 'engineering', catLabel: 'Engineering', title: 'Energy Engineer',                 location: 'Washington, DC',    body: 'Perform energy modeling, building assessments, and 179D certifications. Work with architects and building owners to maximize energy efficiency tax deductions.' },
+  { id: 2, category: 'engineering', catLabel: 'Engineering', title: 'Energy Engineer',                 location: 'Louisville, KY',    body: 'Perform energy modeling, building assessments, and 179D certifications. Work with architects and building owners to maximize energy efficiency tax deductions.' },
   { id: 3, category: 'operations',  catLabel: 'Operations',  title: 'Client Success Manager',          location: 'Remote',           body: 'Own the client experience from onboarding through ongoing engagement. Coordinate cross-functional teams to deliver tax incentive results on time and on budget.' },
-  { id: 4, category: 'marketing',   catLabel: 'Marketing',   title: 'Marketing Director',              location: 'New York, NY',      body: 'Lead brand strategy, content marketing, and demand generation for a fast-growing clean energy consulting firm. Drive awareness and pipeline growth across channels.' },
-  { id: 5, category: 'consulting',  catLabel: 'Consulting',  title: 'PWA Compliance Specialist',       location: 'Washington, DC',    body: 'Ensure prevailing wage and apprenticeship compliance across client projects. Develop documentation frameworks and conduct compliance audits for clean energy builds.' },
+  { id: 4, category: 'marketing',   catLabel: 'Marketing',   title: 'Marketing Director',              location: 'Remote',      body: 'Lead brand strategy, content marketing, and demand generation for a fast-growing clean energy consulting firm. Drive awareness and pipeline growth across channels.' },
+  { id: 5, category: 'consulting',  catLabel: 'Consulting',  title: 'PWA Compliance Specialist',       location: 'Louisville, KY',    body: 'Ensure prevailing wage and apprenticeship compliance across client projects. Develop documentation frameworks and conduct compliance audits for clean energy builds.' },
   { id: 6, category: 'engineering', catLabel: 'Engineering', title: 'Full Stack Developer',            location: 'Remote',           body: 'Build and maintain internal tools and client-facing platforms that power tax incentive analysis, compliance tracking, and reporting dashboards.' },
 ];
 
@@ -62,12 +62,6 @@ export default function Careers() {
         description="Join Concord Energy Strategies. Explore open roles in consulting, engineering, operations, and marketing at a firm with $1B+ in client savings secured."
         canonical="/careers" />
       <SchemaScript schema={generateBreadcrumbSchema([{ name: 'Home', url: '/' }, { name: 'Careers', url: '/careers' }])} />
-      {jobs.map((job) => (
-        <SchemaScript key={job.id} schema={generateJobPostingSchema({
-          title: job.title, description: job.body, location: job.location,
-          remote: job.location.toLowerCase() === 'remote', url: '/careers',
-        })} />
-      ))}
 
       <AboutBreadcrumb current="Careers" />
       <AboutHero
@@ -79,7 +73,7 @@ export default function Careers() {
         secondaryCta={{ label: 'Why Concord', href: '/why-us' }}
         meta={[
           { label: 'Open roles', value: `${jobs.length}` },
-          { label: 'Locations', value: 'Remote · DC · NYC' },
+          { label: 'Locations', value: 'Louisville, KY and Remote' },
           { label: 'Practice', value: 'Clean energy tax' },
         ]}
       />
