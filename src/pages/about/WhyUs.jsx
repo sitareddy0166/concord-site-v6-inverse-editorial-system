@@ -128,7 +128,7 @@ export default function WhyUs() {
             </Link>
           </div>
           <div className="lg:col-span-5">
-            <EnergyFlow label="Energy flow schematic — source, HVAC, envelope, savings" />
+            <EnergyFlow label="Energy flow schematic: source, HVAC, envelope, savings" />
           </div>
         </div>
       </section>
@@ -143,8 +143,8 @@ export default function WhyUs() {
               Concord took the complexity out of our 179D claims and delivered results that exceeded our expectations. Their team was responsive, thorough, and always available.
             </p>
             <footer className="mt-6 text-[14px]">
-              <span className="text-[rgb(var(--ivory))] font-semibold">James Richardson</span>
-              <span className="text-[rgb(var(--ivory))/0.55]"> · VP of Facilities, National Education Partners</span>
+              <span className="text-[rgb(var(--ivory))] font-semibold">Director of Energy, university system</span>
+              <span className="text-[rgb(var(--ivory))/0.55]"> · Illustrative client profile</span>
             </footer>
           </blockquote>
         </div>

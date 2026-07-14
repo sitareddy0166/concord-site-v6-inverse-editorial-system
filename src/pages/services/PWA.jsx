@@ -51,7 +51,7 @@ const faqs = [
   },
   {
     question: 'How does Concord help with PWA compliance?',
-    answer: 'Concord provides end-to-end PWA compliance management including wage determination analysis, payroll monitoring, apprenticeship tracking, real-time compliance dashboards, documentation management, and audit defense support. Our 100% compliance rate ensures your project captures the full bonus multiplier.',
+    answer: 'Concord provides end-to-end PWA compliance management including wage determination analysis, payroll monitoring, apprenticeship tracking, real-time compliance dashboards, documentation management, and audit defense support. Our compliance track record helps your project capture the full bonus multiplier.',
   },
   {
     question: 'What documentation is required through the recapture period?',
@@ -138,7 +138,7 @@ export default function PWA() {
         stats={[
           { value: '5×',      label: 'Enhanced rate multiplier', note: 'With PWA compliance' },
           { value: '$5.94/sf', label: 'Maximum 179D rate',       note: 'PWA required' },
-          { value: '100%',    label: 'Compliance rate',          note: 'All engagements' },
+          { value: '$1B+',    label: 'Client savings identified', note: 'Portfolio to date' },
         ]}
       />
 
@@ -190,8 +190,8 @@ export default function PWA() {
             <div className="mt-10">
               <ServiceFactsRail
                 facts={[
-                  { label: 'Projects Managed', value: '1,200+', note: 'Across all incentive types' },
-                  { label: 'Compliance Rate',  value: '100%',   note: 'All PWA engagements' },
+                  { label: 'Buildings Evaluated', value: '1,000+', note: 'Annually across the portfolio' },
+                  { label: 'Audit Success',  value: '100%',   note: 'Concord engagements' },
                 ]}
               />
             </div>
@@ -235,7 +235,7 @@ export default function PWA() {
               { icon: Certificate,  title: 'Licensed Compliance Officers', desc: 'Our team of certified compliance professionals has deep expertise in Department of Labor wage determinations and registered apprenticeship programs.' },
               { icon: ChartLineUp,  title: 'Real-Time Monitoring',         desc: 'Our proprietary dashboards track wage rates, apprenticeship hours, and compliance metrics in real time so issues are caught and resolved immediately.' },
               { icon: ShieldCheck,  title: 'Audit-Proof Documentation',    desc: 'We build comprehensive, IRS-ready documentation packages from day one, with certified payroll records, apprenticeship logs, and wage determination analyses.' },
-              { icon: Trophy,       title: '100% Compliance Rate',         desc: 'Our track record speaks for itself. Across 1,200+ projects, our clients have successfully secured the full bonus multiplier on their credits.' },
+              { icon: Trophy,       title: 'Compliance Track Record',        desc: 'Our clients have successfully secured the full bonus multiplier, backed by documentation built for examination.' },
             ]}
           />
         </div>
@@ -267,8 +267,8 @@ export default function PWA() {
           <ServiceSectionHeader
             code="G/01"
             eyebrow="Our Guarantee"
-            title="PWA Compliance, Guaranteed."
-            lede={<>When you partner with Concord, you get more than consulting. You get a commitment to results backed by our track record of 1,200+ successful projects. See our <Link to="/resources" className="ed-link">latest case studies and resources</Link> for real-world outcomes.</>}
+            title="PWA Compliance, Engineered."
+            lede={<>When you partner with Concord, you get more than consulting. You get a commitment to results backed by our compliance track record. See our <Link to="/resources" className="ed-link">latest case studies and resources</Link> for real-world outcomes.</>}
           />
           <ServiceDocumentIndex
             documents={guaranteeItems.map((g, i) => ({
@@ -293,8 +293,8 @@ export default function PWA() {
             <ServiceEvidence
               items={[
                 {
-                  amount: '“1,200+ projects”',
-                  title: 'James Richardson, VP of Facilities, National Education Partners',
+                  amount: '“Complete confidence”',
+                  title: 'Compliance Director, national solar EPC · Illustrative client profile',
                   desc: 'Concord\'s PWA compliance process gave us complete confidence that our documentation would withstand any audit. Their team was responsive, thorough, and made a complex process feel straightforward.',
                 },
               ]}

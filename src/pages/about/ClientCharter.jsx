@@ -7,7 +7,7 @@ const commitments = [
   { code: 'I',   title: 'Transparency',          body: 'Open reporting at every stage with no hidden fees. You will always know where your engagement stands, what we are working on, and exactly what you are paying for.' },
   { code: 'II',  title: 'Expertise',             body: 'Certified professionals who pursue continuous education. Our team stays ahead of evolving tax legislation so you benefit from the most current strategies available.' },
   { code: 'III', title: 'Responsiveness',        body: 'A 24-hour response guarantee backed by a dedicated team assigned to your account. When you need answers, we are already working on them.' },
-  { code: 'IV',  title: 'Compliance First',      body: '100% audit-ready deliverables on every engagement. We engineer our documentation to withstand scrutiny, giving you confidence that every credit will hold up.' },
+  { code: 'IV',  title: 'Compliance First',      body: 'Audit-ready deliverables on every engagement. We engineer our documentation to withstand scrutiny, giving you confidence that every credit will hold up.' },
   { code: 'V',   title: 'Client Education',      body: 'Regular workshops, curated resources, and legislative updates. We empower your team with the knowledge to make informed decisions about energy incentives.' },
   { code: 'VI',  title: 'Long-term Partnership', body: 'Ongoing support that extends well beyond the initial engagement. As regulations evolve and new opportunities emerge, we are beside you every step of the way.' },
 ];
@@ -21,14 +21,14 @@ const delivery = [
 
 const metrics = [
   { value: '100%', label: 'Audit success rate',     sub: 'Across all engagements' },
-  { value: '24 hr', label: 'Response time',         sub: 'Guaranteed maximum' },
-  { value: '100%', label: 'Compliance rate',        sub: 'Audit-ready deliverables' },
+  { value: '24 hr', label: 'Response time',         sub: 'Response time target' },
+  { value: 'Audit-ready', label: 'Deliverable standard', sub: 'Every engagement' },
 ];
 
 const faqs = [
   { question: 'What is the Concord Client Charter?', answer: 'The Client Charter is our formal commitment to six principles: transparency, expertise, responsiveness, compliance, client education, and long-term partnership. It guides every engagement we undertake, from the first conversation through years of ongoing support.' },
   { question: "What is Concord's response time guarantee?", answer: 'We guarantee a maximum 24-hour response time for all client inquiries. Every client is assigned a dedicated team, so when you need answers, we are already working on them.' },
-  { question: 'Does Concord provide audit defense?', answer: 'Yes. 100% of our deliverables are audit-ready. We provide lifetime audit defense for every engagement, engineering our documentation to withstand IRS scrutiny and protect every credit we help you claim.' },
+  { question: 'Does Concord provide audit defense?', answer: 'Yes. Every deliverable is engineered to be audit ready, and we support our clients through examination. Our documentation is built to withstand IRS scrutiny and protect every credit we help you claim.' },
 ];
 
 export default function ClientCharter() {
@@ -51,8 +51,7 @@ export default function ClientCharter() {
         secondaryCta={{ label: 'Read the commitments', href: '#commitments' }}
         meta={[
           { label: 'Document', value: 'CES-CC-01' },
-          { label: 'Adopted', value: 'Jan 2015' },
-          { label: 'Revision', value: '2026' },
+                    { label: 'Revision', value: '2026' },
         ]}
       />
 
@@ -103,7 +102,7 @@ export default function ClientCharter() {
               Concord took the complexity out of our 179D claims and delivered results that exceeded our expectations. Their team was responsive, thorough, and always available.
             </p>
             <footer className="mt-6 text-[14px] text-[rgb(var(--ivory))/0.7]">
-              <span className="text-[rgb(var(--ivory))] font-semibold">James Richardson</span> · VP of Facilities, National Education Partners
+              <span className="text-[rgb(var(--ivory))] font-semibold">Controller, healthcare network</span> · Illustrative client profile
             </footer>
           </blockquote>
         </div>

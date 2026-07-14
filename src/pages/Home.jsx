@@ -320,7 +320,7 @@ export default function Home() {
         <div className="arch">
           <div className="grid lg:grid-cols-12 gap-10 items-end mb-14">
             <div className="lg:col-span-8">
-              <p className="tech-label mb-6">Chapters · B/01–04</p>
+              <p className="tech-label mb-6">Chapters · B/01 to 04</p>
               <h2 className="h-display text-balance">Who Qualifies</h2>
             </div>
           </div>
@@ -415,8 +415,8 @@ export default function Home() {
               </p>
               <footer className="mt-8 flex flex-wrap items-center gap-6">
                 <div>
-                  <p className="font-semibold text-[rgb(var(--ink))]">James Richardson</p>
-                  <p className="text-[13px] text-[rgb(var(--ink))/0.6]">VP of Facilities, National Education Partners</p>
+                  <p className="font-semibold text-[rgb(var(--ink))]">VP of Facilities, public school district</p>
+                  <p className="text-[13px] text-[rgb(var(--ink))/0.6]">Illustrative client profile</p>
                 </div>
                 <p className="text-[12px] italic text-[rgb(var(--ink))/0.5] max-w-xs">
                   Illustrative example based on typical engagement profiles. Actual results vary.
@@ -436,14 +436,14 @@ export default function Home() {
           <div className="grid lg:grid-cols-12 gap-10 items-center">
             <div className="lg:col-span-2">
               <p className="tech-label tech-label--brass">Deadline · E/01</p>
-              <p className="mt-4 font-[JetBrains_Mono] text-[13px] text-[rgb(var(--brass))]">2026 · 07 · 06</p>
+              <p className="mt-4 font-[JetBrains_Mono] text-[13px] text-[rgb(var(--brass))]">2026 · 09 · 15</p>
             </div>
             <div className="lg:col-span-7">
               <h2 className="h-lead">
-                The OBBBA election cutoff for retroactive R&amp;D claims is July 6, 2026.
+                The next OBBBA statute deadline lands September 15, 2026.
               </h2>
               <p className="mt-5 text-[16px] text-[rgb(var(--ivory))/0.7] max-w-2xl leading-relaxed">
-                OBBBA statutory deadlines are approaching. Retroactive R&amp;D credit elections, Section 174A expensing, and Direct Pay registrations all have hard filing windows. Let our team confirm which deadlines apply to your organization before they close.
+                The July 6 OBBBA election window has closed, but hard deadlines keep arriving. TY2022 extended filers face statute of limitations dates on September 15 and October 15, 2026, and 179D begin of construction documentation still determines which rate structure applies. Let our team confirm which deadlines apply to your organization before they close.
               </p>
             </div>
             <div className="lg:col-span-3 flex lg:justify-end">

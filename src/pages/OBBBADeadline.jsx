@@ -195,7 +195,7 @@ const impactCards = [
       'Pricing and transaction structures may shift',
     ],
     actions: [
-      'Bring current credits to market before July 6, 2026 cutoff',
+      'Complete IRS pre-filing registration before bringing current credits to market',
       'Finalize pending transactions before any rule changes',
       'Complete IRS pre-filing registration for all transfer credits',
       'Secure compliance and due diligence materials',
@@ -235,7 +235,7 @@ const faqs = [
   {
     question: 'What are the most urgent deadlines?',
     answer:
-      'March 15, 2026 for TY2022 Partnerships and S-Corps, and April 15, 2026 for TY2022 C-Corps. These are the last days to file amended returns for retroactive R&D credits and Section 174A elections before the 3-year statute of limitations expires.',
+      'September 15, 2026 for TY2022 extended Partnerships and S-Corps, and October 15, 2026 for TY2022 extended C-Corps. These are the last days for extended filers to claim retroactive R&D credits and Section 174A elections before the 3-year statute of limitations expires. The March and April 2026 windows for original filers have closed.',
   },
   {
     question: 'What is the Section 174A election?',
@@ -260,7 +260,7 @@ const faqs = [
   {
     question: 'What happens to Transferable Tax Credits?',
     answer:
-      'The transferable credits marketplace may face new rules. Credits should be brought to market before the July 6, 2026 OBBBA election cutoff. IRS pre-filing registration is required for both sellers and buyers.',
+      'The transferable credits marketplace may face new rules. The July 6, 2026 OBBBA election window has closed; current transactions proceed under the post-OBBBA rules. IRS pre-filing registration is required for both sellers and buyers.',
   },
   {
     question: 'How much can I recover through retroactive R&D credits?',
@@ -282,16 +282,16 @@ const faqs = [
 const timelineSteps = [
   { num: 1, phase: 'Immediate', title: 'File TY2022 Returns', text: 'Amended returns for R&D credits and 174A elections', colorClass: 'bg-concord-green' },
   { num: 2, phase: 'Now', title: 'Document 179D Projects', text: 'Begin-of-construction evidence for projects that started before June 30, 2026', colorClass: 'bg-concord-green' },
-  { num: 3, phase: 'Before July 6, 2026', title: 'Complete Elections', text: 'Direct pay and transferable credit IRS registrations', colorClass: 'bg-amber-500' },
-  { num: 4, phase: 'By July 6, 2026', title: 'OBBBA Cutoff', text: 'All OBBBA elections finalized by this date', colorClass: 'bg-amber-500' },
+  { num: 3, phase: 'Completed, July 6, 2026', title: 'Elections Window Closed', text: 'Direct Pay and transferable credit OBBBA elections closed with the July 6 window', colorClass: 'bg-slate-400' },
+  { num: 4, phase: 'Completed, July 6, 2026', title: 'OBBBA Cutoff Passed', text: 'OBBBA elections closed on July 6, 2026', colorClass: 'bg-slate-400' },
   { num: 5, phase: 'Ongoing', title: 'Monitor & Defend', text: 'TY2023-2024 deadlines and PWA documentation', colorClass: 'bg-concord-coral' },
 ];
 
 const phaseColorMap = {
   'Immediate': 'text-concord-green',
   'Now': 'text-concord-green',
-  'Before July 6, 2026': 'text-amber-600',
-  'By July 6, 2026': 'text-amber-600',
+  'Completed, July 6, 2026': 'text-slate-500',
+  
   'Ongoing': 'text-concord-coral',
 };
 
@@ -471,7 +471,7 @@ export default function OBBBADeadline() {
               { value: 'July 4, 2025', label: 'OBBBA signed into law' },
               { value: '$5.94/sq ft', label: 'Max 179D deduction with PWA' },
               { value: '5x', label: 'PWA multiplier on enhanced rates' },
-              { value: 'July 6, 2026', label: 'OBBBA election cutoff for retroactive R&D claims' },
+              { value: 'Sept 15, 2026', label: 'Next statute deadline for TY2022 extended filers' },
             ].map((stat) => (
               <div
                 key={stat.label}

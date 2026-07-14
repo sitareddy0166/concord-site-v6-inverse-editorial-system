@@ -114,8 +114,8 @@ export default function TransferableCredits() {
         stats={[
           { value: '$10B+',  label: 'Market size',           note: 'Growing rapidly' },
           { value: '12',     label: 'Eligible credit types', note: 'Section 6418' },
-          { value: '91–94¢', label: 'Average price',         note: 'Per dollar of credit' },
-          { value: '6–8%',   label: 'Buyer savings',         note: 'vs. full tax liability' },
+          { value: '91 to 94¢', label: 'Average price',         note: 'Per dollar of credit' },
+          { value: '6 to 8%',   label: 'Buyer savings',         note: 'vs. full tax liability' },
         ]}
       />
 
@@ -157,7 +157,7 @@ export default function TransferableCredits() {
             <div className="mt-10">
               <ServiceFactsRail
                 facts={[
-                  { label: 'Average Price',   value: '91–94¢', note: 'Per dollar of credit' },
+                  { label: 'Average Price',   value: '91 to 94¢', note: 'Per dollar of credit' },
                   { label: 'Typical Timeline', value: '4–8 wks', note: 'Engagement to close' },
                 ]}
               />

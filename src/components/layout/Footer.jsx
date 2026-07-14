@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { LinkedinLogo, InstagramLogo, YoutubeLogo, ArrowUpRight } from '@phosphor-icons/react';
+import { LinkedinLogo, ArrowUpRight } from '@phosphor-icons/react';
 
 const cols = [
   {
@@ -59,7 +59,7 @@ export default function Footer() {
               <p className="tech-label mb-3">Correspond</p>
               <ul className="text-[14px] text-[rgb(var(--ivory))/0.75] space-y-1.5">
                 <li>
-                  <a href="mailto:info@concordenergy.com" className="ed-link">info@concordenergy.com</a>
+                  <a href="mailto:info@concordlp.com" className="ed-link">info@concordlp.com</a>
                 </li>
                 <li>
                   <a href="tel:+15023849078" className="ed-link">(502) 384-9078</a>
@@ -100,7 +100,7 @@ export default function Footer() {
             </p>
           </div>
           <a
-            href="mailto:info@concordenergy.com?subject=Subscribe%20to%20Field%20Notes"
+            href="mailto:info@concordlp.com?subject=Subscribe%20to%20Field%20Notes"
             className="btn btn-outline"
           >
             Request Updates <ArrowUpRight size={14} weight="bold" />
@@ -112,9 +112,7 @@ export default function Footer() {
       <div className="border-t border-[rgb(var(--ivory))/0.08]">
         <div className="arch py-7 flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-4">
-            <a href="https://www.linkedin.com/company/283486" target="_blank" rel="noopener noreferrer" aria-label="Concord on LinkedIn" className="text-[rgb(var(--ivory))/0.55] hover:text-[rgb(var(--ivory))]"><LinkedinLogo size={18} weight="bold" /></a>
-            <a href="https://www.instagram.com/concordenergystrategies/" target="_blank" rel="noopener noreferrer" aria-label="Concord on Instagram" className="text-[rgb(var(--ivory))/0.55] hover:text-[rgb(var(--ivory))]"><InstagramLogo size={18} weight="bold" /></a>
-            <a href="https://www.youtube.com/@Concordenergystrategies" target="_blank" rel="noopener noreferrer" aria-label="Concord on YouTube" className="text-[rgb(var(--ivory))/0.55] hover:text-[rgb(var(--ivory))]"><YoutubeLogo size={18} weight="bold" /></a>
+            <a href="https://www.linkedin.com/company/concord-energy-strategies" target="_blank" rel="noopener noreferrer" aria-label="Concord on LinkedIn" className="text-[rgb(var(--ivory))/0.55] hover:text-[rgb(var(--ivory))]"><LinkedinLogo size={18} weight="bold" /></a>
           </div>
           <p className="text-[12px] text-[rgb(var(--ivory))/0.45] tracking-wide">© 2026 Concord Energy Strategies. All rights reserved.</p>
           <div className="flex items-center gap-6">
