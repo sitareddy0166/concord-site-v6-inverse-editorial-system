@@ -9,13 +9,13 @@ const expertise = [
   { code: 'X/02', title: 'Engineering & Energy Modeling',       body: 'ASHRAE 90.1-compliant energy simulations, DOE-2 modeling, and licensed professional certifications for qualifying improvements.' },
   { code: 'X/03', title: 'Legislative & Policy Analysis',       body: 'Real-time monitoring of IRS rulings, Treasury guidance, and legislative developments that affect clean energy incentive eligibility.' },
   { code: 'X/04', title: 'Technology & Data Analytics',         body: 'Proprietary software that automates document processing, identifies qualifying improvements, and accelerates study delivery.' },
-  { code: 'X/05', title: 'Audit Defense & Documentation',       body: 'Comprehensive, IRS-compliant report packages and dedicated audit support with an industry-leading success track record across all engagements.' },
-  { code: 'X/06', title: 'Client Success & Project Management', body: 'Dedicated project managers who coordinate cross-functional teams and ensure every dollar of eligible savings is captured.' },
+  { code: 'X/05', title: 'Audit Defense & Documentation',       body: 'IRS-compliant report packages and dedicated audit support with an industry-leading success track record across all engagements.' },
+  { code: 'X/06', title: 'Client Success & Project Management', body: 'Dedicated project managers coordinate cross-functional teams so every eligible dollar is captured.' },
 ];
 
 const values = [
   { code: 'V/01', title: 'Integrity',  body: 'Honest, transparent advice grounded in current law. Our clients trust us because we never overstate eligibility.' },
-  { code: 'V/02', title: 'Excellence', body: 'We hold ourselves to the highest standards in everything we do, from energy modeling to audit-ready deliverables.' },
+  { code: 'V/02', title: 'Excellence', body: 'Every energy model is built by a licensed engineer. Every deliverable ships audit-ready.' },
   { code: 'V/03', title: 'Innovation', body: 'Our proprietary technology and refined processes deliver faster, more accurate results than traditional approaches.' },
   { code: 'V/04', title: 'Service',    body: 'The client comes first. We build long-term partnerships by making complex tax incentives accessible and results-driven.' },
 ];
@@ -29,7 +29,7 @@ const stats = [
 
 const leadership = [
   { initials: 'DS', name: 'Dennis J. Stilger, Jr.', role: 'Founder & Principal',
-    bio: 'Dennis founded Concord in 2009 and has been instrumental in shaping federal energy tax policy. As Co-Chair of the Coalition for Energy Efficient Jobs & Investment, he played a central role in lobbying Section 179D into permanent law.' },
+    bio: 'Dennis founded Concord in 2009. As Co-Chair of the Coalition for Energy Efficient Jobs & Investment, he played a central role in lobbying Section 179D into permanent law.' },
   { initials: 'JD', name: 'Jonathan Darnell', role: 'Managing Partner',
     bio: 'Jonathan leads client engagements and oversees business development for Concord. With deep expertise in 179D, transferable tax credits, and Direct Pay compliance, he has helped clients realize over $1 billion in federal tax savings.' },
 ];
@@ -150,7 +150,7 @@ export default function WhoWeAre() {
       </section>
 
       <AboutCTA title="Join the organizations we have helped."
-        body="Whether you are a building owner, CPA firm, or tax-exempt organization, Concord can help you capture every incentive you deserve."
+        body="Whether you are a building owner, CPA firm, or tax-exempt organization, Concord can tell you what your projects qualify for."
         primary={{ label: 'Start the Conversation', href: '/contact' }}
         secondary={{ label: 'Explore Services', href: '/179d-tax-deduction' }} />
     </AboutPageShell>

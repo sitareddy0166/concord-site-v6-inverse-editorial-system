@@ -36,7 +36,7 @@ const faqs = [
   { question: 'Which credits are eligible for Direct Pay?', answer: 'Eleven credits qualify, including the Investment Tax Credit (ITC), Production Tax Credit (PTC), Section 179D energy efficient commercial buildings deduction, Section 45Q carbon capture credit, Section 45V clean hydrogen credit, and several others created or expanded by the IRA.' },
   { question: 'How does the Direct Pay process work?', answer: 'Entities must complete IRS pre-filing registration, file an annual tax return (even if not normally required), and make the Direct Pay election. The IRS then treats the credit as a tax payment, resulting in a refund equal to the credit amount.' },
   { question: 'Is there a deadline to elect Direct Pay?', answer: 'The Direct Pay election must be made on the entity\'s tax return for the year the credit is determined, filed by the due date (including extensions). Pre-filing registration must be completed before the return is filed.' },
-  { question: 'Can Direct Pay be combined with other incentives?', answer: 'Yes. Direct Pay can be layered with other IRA provisions. For example, a tax-exempt entity could claim both the 179D deduction and Direct Pay for eligible credits on the same project, or ensure PWA compliance to capture the enhanced 5x bonus rate on applicable credits.' },
+  { question: 'Can Direct Pay be combined with other incentives?', answer: 'Yes. Direct Pay can be layered with other IRA provisions. For example, a tax-exempt entity could claim both the 179D deduction and Direct Pay for eligible credits on the same project, or meet PWA compliance to claim the enhanced 5x bonus rate on applicable credits.' },
   { question: 'What documentation is required to support a Direct Pay election?', answer: 'Entities need IRS pre-filing registration confirmation, credit substantiation records tied to the qualifying project, and a timely filed annual return that carries the Direct Pay election. Concord assembles the full documentation package so the election is defensible under IRS examination.' },
   { question: 'How long does the Direct Pay process take end to end?', answer: 'From pre-filing registration through payment, most engagements run over several months, with pre-filing registration itself typically the longest step. Concord manages the timeline so registration, election filing, and IRS coordination stay aligned with your tax year and cash-flow needs.' },
 ];
@@ -84,7 +84,7 @@ export default function DirectPay() {
         title="Turn Tax Credits Into Direct Cash Payments"
         lastUpdated="April 2026"
         primaryCta={{ label: 'Check Your Eligibility', href: '/contact' }}
-        lede={<>For the first time, tax-exempt entities can receive clean energy tax credits as direct cash payments from the U.S. Treasury. Concord helps municipalities, nonprofits, and tribal governments navigate Section 6417 to unlock millions in new funding. Eligible entities can combine Direct Pay with the <Link to="/179d-tax-deduction" className="ed-link">179D deduction</Link> and <Link to="/transferable-tax-credits" className="ed-link">transferable credits</Link> for maximum benefit.</>}
+        lede={<>For the first time, tax-exempt entities can receive clean energy tax credits as direct cash payments from the U.S. Treasury. Concord helps municipalities, nonprofits, and tribal governments manage Section 6417 to qualify for millions in new funding. Eligible entities can combine Direct Pay with the <Link to="/179d-tax-deduction" className="ed-link">179D deduction</Link> and <Link to="/transferable-tax-credits" className="ed-link">transferable credits</Link> for maximum benefit.</>}
         stats={[
           { value: 'Refundable', label: 'Cash from Treasury', note: 'Direct Payment' },
           { value: '11',          label: 'Eligible credits',    note: 'Under Section 6417' },
@@ -123,7 +123,7 @@ export default function DirectPay() {
                   { title: 'Eleven Credits',     desc: 'Eleven clean energy credits qualify for elective pay under the IRA.' },
                   { title: 'Eligible Entities',  desc: 'Eligible entities include municipalities, school districts, nonprofits, and tribal governments.' },
                   { title: 'Pre-Filing',         desc: 'Pre-filing IRS registration is required before claiming the payment.' },
-                  { title: 'PWA Bonus',          desc: 'PWA compliance unlocks the 5x bonus multiplier on applicable credits.' },
+                  { title: 'PWA Bonus',          desc: 'PWA compliance qualifies applicable credits for the 5x bonus multiplier.' },
                 ]}
               />
             </div>
@@ -153,25 +153,25 @@ export default function DirectPay() {
             headers={['Credit', 'Rate', 'Description', 'Qualifying Technologies']}
             rows={[
               [
-                'ITC (48 & 48E) — Investment Tax Credit',
+                'ITC (48 & 48E): Investment Tax Credit',
                 '6% / 30%',
                 'The ITC provides a percentage-based credit for investment in qualifying clean energy property. With PWA compliance, the rate increases from 6% to 30%, with potential adders for domestic content and energy communities pushing it to 50% or more.',
                 'Solar energy systems; energy storage (standalone); geothermal heat pumps; microgrid controllers; fuel cells & combined heat and power.',
               ],
               [
-                'PTC (45 & 45Y) — Production Tax Credit',
+                'PTC (45 & 45Y): Production Tax Credit',
                 '0.55¢ / 2.75¢ per kWh',
-                'The PTC provides a per-kilowatt-hour credit for electricity generated from qualifying renewable sources over a 10-year period. PWA compliance unlocks the full 2.75¢/kWh rate.',
+                'The PTC provides a per-kilowatt-hour credit for electricity generated from qualifying renewable sources over a 10-year period. PWA compliance qualifies the project for the full 2.75¢/kWh rate.',
                 'Wind energy facilities; solar energy facilities; geothermal energy; municipal solid waste; qualified hydropower.',
               ],
               [
-                '45Q — Carbon Capture Credit',
+                '45Q: Carbon Capture Credit',
                 '$17 / $85 per ton',
                 'Section 45Q provides credits for qualified carbon oxide captured and sequestered. The enhanced rate of $85/ton (geological storage) requires PWA compliance.',
                 'Direct air capture; industrial point source capture; geological sequestration; enhanced oil recovery; utilization pathways.',
               ],
               [
-                '45V — Clean Hydrogen Credit',
+                '45V: Clean Hydrogen Credit',
                 '$0.60 / $3.00 per kg',
                 'Section 45V provides credits for clean hydrogen production based on lifecycle greenhouse gas emissions. The maximum $3.00/kg rate requires PWA compliance and the lowest emissions tier.',
                 'Electrolysis from renewables; steam methane reforming with CCS; biomass gasification; nuclear-powered electrolysis; thermochemical processes.',
@@ -232,15 +232,15 @@ export default function DirectPay() {
             code="H/01"
             eyebrow="The Process"
             title="How to Claim Direct Pay"
-            lede="Concord manages every step from pre-filing registration to payment receipt. Our proven process ensures you capture the maximum credit amount."
+            lede="Concord manages every step from pre-filing registration to payment receipt. Our process helps you claim the maximum credit amount."
           />
           <ServiceProcess
             steps={[
               { title: 'Project Assessment',      desc: 'We evaluate your clean energy projects to identify all eligible credits and estimate the total Direct Pay amount available.' },
               { title: 'Pre-Filing Registration', desc: 'We complete the mandatory IRS pre-filing registration process, obtaining the registration number required to make the Direct Pay election.' },
               { title: 'Credit Substantiation',   desc: 'We document all qualifying costs, activities, and compliance requirements to build an audit-ready credit substantiation package.' },
-              { title: 'PWA Compliance',          desc: 'For projects requiring PWA compliance, we ensure prevailing wage and apprenticeship requirements are met to capture the 5x bonus rate.' },
-              { title: 'Tax Return Filing',       desc: 'We prepare or coordinate the filing of your annual tax return with the Direct Pay election, ensuring all required forms and schedules are included.' },
+              { title: 'PWA Compliance',          desc: 'For projects requiring PWA compliance, we track prevailing wage and apprenticeship requirements needed for the 5x bonus rate.' },
+              { title: 'Tax Return Filing',       desc: 'We prepare or coordinate the filing of your annual tax return with the Direct Pay election and include all required forms and schedules.' },
               { title: 'Payment Receipt',         desc: 'The IRS processes your election and issues a direct cash payment equal to the full credit amount, typically within the standard refund timeline.' },
             ]}
           />
@@ -259,7 +259,7 @@ export default function DirectPay() {
             items={[
               { amount: '$4.2M', title: 'Public School District', desc: 'A large school district installed solar across 12 campuses and received $4.2M in Direct Pay refunds for ITC credits.' },
               { amount: '$2.8M', title: 'Municipal Government',   desc: 'A city government deployed solar and EV charging across public facilities, claiming Direct Pay on multiple credit types.' },
-              { amount: '$1.9M', title: 'Nonprofit Hospital',     desc: 'A nonprofit hospital system leveraged Direct Pay for a combined solar and geothermal project across three facilities.' },
+              { amount: '$1.9M', title: 'Nonprofit Hospital',     desc: 'A nonprofit hospital system used Direct Pay for a combined solar and geothermal project across three facilities.' },
             ]}
           />
         </div>
@@ -272,16 +272,16 @@ export default function DirectPay() {
             code="W/01"
             eyebrow="Why Concord"
             title="Your Direct Pay Partner"
-            lede={<>Concord specializes in navigating the IRS requirements for Direct Pay elections. Learn more about <Link to="/why-us" className="ed-link">why organizations choose Concord</Link> and <Link to="/who-we-are" className="ed-link">the team behind our work</Link>.</>}
+            lede={<>Concord specializes in managing the IRS requirements for Direct Pay elections. Learn more about <Link to="/why-us" className="ed-link">why organizations choose Concord</Link> and <Link to="/who-we-are" className="ed-link">the team behind our work</Link>.</>}
           />
           <ServiceAudienceGrid
             items={[
-              { icon: ShieldCheck, title: 'IRS Registration Experts',   desc: 'We manage the entire pre-filing registration process, ensuring your entity is properly registered and compliant before filing.' },
-              { icon: FileText,    title: 'Credit Substantiation',      desc: 'Comprehensive documentation packages that withstand IRS examination, with detailed cost documentation and credit calculations.' },
+              { icon: ShieldCheck, title: 'IRS Registration Experts',   desc: 'We manage the entire pre-filing registration process so your entity is properly registered and compliant before filing.' },
+              { icon: FileText,    title: 'Credit Substantiation',      desc: 'Complete documentation packages built for IRS examination, with detailed cost documentation and credit calculations.' },
               { icon: Scales,      title: 'Legal & Tax Advisory',       desc: 'Expert guidance on election mechanics, timing strategies, and coordination with your existing tax advisors.' },
-              { icon: ChartBar,    title: 'Multi-Credit Optimization',  desc: 'We analyze your full project portfolio to identify all applicable credits and maximize your total Direct Pay amount.' },
-              { icon: Certificate, title: 'PWA Compliance',             desc: 'Integrated prevailing wage and apprenticeship compliance to ensure you capture the enhanced 5x bonus rate on eligible credits.' },
-              { icon: Headset,     title: 'End-to-End Support',         desc: 'From initial assessment through payment receipt and ongoing audit defense, Concord manages every step of the process.' },
+              { icon: ChartBar,    title: 'Multi-Credit Optimization',  desc: 'We analyze your full project portfolio to identify all applicable credits and increase your total Direct Pay amount.' },
+              { icon: Certificate, title: 'PWA Compliance',             desc: 'Integrated prevailing wage and apprenticeship compliance for the enhanced 5x bonus rate on eligible credits.' },
+              { icon: Headset,     title: 'End-to-End Support',         desc: 'From assessment through payment receipt and audit defense, Concord manages the whole engagement.' },
             ]}
           />
         </div>
@@ -289,7 +289,7 @@ export default function DirectPay() {
 
       <SharedServiceFAQ
         faqs={faqs}
-        intro="Everything you need to know about Section 6417 Direct Pay for tax-exempt entities."
+        intro="Common questions about Section 6417 Direct Pay for tax-exempt entities."
       />
 
       <RelatedServices currentHref="/direct-pay" />

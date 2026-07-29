@@ -259,7 +259,7 @@ export default function BlogPost() {
       <ServiceFinalCTA
         eyebrow="Need Help"
         headline="Talk to a Concord Advisor"
-        description="Our team can help you navigate clean energy tax incentives and maximize your savings."
+        description="Our team can tell you which credits your projects qualify for and what they're worth."
       />
     </>
   );

@@ -339,7 +339,7 @@ export default function OBBBADeadline() {
     <>
       <SEOHead
         title="OBBBA Deadlines 2026: Tracker and Action Plan | Concord"
-        description="Track OBBBA 2026 deadlines for 179D, R&D credits, Section 174A, direct pay, and transferable credits. $1B+ in client savings and 100% audit success rate."
+        description="Track OBBBA 2026 deadlines for 179D, R&D credits, Section 174A, direct pay, and transferable credits. Deadline briefs from Concord Energy Strategies."
         canonical="/obbba-deadline"
       />
       <SchemaScript schema={breadcrumbSchema} />

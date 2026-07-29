@@ -25,9 +25,9 @@ import { ScrollFadeIn } from '@/hooks/useScrollAnimation';
 import CTABanner from '@/components/sections/CTABanner';
 
 const tocItems = [
-  { num: '01', title: 'The R&D Tax Credit Landscape', desc: 'A comprehensive overview of the current federal and state R&D credit framework for energy companies.' },
+  { num: '01', title: 'The R&D Tax Credit Landscape', desc: 'A full overview of the current federal and state R&D credit framework for energy companies.' },
   { num: '02', title: 'Qualifying Activities in Clean Energy', desc: 'Identify which clean energy research, development, and engineering activities qualify for credits.' },
-  { num: '03', title: 'The Four-Part Test Explained', desc: 'A step-by-step breakdown of the IRS four-part test and how to ensure your activities pass each criterion.' },
+  { num: '03', title: 'The Four-Part Test Explained', desc: 'A step-by-step breakdown of the IRS four-part test and how to test each activity against the criteria.' },
   { num: '04', title: 'Credit Calculation Methodology', desc: 'Regular method vs. Alternative Simplified Credit (ASC) with worked examples for clean energy firms.' },
   { num: '05', title: 'Industry-Specific Applications', desc: 'Tailored guidance for solar, wind, battery storage, HVAC, and building efficiency sectors.' },
   { num: '06', title: 'Common Mistakes & Missed Opportunities', desc: 'The top pitfalls that cost energy companies thousands in unclaimed credits every year.' },
@@ -39,7 +39,7 @@ const learnCards = [
   { icon: Factory, title: 'Top Industries Benefiting', desc: 'Discover which clean energy sectors are capturing the most R&D credits and why your industry likely qualifies.' },
   { icon: UsersThree, title: 'Expanded Eligibility Under New Rules', desc: '2026 regulatory updates have broadened eligibility. Learn the new criteria that may now include your activities.' },
   { icon: EyeSlash, title: 'Why R&D Credits Are Overlooked', desc: 'Most energy companies leave money on the table. Understand the misconceptions that cause firms to miss eligible credits.' },
-  { icon: Trophy, title: 'Competitive Advantage Analysis', desc: 'See how leading firms leverage R&D credits to reduce effective tax rates and reinvest in innovation.' },
+  { icon: Trophy, title: 'Competitive Advantage Analysis', desc: 'See how leading firms use R&D credits to reduce effective tax rates and reinvest in innovation.' },
   { icon: MagnifyingGlass, title: 'Missed Opportunities Audit', desc: 'A self-assessment framework to identify credits you may have missed in prior tax years and how to amend.' },
   { icon: Calculator, title: 'Step-by-Step Calculation Guide', desc: 'Walk through actual credit calculations with our worksheets, formulas, and real-world clean energy examples.' },
 ];
@@ -276,7 +276,7 @@ export default function Whitepaper() {
                   Trusted by Clean Energy Leaders Nationwide
                 </h2>
                 <p className="text-concord-dark/60 text-lg leading-relaxed mb-8 font-body">
-                  Concord Energy Strategies is a specialized consulting firm helping organizations maximize clean energy tax incentives under the Inflation Reduction Act. Our team combines deep expertise in areas like <Link to="/rd-tax-credits" className="text-concord-green font-medium hover:underline">R&D tax credits</Link> with energy industry knowledge to deliver measurable results. Learn more about <Link to="/the-concord-standard" className="text-concord-green font-medium hover:underline">the Concord Standard</Link> that guides our work, or explore our full <Link to="/resources" className="text-concord-green font-medium hover:underline">resource library</Link>.
+                  Concord Energy Strategies is a specialized consulting firm helping organizations claim clean energy tax incentives under the Inflation Reduction Act. Our team combines deep expertise in areas like <Link to="/rd-tax-credits" className="text-concord-green font-medium hover:underline">R&D tax credits</Link> with energy industry knowledge to deliver measurable results. Learn more about <Link to="/the-concord-standard" className="text-concord-green font-medium hover:underline">the Concord Standard</Link> that guides our work, or explore our full <Link to="/resources" className="text-concord-green font-medium hover:underline">resource library</Link>.
                 </p>
                 <Link to="/who-we-are" className="inline-flex items-center gap-2 bg-[#151C19] text-white px-8 py-4 rounded-full font-semibold text-sm">
                   Learn More About Us <ArrowRight />
@@ -308,7 +308,7 @@ export default function Whitepaper() {
               <div className="lg:w-[40%]">
                 <p className="text-[13px] uppercase tracking-[0.1em] font-bold text-concord-green mb-4">FAQ</p>
                 <h2 className="font-heading font-extrabold text-[36px] lg:text-[44px] tracking-[-0.03em] leading-[1.1] text-concord-dark mb-4">Frequently Asked Questions</h2>
-                <p className="text-[16px] text-slate-500 leading-relaxed">Everything you need to know about our R&D Tax Credit whitepaper and how it can help your organization.</p>
+                <p className="text-[16px] text-slate-500 leading-relaxed">Common questions about the R&D Tax Credit whitepaper and how it can help your organization.</p>
               </div>
               <div className="lg:w-[60%] flex flex-col gap-4">
                 {faqItems.map((faq, index) => (

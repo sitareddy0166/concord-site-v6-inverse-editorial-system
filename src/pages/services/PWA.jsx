@@ -73,7 +73,7 @@ const tabData = [
 
 const serviceSchema = generateServiceSchema({
   name: 'PWA Compliance Consulting',
-  description: 'Prevailing Wage and Apprenticeship compliance consulting to unlock the 5x bonus multiplier on IRA clean energy tax credits.',
+  description: 'Prevailing Wage and Apprenticeship compliance consulting to earn the 5x bonus multiplier on IRA clean energy tax credits.',
   url: '/prevailing-wage-apprenticeship',
 });
 
@@ -90,7 +90,7 @@ const processSteps = [
   { step: '02', title: 'Wage Rate Determination', desc: 'We analyze Department of Labor wage determinations for your specific project location and trade classifications, verifying prevailing wage rates and fringe benefits.', alt: 'Financial spreadsheets showing prevailing wage rate analysis' },
   { step: '03', title: 'Apprenticeship Setup', desc: 'We coordinate with registered apprenticeship programs, manage labor hour ratios, and ensure your project meets or exceeds the required apprenticeship thresholds.', img: null, alt: 'Team collaborating on apprenticeship program setup and training coordination' },
   { step: '04', title: 'Monitoring & Reporting', desc: 'Our real-time monitoring platform provides continuous visibility into compliance status. Automated alerts flag potential deviations before they become problems.', img: null, alt: 'Compliance monitoring dashboard showing real-time wage tracking metrics' },
-  { step: '05', title: 'Documentation & Filing', desc: 'We build comprehensive, IRS-ready documentation packages with certified payroll records, apprenticeship logs, and wage determination analyses assembled throughout construction.', img: null, alt: 'Professional reviewing certified payroll compliance documents' },
+  { step: '05', title: 'Documentation & Filing', desc: 'We build complete, IRS-ready documentation packages with certified payroll records, apprenticeship logs, and wage determination analyses assembled throughout construction.', img: null, alt: 'Professional reviewing certified payroll compliance documents' },
   { step: '06', title: 'Audit Support', desc: 'If the IRS examines your credit claim, our team steps in with organized, defensible documentation and direct support throughout the audit process to protect your full credit amount.', img: null, alt: 'Tax professionals reviewing audit documentation and compliance records' },
 ];
 
@@ -108,7 +108,7 @@ export default function PWA() {
     <ServicePageShell>
       <SEOHead
         title="PWA Compliance | Concord Energy Strategies"
-        description="Prevailing Wage and Apprenticeship compliance for clean energy projects. Unlock the 5x IRA bonus multiplier with Concord and our 100% audit success rate."
+        description="Prevailing Wage and Apprenticeship compliance for clean energy projects. Meet PWA requirements, multiply IRA credits 5x. Concord manages the documentation."
         canonical="/prevailing-wage-apprenticeship"
       />
       <SchemaScript schema={serviceSchema} />
@@ -118,7 +118,7 @@ export default function PWA() {
       <SchemaScript schema={generateSpeakableSchema(['.hero-description', '.service-definition', '.key-facts'])} />
       <SchemaScript schema={generateHowToSchema({
         name: 'How to Achieve PWA Compliance',
-        description: "Concord's process to unlock the 5x IRA bonus multiplier through Prevailing Wage and Apprenticeship compliance.",
+        description: "Concord's process to earn the 5x IRA bonus multiplier through Prevailing Wage and Apprenticeship compliance.",
         steps: [
           { title: 'Project Assessment', description: 'Review labor plan, wage determinations, and apprenticeship requirements.' },
           { title: 'Wage & Fringe Monitoring', description: 'Track prevailing wage payments and fringe benefits across contractors.' },
@@ -131,10 +131,10 @@ export default function PWA() {
       <ServiceHero
         code="S/02"
         eyebrow="PWA Compliance"
-        title="Unlock the 5× bonus multiplier"
+        title="Earn the 5× bonus multiplier"
         lastUpdated="April 2026"
         primaryCta={{ label: 'Get a Compliance Assessment', href: '/contact' }}
-        lede="The Inflation Reduction Act offers massive clean energy tax credits, but only if you meet Prevailing Wage and Apprenticeship requirements. Concord ensures every dollar is captured."
+        lede="The Inflation Reduction Act offers massive clean energy tax credits, but only if you meet Prevailing Wage and Apprenticeship requirements. Concord manages the records that protect every dollar."
         stats={[
           { value: '5×',      label: 'Enhanced rate multiplier', note: 'With PWA compliance' },
           { value: '$5.94/sf', label: 'Maximum 179D rate',       note: 'PWA required' },
@@ -161,14 +161,14 @@ export default function PWA() {
             lede={<>The Inflation Reduction Act of 2022 introduced Prevailing Wage and Apprenticeship (PWA) requirements as the gateway to enhanced clean energy tax incentives. Projects that meet these labor standards qualify for the full bonus credit rate, which is <strong className="text-[rgb(var(--ivory))]">five times</strong> the base rate. This is particularly critical for organizations pursuing the <Link to="/179d-tax-deduction" className="ed-link">179D tax deduction</Link>, where compliance determines whether you receive $1.19/sqft or the full $5.94/sqft.</>}
           >
             <p className="service-definition mt-5 text-[16px] lg:text-[17px] leading-relaxed text-[rgb(var(--ivory))/0.72] max-w-2xl">
-              Prevailing wage requires paying workers no less than local prevailing rates as determined by the Department of Labor. Apprenticeship requirements mandate a percentage of total labor hours be performed by qualified apprentices from registered programs. Meeting <Link to="/the-concord-standard" className="ed-link">the Concord Standard</Link> ensures your documentation is audit-proof from day one.
+              Prevailing wage requires paying workers no less than local prevailing rates as determined by the Department of Labor. Apprenticeship requirements mandate a percentage of total labor hours be performed by qualified apprentices from registered programs. Meeting <Link to="/the-concord-standard" className="ed-link">the Concord Standard</Link> gives you audit-ready documentation from day one.
             </p>
 
             <div className="key-facts mt-8">
               <p className="tech-label mb-4"><span className="index-num mr-2 text-[rgb(var(--concord-glow))]">K/01</span>Key PWA Facts</p>
               <ServiceEligibilityIndex
                 rows={[
-                  { title: 'Bonus Multiplier',    desc: 'PWA compliance unlocks the 5x bonus multiplier on IRA credits.' },
+                  { title: 'Bonus Multiplier',    desc: 'PWA compliance earns the 5x bonus multiplier on IRA credits.' },
                   { title: 'Prevailing Wage',     desc: 'Prevailing wages are set by the Department of Labor for the project locality.' },
                   { title: 'Apprentice Hours',    desc: 'A minimum share of total labor hours must be performed by registered apprentices.' },
                   { title: 'Base Rate Penalty',   desc: 'Base rate without PWA is one-fifth of the bonus rate (for ITC: 6% vs 30%).' },
@@ -206,7 +206,7 @@ export default function PWA() {
             code="I/01"
             eyebrow="Applicable Incentives"
             title="Base Rate vs. Bonus Rate"
-            lede={<>See how PWA compliance transforms every major IRA tax incentive from modest to maximized. Whether you are pursuing <Link to="/direct-pay" className="ed-link">Direct Pay under Section 6417</Link> or <Link to="/transferable-tax-credits" className="ed-link">transferable credits under Section 6418</Link>, the bonus rate requires PWA compliance.</>}
+            lede={<>See how PWA compliance changes every major IRA tax incentive from the base rate to the bonus rate. Whether you are pursuing <Link to="/direct-pay" className="ed-link">Direct Pay under Section 6417</Link> or <Link to="/transferable-tax-credits" className="ed-link">transferable credits under Section 6418</Link>, the bonus rate requires PWA compliance.</>}
           />
           <ServiceComparison
             headers={['Incentive', 'Base Rate', 'Bonus Rate', 'Notes']}
@@ -234,7 +234,7 @@ export default function PWA() {
             items={[
               { icon: Certificate,  title: 'Licensed Compliance Officers', desc: 'Our team of certified compliance professionals has deep expertise in Department of Labor wage determinations and registered apprenticeship programs.' },
               { icon: ChartLineUp,  title: 'Real-Time Monitoring',         desc: 'Our proprietary dashboards track wage rates, apprenticeship hours, and compliance metrics in real time so issues are caught and resolved immediately.' },
-              { icon: ShieldCheck,  title: 'Audit-Proof Documentation',    desc: 'We build comprehensive, IRS-ready documentation packages from day one, with certified payroll records, apprenticeship logs, and wage determination analyses.' },
+              { icon: ShieldCheck,  title: 'Audit-Ready Documentation',    desc: 'We build complete, IRS-ready documentation packages from day one, with certified payroll records, apprenticeship logs, and wage determination analyses.' },
               { icon: Trophy,       title: 'Compliance Track Record',        desc: 'Our clients have successfully secured the full bonus multiplier, backed by documentation built for examination.' },
             ]}
           />
@@ -248,7 +248,7 @@ export default function PWA() {
             code="P/01"
             eyebrow="Our Process"
             title="End-to-End PWA Compliance"
-            lede={<>From pre-construction planning to post-completion audit defense, we manage every element of PWA compliance. Our process pairs naturally with incentives like <Link to="/rd-tax-credits" className="ed-link">R&D tax credits</Link> to maximize your total benefit.</>}
+            lede={<>From pre-construction planning to post-completion audit defense, we manage every element of PWA compliance. Our process pairs naturally with incentives like <Link to="/rd-tax-credits" className="ed-link">R&D tax credits</Link> to protect your total benefit.</>}
           />
           <ServiceProcess
             steps={processSteps.map((s) => ({ title: s.title, desc: s.desc }))}
@@ -295,7 +295,7 @@ export default function PWA() {
                 {
                   amount: '“Complete confidence”',
                   title: 'Compliance Director, national solar EPC · Illustrative client profile',
-                  desc: 'Concord\'s PWA compliance process gave us complete confidence that our documentation would withstand any audit. Their team was responsive, thorough, and made a complex process feel straightforward.',
+                  desc: 'Concord\'s PWA compliance process meant our documentation was ready before the IRS ever asked. Questions came back answered within a day.',
                 },
               ]}
             />
@@ -306,7 +306,7 @@ export default function PWA() {
 
       <SharedServiceFAQ
         faqs={faqs}
-        intro="Everything you need to know about prevailing wage and apprenticeship compliance for IRA tax credits."
+        intro="Common questions about prevailing wage and apprenticeship compliance for IRA tax credits."
       />
 
       <RelatedServices currentHref="/prevailing-wage-apprenticeship" />
@@ -314,7 +314,7 @@ export default function PWA() {
       <ServiceFinalCTA
         eyebrow="Start Today"
         headline="Don't Leave 80% of Your Credits on the Table"
-        description="Every day without PWA compliance is money left behind. Let Concord's experts ensure you capture the full 5x bonus multiplier on your clean energy tax credits."
+        description="Missing PWA compliance cuts your credit to one-fifth. Concord gets projects to the full 5x bonus multiplier and keeps the records to prove it."
       />
     </ServicePageShell>
   );

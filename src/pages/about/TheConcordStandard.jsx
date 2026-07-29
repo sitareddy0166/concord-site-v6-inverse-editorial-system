@@ -9,7 +9,7 @@ const stages = [
   { num: '01', title: 'Assessment',            body: 'We evaluate eligibility across every applicable federal incentive, identifying opportunities that generalist advisors miss.' },
   { num: '02', title: 'Roadmap',               body: 'A project-specific compliance roadmap detailing every milestone, deliverable, and deadline.' },
   { num: '03', title: 'Compliance Management', body: 'Real-time tracking through Concord Caisson keeps every document, deadline, and requirement on schedule.' },
-  { num: '04', title: 'Substantiation',        body: 'Detailed technical reports and certifications built to withstand IRS scrutiny.' },
+  { num: '04', title: 'Substantiation',        body: 'Detailed technical reports and certifications built for IRS scrutiny.' },
   { num: '05', title: 'Monetization',          body: 'IRS election filings, pre-registration, credit transfer facilitation, and Direct Pay applications.' },
   { num: '06', title: 'Continuation',          body: 'Monitoring through the full recapture window with audit defense included as standard.' },
 ];
@@ -17,7 +17,7 @@ const stages = [
 const caissonFeatures = [
   { code: 'K/01', title: 'Real-Time Dashboard',     body: 'Live compliance visibility into every project, incentive, and deadline.' },
   { code: 'K/02', title: 'Document Management',     body: 'All certifications and reports stored in one secure repository with version control.' },
-  { code: 'K/03', title: 'Deadline Tracking',       body: 'Automated alerts ensure no filing deadline or compliance milestone is missed.' },
+  { code: 'K/03', title: 'Deadline Tracking',       body: 'Automated alerts keep filing deadlines and compliance milestones from getting missed.' },
   { code: 'K/04', title: 'Audit-Ready Architecture', body: 'Every document organized for immediate IRS examination.' },
   { code: 'K/05', title: 'Collaborative Workflows', body: 'Your team, CPA, and Concord on the same platform with role-based access.' },
   { code: 'K/06', title: 'Portfolio Analytics',     body: 'Track credit values, filing statuses, and monetization across your portfolio.' },
@@ -31,7 +31,7 @@ const differentiators = [
 
 const caseStudies = [
   { amount: '$12M+', label: 'Credits Captured',      title: 'National Solar Developer',    body: 'Concord managed compliance across a 40-project solar portfolio, identifying overlooked PWA documentation gaps and recovering credits that would have been forfeited.', tags: ['ITC', 'PWA', 'Direct Pay'] },
-  { amount: '$3.2M', label: 'Direct Pay Received',   title: 'University Medical Center',   body: 'A major university hospital leveraged the Concord Standard to claim Direct Pay on a campus-wide energy retrofit, delivering a Treasury payment within one filing cycle.', tags: ['179D', 'Direct Pay', 'Tax-Exempt'] },
+  { amount: '$3.2M', label: 'Direct Pay Received',   title: 'University Medical Center',   body: 'A major university hospital used the Concord Standard to claim Direct Pay on a campus-wide energy retrofit, delivering a Treasury payment within one filing cycle.', tags: ['179D', 'Direct Pay', 'Tax-Exempt'] },
   { amount: '$8.5M', label: 'R&D Credits Claimed',   title: 'Manufacturing Conglomerate',  body: 'A multi-facility manufacturer engaged Concord to assess R&D credit eligibility across six divisions, resulting in current-year and retroactive credits.', tags: ['R&D Credits', 'Retroactive', 'Audit Defense'] },
 ];
 
@@ -117,7 +117,7 @@ export default function TheConcordStandard() {
         code="A/03 · THE STANDARD"
         eyebrow="Our framework"
         title={<>The Concord <em className="italic font-light">Standard.</em></>}
-        lede="Our structured compliance management framework ensures nothing is missed and every incentive dollar is captured. Developed over 15 years of practice, this is the process behind more than $1 billion in client savings."
+        lede="A compliance framework built so nothing gets missed and every incentive dollar gets claimed. Developed over 15 years of practice, this is the process behind more than $1 billion in client savings."
         primaryCta={{ label: 'Start the Conversation', href: '/contact' }}
         secondaryCta={{ label: 'See the six stages', href: '#process' }}
         meta={[
@@ -137,7 +137,7 @@ export default function TheConcordStandard() {
             <h2 className="h-lead" style={{ color: 'rgb(var(--ink))' }}>What is the Concord Standard?</h2>
           </div>
           <div className="lg:col-span-7 space-y-5 text-[17px] leading-relaxed text-[rgb(var(--ink))/0.78]">
-            <p>The Concord Standard is a proprietary, end-to-end compliance management framework developed over more than 15 years of specialized practice. It ensures every qualifying incentive is identified, every compliance requirement is met, and every credit dollar is captured and defended.</p>
+            <p>The Concord Standard is a proprietary, end-to-end compliance management framework developed over more than 15 years of specialized practice. It identifies qualifying incentives, tracks each compliance requirement, and builds the record to defend every credit dollar.</p>
             <p>Unlike ad-hoc consulting approaches, the Concord Standard covers the full incentive lifecycle. It is powered by our proprietary technology platform, <strong className="text-[rgb(var(--ink))]">Concord Caisson</strong>, which provides real-time visibility into compliance status across every project in your portfolio.</p>
           </div>
         </div>

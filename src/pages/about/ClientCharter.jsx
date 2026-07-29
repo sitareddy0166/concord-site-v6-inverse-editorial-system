@@ -5,17 +5,17 @@ import AboutPageShell, { AboutBreadcrumb, AboutHero, ChapterHeader, ChapterHeade
 
 const commitments = [
   { code: 'I',   title: 'Transparency',          body: 'Open reporting at every stage with no hidden fees. You will always know where your engagement stands, what we are working on, and exactly what you are paying for.' },
-  { code: 'II',  title: 'Expertise',             body: 'Certified professionals who pursue continuous education. Our team stays ahead of evolving tax legislation so you benefit from the most current strategies available.' },
+  { code: 'II',  title: 'Expertise',             body: 'Certified professionals who pursue continuous education. Our team tracks tax legislation as it moves, so your strategy reflects current law, not last year\'s guidance.' },
   { code: 'III', title: 'Responsiveness',        body: 'A 24-hour response guarantee backed by a dedicated team assigned to your account. When you need answers, we are already working on them.' },
   { code: 'IV',  title: 'Compliance First',      body: 'Audit-ready deliverables on every engagement. We engineer our documentation to withstand scrutiny, giving you confidence that every credit will hold up.' },
-  { code: 'V',   title: 'Client Education',      body: 'Regular workshops, curated resources, and legislative updates. We empower your team with the knowledge to make informed decisions about energy incentives.' },
-  { code: 'VI',  title: 'Long-term Partnership', body: 'Ongoing support that extends well beyond the initial engagement. As regulations evolve and new opportunities emerge, we are beside you every step of the way.' },
+  { code: 'V',   title: 'Client Education',      body: 'Regular workshops, curated resources, and legislative updates. Your team gets the knowledge to make its own calls on energy incentives.' },
+  { code: 'VI',  title: 'Long-term Partnership', body: 'Ongoing support that extends well beyond the initial engagement. When regulations change or a new program opens, you hear it from us first.' },
 ];
 
 const delivery = [
   { num: '01', title: 'Discovery & Assessment',   body: 'We analyze your portfolio, identify every eligible incentive, and quantify the potential value across all applicable programs.' },
-  { num: '02', title: 'Strategy Development',     body: 'Our engineers and tax experts craft a tailored roadmap that maximizes your credits while ensuring full regulatory compliance.' },
-  { num: '03', title: 'Implementation & Filing',  body: 'We prepare audit-proof documentation, coordinate with your CPA, and manage the complete filing process from start to finish.' },
+  { num: '02', title: 'Strategy Development',     body: 'Our engineers and tax experts build a tailored roadmap that helps you claim the right credits while keeping compliance front and center.' },
+  { num: '03', title: 'Implementation & Filing',  body: 'We prepare audit-ready documentation, coordinate with your CPA, and manage the complete filing process from start to finish.' },
   { num: '04', title: 'Ongoing Support',          body: 'We monitor legislative changes, identify new opportunities, and provide lifetime audit defense for every engagement we deliver.' },
 ];
 
@@ -46,7 +46,7 @@ export default function ClientCharter() {
         code="A/04 · CHARTER"
         eyebrow="Our commitment"
         title={<>Our <em className="italic font-light">Client Charter.</em></>}
-        lede="A commitment to excellence, transparency, and your success. The Charter represents the principles and standards we hold ourselves to on every engagement."
+        lede="The standards we hold ourselves to on every engagement, in writing and signed."
         primaryCta={{ label: 'Start the Conversation', href: '/contact' }}
         secondaryCta={{ label: 'Read the commitments', href: '#commitments' }}
         meta={[
@@ -64,7 +64,7 @@ export default function ClientCharter() {
               At Concord Energy Strategies, our clients are at the center of everything we do. This charter represents the principles and standards we hold ourselves to on every engagement.
             </p>
             <p className="text-[16px] leading-relaxed text-[rgb(var(--ink))/0.75]">
-              It is not merely a statement of intent; it is a binding commitment that guides our team from the first conversation through years of ongoing partnership. We believe that navigating complex clean energy tax incentives requires more than technical expertise. It demands a consulting partner who operates with radical transparency, unwavering accountability, and a genuine investment in your long-term success.
+              This charter is a binding commitment, not a mission statement. It sets the standards you can hold us to on every engagement: open reporting, a 24-hour response guarantee, and documentation built to survive an IRS exam.
             </p>
           </div>
           <p className="mt-6 tech-label tech-label--dim">Signed · The Partners of Concord Energy Strategies</p>
@@ -99,7 +99,7 @@ export default function ClientCharter() {
           <blockquote className="border-l-2 border-[rgb(var(--concord))] pl-8">
             <Quotes size={28} weight="fill" className="text-[rgb(var(--concord))/0.5] mb-4" aria-hidden="true" />
             <p className="font-[Fraunces] italic text-[22px] lg:text-[26px] leading-snug text-[rgb(var(--ivory))]">
-              Concord took the complexity out of our 179D claims and delivered results that exceeded our expectations. Their team was responsive, thorough, and always available.
+              Concord took the complexity out of our 179D claims. Every question we sent came back answered within a day.
             </p>
             <footer className="mt-6 text-[14px] text-[rgb(var(--ivory))/0.7]">
               <span className="text-[rgb(var(--ivory))] font-semibold">Controller, healthcare network</span> · Illustrative client profile

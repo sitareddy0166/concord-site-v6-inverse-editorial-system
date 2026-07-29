@@ -61,7 +61,7 @@ const blogPosts = [
     serviceType: '179D',
     tags: ['179D', 'Tax Deduction', 'Myths', 'OBBBA'],
     excerpt:
-      'The passage of the One Big Beautiful Bill Act (OBBBA) marks a pivotal moment for the 179D tax deduction. Learn the truth behind the most common misconceptions.',
+      'OBBBA changed the rules for the 179D deduction. Here\'s what the most common misconceptions get wrong.',
     author: 'Dennis J. Stilger, Jr.',
     image: 'https://44419682.fs1.hubspotusercontent-na1.net/hubfs/44419682/Debunking%209%20Myths%20About%20179D%20Tax%20Deduction%20-%20Maximize%20Energy%20Savings%20Before%20OBBBAs%202026%20Deadline%20Hits%20Banner.png',
     readTime: '9 min read',
@@ -78,19 +78,19 @@ const blogPosts = [
   },
   {
     id: 'maximize-179d-tax-deductions-before-obbba-ends-energy-savings',
-    title: 'Maximize 179D Savings Before OBBBA Deadline',
+    title: 'Claim 179D Savings Before OBBBA Deadline',
     date: '2025-07-16',
     category: 'News',
     serviceType: '179D',
     tags: ['179D', 'OBBBA', 'Tax Planning', 'Energy Savings'],
     excerpt:
-      'Maximize your Section 179D tax deductions before they expire in 2026 with proactive planning for energy-efficient commercial building projects.',
+      'Claim your Section 179D tax deductions before they expire in 2026 with proactive planning for energy-efficient commercial building projects.',
     author: 'Dennis J. Stilger, Jr.',
     image: 'https://44419682.fs1.hubspotusercontent-na1.net/hubfs/44419682/179D%20-%20OBBBA%20Banner.png',
     readTime: '6 min read',
     content: `
       <h2>Section 179D: A New Chapter Begins</h2>
-      <p>The passage of the One Big Beautiful Bill Act (OBBBA) represents a significant development for companies investing in energy-efficient commercial buildings.</p>
+      <p>OBBBA changed the rules for companies investing in energy-efficient commercial buildings.</p>
       <h3>What Should Businesses Do Now?</h3>
       <p>Projects that began construction before June 30, 2026 locked in enhanced IRA rates. For qualifying projects, document begin-of-construction evidence (Physical Work Test or 5% Safe Harbor under IRS Notice 2022-61) now so the enhanced rate structure withstands IRS examination.</p>
     `,
@@ -158,7 +158,7 @@ const blogPosts = [
     author: 'Concord',
     image: 'https://www.concordlp.com/hs-fs/hubfs/Imagery/Several%20people%20working%20together%20around%20a%20laptop.jpg?width=800&height=500',
     readTime: '5 min read',
-    content: `<h2>Concord Leads 179D Advocacy</h2><p>Concord's role as Co-Chair of the Coalition for Energy Efficient Jobs & Investment's Steering Committee highlights our commitment to preserving the Section 179D deduction.</p>`,
+    content: `<h2>Concord Leads 179D Advocacy</h2><p>Concord serves as Co-Chair of the Coalition for Energy Efficient Jobs & Investment's Steering Committee, the group that lobbied to preserve the Section 179D deduction.</p>`,
   },
   {
     id: 'concord-policy-primer-vol-4',
@@ -232,11 +232,11 @@ const blogPosts = [
     category: 'News',
     serviceType: '179D',
     tags: ['179D', 'Legislation'],
-    excerpt: 'Senate Democrats unveiled comprehensive energy legislation proposing measures to reform energy tax incentives.',
+    excerpt: 'Senate Democrats unveiled energy legislation proposing measures to reform energy tax incentives.',
     author: 'Concord',
     image: 'https://www.concordlp.com/hs-fs/hubfs/Imagery/A%20person%20consulting%20with%20a%20client%20about%20energy%20saving%20in%20buildings.jpg?width=800&height=500',
     readTime: '5 min read',
-    content: `<h2>Senate Democrats Unveil Energy Bill</h2><p>Senate Democrats led by Senator Maria Cantwell unveiled a comprehensive energy bill, including measures reforming energy tax incentives.</p>`,
+    content: `<h2>Senate Democrats Unveil Energy Bill</h2><p>Senate Democrats led by Senator Maria Cantwell unveiled an energy bill, including measures reforming energy tax incentives.</p>`,
   },
   {
     id: 'congressional-tax-committees-plan-to-take-up-expired-tax-breaks',
@@ -298,11 +298,11 @@ const blogPosts = [
     category: 'Case Studies',
     serviceType: '179D',
     tags: ['179D', 'HVAC', 'Military'],
-    excerpt: 'A multi-year comprehensive energy efficiency retrofit project for a large military base in the Southeast.',
+    excerpt: 'A multi-year energy efficiency retrofit project for a large military base in the Southeast.',
     author: 'Concord',
     image: 'https://www.concordlp.com/hs-fs/hubfs/Imagery/A%20person%20consulting%20with%20a%20client%20about%20energy%20saving%20in%20buildings.jpg?width=800&height=500',
     readTime: '3 min read',
-    content: `<h2>Military Base Office Building: Comprehensive Retrofit</h2><p>A multi-year comprehensive energy efficiency retrofit project was released by the military for a large military base in the Southeast.</p>`,
+    content: `<h2>Military Base Office Building: Full Retrofit</h2><p>A multi-year energy efficiency retrofit project was released by the military for a large military base in the Southeast.</p>`,
   },
   {
     id: 'vocational-training-center',
@@ -311,11 +311,11 @@ const blogPosts = [
     category: 'Case Studies',
     serviceType: '179D',
     tags: ['179D', 'Government'],
-    excerpt: 'A state-owned training facility completed comprehensive energy efficiency upgrades.',
+    excerpt: 'A state-owned training facility completed full energy efficiency upgrades.',
     author: 'Concord',
     image: 'https://www.concordlp.com/hs-fs/hubfs/Imagery/A%20person%20consulting%20with%20a%20client%20about%20energy%20saving%20in%20buildings.jpg?width=800&height=500',
     readTime: '3 min read',
-    content: `<h2>Vocational Training Center: Energy Upgrade</h2><p>A state-owned training facility for individuals with disabilities completed comprehensive energy efficiency upgrades.</p>`,
+    content: `<h2>Vocational Training Center: Energy Upgrade</h2><p>A state-owned training facility for individuals with disabilities completed full energy efficiency upgrades.</p>`,
   },
   {
     id: 'hospital-energy-efficiency',
@@ -374,7 +374,7 @@ const blogPosts = [
     id: 'rd-tax-credit-whitepaper-driving-innovation-job-creation',
     title: 'The R&D Tax Credit: Driving Innovation & Job Creation',
     date: '2025-06-01',
-    excerpt: 'Download our comprehensive whitepaper on R&D tax credits.',
+    excerpt: 'Download our complete whitepaper on R&D tax credits.',
     author: 'Concord',
     readTime: '15 min read',
     category: 'Whitepapers',

@@ -90,10 +90,10 @@ export default function WhitepaperThankYou() {
           <ScrollFadeIn>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 items-stretch">
               {[
-                { icon: MagnifyingGlassPlus, title: 'R&D Credit Overview', desc: 'A comprehensive breakdown of the federal R&D tax credit, its history, and current legislation affecting clean energy companies.' },
+                { icon: MagnifyingGlassPlus, title: 'R&D Credit Overview', desc: 'A full breakdown of the federal R&D tax credit, its history, and current legislation affecting clean energy companies.' },
                 { icon: CheckSquare, title: 'Eligibility Criteria', desc: 'Detailed four-part test analysis to determine which of your activities qualify, with real-world clean energy examples.' },
-                { icon: Calculator, title: 'Calculation Methods', desc: 'Step-by-step walkthrough of the Regular and Alternative Simplified Credit methods, including which one maximizes your benefit.' },
-                { icon: FileText, title: 'Claiming Process', desc: 'Documentation requirements, IRS Form 6765 guidance, and audit-proof strategies to protect your credit claims long-term.' },
+                { icon: Calculator, title: 'Calculation Methods', desc: 'Step-by-step walkthrough of the Regular and Alternative Simplified Credit methods, including which one produces the larger credit.' },
+                { icon: FileText, title: 'Claiming Process', desc: 'Documentation requirements, IRS Form 6765 guidance, and audit-ready strategies to protect your credit claims long-term.' },
               ].map((card) => (
                 <div key={card.title} className="card-hover bg-concord-mint rounded-3xl p-8 text-center flex flex-col h-full">
                   <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-sm">
@@ -125,7 +125,7 @@ export default function WhitepaperThankYou() {
 
               {[
                 { num: 1, icon: EnvelopeSimple, title: 'Check Your Inbox', desc: <>Your whitepaper download link has been sent to the email you provided. Look for a message from Concord Energy Strategies. Questions? <Link to="/contact" className="text-concord-green font-medium hover:underline">Contact us</Link>.</> },
-                { num: 2, icon: BookOpen, title: 'Read the Guide', desc: 'Dive into the 50+ page guide covering everything from eligibility to advanced calculation strategies for clean energy R&D credits.' },
+                { num: 2, icon: BookOpen, title: 'Read the Guide', desc: 'The 50+ page guide covers eligibility, the four-part test, both calculation methods, and filing checklists for clean energy R&D credits.' },
                 { num: 3, icon: CalendarCheck, title: 'Start the Conversation', desc: <>Ready to put this knowledge into action? <a href="https://www.concordlp.com/meetings/jonathan-darnell" className="text-concord-green font-medium hover:underline">Book a discovery call</a> with our experts to assess your credit opportunities.</> },
               ].map((step) => (
                 <div key={step.num} className="text-center relative flex flex-col h-full">
@@ -182,7 +182,7 @@ export default function WhitepaperThankYou() {
                   <span className="inline-block text-xs font-semibold text-[#e85d75] uppercase tracking-wider mb-3">Whitepaper</span>
                   <h3 className="font-heading text-lg font-bold mb-2 group-hover:text-concord-green transition-colors">The Complete Guide to 179D Deductions in 2026</h3>
                   <p className="text-concord-dark/60 text-sm leading-relaxed mb-4">
-                    Everything building owners and designers need to know about maximizing energy-efficient commercial building deductions.
+                    A practical guide for building owners and designers claiming energy-efficient commercial building deductions.
                   </p>
                   <span className="inline-flex items-center gap-1.5 text-concord-green font-semibold text-sm group-hover:gap-2.5 transition-all">
                     Read More <ArrowRight />
@@ -219,10 +219,10 @@ export default function WhitepaperThankYou() {
             <div className="relative z-10 p-16 md:p-20 text-center">
               <div className="max-w-2xl mx-auto rounded-3xl p-12" style={{ background: 'rgba(255,255,255,0.1)', backdropFilter: 'blur(16px)', WebkitBackdropFilter: 'blur(16px)', border: '1px solid rgba(255,255,255,0.2)' }}>
                 <h2 className="font-heading font-extrabold text-[36px] lg:text-[52px] tracking-[-0.03em] leading-[1.1] text-white mb-6">
-                  Ready to Maximize Your Credits?
+                  Ready to Claim Your Credits?
                 </h2>
                 <p className="text-white/70 text-lg leading-relaxed max-w-xl mx-auto mb-10">
-                  Our team has helped organizations capture over $1B in clean energy tax incentives. Let us show you what's possible for your business. Browse more insights in our <Link to="/resources" className="text-white underline hover:text-white/90">resource library</Link>.
+                  Our team has helped organizations capture over $1B in clean energy tax incentives. Let us show you what your business qualifies for. Browse more insights in our <Link to="/resources" className="text-white underline hover:text-white/90">resource library</Link>.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a href="https://www.concordlp.com/meetings/jonathan-darnell" className="inline-flex items-center justify-center gap-2.5 bg-white text-[#151C19] px-8 py-3.5 rounded-full text-[15px] font-bold hover:-translate-y-[2px] hover:shadow-lg transition-all duration-300">

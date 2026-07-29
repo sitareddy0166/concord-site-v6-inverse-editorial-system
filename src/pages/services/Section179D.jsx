@@ -130,7 +130,7 @@ export default function Section179D() {
             mediaAlt="Modern commercial building with energy-efficient glass facade"
             lede={
               <>
-                The 179D tax deduction is a federal incentive that allows building owners and designers to reduce their tax liability by up to $5.94 per square foot when they implement energy-efficient improvements in commercial, government, or multifamily buildings. Established under the Energy Policy Act of 2005 and expanded by the Inflation Reduction Act of 2022, it covers new construction and retrofits. Learn more about how <Link to="/prevailing-wage-apprenticeship" className="ed-link">PWA compliance</Link> unlocks the maximum rates.
+                The 179D tax deduction is a federal incentive that allows building owners and designers to reduce their tax liability by up to $5.94 per square foot when they implement energy-efficient improvements in commercial, government, or multifamily buildings. Established under the Energy Policy Act of 2005 and expanded by the Inflation Reduction Act of 2022, it covers new construction and retrofits. Learn more about how <Link to="/prevailing-wage-apprenticeship" className="ed-link">PWA compliance</Link> earns the maximum rates.
               </>
             }
           >
@@ -198,7 +198,7 @@ export default function Section179D() {
               'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1000&q=85',
             ]}
             mediaAlt="Engineers reviewing energy modeling blueprints for building improvements"
-            lede={<>To qualify, projects must demonstrate a reduction in total annual energy and power costs compared to the ASHRAE 90.1 reference standard. Meeting <Link to="/prevailing-wage-apprenticeship" className="ed-link">prevailing wage and apprenticeship</Link> requirements unlocks enhanced rates.</>}
+            lede={<>To qualify, projects must demonstrate a reduction in total annual energy and power costs compared to the ASHRAE 90.1 reference standard. Meeting <Link to="/prevailing-wage-apprenticeship" className="ed-link">prevailing wage and apprenticeship</Link> requirements earns enhanced rates.</>}
           >
             <div className="mt-6">
               <ServiceEligibilityIndex
@@ -292,7 +292,7 @@ export default function Section179D() {
           <ServiceEvidence
             items={[
               { amount: '$1.2M', title: 'Public School District', desc: 'Deductions realized through HVAC and lighting upgrades across multiple campuses.' },
-              { amount: '$750K', title: 'Military Facility',      desc: 'Retroactive savings secured through amended filings and comprehensive documentation.' },
+              { amount: '$750K', title: 'Military Facility',      desc: 'Retroactive savings secured through amended filings and complete documentation.' },
               { amount: '$2.5M', title: 'Multifamily Developer',  desc: 'Tax benefits captured from building envelope and lighting system upgrades.' },
             ]}
           />
@@ -378,7 +378,7 @@ export default function Section179D() {
       <ServiceFinalCTA
         eyebrow="Get Started Today"
         headline="Ready to Claim Your 179D Deduction?"
-        description="Our team will assess your building portfolio, estimate your potential savings, and guide you through every step of the process."
+        description="Our team will assess your building portfolio, estimate your savings, and handle the modeling, certification, and allocation letters."
       />
     </ServicePageShell>
   );

@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight } from '@phosphor-icons/react';
 
 export default function CTABanner({
-  headline = "Ready to Maximize Your Tax Incentives?",
+  headline = "Ready to Claim Your Tax Incentives?",
   description = "Let's identify every incentive your organization qualifies for.",
   buttonText = "Start the Conversation",
   buttonHref = "/contact",

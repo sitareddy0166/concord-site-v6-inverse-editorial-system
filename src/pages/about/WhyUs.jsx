@@ -15,7 +15,7 @@ const proofRows = [
 
 const differentiators = [
   { code: 'D/01', title: 'Engineering-first approach', body: 'Licensed Professional Engineers build detailed energy models. Not accountants reviewing spreadsheets. Real engineering means real defensibility on examination.' },
-  { code: 'D/02', title: 'Audit-proof documentation', body: 'Every study includes court-tested documentation protocols with lifetime audit defense. We do not just help you claim credits; we make sure you keep them.' },
+  { code: 'D/02', title: 'Audit-ready documentation', body: 'Every study includes court-tested documentation protocols with lifetime audit defense. We do not just help you claim credits; we make sure you keep them.' },
   { code: 'D/03', title: 'End-to-end service', body: 'From initial assessment through filing and audit defense, one dedicated team handles everything. No handoffs, no gaps, no surprises.' },
 ];
 
@@ -29,7 +29,7 @@ const credentials = [
 
 const faqs = [
   { question: 'What makes Concord different from other tax incentive firms?', answer: 'Concord employs licensed Professional Engineers who build detailed energy models, not just accountants. Every study includes court-tested documentation protocols with lifetime audit defense. Our engineering-first approach ensures your credits are not only claimed but can withstand any IRS scrutiny.' },
-  { question: 'How does Concord ensure my credits survive an IRS audit?', answer: 'Our engineering-first approach produces audit-proof documentation backed by ASHRAE-standard energy models. With an industry-leading audit track record and lifetime audit defense included in every engagement, your credits are protected from day one.' },
+  { question: 'How does Concord help my credits survive an IRS audit?', answer: 'Our engineering-first approach produces audit-ready documentation backed by ASHRAE-standard energy models. With an industry-leading audit track record and lifetime audit defense included in every engagement, your credits are protected from day one.' },
   { question: 'What types of organizations does Concord work with?', answer: 'We work with building owners, commercial real estate portfolios, tax-exempt organizations, government entities, CPA firms, and any organization that can benefit from clean energy tax incentives including 179D, Direct Pay, PWA compliance, and R&D credits.' },
   { question: 'How long does the engagement process take?', answer: 'Most engagements begin with a complimentary assessment. From there, our team can identify eligible incentives and create a roadmap within weeks, with many clients seeing results within 60 to 90 days.' },
 ];
@@ -44,7 +44,7 @@ export default function WhyUs() {
   return (
     <AboutPageShell>
       <SEOHead title="Why Choose Concord | Concord Energy Strategies"
-        description="Discover why leading organizations choose Concord Energy Strategies. Engineering-first approach, audit-proof documentation, and $1B+ in tax savings secured."
+        description="Discover why leading organizations choose Concord Energy Strategies. Engineering-first approach, audit-ready documentation, and $1B+ in tax savings secured."
         canonical="/why-us" />
       <SchemaScript schema={generateOrganizationSchema()} />
       <SchemaScript schema={generateBreadcrumbSchema([{ name: 'Home', url: '/' }, { name: 'About', url: '/why-us' }, { name: 'Why Choose Concord' }])} />
@@ -55,7 +55,7 @@ export default function WhyUs() {
         code="A/01 · WHY US"
         eyebrow="Evidence, not adjectives"
         title={<>We do not just find incentives.<br/><em className="italic font-light">We defend them.</em></>}
-        lede="Where other firms stop at identification, Concord builds audit-proof cases backed by licensed engineers, energy models, and 15+ years of IRS defense experience. That is the difference between claiming a credit and keeping it."
+        lede="Where other firms stop at identification, Concord builds audit-ready cases backed by licensed engineers, energy models, and 15+ years of IRS defense experience. That is the difference between claiming a credit and keeping it."
         primaryCta={{ label: 'Start the Conversation', href: '/contact' }}
         secondaryCta={{ label: 'See Our Process', href: '/the-concord-standard' }}
         meta={[
@@ -140,7 +140,7 @@ export default function WhyUs() {
           <blockquote className="relative">
             <Quotes size={36} weight="fill" className="text-[rgb(var(--concord))/0.4] mb-4" aria-hidden="true" />
             <p className="font-[Fraunces] text-[24px] lg:text-[30px] leading-tight tracking-tight text-[rgb(var(--ivory))]">
-              Concord took the complexity out of our 179D claims and delivered results that exceeded our expectations. Their team was responsive, thorough, and always available.
+              Concord took the complexity out of our 179D claims and delivered clear, defensible results. Their team was responsive, thorough, and always available.
             </p>
             <footer className="mt-6 text-[14px]">
               <span className="text-[rgb(var(--ivory))] font-semibold">Director of Energy, university system</span>
@@ -155,7 +155,7 @@ export default function WhyUs() {
         <div className="arch grid lg:grid-cols-12 gap-12">
           <div className="lg:col-span-4">
             <ChapterHeaderInk chapter="Section V · FAQ" title="Common questions."
-              lede="Everything you need to know about working with Concord and how we help organizations maximize their clean energy tax incentives." />
+              lede="Common questions about working with Concord and how we help organizations claim clean energy tax incentives." />
           </div>
           <ul className="lg:col-span-8 border-t border-[rgb(var(--ink))/0.15]">
             {faqs.map((f, i) => (
@@ -175,7 +175,7 @@ export default function WhyUs() {
       </section>
 
       <AboutCTA title="Ready to work with the best?"
-        body="Join the organizations that trust Concord to maximize their clean energy incentives and defend every dollar."
+        body="Join the organizations that trust Concord to claim their clean energy incentives and defend every dollar."
         primary={{ label: 'Start the Conversation', href: '/contact' }}
         secondary={{ label: 'Explore Services', href: '/179d-tax-deduction' }} />
     </AboutPageShell>

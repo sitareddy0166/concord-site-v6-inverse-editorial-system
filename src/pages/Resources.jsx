@@ -93,7 +93,7 @@ export default function Resources() {
     <>
       <SEOHead
         title="Resources & Insights | Concord Energy Strategies"
-        description="Expert analysis on clean energy tax incentives. Stay ahead of regulatory changes, market trends, and optimization strategies with Concord Energy Strategies."
+        description="Analysis on clean energy tax incentives: 179D, PWA, Direct Pay, transferable credits, and R&D. Legislative updates and case studies from Concord."
         canonical="/resources"
       />
       <SchemaScript schema={breadcrumbSchema} />
@@ -329,7 +329,7 @@ export default function Resources() {
       <ServiceFinalCTA
         eyebrow="Need Expert Guidance"
         headline="Talk to a Concord Advisor"
-        description="Our team can help you navigate clean energy tax incentives and maximize your savings."
+        description="Our team can tell you which credits your projects qualify for and what they're worth."
       />
     </>
   );

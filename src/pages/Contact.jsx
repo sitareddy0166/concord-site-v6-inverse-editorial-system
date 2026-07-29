@@ -113,7 +113,7 @@ export default function Contact() {
             </ol>
           </nav>
           <h1 className="font-heading font-extrabold text-[32px] lg:text-[44px] tracking-[-0.03em] leading-[1.1] text-white mb-2">Start the Conversation</h1>
-          <p className="text-[16px] md:text-[18px] text-white/70 leading-relaxed max-w-[600px]">Ready to maximize your clean energy tax incentives? Let's talk.</p>
+          <p className="text-[16px] md:text-[18px] text-white/70 leading-relaxed max-w-[600px]">Ready to claim your clean energy tax incentives? Let's talk.</p>
         </div>
       </section>
 
