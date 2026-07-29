@@ -77,7 +77,7 @@ const blogPosts = [
     `,
   },
   {
-    id: 'claim-179d-tax-deductions-before-obbba-ends-energy-savings',
+    id: 'maximize-179d-tax-deductions-before-obbba-ends-energy-savings',
     title: 'Claim 179D Savings Before OBBBA Deadline',
     date: '2025-07-16',
     category: 'News',

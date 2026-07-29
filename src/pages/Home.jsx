@@ -112,7 +112,7 @@ export default function Home() {
     <>
       <SEOHead
         title="Concord Energy Strategies | Tax Incentive Experts"
-        description="Maximize clean energy tax incentives with Concord Energy Strategies. Over $1 billion in client savings across 15+ years of 179D, PWA, and Direct Pay expertise."
+        description="Claim clean energy tax incentives with Concord Energy Strategies. Over $1 billion in client savings across 15+ years of 179D, PWA, and Direct Pay expertise."
         canonical="/"
       />
       <SchemaScript schema={organizationSchema} />
@@ -142,7 +142,7 @@ export default function Home() {
               </div>
 
               <h1 className="h-display text-balance" style={{ color: 'rgb(var(--ink))' }}>
-                Maximize Your<br /><em className="italic font-light">Tax Incentives.</em>
+                Claim Your<br /><em className="italic font-light">Tax Incentives.</em>
               </h1>
 
               <p className="mt-6 font-[Fraunces] text-[22px] sm:text-[24px] lg:text-[30px] leading-tight tracking-tight text-[rgb(var(--ink))/0.75]">
