@@ -54,7 +54,7 @@ const breadcrumbSchema = generateBreadcrumbSchema([
 
 const processSteps = [
   { title: 'Credit Identification',   desc: 'We analyze your clean energy portfolio to identify all eligible IRA tax credits, quantify their value, and determine optimal transfer timing. This step mirrors the assessment phase of The Concord Standard.' },
-  { title: 'Due Diligence',           desc: 'Comprehensive project verification, credit substantiation, financial review, and risk assessment to ensure every credit is defensible and market-ready.' },
+  { title: 'Due Diligence',           desc: 'Full project verification, credit substantiation, financial review, and risk assessment so every credit is defensible and market-ready.' },
   { title: 'Buyer Matching',          desc: 'Credits are matched to pre-vetted corporate buyers in our network based on credit type, size, timing preferences, and competitive market pricing.' },
   { title: 'Transfer Execution',      desc: 'Transfer agreements drafted with full tax indemnification, representations, warranties, and IRS compliance provisions. Cash delivered at closing.' },
   { title: 'Compliance Filing',       desc: 'IRS pre-filing registration, transfer election support, Form 3800 guidance, and complete documentation packages for both parties.' },
@@ -216,7 +216,7 @@ export default function TransferableCredits() {
           />
           <ServiceAudienceGrid
             items={[
-              { icon: MagnifyingGlass, title: 'Due Diligence',    desc: 'Comprehensive project verification, credit substantiation, and seller vetting for every transaction.' },
+              { icon: MagnifyingGlass, title: 'Due Diligence',    desc: 'Full project verification, credit substantiation, and seller vetting for every transaction.' },
               { icon: ChartBar,        title: 'Price Discovery',  desc: 'Market-driven pricing informed by our proprietary deal data and broad network of buyers and sellers.' },
               { icon: Scales,          title: 'Legal Structuring', desc: 'Transfer agreements with tax indemnification, representations, warranties, and IRS compliance provisions.' },
               { icon: Headset,         title: 'Ongoing Support',  desc: 'Post-closing compliance monitoring, IRS registration support, and audit defense assistance.' },

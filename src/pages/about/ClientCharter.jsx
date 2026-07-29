@@ -14,8 +14,8 @@ const commitments = [
 
 const delivery = [
   { num: '01', title: 'Discovery & Assessment',   body: 'We analyze your portfolio, identify every eligible incentive, and quantify the potential value across all applicable programs.' },
-  { num: '02', title: 'Strategy Development',     body: 'Our engineers and tax experts craft a tailored roadmap that maximizes your credits while ensuring full regulatory compliance.' },
-  { num: '03', title: 'Implementation & Filing',  body: 'We prepare audit-proof documentation, coordinate with your CPA, and manage the complete filing process from start to finish.' },
+  { num: '02', title: 'Strategy Development',     body: 'Our engineers and tax experts build a tailored roadmap that helps you claim the right credits while keeping compliance front and center.' },
+  { num: '03', title: 'Implementation & Filing',  body: 'We prepare audit-ready documentation, coordinate with your CPA, and manage the complete filing process from start to finish.' },
   { num: '04', title: 'Ongoing Support',          body: 'We monitor legislative changes, identify new opportunities, and provide lifetime audit defense for every engagement we deliver.' },
 ];
 

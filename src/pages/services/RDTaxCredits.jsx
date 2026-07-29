@@ -207,7 +207,7 @@ export default function RDTaxCredits() {
       <ServiceFinalCTA
         eyebrow="Start Today"
         headline="Stop Overlooking Your R&D Tax Benefits"
-        description="Your innovation already happened. Let Concord make sure you're rewarded for it. Our team will identify every qualifying activity and calculate the credit."
+        description="Your innovation already happened. Let Concord document it properly. Our team will identify every qualifying activity and calculate the credit."
       />
     </ServicePageShell>
   );

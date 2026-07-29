@@ -194,7 +194,7 @@ export default function PrivacyPolicy() {
                   <h3 className="font-heading font-semibold text-lg text-concord-dark mt-8 mb-3">Access Controls</h3>
                   <p className="text-[16px] text-slate-500 leading-relaxed mb-4">We implement strict role-based access controls to ensure that only authorized personnel can access your personal information. Multi-factor authentication is required for all team members accessing client data systems.</p>
                   <h3 className="font-heading font-semibold text-lg text-concord-dark mt-8 mb-3">Incident Response</h3>
-                  <p className="text-[16px] text-slate-500 leading-relaxed">We maintain a comprehensive incident response plan. In the event of a data breach, we will notify affected individuals and relevant authorities in accordance with applicable laws, typically within 72 hours of discovery.</p>
+                  <p className="text-[16px] text-slate-500 leading-relaxed">We maintain a detailed incident response plan. In the event of a data breach, we will notify affected individuals and relevant authorities in accordance with applicable laws, typically within 72 hours of discovery.</p>
                 </ScrollFadeIn>
               </div>
 
