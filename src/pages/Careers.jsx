@@ -6,15 +6,15 @@ import AboutPageShell, { AboutBreadcrumb, AboutHero, ChapterHeader, ChapterHeade
 
 const whyItems = [
   { code: 'W/01', title: 'Mission-Driven Work',  body: 'Every project accelerates the clean energy transition. Your work directly helps organizations capture incentives that fund sustainable building practices.' },
-  { code: 'W/02', title: 'Growth & Development', body: 'Dedicated learning budgets, mentorship programs, and clear career pathways ensure you are always advancing your expertise and leadership skills.' },
-  { code: 'W/03', title: 'Competitive Benefits', body: 'Top-tier compensation, comprehensive health coverage, generous PTO, and a 401(k) match that reflects how much we value our team.' },
+  { code: 'W/02', title: 'Growth & Development', body: 'Dedicated learning budgets, mentorship programs, and clear career pathways keep your expertise and leadership skills moving forward.' },
+  { code: 'W/03', title: 'Competitive Benefits', body: 'Top-tier compensation, full health coverage, generous PTO, and a 401(k) match that reflects how much we value our team.' },
   { code: 'W/04', title: 'Collaborative Culture', body: 'Engineers, consultants, and strategists work side by side. We celebrate diverse perspectives and believe the best ideas come from open collaboration.' },
 ];
 
 const values = [
   { title: 'Integrity First',            body: 'We do the right thing, even when no one is watching. Our compliance-driven approach means every recommendation is backed by rigorous analysis.' },
   { title: 'Continuous Learning',        body: 'Tax policy evolves constantly. We stay ahead through ongoing education, industry conferences, and knowledge-sharing across teams.' },
-  { title: 'Client-Centered Excellence', body: 'We measure our success by our clients\' outcomes. Every team member is empowered to go the extra mile to deliver exceptional results.' },
+  { title: 'Client-Centered Excellence', body: 'We measure our success by our clients\' outcomes.' },
 ];
 
 const jobs = [
@@ -41,7 +41,7 @@ const process = [
   { num: '01', title: 'Apply Online',        body: 'Submit your resume and cover letter through our application portal. We review every application carefully and respond within one week.' },
   { num: '02', title: 'Phone Screen',        body: 'A 30-minute call with our People team to discuss your background, interests, and how you would contribute to Concord\'s mission.' },
   { num: '03', title: 'Team Interview',      body: 'Meet with your future team leads for a deeper dive into your skills, experience, and culture fit. We want you to learn about us too.' },
-  { num: '04', title: 'Offer & Onboarding',  body: 'Receive a competitive offer and join the Concord team. Our structured onboarding ensures you are set up for success from day one.' },
+  { num: '04', title: 'Offer & Onboarding',  body: 'Receive a competitive offer and join the Concord team. Our structured onboarding sets you up for success from day one.' },
 ];
 
 const filters = [
@@ -68,7 +68,7 @@ export default function Careers() {
         code="A/05 · CAREERS"
         eyebrow="We are hiring"
         title={<>Join our <em className="italic font-light">team.</em></>}
-        lede="Help shape the future of clean energy tax incentives. Build your career at a firm where compliance, innovation, and sustainability converge."
+        lede="Build your career at the firm behind $1B+ in clean energy tax savings."
         primaryCta={{ label: 'View Open Roles', href: '#positions' }}
         secondaryCta={{ label: 'Why Concord', href: '/why-us' }}
         meta={[
@@ -204,7 +204,7 @@ export default function Careers() {
       </section>
 
       <AboutCTA title="We make it simple."
-        body="Do not see your role? We are always looking for exceptional talent. Send us your resume and let us know how you would like to contribute to the clean energy transition."
+        body="Do not see your role? Send us your resume and let us know how you would like to contribute to the clean energy transition."
         primary={{ label: 'Send Us Your Resume', href: '/contact' }}
         secondary={{ label: 'Contact Our Team', href: '/contact' }} />
     </AboutPageShell>

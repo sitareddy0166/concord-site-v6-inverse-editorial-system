@@ -17,7 +17,7 @@ const stages = [
 const caissonFeatures = [
   { code: 'K/01', title: 'Real-Time Dashboard',     body: 'Live compliance visibility into every project, incentive, and deadline.' },
   { code: 'K/02', title: 'Document Management',     body: 'All certifications and reports stored in one secure repository with version control.' },
-  { code: 'K/03', title: 'Deadline Tracking',       body: 'Automated alerts ensure no filing deadline or compliance milestone is missed.' },
+  { code: 'K/03', title: 'Deadline Tracking',       body: 'Automated alerts keep filing deadlines and compliance milestones from getting missed.' },
   { code: 'K/04', title: 'Audit-Ready Architecture', body: 'Every document organized for immediate IRS examination.' },
   { code: 'K/05', title: 'Collaborative Workflows', body: 'Your team, CPA, and Concord on the same platform with role-based access.' },
   { code: 'K/06', title: 'Portfolio Analytics',     body: 'Track credit values, filing statuses, and monetization across your portfolio.' },
@@ -117,7 +117,7 @@ export default function TheConcordStandard() {
         code="A/03 · THE STANDARD"
         eyebrow="Our framework"
         title={<>The Concord <em className="italic font-light">Standard.</em></>}
-        lede="Our structured compliance management framework ensures nothing is missed and every incentive dollar is captured. Developed over 15 years of practice, this is the process behind more than $1 billion in client savings."
+        lede="A compliance framework built so nothing gets missed and every incentive dollar gets claimed. Developed over 15 years of practice, this is the process behind more than $1 billion in client savings."
         primaryCta={{ label: 'Start the Conversation', href: '/contact' }}
         secondaryCta={{ label: 'See the six stages', href: '#process' }}
         meta={[
@@ -137,7 +137,7 @@ export default function TheConcordStandard() {
             <h2 className="h-lead" style={{ color: 'rgb(var(--ink))' }}>What is the Concord Standard?</h2>
           </div>
           <div className="lg:col-span-7 space-y-5 text-[17px] leading-relaxed text-[rgb(var(--ink))/0.78]">
-            <p>The Concord Standard is a proprietary, end-to-end compliance management framework developed over more than 15 years of specialized practice. It ensures every qualifying incentive is identified, every compliance requirement is met, and every credit dollar is captured and defended.</p>
+            <p>The Concord Standard is a proprietary, end-to-end compliance management framework developed over more than 15 years of specialized practice. It identifies qualifying incentives, tracks each compliance requirement, and builds the record to defend every credit dollar.</p>
             <p>Unlike ad-hoc consulting approaches, the Concord Standard covers the full incentive lifecycle. It is powered by our proprietary technology platform, <strong className="text-[rgb(var(--ink))]">Concord Caisson</strong>, which provides real-time visibility into compliance status across every project in your portfolio.</p>
           </div>
         </div>

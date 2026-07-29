@@ -386,7 +386,7 @@ export function SharedServiceFAQ({ faqs = [], eyebrow = 'FAQ', title = 'Frequent
 export function ServiceFinalCTA({
   eyebrow = 'Get Started',
   headline = 'Ready to Move Forward?',
-  description = 'Our team will assess eligibility, estimate potential savings, and guide you through every step.',
+  description = 'Our team will assess eligibility, estimate your savings, and handle the filings.',
   primary = { label: 'Start the Conversation', href: '/contact' },
   secondary = { label: 'Book a Discovery Call', href: 'https://www.concordlp.com/meetings/jonathan-darnell' },
 }) {
