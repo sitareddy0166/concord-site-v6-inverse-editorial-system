@@ -15,7 +15,7 @@ const proofRows = [
 
 const differentiators = [
   { code: 'D/01', title: 'Engineering-first approach', body: 'Licensed Professional Engineers build detailed energy models. Not accountants reviewing spreadsheets. Real engineering means real defensibility on examination.' },
-  { code: 'D/02', title: 'Audit-proof documentation', body: 'Every study includes court-tested documentation protocols with lifetime audit defense. We do not just help you claim credits; we make sure you keep them.' },
+  { code: 'D/02', title: 'Audit-ready documentation', body: 'Every study includes court-tested documentation protocols with lifetime audit defense. We do not just help you claim credits; we make sure you keep them.' },
   { code: 'D/03', title: 'End-to-end service', body: 'From initial assessment through filing and audit defense, one dedicated team handles everything. No handoffs, no gaps, no surprises.' },
 ];
 
