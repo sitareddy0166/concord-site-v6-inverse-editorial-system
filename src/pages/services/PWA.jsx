@@ -306,7 +306,7 @@ export default function PWA() {
 
       <SharedServiceFAQ
         faqs={faqs}
-        intro="Everything you need to know about prevailing wage and apprenticeship compliance for IRA tax credits."
+        intro="Common questions about prevailing wage and apprenticeship compliance for IRA tax credits."
       />
 
       <RelatedServices currentHref="/prevailing-wage-apprenticeship" />

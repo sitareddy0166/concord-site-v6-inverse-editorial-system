@@ -9,7 +9,7 @@ const stages = [
   { num: '01', title: 'Assessment',            body: 'We evaluate eligibility across every applicable federal incentive, identifying opportunities that generalist advisors miss.' },
   { num: '02', title: 'Roadmap',               body: 'A project-specific compliance roadmap detailing every milestone, deliverable, and deadline.' },
   { num: '03', title: 'Compliance Management', body: 'Real-time tracking through Concord Caisson keeps every document, deadline, and requirement on schedule.' },
-  { num: '04', title: 'Substantiation',        body: 'Detailed technical reports and certifications built to withstand IRS scrutiny.' },
+  { num: '04', title: 'Substantiation',        body: 'Detailed technical reports and certifications built for IRS scrutiny.' },
   { num: '05', title: 'Monetization',          body: 'IRS election filings, pre-registration, credit transfer facilitation, and Direct Pay applications.' },
   { num: '06', title: 'Continuation',          body: 'Monitoring through the full recapture window with audit defense included as standard.' },
 ];
@@ -31,7 +31,7 @@ const differentiators = [
 
 const caseStudies = [
   { amount: '$12M+', label: 'Credits Captured',      title: 'National Solar Developer',    body: 'Concord managed compliance across a 40-project solar portfolio, identifying overlooked PWA documentation gaps and recovering credits that would have been forfeited.', tags: ['ITC', 'PWA', 'Direct Pay'] },
-  { amount: '$3.2M', label: 'Direct Pay Received',   title: 'University Medical Center',   body: 'A major university hospital leveraged the Concord Standard to claim Direct Pay on a campus-wide energy retrofit, delivering a Treasury payment within one filing cycle.', tags: ['179D', 'Direct Pay', 'Tax-Exempt'] },
+  { amount: '$3.2M', label: 'Direct Pay Received',   title: 'University Medical Center',   body: 'A major university hospital used the Concord Standard to claim Direct Pay on a campus-wide energy retrofit, delivering a Treasury payment within one filing cycle.', tags: ['179D', 'Direct Pay', 'Tax-Exempt'] },
   { amount: '$8.5M', label: 'R&D Credits Claimed',   title: 'Manufacturing Conglomerate',  body: 'A multi-facility manufacturer engaged Concord to assess R&D credit eligibility across six divisions, resulting in current-year and retroactive credits.', tags: ['R&D Credits', 'Retroactive', 'Audit Defense'] },
 ];
 
