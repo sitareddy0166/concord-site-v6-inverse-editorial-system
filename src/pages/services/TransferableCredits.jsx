@@ -33,7 +33,7 @@ const faqs = [
   { question: 'What is Section 6418 transferability?', answer: 'Section 6418, introduced by the Inflation Reduction Act, allows eligible taxpayers who generate clean energy tax credits to sell those credits to unrelated third-party buyers for cash. This creates a liquid market for tax credits without the complexity of traditional tax equity structures.' },
   { question: 'Which credits are eligible for transfer?', answer: 'Twelve types of credits qualify, including the Investment Tax Credit (ITC), Production Tax Credit (PTC), Section 45Q carbon capture credits, Section 45V clean hydrogen credits, Section 45X advanced manufacturing credits, and others created or extended by the IRA.' },
   { question: 'What discount do buyers typically receive?', answer: 'Market pricing typically ranges from 90 to 95 cents per dollar of credit value, depending on credit type, project risk profile, and market conditions. Concord ensures competitive pricing through its broad buyer network.' },
-  { question: 'How does Concord protect buyers from risk?', answer: 'Concord performs comprehensive due diligence on every transaction, including project verification, credit substantiation, seller financial review, and legal structuring with tax indemnification provisions to protect buyers.' },
+  { question: 'How does Concord protect buyers from risk?', answer: 'Concord performs full due diligence on every transaction, including project verification, credit substantiation, seller financial review, and legal structuring with tax indemnification provisions to protect buyers.' },
   { question: 'How long does a transfer take?', answer: 'A typical transfer takes 4 to 8 weeks from initial engagement to closing, depending on deal complexity and due diligence requirements. Concord manages the full timeline to ensure efficient execution.' },
   { question: 'Can any taxpayer buy transferable credits?', answer: 'Yes. Any taxpayer with federal income tax liability can purchase transferable credits under Section 6418. This includes corporations, partnerships, individuals, and other entities across all industries.' },
   { question: 'What documentation supports a Section 6418 transfer?', answer: 'A defensible transfer package includes IRS pre-filing registration numbers for both parties, credit substantiation from the underlying project, a transfer agreement with tax indemnification provisions, and evidence supporting the credit amount claimed. Concord assembles and reviews this package before closing to protect both seller and buyer.' },
@@ -72,7 +72,7 @@ const sellerCards = [
 
 const buyerCards = [
   { icon: Buildings, title: 'Corporations',                   desc: 'Fortune 500 and mid-market companies looking to reduce federal tax liability while supporting clean energy.' },
-  { icon: Bank,      title: 'Banks & Financial Institutions', desc: 'National and regional banks leveraging transferable credits as a simpler alternative to traditional tax equity.' },
+  { icon: Bank,      title: 'Banks & Financial Institutions', desc: 'National and regional banks using transferable credits as a simpler alternative to traditional tax equity.' },
   { icon: Shield,    title: 'Insurance Companies',            desc: 'Property & casualty and life insurers with significant tax obligations seeking dollar-for-dollar credit offsets.' },
   { icon: Cpu,       title: 'Tech Companies',                 desc: 'Technology firms achieving ESG goals and tax optimization through strategic clean energy credit purchases.' },
   { icon: ChartPie,  title: 'Private Equity Firms',           desc: 'Fund-level buyers deploying capital into transferable credits as a risk-adjusted investment strategy.' },
@@ -135,7 +135,7 @@ export default function TransferableCredits() {
               'https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1000&q=85',
             ]}
             mediaAlt="Business professionals shaking hands representing a transferable tax credit transaction"
-            lede={<>The Inflation Reduction Act created Section 6418, allowing entities that generate clean energy tax credits to sell them to unrelated third-party buyers for cash. This unlocks liquidity for project developers and delivers tax savings to corporate buyers, without complex tax equity partnerships. Organizations pursuing <Link to="/179d-tax-deduction" className="ed-link">179D deductions</Link> or <Link to="/direct-pay" className="ed-link">Direct Pay elections</Link> can also benefit from understanding the transfer marketplace.</>}
+            lede={<>The Inflation Reduction Act created Section 6418, allowing entities that generate clean energy tax credits to sell them to unrelated third-party buyers for cash. This raises liquidity for project developers and delivers tax savings to corporate buyers, without complex tax equity partnerships. Organizations pursuing <Link to="/179d-tax-deduction" className="ed-link">179D deductions</Link> or <Link to="/direct-pay" className="ed-link">Direct Pay elections</Link> can also benefit from understanding the transfer marketplace.</>}
           >
             <p className="service-definition mt-5 text-[16px] lg:text-[17px] leading-relaxed text-[rgb(var(--ivory))/0.72] max-w-2xl">
               Transferability has rapidly created a multi-billion dollar market, simplifying how clean energy projects are financed and making tax credits accessible to a much broader set of participants. Learn how <Link to="/the-concord-standard" className="ed-link">The Concord Standard</Link> ensures every transaction is handled with rigor.
@@ -199,7 +199,7 @@ export default function TransferableCredits() {
             code="B/01"
             eyebrow="For Buyers"
             title="Who Can Buy Credits?"
-            lede={<>Any entity with federal income tax liability can purchase transferable credits and claim them dollar-for-dollar against taxes owed. Learn more about <Link to="/why-us" className="ed-link">why organizations choose Concord</Link> to navigate this process. Our buyer network includes:</>}
+            lede={<>Any entity with federal income tax liability can purchase transferable credits and claim them dollar-for-dollar against taxes owed. Learn more about <Link to="/why-us" className="ed-link">why organizations choose Concord</Link> to manage this process. Our buyer network includes:</>}
           />
           <ServiceAudienceGrid items={buyerCards} />
         </div>
@@ -239,9 +239,9 @@ export default function TransferableCredits() {
           />
           <ServiceEvidence
             items={[
-              { amount: '$1.2M', title: 'Public School District',  desc: 'A public school district leveraged energy-efficient building upgrades across multiple campuses, capturing 179D deductions and transferring credits to unlock immediate savings.' },
+              { amount: '$1.2M', title: 'Public School District',  desc: 'A public school district used energy-efficient building upgrades across multiple campuses, capturing 179D deductions and transferring credits for immediate savings.' },
               { amount: '$750K', title: 'Military Facility',       desc: "A military facility achieved significant energy efficiency improvements and monetized the resulting tax credits through Concord's proven methodology." },
-              { amount: '$2.5M', title: 'Multifamily Developer',   desc: 'A multifamily developer maximized incentives across a portfolio of new construction projects, combining Direct Pay and transferable credits for optimal value.' },
+              { amount: '$2.5M', title: 'Multifamily Developer',   desc: 'A multifamily developer combined Direct Pay and transferable credits across a portfolio of new construction projects.' },
             ]}
           />
         </div>
@@ -249,7 +249,7 @@ export default function TransferableCredits() {
 
       <SharedServiceFAQ
         faqs={faqs}
-        intro={<>New to transferable credits? We answer the most common questions from both buyers and sellers navigating the Section 6418 marketplace. For more <Link to="/resources" className="ed-link">insights and resources</Link>, visit our knowledge center.</>}
+        intro={<>New to transferable credits? We answer the most common questions from both buyers and sellers handling the Section 6418 marketplace. For more <Link to="/resources" className="ed-link">insights and resources</Link>, visit our knowledge center.</>}
       />
 
       <RelatedServices currentHref="/transferable-tax-credits" />
@@ -257,7 +257,7 @@ export default function TransferableCredits() {
       <ServiceFinalCTA
         eyebrow="Get Started"
         headline="Ready to Monetize Your Credits?"
-        description="Whether you are selling credits for cash or buying them at a discount, Concord makes the process simple, safe, and fast. Schedule a consultation today."
+        description="Selling credits for cash or buying at a discount, Concord manages diligence, documentation, and transfer mechanics on both sides. Schedule a consultation."
       />
     </ServicePageShell>
   );

@@ -20,15 +20,15 @@ import HomeFaq from '@/components/sections/HomeFaq';
 const homeFaqs = [
   { question: 'What is the 179D tax deduction?', answer: 'Section 179D is a federal tax deduction for energy-efficient commercial buildings. Qualifying buildings can receive up to $5.94 per square foot when prevailing wage and apprenticeship requirements are met.' },
   { question: 'Who qualifies for Direct Pay under Section 6417?', answer: 'Tax-exempt entities such as state and local governments, tribal nations, nonprofits, and rural electric cooperatives can receive direct cash payments for 11 eligible clean energy tax credits.' },
-  { question: 'What are transferable tax credits under Section 6418?', answer: 'Section 6418 allows for-profit entities to sell eligible clean energy tax credits to unrelated buyers for cash, creating a new marketplace for monetizing clean energy investments.' },
-  { question: 'How does the prevailing wage and apprenticeship requirement work?', answer: 'Projects that meet PWA requirements can multiply their base credit by up to 5x. Concord helps you navigate compliance, documentation, and correction procedures to maximize your incentive.' },
-  { question: 'What is The Concord Standard?', answer: 'The Concord Standard is our six-step compliance-driven process covering assessment, roadmap creation, substantiation, compliance management, monetization, and continuation to ensure maximum incentive capture.' },
+  { question: 'What are transferable tax credits under Section 6418?', answer: 'Section 6418 allows for-profit entities to sell eligible clean energy tax credits to unrelated buyers for cash. The 2022 Inflation Reduction Act created this transfer market.' },
+  { question: 'How does the prevailing wage and apprenticeship requirement work?', answer: 'Projects that meet PWA requirements can multiply their base credit by up to 5x. Miss them and you get one-fifth of the bonus rate. Concord manages the wage documentation, apprenticeship ratios, and correction procedures so you keep the full multiplier.' },
+  { question: 'What is The Concord Standard?', answer: 'The Concord Standard is our six-step compliance-driven process covering assessment, roadmap creation, substantiation, compliance management, monetization, and continuation. Each stage produces documentation your auditor can rely on.' },
   { question: 'How quickly can we start capturing incentives?', answer: 'Most engagements begin with a complimentary assessment. From there, our team can identify eligible incentives and create a roadmap within weeks, with many clients seeing results within 60 to 90 days.' },
 ];
 
 const services = [
   { code: 'S/01', href: '/179d-tax-deduction',            title: '179D Tax Deduction',            note: 'Sec. 179D',      lede: 'Up to $5.94 per square foot for energy-efficient commercial buildings. We handle the energy modeling, certification, and allocation letters so you capture the maximum deduction.' },
-  { code: 'S/02', href: '/prevailing-wage-apprenticeship', title: 'PWA Compliance',                note: 'IRA Labor Std.', lede: 'Prevailing wage and apprenticeship requirements can multiply credits up to 5x. We ensure compliance from day one.' },
+  { code: 'S/02', href: '/prevailing-wage-apprenticeship', title: 'PWA Compliance',                note: 'IRA Labor Std.', lede: 'Prevailing wage and apprenticeship requirements can multiply credits up to 5x. We manage compliance from day one.' },
   { code: 'S/03', href: '/direct-pay',                    title: 'Section 6417 Direct Pay',       note: 'Sec. 6417',      lede: 'Tax-exempt entities receive direct cash payments for eligible clean energy credits. We manage pre-filing registration and compliance.' },
   { code: 'S/04', href: '/transferable-tax-credits',       title: 'Section 6418 Transferable Credits', note: 'Sec. 6418',  lede: 'Sell eligible clean energy tax credits to unrelated buyers for cash. We facilitate the marketplace, diligence, and transfer mechanics.' },
   { code: 'S/05', href: '/rd-tax-credits',                title: 'R&D Tax Credits',               note: 'Sec. 41',        lede: 'Identify qualifying research activities and expenses to offset tax liability. Our technical team documents everything for audit resilience.' },
@@ -36,7 +36,7 @@ const services = [
 
 const tabs = [
   { id: 'designers',   label: 'Project Designers',       title: 'Project Designers',       description: 'Architects and engineers who design energy-efficient buildings can claim the 179D deduction through allocation letters from building owners. Concord manages the entire process, from energy modeling to certification.', media: 'engineering',   image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80', imageAlt: 'Architectural drawings and building plans for an energy-efficient design project' },
-  { id: 'for-profit',  label: 'For-Profit Owners',       title: 'For-Profit Owners',       description: 'Commercial building owners can directly claim 179D deductions and leverage transferable credits under Section 6418 to monetize their clean energy investments in new ways.', media: 'building-179d', image: 'https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80', imageAlt: 'Modern commercial office interior representing for-profit building owners' },
+  { id: 'for-profit',  label: 'For-Profit Owners',       title: 'For-Profit Owners',       description: 'Commercial building owners can directly claim 179D deductions and use transferable credits under Section 6418 to monetize their clean energy investments in new ways.', media: 'building-179d', image: 'https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80', imageAlt: 'Modern commercial office interior representing for-profit building owners' },
   { id: 'tax-exempt',  label: 'Tax-Exempt Owners',       title: 'Tax-Exempt Owners',       description: 'Government agencies, tribal nations, and nonprofits can now receive direct cash payments for clean energy tax credits through Section 6417. We handle pre-filing registration and IRS compliance.', media: 'public-infra',  image: 'https://images.unsplash.com/photo-1568992687947-868a62a9f521?auto=format&fit=crop&w=1200&q=80', imageAlt: 'Solar panels installed on a public institutional building representing tax-exempt clean energy investment' },
   { id: 'marketplace', label: 'Tax Credit Marketplace',  title: 'Tax Credit Marketplace',  description: 'Section 6418 created a new marketplace for buying and selling clean energy credits. Concord connects buyers and sellers, manages due diligence, and ensures compliant transfer mechanics.', media: 'transaction',   image: 'https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&w=1200&q=80', imageAlt: 'Financial market trading screens representing the Section 6418 tax credit marketplace' },
 ];
@@ -46,9 +46,9 @@ const standardStages = [
   { num: '01', title: 'Assessment',            text: 'We evaluate your portfolio to identify every eligible incentive. Our team reviews building systems, project timelines, and ownership structures to uncover hidden value.' },
   { num: '02', title: 'Roadmap',               text: 'We create a clear, prioritized action plan for capturing your incentives. You will know exactly what is available, what is required, and the projected financial impact.' },
   { num: '03', title: 'Substantiation',        text: 'Our technical team builds the audit-resilient documentation package, including energy models, certifications, and allocation letters that withstand IRS scrutiny.' },
-  { num: '04', title: 'Compliance Management', text: 'We monitor regulatory changes, manage prevailing wage documentation, and ensure your projects stay compliant throughout the entire lifecycle.' },
+  { num: '04', title: 'Compliance Management', text: 'We monitor regulatory changes and manage prevailing wage documentation so your projects stay compliant throughout the entire lifecycle.' },
   { num: '05', title: 'Monetization',          text: 'Whether through direct deductions, Direct Pay elections, or credit transfers, we help you convert your incentives into real financial returns.' },
-  { num: '06', title: 'Continuation',          text: 'Incentive programs evolve. We stay engaged to capture future opportunities, adapt to regulatory changes, and ensure your portfolio continues to benefit year after year.' },
+  { num: '06', title: 'Continuation',          text: 'Incentive programs evolve. We stay engaged to capture future opportunities, adapt to regulatory changes, and keep your portfolio positioned to benefit year after year.' },
 ];
 
 const industries = [
@@ -65,7 +65,7 @@ const industries = [
 ];
 
 const caseStudies = [
-  { amount: '$1.2M', title: 'Public School District', text: '179D deductions captured across 14 energy-efficient school buildings through designer allocation letters and comprehensive energy modeling.' },
+  { amount: '$1.2M', title: 'Public School District', text: '179D deductions captured across 14 energy-efficient school buildings through designer allocation letters and complete energy modeling.' },
   { amount: '$750K', title: 'Military Facility',      text: 'Direct Pay election for a federal military installation, including pre-filing registration, compliance documentation, and IRS coordination.' },
   { amount: '$2.5M', title: 'Multifamily Developer',  text: 'Combined 179D and transferable credits strategy across a portfolio of sustainable residential developments meeting PWA requirements.' },
 ];
@@ -103,7 +103,7 @@ export default function Home() {
   const serviceSchemas = [
     generateServiceSchema({ name: '179D Tax Deduction Consulting', description: 'Expert consulting for the 179D energy-efficient commercial building tax deduction.', url: '/179d-tax-deduction' }),
     generateServiceSchema({ name: 'Direct Pay (Section 6417)', description: 'Help tax-exempt entities receive clean energy tax credits as direct cash payments.', url: '/direct-pay' }),
-    generateServiceSchema({ name: 'PWA Compliance Consulting', description: 'Prevailing Wage and Apprenticeship compliance to unlock the 5x bonus multiplier.', url: '/prevailing-wage-apprenticeship' }),
+    generateServiceSchema({ name: 'PWA Compliance Consulting', description: 'Prevailing Wage and Apprenticeship compliance to earn the 5x bonus multiplier.', url: '/prevailing-wage-apprenticeship' }),
     generateServiceSchema({ name: 'Transferable Tax Credits (Section 6418)', description: 'Monetize clean energy tax credits through Section 6418 transfers to corporate buyers.', url: '/transferable-tax-credits' }),
     generateServiceSchema({ name: 'R&D Tax Credits', description: 'Recover innovation costs with R&D tax credits for clean energy companies.', url: '/rd-tax-credits' }),
   ];
@@ -150,7 +150,7 @@ export default function Home() {
               </p>
 
               <p className="hero-description mt-6 text-[16px] lg:text-[17px] leading-relaxed text-[rgb(var(--ink))/0.75] max-w-lg">
-                With over $1 billion in tax savings identified and an industry-leading audit success track record, Concord Energy Strategies helps building owners, designers, and tax-exempt organizations capture every clean energy incentive they deserve.
+                With over $1 billion in tax savings identified and an industry-leading audit success track record, Concord Energy Strategies helps building owners, designers, and tax-exempt organizations capture every incentive their projects qualify for.
               </p>
 
               <div className="mt-8 flex flex-wrap gap-3">
@@ -411,7 +411,7 @@ export default function Home() {
             </div>
             <blockquote className="lg:col-span-9">
               <p className="font-[Fraunces] text-[32px] lg:text-[48px] leading-[1.05] tracking-tight text-[rgb(var(--ink))] text-balance">
-                "Concord took the complexity out of our 179D claims and delivered results that exceeded our expectations. Their team was responsive, thorough, and always available."
+                "Concord took the complexity out of our 179D claims. Every question we sent came back answered within a day."
               </p>
               <footer className="mt-8 flex flex-wrap items-center gap-6">
                 <div>
@@ -588,7 +588,7 @@ export default function Home() {
           <div className="grid lg:grid-cols-12 gap-10">
             <div className="lg:col-span-4">
               <p className="tech-label mb-6">Frequently Asked · J/01</p>
-              <h2 className="h-lead">Everything you need to know about clean energy tax incentives and how Concord can help your organization.</h2>
+              <h2 className="h-lead">Straight answers on 179D, PWA, Direct Pay, transferable credits, and how a Concord engagement works.</h2>
             </div>
             <div className="lg:col-span-8">
               <HomeFaq faqs={homeFaqs} />
@@ -613,7 +613,7 @@ export default function Home() {
             <p className="tech-label" style={{ color: 'rgb(var(--concord))' }}>Concord Energy Strategies · Louisville KY</p>
             <h2 className="h-display mt-6 text-balance" style={{ color: 'rgb(var(--ink))' }}>We make it simple.</h2>
             <p className="mt-6 text-[17px] text-[rgb(var(--ink))/0.7] max-w-lg leading-relaxed">
-              Let Concord Energy Strategies handle the complexity of clean energy tax incentives so you can focus on what matters most.
+              One conversation tells you what your portfolio qualifies for. The assessment costs nothing.
             </p>
             <div className="mt-10 flex flex-wrap gap-3">
               <Link to="/contact" className="btn btn-dark">Start the Conversation <ArrowRight size={14} weight="bold" /></Link>
